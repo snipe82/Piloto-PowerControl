@@ -1,0 +1,25 @@
+{
+  "name": "powercontrol",
+  "version": "1.0.0",
+  "description": "Servicio Antifraude BNPL — Powerpay",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest --runInBand",
+    "db:reset": "docker compose down -v && docker compose up -d"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "joi": "^17.13.1",
+    "dotenv": "^16.4.5",
+    "uuid": "^10.0.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
