@@ -33,6 +33,13 @@ const baseSchema = Joi.object({
     dniuserstore: Joi.string().allow('').optional(),
     firstnameuserstore: Joi.string().allow('').optional(),
     lastnameuserstore: Joi.string().allow('').optional(),
+    msgstatus: Joi.string().allow('').optional(),
+    msgstatusreason: Joi.string().allow('').optional(),
+    msgreason: Joi.string().allow('').optional(),
+    msgtype: Joi.string().allow('').optional(),
+    payment_concept: Joi.string().allow('').optional(),
+    msgstatusreason: Joi.string().allow('').optional(),
+    correspondenceaddress: Joi.object().unknown(true).optional(),
 
 }).unknown(true); // unknown(true) permite campos extra sin romper
 

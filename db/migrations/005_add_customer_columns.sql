@@ -1,0 +1,2 @@
+ALTER TABLE dim_customer ADD COLUMN IF NOT EXISTS middle_name VARCHAR(80);
+ALTER TABLE dim_customer ADD COLUMN IF NOT EXISTS full_name   VARCHAR(200);

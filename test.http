@@ -384,3 +384,127 @@ X-API-Key: pc-antifraude-local-key-2026
   },
   "age": 36
 }
+
+
+### Test NRT — Trama rechazo Openpay Powerpay
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "firstnameuserstore": "ANDREE SEBASTIAN",
+  "payment_concept": "BV 80918724-1858.61;CU 4477631-2110.00;",
+  "deviceId": "b2f71a6d-9236-4898-94fe-3b073c3a95f9",
+  "cardToken": "kmcgxdgpam5su0gtkczm",
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 34700,
+      "currency": "PER",
+      "value": 34700,
+      "baseCurrency": "PER"
+    }
+  },
+  "correspondenceAddress": {
+    "country": "PER",
+    "addressLine1": "JR MARISCAL MILLER 965"
+  },
+  "Biometria": "NO",
+  "creditApplicationScore": 0,
+  "customerType": "DIGITAL",
+  "applicationStatus": "rejected",
+  "emailEntityId": "alexandracueva0811@gmail.com",
+  "merchantId": "41f4d599-0492-4439-ada7-beab10bd602b",
+  "flag3DS": "N",
+  "homeAddress": {
+    "country": "PER",
+    "townName": "LIMA",
+    "countrySubDivision": "LIMA",
+    "addressLine1": "JR.|SAN FRANCISCO||||||A|04"
+  },
+  "eventId": "2128ebcc-6647-44b3-b2af-df45039ce25b_1772683820.398273",
+  "nrovecescambiocard": 0,
+  "numberInstallments": 6,
+  "captureDateTime": "2026-03-04T23:10:13.628116-05:00",
+  "countryRegion": "PER",
+  "dniuserstore": "75503630",
+  "Fallecido": "NO",
+  "eventType": "fullApplicationNRT",
+  "deviceEntityId": "b2f71a6d-9236-4898-94fe-3b073c3a95f9",
+  "personalEntityId": "71541837",
+  "homeEmail": "alexandracueva0811@gmail.com",
+  "msgReason": "3005",
+  "msgStatus": "402",
+  "msgStatusReason": "Fraud risk detected by anti-fraud system",
+  "msgType": "3005",
+  "mobilePhone": {
+    "number": "935224561",
+    "countryRegionCode": "51"
+  },
+  "nationality": "PE",
+  "cardId": "0070a15a218d25fc60925f5ed23e1fd12aacfaba6f49cc524d40961cde080a04",
+  "name": {
+    "surname": "Cueva Diaz",
+    "givenName": "Alexandra",
+    "fullName": "Alexandra Cueva Diaz",
+    "middleName": ""
+  },
+  "applicationId": "XD8KDEMN1ZFT",
+  "applicantCityEntityId": "Lima",
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/409.0.872648028 Mobile/15E148 Safari/604.1",
+    "ipAddress": "170.0.80.70",
+    "ipAddressV4": "170.0.80.70"
+  },
+  "applicationDate": "2026-03-04",
+  "merchantShortName": "USIL",
+  "telephoneNumber": "935224561",
+  "gender": "F",
+  "thirdPartyRiskScore": 4,
+  "customerOnboardDate": "2026-03-02",
+  "customerEntityId": "8a6107ad-1160-4c48-b0e8-0ece6aebafa2",
+  "session": {
+    "sessionStartTime": "2026-03-05T04:10:15.395474+00:00",
+    "sessionId": "lNoOWvqW0l75QKt06Td30op7hd0nJD2r"
+  },
+  "numberPaidLoans": 0,
+  "totalTimeDuringApplicationSubmissionInSeconds": 103.549219,
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "71541837"
+  },
+  "applicationChannel": "ONLINE",
+  "submissionDateTime": "2026-03-04T23:10:13.645210-05:00",
+  "cardEntityId": "0070a15a218d25fc60925f5ed23e1fd12aacfaba6f49cc524d40961cde080a04",
+  "customerId": "8a6107ad-1160-4c48-b0e8-0ece6aebafa2",
+  "eventTime": "2026-03-04T23:10:20.396437-05:00",
+  "merchantCountry": "PER",
+  "amount": {
+    "baseValue": 3968.61,
+    "currency": "PER",
+    "value": 3968.61,
+    "baseCurrency": "PER"
+  },
+  "schemaVersion": 1,
+  "dateOfBirth": "1996-11-08",
+  "customerNumber": "2X35JNQ5WMDR",
+  "cardholder": "Alexandra Cueva Diaz",
+  "numberActiveLoans": 0,
+  "merchantActivityStatus": "enabled",
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "ppm": 2448.11,
+    "scoreKYC": 100,
+    "effort_rate": 50.21
+  },
+  "merchantCategoryCode": "8220",
+  "tenantId": "Powerpay",
+  "amountInstallment": {
+    "baseValue": 734.98,
+    "currency": "PER",
+    "value": 734.98,
+    "baseCurrency": "PER"
+  },
+  "lastnameuserstore": "BARAHONA NEYRA",
+  "age": 29
+}

@@ -1,0 +1,1 @@
+ALTER TABLE fact_event ADD COLUMN IF NOT EXISTS error_message TEXT NULL;
