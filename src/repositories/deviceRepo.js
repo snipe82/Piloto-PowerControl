@@ -1,32 +1,24 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function upsertDevice(payload) {
-    const fingerprint = payload.device?.devicefingerprint
-        || payload.device?.deviceFingerprint
-        || null;
-
-    const query = `
+  const rows = await db.query(`
     INSERT INTO dim_device (
-      device_id, device_fingerprint, ip_address,
-      user_agent, first_seen, last_seen
+      device_id, device_fingerprint, ip_address, last_seen
     )
-    VALUES ($1,$2,$3,$4,NOW(),NOW())
-    ON CONFLICT (device_fingerprint)
+    VALUES ($1,$2,$3,NOW())
+    ON CONFLICT (device_id)
     DO UPDATE SET
-      ip_address = EXCLUDED.ip_address,
-      last_seen  = NOW()
+      device_fingerprint = COALESCE(EXCLUDED.device_fingerprint, dim_device.device_fingerprint),
+      ip_address         = COALESCE(EXCLUDED.ip_address, dim_device.ip_address),
+      last_seen          = NOW()
     RETURNING device_id
-  `;
+  `, [
+    payload.deviceid,
+    payload.device?.devicefingerprint || null,
+    payload.device?.ipaddress || null,
+  ]);
 
-    const values = [
-        payload.deviceid,
-        fingerprint,
-        payload.device?.ipaddress || payload.device?.ipAddress || null,
-        fingerprint, // user_agent es el mismo que el fingerprint en la trama
-    ];
-
-    const result = await pool.query(query, values);
-    return result.rows[0].device_id;
+  return rows[0].device_id;
 }
 
 module.exports = { upsertDevice };

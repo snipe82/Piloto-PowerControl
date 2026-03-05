@@ -1,7 +1,11 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function upsertApplication(payload, refs) {
-  const query = `
+  const creditScore = payload.creditapplicationscore !== undefined
+    ? parseInt(payload.creditapplicationscore) || 0
+    : null;
+
+  const rows = await db.query(`
     INSERT INTO fact_application (
       application_id, event_id, customer_id, merchant_id,
       merchant_user_dni, card_id, device_id, session_id,
@@ -29,13 +33,7 @@ async function upsertApplication(payload, refs) {
       loan_reference         = EXCLUDED.loan_reference,
       loan_state             = EXCLUDED.loan_state
     RETURNING application_id
-  `;
-
-  const creditScore = payload.creditapplicationscore !== undefined
-    ? parseInt(payload.creditapplicationscore) || 0
-    : null;
-
-  const values = [
+  `, [
     payload.applicationid,
     refs.eventId,
     refs.customerId,
@@ -63,10 +61,9 @@ async function upsertApplication(payload, refs) {
     payload.flag3ds || null,
     payload.loanreference || null,
     payload.loanstate || null,
-  ];
+  ]);
 
-  const result = await pool.query(query, values);
-  return result.rows[0].application_id;
+  return rows[0].application_id;
 }
 
 module.exports = { upsertApplication };

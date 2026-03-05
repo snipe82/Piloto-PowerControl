@@ -1,0 +1,386 @@
+
+GET http://localhost:3015/api/v1/health
+
+###### Test RT - Trama de crédito
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "eventid": "26227a46-a948-4088-8145-2350188e02b9_1772206127",
+  "applicationid": "VUZ3TCUAHTOT",
+  "customerid": "1aa8485e-698f-44fa-aaff-868b2e853a2e",
+  "merchantid": "f2162aab-86b1-4623-82b9-978bbf4c3b08",
+  "deviceid": "05dd3ed5-3604-42e4-aa5c-a1ca57e26893",
+  "eventtype": "fullApplicationNRT",
+  "submissiondatetime": "2026-02-27T10:26:25.740120-05:00",
+  "applicationdate": "2026-02-27",
+  "amount": { "value": 734.4, "currency": "PER" },
+  "customeridentification": { "documenttype": "DNI", "documentnumber": "42079472" },
+  "session": {
+    "sessionid": "pZcIRCXS84EKqQeb2wYd0HBKbdt5u6pK",
+    "sessionstarttime": "2026-02-27T15:28:37.150303+00:00"
+  },
+  "device": { "ipaddress": "179.6.144.143" },
+  "biometria": "NO",
+  "fallecido": "NO"
+}
+
+#### Test NRT - Trama de pago
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "eventid": "ab89289f-a1a6-4fd4-ba1c-baff0d2ef035_1756897475",
+  "applicationid": "FQWS0XHDXIKZ",
+  "customerid": "b6bad796-d140-42fc-a656-75ce4fcb1b69",
+  "merchantid": "243d5f7c-a8fc-465b-ac9b-646e59cb4ae8",
+  "deviceid": "930576ac-b0fa-45bb-92e2-966a1d333715",
+  "eventtype": "fullApplicationNRT",
+  "submissiondatetime": "2025-08-03T14:33:27.545063-05:00",
+  "applicationdate": "2025-08-03",
+  "amount": { "value": 503.86, "currency": "PER" },
+  "customeridentification": { "documenttype": "DNI", "documentnumber": "47462118" },
+  "session": {
+    "sessionid": "RA0GlEXZtdbAMZK0RQdF1trE4th4NrEg",
+    "sessionstarttime": "2025-08-03T19:34:40.174439+00:00"
+  },
+  "device": { "ipaddress": "38.253.147.184" },
+  "payments": {
+    "createdAt": "2025-09-03T05:32:15.652527-05:00",
+    "statusPayment": "pending",
+    "paymentsAmount": { "value": 90.71, "currency": "PER" }
+  }
+}
+
+### Test sin API Key - debe dar 401
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+
+{
+  "eventid": "test-sin-auth"
+}
+
+### Test payload inválido - debe dar 400
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "eventid": "test-invalido"
+}
+
+
+
+### Test RT — Trama real Powerpay
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+    "affordability": {
+      "totalcreditlimit": {
+        "basecurrency": "PER",
+        "basevalue": 55400,
+        "currency": "PER",
+        "value": 55400
+      }
+    },
+    "age": 24,
+    "amount": {
+      "basecurrency": "PER",
+      "basevalue": 6119,
+      "currency": "PER",
+      "value": 6119
+    },
+    "amountinstallment": {
+      "basecurrency": "PER",
+      "basevalue": 2039.67,
+      "currency": "PER",
+      "value": 2039.67
+    },
+    "applicantcityentityid": "Chiclayo",
+    "applicationchannel": "POINT_OF_SALE",
+    "applicationdate": "2026-02-26",
+    "applicationid": "4M9E4GAWSP6T",
+    "applicationstatus": "pending",
+    "applicationtype": "POWERPAY",
+    "biometria": "SI",
+    "capturedatetime": "2026-02-26T20:43:00.587056-05:00",
+    "cardholder": "Oscar Cardozo Rengifo",
+    "cardid": "339ce28c7cc1f47446c5692c42723b16b8a79d9173bb7e958f9975bcbfc02ab2",
+    "cardtoken": "[filter] -> <class 'str'>",
+    "countryregion": "PER",
+    "creditapplicationscore": "0",
+    "customerid": "21bf5d60-744d-44c5-be3f-2f80c07324b8",
+    "customeridentification": {
+      "documentnumber": "77238890",
+      "documenttype": "DNI"
+    },
+    "customernumber": "0F8MTCRA22PO",
+    "customeronboarddate": "2025-11-29",
+    "customertype": "PHYSICAL",
+    "dateofbirth": "2001-04-30",
+    "device": {
+      "devicefingerprint": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_3_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/145.0.7632.108 Mobile/15E148 Safari/604.1",
+      "ipaddress": "38.250.131.55",
+      "ipaddressv4": "38.250.131.55"
+    },
+    "deviceid": "2c8224c1-5210-4d8f-968b-24f2c7d11f46",
+    "emailentityid": "oscardaniel82001@hotmail.com",
+    "eventid": "8cdb5967-4607-4c90-8f83-c8c9dcbf6255_1772156584.356494",
+    "eventtime": "2026-02-26T20:43:04.354663-05:00",
+    "eventtype": "fullApplicationRT",
+    "fallecido": "NO",
+    "flag3ds": "N",
+    "gender": "M",
+    "homeaddress": {
+      "addressline1": "AV.|AUGUSTO B.LEGUIA|1173||||||",
+      "country": "PER",
+      "countrysubdivision": "LAMBAYEQUE",
+      "townname": "CHICLAYO"
+    },
+    "homeemail": "oscardaniel82001@hotmail.com",
+    "merchantactivitystatus": "enabled",
+    "merchantcategorycode": "5732",
+    "merchantcountry": "PER",
+    "merchantid": "228aaee1-b6b2-4d57-9466-b3cad9c2258b",
+    "merchantshortname": "Mac Center",
+    "mobilephone": {
+      "countryregioncode": "51",
+      "number": "931024928"
+    },
+    "name": {
+      "fullname": "Oscar Daniel Cardozo Rengifo",
+      "givenname": "Oscar",
+      "middlename": "Daniel",
+      "surname": "Cardozo Rengifo"
+    },
+    "nationality": "PE",
+    "nrovecescambiocard": 0,
+    "numberactiveloans": 1,
+    "numberinstallments": 3,
+    "numberpaidloans": 2,
+    "personalentityid": "77238890",
+    "salespersonentityid": "255772",
+    "schemaversion": 1,
+    "session": {
+      "sessionid": "JQGDLU8dhGw4YiCTz9GMh4lCCzXrgZbs",
+      "sessionstarttime": "2026-02-27T01:43:02.779108+00:00"
+    },
+    "submissiondatetime": "2026-02-26T20:43:00.603309-05:00",
+    "telephonenumber": "931024928",
+    "tenantid": "Powerpay",
+    "thirdpartykyc": {
+      "effort_rate": 15.41,
+      "ppm": 754.34,
+      "scorekyc": 100,
+      "statusburo": "approved"
+    },
+    "thirdpartyriskscore": 3,
+    "totaltimeduringapplicationsubmissioninseconds": 188.061717
+  }
+
+
+  ### Test NRT — Trama real Powerpay ###
+###
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "affordability": { "totalcreditlimit": { "basecurrency": "PER", "basevalue": 55400, "currency": "PER", "value": 55400 } },
+  "age": 24,
+  "amount": { "basecurrency": "PER", "basevalue": 6119, "currency": "PER", "value": 6119 },
+  "amountinstallment": { "basecurrency": "PER", "basevalue": 2039.67, "currency": "PER", "value": 2039.67 },
+  "applicantcityentityid": "Chiclayo",
+  "applicationchannel": "POINT_OF_SALE",
+  "applicationdate": "2026-02-26",
+  "applicationid": "4M9E4GAWSP6T",
+  "applicationstatus": "completed",
+  "applicationtype": "POWERPAY",
+  "biometria": "SI",
+  "capturedatetime": "2026-02-26T20:43:00.587056-05:00",
+  "cardholder": "Oscar Cardozo Rengifo",
+  "cardid": "339ce28c7cc1f47446c5692c42723b16b8a79d9173bb7e958f9975bcbfc02ab2",
+  "cardtoken": "[filter] -> <class 'str'>",
+  "countryregion": "PER",
+  "creditapplicationscore": 0,
+  "customerid": "21bf5d60-744d-44c5-be3f-2f80c07324b8",
+  "customeridentification": { "documentnumber": "77238890", "documenttype": "DNI" },
+  "customernumber": "0F8MTCRA22PO",
+  "customeronboarddate": "2025-11-29",
+  "customertype": "PHYSICAL",
+  "dateofbirth": "2001-04-30",
+  "device": {
+    "devicefingerprint": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_3_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/145.0.7632.108 Mobile/15E148 Safari/604.1",
+    "ipaddress": "38.250.131.55",
+    "ipaddressv4": "38.250.131.55"
+  },
+  "deviceid": "2c8224c1-5210-4d8f-968b-24f2c7d11f46",
+  "emailentityid": "oscardaniel82001@hotmail.com",
+  "eventid": "8cdb5967-4607-4c90-8f83-c8c9dcbf6255_1772156594.719882",
+  "eventtime": "2026-02-26T20:43:14.717808-05:00",
+  "eventtype": "fullApplicationNRT",
+  "fallecido": "NO",
+  "flag3ds": "N",
+  "gender": "M",
+  "homeaddress": {
+    "addressline1": "AV.|AUGUSTO B.LEGUIA|1173||||||",
+    "country": "PER",
+    "countrysubdivision": "LAMBAYEQUE",
+    "townname": "CHICLAYO"
+  },
+  "homeemail": "oscardaniel82001@hotmail.com",
+  "loanreference": "7YQH4XYKUEFY",
+  "loanstate": "active",
+  "merchantactivitystatus": "enabled",
+  "merchantcategorycode": "5732",
+  "merchantcountry": "PER",
+  "merchantid": "228aaee1-b6b2-4d57-9466-b3cad9c2258b",
+  "merchantshortname": "Mac Center",
+  "mobilephone": { "countryregioncode": "51", "number": "931024928" },
+  "name": { "fullname": "Oscar Daniel Cardozo Rengifo", "givenname": "Oscar", "middlename": "Daniel", "surname": "Cardozo Rengifo" },
+  "nationality": "PE",
+  "nrovecescambiocard": 0,
+  "numberactiveloans": 2,
+  "numberinstallments": 3,
+  "numberpaidloans": 2,
+  "personalentityid": "77238890",
+  "salespersonentityid": "255772",
+  "schemaversion": 1,
+  "session": { "sessionid": "JQGDLU8dhGw4YiCTz9GMh4lCCzXrgZbs", "sessionstarttime": "2026-02-27T01:43:02.779108+00:00" },
+  "submissiondatetime": "2026-02-26T20:43:00.603309-05:00",
+  "telephonenumber": "931024928",
+  "tenantid": "Powerpay",
+  "thirdpartykyc": { "effort_rate": 15.41, "ppm": 754.34, "scorekyc": 100, "statusburo": "approved" },
+  "thirdpartyriskscore": 3,
+  "totaltimeduringapplicationsubmissioninseconds": 197.34244
+}
+
+### Test NRT — Trama de pago real Powerpay
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "loanreference": "H1LZA8B03ZVN",
+  "deviceId": "fe51517f-3ae3-400c-8032-fafaac53ca41",
+  "cardToken": "kv9pu4wti3z2sfult1vk",
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 1150,
+      "currency": "PER",
+      "value": 1150,
+      "baseCurrency": "PER"
+    }
+  },
+  "Biometria": "NO",
+  "creditApplicationScore": 0,
+  "customerType": "PHYSICAL",
+  "applicationStatus": "completed",
+  "emailEntityId": "melissaqm015@gmail.com",
+  "merchantId": "044e72b2-34b3-4689-848a-c5ff6349175e",
+  "flag3DS": "N",
+  "homeAddress": {
+    "country": "PER",
+    "townName": "LIMA",
+    "countrySubDivision": "LIMA",
+    "addressLine1": "|MZ G LOTE 1 FLORES DE VILLA SECTOR III GRUPO 8|||||||"
+  },
+  "eventId": "4c83282c-c59a-4282-8524-48bdbf5dde36_1772240726.849036",
+  "nrovecescambiocard": 1,
+  "numberInstallments": 3,
+  "captureDateTime": "2026-02-08T22:16:49.079443-05:00",
+  "countryRegion": "PER",
+  "salespersonEntityId": "184173",
+  "Fallecido": "NO",
+  "eventType": "fullApplicationNRT",
+  "personalEntityId": "46053541",
+  "homeEmail": "melissaqm015@gmail.com",
+  "mobilePhone": {
+    "number": "931688814",
+    "countryRegionCode": "51"
+  },
+  "nationality": "PE",
+  "cardId": "05b3704e94e7a4a266e279b0cd3ad8dba2ea505bec0efc025b855b40a9033da4",
+  "name": {
+    "surname": "Quispe Morales",
+    "givenName": "Melissa",
+    "fullName": "Melissa Meisu Quispe Morales",
+    "middleName": "Meisu"
+  },
+  "applicationId": "77ZMKOIETDEZ",
+  "applicantCityEntityId": "Lima",
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/29.0 Chrome/136.0.0.0 Mobile Safari/537.36",
+    "ipAddress": "132.251.2.174",
+    "ipAddressV4": "132.251.2.174"
+  },
+  "applicationDate": "2026-02-08",
+  "merchantShortName": "CONVERSE",
+  "msgType": "",
+  "telephoneNumber": "931688814",
+  "gender": "F",
+  "thirdPartyRiskScore": 4,
+  "customerOnboardDate": "2025-09-30",
+  "customerEntityId": "c4811961-41cd-42bb-86b3-bb2facda4072",
+  "session": {
+    "sessionStartTime": "2026-02-27T20:05:17.349156-05:00",
+    "sessionId": "fc1c0e0893274a36be624150075e089c"
+  },
+  "payments": {
+    "createdAt": "2026-02-27T20:05:17.349156-05:00",
+    "statusPayment": "completed",
+    "prePaymentType": "manual",
+    "paymentsAmount": {
+      "baseValue": 116.63,
+      "currency": "PER",
+      "value": 116.63,
+      "baseCurrency": "PER"
+    }
+  },
+  "numberPaidLoans": 0,
+  "totalTimeDuringApplicationSubmissionInSeconds": 173.215599,
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "46053541"
+  },
+  "msgStatus": "",
+  "applicationChannel": "POINT_OF_SALE",
+  "submissionDateTime": "2026-02-08T22:16:49.092037-05:00",
+  "cardEntityId": "05b3704e94e7a4a266e279b0cd3ad8dba2ea505bec0efc025b855b40a9033da4",
+  "customerId": "c4811961-41cd-42bb-86b3-bb2facda4072",
+  "eventTime": "2026-02-27T20:05:26.847219-05:00",
+  "merchantCountry": "PER",
+  "loanstate": "active",
+  "amount": {
+    "baseValue": 349.9,
+    "currency": "PER",
+    "value": 349.9,
+    "baseCurrency": "PER"
+  },
+  "schemaVersion": 1,
+  "dateOfBirth": "1989-01-02",
+  "customerNumber": "CE72FSAFO1YD",
+  "cardholder": "Melissa Meisu Quispe Morales",
+  "numberActiveLoans": 5,
+  "merchantActivityStatus": "enabled",
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "ppm": 31.19,
+    "scoreKYC": 100,
+    "effort_rate": 1.07
+  },
+  "merchantCategoryCode": "5621",
+  "tenantId": "Powerpay",
+  "amountInstallment": {
+    "baseValue": 116.63,
+    "currency": "PER",
+    "value": 116.63,
+    "baseCurrency": "PER"
+  },
+  "age": 36
+}

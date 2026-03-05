@@ -1,11 +1,9 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function upsertUserMerchant(payload, merchantId) {
-  // Solo procesamos si viene dniuserstore (compra online)
-  // Si viene salespersonentityid (compra en tienda) o no viene nada → ignoramos
   if (!payload.dniuserstore) return null;
 
-  const query = `
+  await db.query(`
     INSERT INTO dim_merchant_user (
       merchant_id, dni_user_comercio,
       first_name_user_comercio, last_name_user_comercio
@@ -15,16 +13,13 @@ async function upsertUserMerchant(payload, merchantId) {
     DO UPDATE SET
       first_name_user_comercio = EXCLUDED.first_name_user_comercio,
       last_name_user_comercio  = EXCLUDED.last_name_user_comercio
-  `;
-
-  const values = [
+  `, [
     merchantId,
     payload.dniuserstore,
     payload.firstnameuserstore || null,
     payload.lastnameuserstore || null,
-  ];
+  ]);
 
-  await pool.query(query, values);
   return payload.dniuserstore;
 }
 

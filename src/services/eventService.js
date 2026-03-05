@@ -9,6 +9,8 @@ const applicationRepo = require('../repositories/applicationRepo');
 const paymentRepo = require('../repositories/paymentRepo');
 const { executeRules } = require('./ruleEngine');
 const { insertAlerts, formatAlerts } = require('./alertService');
+const { getAlertsByEvent } = require('../repositories/eventRepo');
+
 
 function isPayment(payload) {
     return !!payload.payments;
@@ -17,7 +19,28 @@ function isPayment(payload) {
 async function processRT(payload, mode = 'fullApplicationRT') {
     const { event_id, duplicate } = await eventRepo.insertEvent(payload);
     if (duplicate) {
-        return { eventId: event_id, duplicate: true, rulesActivated: [], blocked: false };
+        // Consultar alertas existentes para este evento
+        const existingAlerts = await getAlertsByEvent(event_id);
+        const rulesActivated = existingAlerts.map(a => ({
+            alertId: a.alert_id,
+            ruleCode: a.rule_code,
+            ruleName: a.rule_name,
+            severity: a.severity,
+            blocks: a.blocks_operation,
+            status: a.status,
+            createdAt: a.created_at,
+        }));
+
+        const blocked = rulesActivated.some(r => r.blocks);
+
+        console.warn(`⚠️  Evento duplicado — devolviendo ${rulesActivated.length} alerta(s) existente(s): ${event_id}`);
+
+        return {
+            eventId: event_id,
+            duplicate: true,
+            rulesActivated,
+            blocked,
+        };
     }
 
     try {

@@ -1,32 +1,22 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function upsertSession(payload, deviceId) {
-  const sessionId = payload.session?.sessionid
-    || payload.session?.sessionId;
+  if (!payload.session?.sessionid) return null;
 
-  if (!sessionId) return null;
-
-  const query = `
-    INSERT INTO dim_session (
-      session_id, device_id, session_start_time
-    )
+  const rows = await db.query(`
+    INSERT INTO dim_session (session_id, device_id, session_start_time)
     VALUES ($1,$2,$3)
     ON CONFLICT (session_id)
     DO UPDATE SET
       session_start_time = EXCLUDED.session_start_time
     RETURNING session_id
-  `;
-
-  const values = [
-    sessionId,
+  `, [
+    payload.session.sessionid,
     deviceId,
-    payload.session?.sessionstarttime
-    || payload.session?.sessionStartTime
-    || null,
-  ];
+    payload.session.sessionstarttime || null,
+  ]);
 
-  await pool.query(query, values);
-  return sessionId;
+  return rows[0].session_id;
 }
 
 module.exports = { upsertSession };

@@ -1,7 +1,7 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function upsertCustomer(payload) {
-  const query = `
+  const rows = await db.query(`
     INSERT INTO dim_customer (
       customer_id, customer_number, document_type, document_number,
       first_name, middle_name, last_name, full_name,
@@ -23,9 +23,7 @@ async function upsertCustomer(payload) {
       customer_type   = EXCLUDED.customer_type,
       fallecido       = EXCLUDED.fallecido
     RETURNING customer_id
-  `;
-
-  const values = [
+  `, [
     payload.customerid,
     payload.customernumber || null,
     payload.customeridentification?.documenttype || null,
@@ -41,11 +39,10 @@ async function upsertCustomer(payload) {
     payload.nationality || null,
     payload.customeronboarddate || null,
     payload.customertype || null,
-    payload.fallecido === 'SI',
-  ];
+    payload.fallecido === 'si',
+  ]);
 
-  const result = await pool.query(query, values);
-  return result.rows[0].customer_id;
+  return rows[0].customer_id;
 }
 
 module.exports = { upsertCustomer };

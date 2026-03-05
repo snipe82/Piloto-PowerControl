@@ -1,30 +1,22 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function upsertCard(payload, customerId) {
-    // Si no viene card_id no insertamos
-    if (!payload.cardid && !payload.cardId) return null;
+  if (!payload.cardid) return null;
 
-    const cardId = payload.cardid || payload.cardId;
-
-    const query = `
-    INSERT INTO dim_card (
-      card_id, customer_id, cardholder
-    )
+  const rows = await db.query(`
+    INSERT INTO dim_card (card_id, customer_id, cardholder)
     VALUES ($1,$2,$3)
     ON CONFLICT (card_id)
     DO UPDATE SET
-      cardholder = EXCLUDED.cardholder
+      cardholder = COALESCE(EXCLUDED.cardholder, dim_card.cardholder)
     RETURNING card_id
-  `;
+  `, [
+    payload.cardid,
+    customerId,
+    payload.cardholder || null,
+  ]);
 
-    const values = [
-        cardId,
-        customerId,
-        payload.cardholder || null,
-    ];
-
-    const result = await pool.query(query, values);
-    return result.rows[0].card_id;
+  return rows[0].card_id;
 }
 
 module.exports = { upsertCard };

@@ -1,41 +1,35 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function insertPayment(payload, refs) {
-    const p = payload.payments;
-    if (!p) return null;
+  if (!payload.payments) return null;
 
-    const query = `
+  const p = payload.payments;
+
+  const rawStatus = (p.statuspayment || p.status || '').toLowerCase();
+  let paymentStatus = 'PENDING';
+  if (rawStatus === 'completed' || rawStatus === 'success') paymentStatus = 'SUCCESS';
+  if (rawStatus === 'failed') paymentStatus = 'FAILED';
+
+  const rows = await db.query(`
     INSERT INTO fact_payment (
       event_id, application_id, customer_id,
-      payment_datetime, payment_status,
-      amount, currency
+      amount, currency,
+      payment_status, payment_datetime
     )
     VALUES ($1,$2,$3,$4,$5,$6,$7)
+    ON CONFLICT DO NOTHING
     RETURNING payment_id
-  `;
+  `, [
+    refs.eventId,
+    payload.applicationid,
+    refs.customerId,
+    p.paymentsamount?.value || null,
+    p.paymentsamount?.currency || null,
+    paymentStatus,
+    p.createdat || payload.submissiondatetime || null,
+  ]);
 
-    // Normalizar status al CHECK del DDL: PENDING/FAILED/SUCCESS
-    const statusMap = {
-        pending: 'PENDING',
-        failed: 'FAILED',
-        success: 'SUCCESS',
-        completed: 'SUCCESS',
-    };
-    const rawStatus = (p.statusPayment || p.statuspayment || '').toLowerCase();
-    const status = statusMap[rawStatus] || 'PENDING';
-
-    const values = [
-        refs.eventId,
-        payload.applicationid,
-        refs.customerId,
-        p.createdAt || p.createdat || null,
-        status,
-        p.paymentsAmount?.value || p.paymentsamount?.value || null,
-        p.paymentsAmount?.currency || p.paymentsamount?.currency || null,
-    ];
-
-    const result = await pool.query(query, values);
-    return result.rows[0].payment_id;
+  return rows[0]?.payment_id || null;
 }
 
 module.exports = { insertPayment };

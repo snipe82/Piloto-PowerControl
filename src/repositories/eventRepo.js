@@ -1,60 +1,70 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 const crypto = require('crypto');
 
-// Genera hash SHA256 del payload para control de idempotencia
-function generateHash(payload) {
-    return crypto
-        .createHash('sha256')
-        .update(JSON.stringify(payload))
-        .digest('hex');
+function hashPayload(payload) {
+  return crypto
+    .createHash('sha256')
+    .update(JSON.stringify(payload))
+    .digest('hex');
 }
 
 async function insertEvent(payload) {
-    const hash = generateHash(payload);
+  const hash = hashPayload(payload);
 
-    const query = `
-    INSERT INTO fact_event (
-      event_id, event_type, application_id, customer_id,
-      received_at, status, payload, hash
-    )
-    VALUES ($1, $2, $3, $4, NOW(), 'RAW', $5, $6)
+  const rows = await db.query(`
+    INSERT INTO fact_event (event_id, event_type, payload, hash)
+    VALUES ($1, $2, $3, $4)
     ON CONFLICT (hash) DO NOTHING
-    RETURNING event_id, status
-  `;
+    RETURNING event_id
+  `, [
+    payload.eventid,
+    payload.eventtype,
+    JSON.stringify(payload),
+    hash,
+  ]);
 
-    const values = [
-        payload.eventid,
-        payload.eventtype,
-        payload.applicationid,
-        payload.customerid,
-        JSON.stringify(payload),
-        hash,
-    ];
+  if (rows.length === 0) {
+    console.warn(`⚠️  Evento duplicado ignorado: ${payload.eventid}`);
+    return { event_id: payload.eventid, duplicate: true };
+  }
 
-    const result = await pool.query(query, values);
-
-    // Si no retornó filas es porque ya existía (duplicado)
-    if (result.rows.length === 0) {
-        console.log(`⚠️  Evento duplicado ignorado: ${payload.eventid}`);
-        return { event_id: payload.eventid, duplicate: true };
-    }
-
-    return { event_id: result.rows[0].event_id, duplicate: false };
+  return { event_id: rows[0].event_id, duplicate: false };
 }
 
 async function markProcessed(eventId) {
-    await pool.query(
-        `UPDATE fact_event SET status = 'PROCESSED', processed_at = NOW() WHERE event_id = $1`,
-        [eventId]
-    );
+  await db.query(`
+    UPDATE fact_event
+    SET status = 'PROCESSED', processed_at = NOW()
+    WHERE event_id = $1
+  `, [eventId]);
 }
 
 async function markError(eventId, errorMsg) {
-    await pool.query(
-        `UPDATE fact_event SET status = 'ERROR', processed_at = NOW() WHERE event_id = $1`,
-        [eventId]
-    );
-    console.error(`❌ Evento marcado como ERROR: ${eventId} — ${errorMsg}`);
+  console.error(`❌ Evento marcado como ERROR: ${eventId} — ${errorMsg}`);
+  await db.query(`
+    UPDATE fact_event
+    SET status = 'ERROR'
+    WHERE event_id = $1
+  `, [eventId]);
 }
 
-module.exports = { insertEvent, markProcessed, markError };
+async function getAlertsByEvent(eventId) {
+  const rows = await db.query(`
+    SELECT 
+      fa.alert_id,
+      fa.rule_code,
+      fa.severity,
+      fa.status,
+      fa.created_at,
+      dr.rule_name,
+      dr.blocks_operation
+    FROM fact_alert fa
+    JOIN dim_rule dr ON dr.rule_code = fa.rule_code
+    WHERE fa.event_id = $1
+      AND fa.status = 'OPEN'
+  `, [eventId]);
+
+  return rows;
+}
+
+module.exports = { insertEvent, markProcessed, markError, getAlertsByEvent };

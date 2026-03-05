@@ -1,26 +1,8 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 function evaluateResult(rows) {
     if (!rows || rows.length === 0) return false;
     return (parseInt(rows[0].total) || 0) > 0;
-}
-
-// Inyecta los valores del payload directamente en el SQL
-// evitando el problema de tipos con parámetros posicionales
-function injectParams(querySql, payload) {
-    let sql = querySql;
-
-    // Reemplazar con valores literales escapados
-    sql = sql.replace(/\$1::uuid/g, `'${payload.customerid}'::uuid`);
-    sql = sql.replace(/\$1/g, `'${payload.customerid}'`);
-    sql = sql.replace(/\$2::varchar/g, `'${payload.applicationid}'`);
-    sql = sql.replace(/\$2/g, `'${payload.applicationid}'`);
-    sql = sql.replace(/\$3::uuid/g, `'${payload.deviceid}'::uuid`);
-    sql = sql.replace(/\$3/g, `'${payload.deviceid}'`);
-    sql = sql.replace(/\$4::uuid/g, `'${payload.merchantid}'::uuid`);
-    sql = sql.replace(/\$4/g, `'${payload.merchantid}'`);
-
-    return sql;
 }
 
 async function executeRule(rule, payload) {
@@ -31,10 +13,16 @@ async function executeRule(rule, payload) {
         }, 200);
 
         try {
-            const sql = injectParams(rule.query_sql, payload);
-            const result = await pool.query(sql);
+            const params = [
+                payload.customerid,    // $1
+                payload.applicationid, // $2
+                payload.deviceid,      // $3
+                payload.merchantid,    // $4
+            ];
+
+            const rows = await db.query(rule.query_sql, params);
             clearTimeout(timeout);
-            const activated = evaluateResult(result.rows);
+            const activated = evaluateResult(rows);
             if (activated) console.log(`🔍 ${rule.rule_code} activada`);
             resolve(activated ? rule : null);
         } catch (err) {
@@ -50,7 +38,7 @@ async function loadActiveRules(eventType) {
 
     console.log(`🔍 Cargando reglas para eventType: ${eventType} — columna: ${column}`);
 
-    const result = await pool.query(`
+    const rows = await db.query(`
     SELECT rule_code, rule_name, severity, blocks_operation, query_sql
     FROM dim_rule
     WHERE is_active = true
@@ -59,10 +47,10 @@ async function loadActiveRules(eventType) {
     ORDER BY priority ASC, rule_code ASC
   `);
 
-    console.log(`🔍 Reglas cargadas: ${result.rows.length}`);
-    result.rows.forEach(r => console.log(`   - ${r.rule_code}`));
+    console.log(`🔍 Reglas cargadas: ${rows.length}`);
+    rows.forEach(r => console.log(`   - ${r.rule_code}`));
 
-    return result.rows;
+    return rows;
 }
 
 async function executeRules(payload, eventType) {

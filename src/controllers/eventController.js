@@ -1,6 +1,7 @@
 const { validateEvent } = require('../validators/eventSchema');
 const { processRT, processNRT } = require('../services/eventService');
 const { buildARICResponse } = require('../services/responseBuilder');
+const { normalizeKeys } = require('../utils/normalizePayload');
 
 function isPayment(payload) {
     return !!payload.payments;
@@ -8,7 +9,8 @@ function isPayment(payload) {
 
 async function fullApplicationRT(req, res, next) {
     try {
-        const payload = validateEvent(req.body);
+        // Normalizar keys a lowercase antes de validar
+        const payload = validateEvent(normalizeKeys(req.body));
         const eventType = isPayment(payload) ? 'payment' : 'credit';
 
         console.log(`📥 RT | appId: ${payload.applicationid} | tipo: ${eventType}`);
@@ -25,18 +27,17 @@ async function fullApplicationRT(req, res, next) {
 
 async function fullApplicationNRT(req, res, next) {
     try {
-        const payload = validateEvent(req.body);
+        // Normalizar keys a lowercase antes de validar
+        const payload = validateEvent(normalizeKeys(req.body));
         const eventType = isPayment(payload) ? 'payment' : 'credit';
 
         console.log(`📥 NRT | appId: ${payload.applicationid} | tipo: ${eventType}`);
 
-        // Responder 204 inmediato — formato esperado por Powerpay
         res.status(200).json({
             body: '',
             status_code: 204,
         });
 
-        // Procesar en background
         setImmediate(() => {
             processNRT(payload, 'fullApplicationNRT').catch(err => {
                 console.error(`❌ Error NRT background appId: ${payload.applicationid} — ${err.message}`);
@@ -44,7 +45,6 @@ async function fullApplicationNRT(req, res, next) {
         });
 
     } catch (err) {
-        // Error de validación — formato de error esperado por Powerpay
         if (err.isJoi) {
             const details = err.details.map(d => d.message).join('\n');
             return res.status(400).json({
