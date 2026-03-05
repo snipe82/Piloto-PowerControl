@@ -43,9 +43,9 @@ async function markError(eventId, errorMsg) {
   console.error(`❌ Evento marcado como ERROR: ${eventId} — ${errorMsg}`);
   await db.query(`
     UPDATE fact_event
-    SET status = 'ERROR'
+    SET status = 'ERROR', processed_at = NOW(), error_message = $2
     WHERE event_id = $1
-  `, [eventId]);
+  `, [eventId, errorMsg]);
 }
 
 async function getAlertsByEvent(eventId) {
