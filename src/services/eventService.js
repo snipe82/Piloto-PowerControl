@@ -10,6 +10,8 @@ const paymentRepo = require('../repositories/paymentRepo');
 const { executeRules } = require('./ruleEngine');
 const { insertAlerts, formatAlerts } = require('./alertService');
 const { getAlertsByEvent } = require('../repositories/eventRepo');
+const { buildARICResponse } = require('./responseBuilder');
+
 
 function isPayment(payload) {
     return !!payload.payments;
@@ -70,6 +72,12 @@ async function processRT(payload, mode = 'fullApplicationRT') {
         // Procesado exitosamente — incluso si fue reintento de ERROR
         await eventRepo.markProcessed(event_id);
 
+        // Construir respuesta ARIC
+        const aricResponse = buildARICResponse(payload, formattedAlerts);
+
+        // Grabar respuesta en fact_event
+        await eventRepo.saveResponse(event_id, aricResponse);
+
         console.log(`✅ ${mode} procesado | appId: ${payload.applicationid} | tipo: ${isPayment(payload) ? 'pago' : 'crédito'}`);
 
         return {
@@ -78,6 +86,7 @@ async function processRT(payload, mode = 'fullApplicationRT') {
             customerId,
             rulesActivated: formattedAlerts,
             blocked,
+            aricResponse,  // ← devolver la respuesta para que el controller la use
         };
 
     } catch (err) {

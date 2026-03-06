@@ -1,0 +1,242 @@
+###
+  ### Test NRT — Prueba regla RP01 ###
+###
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "loanreference": "6CPBHACOBSIZ",
+  "firstnameuserstore": "Edwin",
+  "payment_concept": "electrodomésticos, Ropa",
+  "deviceId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+  "cardToken": "k46n4oxneks0sfd98lxk",
+
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 29100,
+      "currency": "PER",
+      "value": 29100,
+      "baseCurrency": "PER"
+    }
+  },
+
+  "correspondenceAddress": {
+    "country": "PER",
+    "addressLine1": "Jr. 20 de abril 1598"
+  },
+
+  "Biometria": "NO",
+  "customerType": "DIGITAL",
+  "creditApplicationScore": 0,
+  "applicationStatus": "completed",
+  "emailEntityId": "etorres2311@gmail.com",
+  "merchantId": "394b0772-3958-4330-af51-6e6a7a2ba1e9",
+
+  "maxMind": {
+    "cityDbCountryName": "Perú",
+    "cityDbLongitude": "-77.0305",
+    "cityDbLatitude": "-12.046",
+    "cityDbContinentName": "Sudamérica",
+    "cityDbPostalCode": "--",
+    "ispDbAutonomousSystemOrganization": "ENTEL PERU S.A.",
+    "cityDbRepresentedCountryType": "--",
+    "ispDbName": "Entel Peru",
+    "cityDbTimezone": "America/Lima",
+    "connectionType": "Cellular",
+    "cityDbCityName": "--",
+    "cityDbMetroCode": "--",
+    "ispDbMobileCountryCode": "716",
+    "cityDbGeoNamesIDs": "3932488",
+    "cityDbAccuracyRadius": "200",
+    "cityDbRegisteredCountry": "Perú",
+    "ispDbOrganizationName": "Entel Peru",
+    "cityDbSubdivisionsName1": "--",
+    "cityDbSubdivisionsName0": "Provincia de Lima",
+    "cityDbContinentCode": "SA",
+    "cityDbSubdivisionsCode0": "LMA",
+    "cityDbCountryCode": "PE",
+    "cityDbSubdivisionsCode1": "--",
+    "cityDbSubdivisionsName2": "--",
+    "cityDbSubdivisionsCode2": "--",
+    "ispDbMobileNetworkCode": "07",
+    "domainName": "--",
+    "ispDbAutonomousSystemNumber": "21575"
+  },
+
+  "_metadata": {
+    "eventId": "022d0414-2e28-4537-a714-3f7335ff1ee0_1772805927.02853",
+
+    "execution": {
+      "expectResponse": false
+    },
+
+    "maxMind_cityDbEuCountry": "false",
+    "systemEventId": "226229221-Gq6znh15",
+
+    "entities": {
+      "PARTY": ["09548301"],
+      "MOBILEPHONE": ["945788279"],
+      "IP": ["132.184.128.14"],
+      "APPLICATION": ["F3YKZ4IL59N2"],
+      "DEVICE": ["aa21587f-8e4a-45ff-a5e6-bc37555df338"],
+      "CUSTOMER": ["dc7ec455-b91a-4105-a0a0-8cfe3e740227"],
+      "MCC": ["5621"],
+      "EMAIL": ["etorres2311@gmail.com"],
+      "CARD": ["332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994"],
+      "MERCHANT": ["394b0772-3958-4330-af51-6e6a7a2ba1e9"]
+    },
+
+    "receivedTime": "2026-03-06T14:05:27Z",
+    "eventTime": "2026-03-06T14:05:27.026292Z",
+    "tenantId": ["Powerpay"],
+    "eventType": "fullApplicationNRT",
+
+    "searchable": {
+      "merchantShortName": "Invicta",
+      "eventId": "022d0414-2e28-4537-a714-3f7335ff1ee0_1772805927.02853",
+      "customerEntityId": "dc7ec455-b91a-4105-a0a0-8cfe3e740227",
+      "mccEntityId": "5621",
+      "merchantEntityId": "394b0772-3958-4330-af51-6e6a7a2ba1e9",
+      "eventType": "fullApplicationNRT",
+      "deviceEntityId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+      "deviceId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+      "msgStatus": "",
+      "customerIdentification": {
+        "documentNumber": "09548301"
+      },
+      "personalEntityId": "09548301",
+      "homeEmail": "etorres2311@gmail.com",
+      "emailEntityId": "etorres2311@gmail.com",
+      "mobilePhoneEntityId": "945788279",
+      "cardEntityId": "332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994",
+      "eventTime": "2026-03-06T14:05:27.026292Z",
+
+      "name": {
+        "fullName": "Edwin Jose Torres Panduro"
+      },
+
+      "applicationId": "F3YKZ4IL59N2",
+
+      "device": {
+        "ipAddress": "132.184.128.14",
+        "ipAddressV4": "132.184.128.14"
+      },
+
+      "applicationDate": "2026-03-06"
+    },
+
+    "maxMind_cityDbRegisteredEuCountry": "false"
+  },
+
+  "homeAddress": {
+    "country": "PER",
+    "townName": "MOYOBAMBA",
+    "countrySubDivision": "SAN MARTIN",
+    "addressLine1": "|||||CONJ.HAB.|ALONSO DE ALVARADO-FONAVI II|02|19"
+  },
+
+  "eventId": "022d0414-2e28-4537-a714-3f7335ff1ee0_1772805927.02853",
+  "nrovecescambiocard": 0,
+  "numberInstallments": 3,
+  "captureDateTime": "2026-03-06T09:03:40.365292-05:00",
+  "countryRegion": "PER",
+  "dniuserstore": "",
+  "Fallecido": "NO",
+  "eventType": "fullApplicationNRT",
+  "deviceEntityId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+  "personalEntityId": "09548301",
+  "homeEmail": "etorres2311@gmail.com",
+
+  "mobilePhone": {
+    "number": "945788279",
+    "countryRegionCode": "51"
+  },
+
+  "nationality": "PE",
+  "cardId": "332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994",
+
+  "name": {
+    "surname": "Torres Panduro",
+    "givenName": "Edwin",
+    "fullName": "Edwin Jose Torres Panduro",
+    "middleName": "Jose"
+  },
+
+  "applicationId": "F3YKZ4IL59N2",
+
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (Linux; Android 16; motorola edge 50 fusion Build/W1UUS36H.21-14-4-1-1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/145.0.7632.104 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/549.0.0.61.62;IABMV/1;]",
+    "ipAddress": "132.184.128.14",
+    "ipAddressV4": "132.184.128.14"
+  },
+
+  "lastnameuserstore": "Torres Panduro",
+  "applicationDate": "2026-03-06",
+  "merchantShortName": "Invicta",
+  "telephoneNumber": "945788279",
+  "msgType": "",
+  "customerOnboardDate": "2026-03-06",
+  "gender": "M",
+  "thirdPartyRiskScore": 3,
+  "customerEntityId": "dc7ec455-b91a-4105-a0a0-8cfe3e740227",
+
+  "session": {
+    "sessionStartTime": "2026-03-06T14:05:14.397351+00:00",
+    "sessionId": "kBagma50LToSQn6mrCIOnupk6lJXasmq"
+  },
+
+  "numberPaidLoans": 0,
+  "mccEntityId": "5621",
+  "totalTimeDuringApplicationSubmissionInSeconds": 278.901907,
+  "merchantEntityId": "394b0772-3958-4330-af51-6e6a7a2ba1e9",
+
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "09548301"
+  },
+
+  "applicationChannel": "ONLINE",
+  "msgStatus": "",
+  "submissionDateTime": "2026-03-06T09:03:40.384555-05:00",
+  "cardEntityId": "332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994",
+  "eventTime": "2026-03-06T09:05:27.026292-05:00",
+  "customerId": "dc7ec455-b91a-4105-a0a0-8cfe3e740227",
+  "merchantCountry": "PER",
+  "loanstate": "active",
+
+  "amount": {
+    "baseValue": 319,
+    "currency": "PER",
+    "value": 319,
+    "baseCurrency": "PER"
+  },
+
+  "schemaVersion": 1,
+  "dateOfBirth": "1971-11-23",
+  "customerNumber": "90OQE0ZBQABI",
+  "cardholder": "Edwin Torres Panduro",
+  "numberActiveLoans": 1,
+  "merchantActivityStatus": "enabled",
+
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "scoreKYC": 100,
+    "ppm": 1028.08,
+    "effort_rate": 73.18
+  },
+
+  "merchantCategoryCode": "5621",
+  "mobilePhoneEntityId": "945788279",
+  "tenantId": "Powerpay",
+
+  "amountInstallment": {
+    "baseValue": 106.33,
+    "currency": "PER",
+    "value": 106.33,
+    "baseCurrency": "PER"
+  },
+
+  "age": 54
+}

@@ -87,4 +87,12 @@ async function getAlertsByEvent(eventId) {
   return rows;
 }
 
-module.exports = { insertEvent, markProcessing, markProcessed, markError, getAlertsByEvent };
+async function saveResponse(eventId, responsePayload) {
+  await db.query(`
+    UPDATE fact_event
+    SET response_payload = $2
+    WHERE event_id = $1
+  `, [eventId, JSON.stringify(responsePayload)]);
+}
+
+module.exports = { insertEvent, markProcessing, markProcessed, markError, getAlertsByEvent, saveResponse };

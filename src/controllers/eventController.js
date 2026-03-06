@@ -9,7 +9,6 @@ function isPayment(payload) {
 
 async function fullApplicationRT(req, res, next) {
     try {
-        // Normalizar keys a lowercase antes de validar
         const payload = validateEvent(normalizeKeys(req.body));
         const eventType = isPayment(payload) ? 'payment' : 'credit';
 
@@ -17,8 +16,8 @@ async function fullApplicationRT(req, res, next) {
 
         const result = await processRT(payload, 'fullApplicationRT');
 
-        const aricResponse = buildARICResponse(payload, result.rulesActivated);
-        return res.status(200).json(aricResponse);
+        // Usar la respuesta ARIC ya construida en el service
+        return res.status(200).json(result.aricResponse);
 
     } catch (err) {
         next(err);
@@ -27,17 +26,18 @@ async function fullApplicationRT(req, res, next) {
 
 async function fullApplicationNRT(req, res, next) {
     try {
-        // Normalizar keys a lowercase antes de validar
         const payload = validateEvent(normalizeKeys(req.body));
         const eventType = isPayment(payload) ? 'payment' : 'credit';
 
         console.log(`📥 NRT | appId: ${payload.applicationid} | tipo: ${eventType}`);
 
+        // Responder inmediato
         res.status(200).json({
             body: '',
             status_code: 204,
         });
 
+        // Procesar en background — genera y graba trama ARIC igual que RT
         setImmediate(() => {
             processNRT(payload, 'fullApplicationNRT').catch(err => {
                 console.error(`❌ Error NRT background appId: ${payload.applicationid} — ${err.message}`);
