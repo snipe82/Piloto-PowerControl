@@ -4,14 +4,12 @@ const merchantRepo = require('../repositories/merchantRepo');
 const deviceRepo = require('../repositories/deviceRepo');
 const cardRepo = require('../repositories/cardRepo');
 const sessionRepo = require('../repositories/sessionRepo');
-const userMerchantRepo = require('../repositories/userMerchantRepo');
 const applicationRepo = require('../repositories/applicationRepo');
 const paymentRepo = require('../repositories/paymentRepo');
 const { executeRules } = require('./ruleEngine');
 const { insertAlerts, formatAlerts } = require('./alertService');
 const { getAlertsByEvent } = require('../repositories/eventRepo');
 const { buildARICResponse } = require('./responseBuilder');
-
 
 function isPayment(payload) {
     return !!payload.payments;
@@ -39,7 +37,6 @@ async function processRT(payload, mode = 'fullApplicationRT') {
     }
 
     try {
-        // Marcar como EN PROCESO — detecta si el servidor muere a mitad
         await eventRepo.markProcessing(event_id);
 
         const [customerId, merchantId, deviceId] = await Promise.all([
@@ -52,8 +49,6 @@ async function processRT(payload, mode = 'fullApplicationRT') {
             cardRepo.upsertCard(payload, customerId),
             sessionRepo.upsertSession(payload, deviceId),
         ]);
-
-        await userMerchantRepo.upsertUserMerchant(payload, merchantId);
 
         const refs = { eventId: event_id, customerId, merchantId, deviceId, cardId, sessionId };
         await applicationRepo.upsertApplication(payload, refs);
@@ -69,13 +64,9 @@ async function processRT(payload, mode = 'fullApplicationRT') {
         const alerts = await insertAlerts(rulesActivated, payload, mode, alertRefs);
         const formattedAlerts = formatAlerts(rulesActivated, alerts);
 
-        // Procesado exitosamente — incluso si fue reintento de ERROR
         await eventRepo.markProcessed(event_id);
 
-        // Construir respuesta ARIC
         const aricResponse = buildARICResponse(payload, formattedAlerts);
-
-        // Grabar respuesta en fact_event
         await eventRepo.saveResponse(event_id, aricResponse);
 
         console.log(`✅ ${mode} procesado | appId: ${payload.applicationid} | tipo: ${isPayment(payload) ? 'pago' : 'crédito'}`);
@@ -86,11 +77,10 @@ async function processRT(payload, mode = 'fullApplicationRT') {
             customerId,
             rulesActivated: formattedAlerts,
             blocked,
-            aricResponse,  // ← devolver la respuesta para que el controller la use
+            aricResponse,
         };
 
     } catch (err) {
-        // Marcar como ERROR — reintentable
         await eventRepo.markError(event_id, err.message);
         throw err;
     }

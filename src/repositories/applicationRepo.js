@@ -17,14 +17,15 @@ async function upsertApplication(payload, refs) {
       card_change_count, credit_application_score,
       total_time_seconds, biometria,
       flag3ds, loan_reference, loan_state,
-      msg_status, msg_status_reason
+      msg_status, msg_status_reason,
+      beneficiary_dni, beneficiary_firstname, beneficiary_lastname
     )
     VALUES (
       $1,$2,$3,$4,$5,$6,$7,$8,
       $9,$10,$11,$12,$13,$14,
       $15,$16,$17,$18,$19,$20,
       $21,$22,$23,$24,$25,$26,$27,
-      $28,$29
+      $28,$29,$30,$31,$32
     )
     ON CONFLICT (application_id)
     DO UPDATE SET
@@ -35,7 +36,10 @@ async function upsertApplication(payload, refs) {
       loan_reference         = EXCLUDED.loan_reference,
       loan_state             = EXCLUDED.loan_state,
       msg_status             = EXCLUDED.msg_status,
-      msg_status_reason      = EXCLUDED.msg_status_reason
+      msg_status_reason      = EXCLUDED.msg_status_reason,
+      beneficiary_dni        = EXCLUDED.beneficiary_dni,
+      beneficiary_firstname  = EXCLUDED.beneficiary_firstname,
+      beneficiary_lastname   = EXCLUDED.beneficiary_lastname
     RETURNING application_id
   `, [
     payload.applicationid,
@@ -67,6 +71,9 @@ async function upsertApplication(payload, refs) {
     payload.loanstate || null,
     payload.msgstatus || null,
     payload.msgstatusreason || null,
+    payload.dniuserstore || null,
+    payload.firstnameuserstore || null,
+    payload.lastnameuserstore || null,
   ]);
 
   return rows[0].application_id;
