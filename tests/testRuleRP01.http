@@ -1,0 +1,487 @@
+###
+  ### Test NRT — Prueba regla RP01 ###
+###
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "loanreference": "6CPBHACOBSIZ",
+  "firstnameuserstore": "Edwin",
+  "payment_concept": "electrodomésticos, Ropa",
+  "deviceId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+  "cardToken": "k46n4oxneks0sfd98lxk",
+
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 29100,
+      "currency": "PER",
+      "value": 29100,
+      "baseCurrency": "PER"
+    }
+  },
+
+  "correspondenceAddress": {
+    "country": "PER",
+    "addressLine1": "Jr. 20 de abril 1598"
+  },
+
+  "Biometria": "NO",
+  "customerType": "DIGITAL",
+  "creditApplicationScore": 0,
+  "applicationStatus": "completed",
+  "emailEntityId": "etorres2311@gmail.com",
+  "merchantId": "394b0772-3958-4330-af51-6e6a7a2ba1e9",
+
+  "maxMind": {
+    "cityDbCountryName": "Perú",
+    "cityDbLongitude": "-77.0305",
+    "cityDbLatitude": "-12.046",
+    "cityDbContinentName": "Sudamérica",
+    "cityDbPostalCode": "--",
+    "ispDbAutonomousSystemOrganization": "ENTEL PERU S.A.",
+    "cityDbRepresentedCountryType": "--",
+    "ispDbName": "Entel Peru",
+    "cityDbTimezone": "America/Lima",
+    "connectionType": "Cellular",
+    "cityDbCityName": "--",
+    "cityDbMetroCode": "--",
+    "ispDbMobileCountryCode": "716",
+    "cityDbGeoNamesIDs": "3932488",
+    "cityDbAccuracyRadius": "200",
+    "cityDbRegisteredCountry": "Perú",
+    "ispDbOrganizationName": "Entel Peru",
+    "cityDbSubdivisionsName1": "--",
+    "cityDbSubdivisionsName0": "Provincia de Lima",
+    "cityDbContinentCode": "SA",
+    "cityDbSubdivisionsCode0": "LMA",
+    "cityDbCountryCode": "PE",
+    "cityDbSubdivisionsCode1": "--",
+    "cityDbSubdivisionsName2": "--",
+    "cityDbSubdivisionsCode2": "--",
+    "ispDbMobileNetworkCode": "07",
+    "domainName": "--",
+    "ispDbAutonomousSystemNumber": "21575"
+  },
+
+  "_metadata": {
+    "eventId": "022d0414-2e28-4537-a714-3f7335ff1ee0_1772805927.02853",
+
+    "execution": {
+      "expectResponse": false
+    },
+
+    "maxMind_cityDbEuCountry": "false",
+    "systemEventId": "226229221-Gq6znh15",
+
+    "entities": {
+      "PARTY": ["09548301"],
+      "MOBILEPHONE": ["945788279"],
+      "IP": ["132.184.128.14"],
+      "APPLICATION": ["F3YKZ4IL59N2"],
+      "DEVICE": ["aa21587f-8e4a-45ff-a5e6-bc37555df338"],
+      "CUSTOMER": ["dc7ec455-b91a-4105-a0a0-8cfe3e740227"],
+      "MCC": ["5621"],
+      "EMAIL": ["etorres2311@gmail.com"],
+      "CARD": ["332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994"],
+      "MERCHANT": ["394b0772-3958-4330-af51-6e6a7a2ba1e9"]
+    },
+
+    "receivedTime": "2026-03-06T14:05:27Z",
+    "eventTime": "2026-03-06T14:05:27.026292Z",
+    "tenantId": ["Powerpay"],
+    "eventType": "fullApplicationNRT",
+
+    "searchable": {
+      "merchantShortName": "Invicta",
+      "eventId": "022d0414-2e28-4537-a714-3f7335ff1ee0_1772805927.02853",
+      "customerEntityId": "dc7ec455-b91a-4105-a0a0-8cfe3e740227",
+      "mccEntityId": "5621",
+      "merchantEntityId": "394b0772-3958-4330-af51-6e6a7a2ba1e9",
+      "eventType": "fullApplicationNRT",
+      "deviceEntityId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+      "deviceId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+      "msgStatus": "",
+      "customerIdentification": {
+        "documentNumber": "09548301"
+      },
+      "personalEntityId": "09548301",
+      "homeEmail": "etorres2311@gmail.com",
+      "emailEntityId": "etorres2311@gmail.com",
+      "mobilePhoneEntityId": "945788279",
+      "cardEntityId": "332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994",
+      "eventTime": "2026-03-06T14:05:27.026292Z",
+
+      "name": {
+        "fullName": "Edwin Jose Torres Panduro"
+      },
+
+      "applicationId": "F3YKZ4IL59N2",
+
+      "device": {
+        "ipAddress": "132.184.128.14",
+        "ipAddressV4": "132.184.128.14"
+      },
+
+      "applicationDate": "2026-03-06"
+    },
+
+    "maxMind_cityDbRegisteredEuCountry": "false"
+  },
+
+  "homeAddress": {
+    "country": "PER",
+    "townName": "MOYOBAMBA",
+    "countrySubDivision": "SAN MARTIN",
+    "addressLine1": "|||||CONJ.HAB.|ALONSO DE ALVARADO-FONAVI II|02|19"
+  },
+
+  "eventId": "022d0414-2e28-4537-a714-3f7335ff1ee0_1772805927.02853",
+  "nrovecescambiocard": 0,
+  "numberInstallments": 3,
+  "captureDateTime": "2026-03-06T09:03:40.365292-05:00",
+  "countryRegion": "PER",
+  "dniuserstore": "",
+  "Fallecido": "NO",
+  "eventType": "fullApplicationNRT",
+  "deviceEntityId": "aa21587f-8e4a-45ff-a5e6-bc37555df338",
+  "personalEntityId": "09548301",
+  "homeEmail": "etorres2311@gmail.com",
+
+  "mobilePhone": {
+    "number": "945788279",
+    "countryRegionCode": "51"
+  },
+
+  "nationality": "PE",
+  "cardId": "332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994",
+
+  "name": {
+    "surname": "Torres Panduro",
+    "givenName": "Edwin",
+    "fullName": "Edwin Jose Torres Panduro",
+    "middleName": "Jose"
+  },
+
+  "applicationId": "F3YKZ4IL59N2",
+
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (Linux; Android 16; motorola edge 50 fusion Build/W1UUS36H.21-14-4-1-1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/145.0.7632.104 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/549.0.0.61.62;IABMV/1;]",
+    "ipAddress": "132.184.128.14",
+    "ipAddressV4": "132.184.128.14"
+  },
+
+  "lastnameuserstore": "Torres Panduro",
+  "applicationDate": "2026-03-06",
+  "merchantShortName": "Invicta",
+  "telephoneNumber": "945788279",
+  "msgType": "",
+  "customerOnboardDate": "2026-03-06",
+  "gender": "M",
+  "thirdPartyRiskScore": 3,
+  "customerEntityId": "dc7ec455-b91a-4105-a0a0-8cfe3e740227",
+
+  "session": {
+    "sessionStartTime": "2026-03-06T14:05:14.397351+00:00",
+    "sessionId": "kBagma50LToSQn6mrCIOnupk6lJXasmq"
+  },
+
+  "numberPaidLoans": 0,
+  "mccEntityId": "5621",
+  "totalTimeDuringApplicationSubmissionInSeconds": 278.901907,
+  "merchantEntityId": "394b0772-3958-4330-af51-6e6a7a2ba1e9",
+
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "09548301"
+  },
+
+  "applicationChannel": "ONLINE",
+  "msgStatus": "",
+  "submissionDateTime": "2026-03-06T09:03:40.384555-05:00",
+  "cardEntityId": "332177b5c4773d48ed90e94b9f7f7b49c0d426f2e71bea90ccaef91435b97994",
+  "eventTime": "2026-03-06T09:05:27.026292-05:00",
+  "customerId": "dc7ec455-b91a-4105-a0a0-8cfe3e740227",
+  "merchantCountry": "PER",
+  "loanstate": "active",
+
+  "amount": {
+    "baseValue": 319,
+    "currency": "PER",
+    "value": 319,
+    "baseCurrency": "PER"
+  },
+
+  "schemaVersion": 1,
+  "dateOfBirth": "1971-11-23",
+  "customerNumber": "90OQE0ZBQABI",
+  "cardholder": "Edwin Torres Panduro",
+  "numberActiveLoans": 1,
+  "merchantActivityStatus": "enabled",
+
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "scoreKYC": 100,
+    "ppm": 1028.08,
+    "effort_rate": 73.18
+  },
+
+  "merchantCategoryCode": "5621",
+  "mobilePhoneEntityId": "945788279",
+  "tenantId": "Powerpay",
+
+  "amountInstallment": {
+    "baseValue": 106.33,
+    "currency": "PER",
+    "value": 106.33,
+    "baseCurrency": "PER"
+  },
+
+  "age": 54
+}
+
+
+###
+  ### Test NRT — Prueba regla RP01 -  002 ###
+###
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{"applicationType":"POWERPAY","loanreference":"27VO1PFX3OYC","firstnameuserstore":"Adriana","payment_concept":"E-comerce","deviceId":"229dee51-8028-4d7a-99e3-59a8dc785488","cardToken":"kkpch8joefwttyuecnpl","affordability":{"totalCreditLimit":{"baseValue":23600,"currency":"PER","value":23600,"baseCurrency":"PER"}},"Biometria":"NO","customerType":"DIGITAL","creditApplicationScore":0,"applicationStatus":"completed","emailEntityId":"hugogarcia_14@hotmail.com","merchantId":"be1a8c0e-cf35-430d-9b92-fccd201e8dcf","maxMind":{"cityDbCountryName":"Perú","cityDbLongitude":"-77.0305","cityDbLatitude":"-12.046","cityDbContinentName":"Sudamérica","cityDbPostalCode":"--","ispDbAutonomousSystemOrganization":"ENTEL PERU S.A.","cityDbRepresentedCountryType":"--","ispDbName":"Entel Peru","cityDbTimezone":"America/Lima","connectionType":"Cellular","cityDbCityName":"Lima","cityDbMetroCode":"--","ispDbMobileCountryCode":"716","cityDbGeoNamesIDs":"3932488","cityDbAccuracyRadius":"20","cityDbRegisteredCountry":"Perú","ispDbOrganizationName":"Entel Peru","cityDbSubdivisionsName1":"--","cityDbSubdivisionsName0":"Provincia de Lima","cityDbContinentCode":"SA","cityDbSubdivisionsCode0":"LMA","cityDbCountryCode":"PE","cityDbSubdivisionsCode1":"--","cityDbSubdivisionsName2":"--","cityDbSubdivisionsCode2":"--","ispDbMobileNetworkCode":"07","domainName":"--","ispDbAutonomousSystemNumber":"21575"},"flag3DS":"N","_metadata":{"eventId":"f81cbbf8-75ea-43d5-978a-ba80b01a8f12_1772817758.04862","execution":{"expectResponse":false},"maxMind_cityDbEuCountry":"false","systemEventId":"227500102-ZA3zjCLF","entities":{"PARTY":["46315635"],"MOBILEPHONE":["989024219"],"CITY":["Lima"],"IP":["132.251.2.77"],"APPLICATION":["SNOHT23ZHTF9"],"DEVICE":["229dee51-8028-4d7a-99e3-59a8dc785488"],"CUSTOMER":["d75edd11-641e-4b3b-9012-29fb5154f3c9"],"MCC":["5621"],"EMAIL":["hugogarcia_14@hotmail.com"],"CARD":["447974166010879dc48c26ed46d6d0e713f65a7c84b2ddf86839eedacbb6e496"],"MERCHANT":["be1a8c0e-cf35-430d-9b92-fccd201e8dcf"]},"receivedTime":"2026-03-06T17:22:38Z","eventTime":"2026-03-06T17:22:38.046533Z","tenantId":["Powerpay"],"eventType":"fullApplicationNRT","searchable":{"merchantShortName":"Porta","eventId":"f81cbbf8-75ea-43d5-978a-ba80b01a8f12_1772817758.04862","customerEntityId":"d75edd11-641e-4b3b-9012-29fb5154f3c9","mccEntityId":"5621","merchantEntityId":"be1a8c0e-cf35-430d-9b92-fccd201e8dcf","eventType":"fullApplicationNRT","deviceId":"229dee51-8028-4d7a-99e3-59a8dc785488","deviceEntityId":"229dee51-8028-4d7a-99e3-59a8dc785488","msgStatus":"","customerIdentification":{"documentNumber":"46315635"},"personalEntityId":"46315635","homeEmail":"hugogarcia_14@hotmail.com","emailEntityId":"hugogarcia_14@hotmail.com","mobilePhoneEntityId":"989024219","cardEntityId":"447974166010879dc48c26ed46d6d0e713f65a7c84b2ddf86839eedacbb6e496","eventTime":"2026-03-06T17:22:38.046533Z","name":{"fullName":"Victor Hugo Garcia Bello"},"applicationId":"SNOHT23ZHTF9","device":{"ipAddress":"132.251.2.77","ipAddressV4":"132.251.2.77"},"applicantCityEntityId":"Lima","applicationDate":"2026-03-06"},"maxMind_cityDbRegisteredEuCountry":"false"},"homeAddress":{"country":"PER","townName":"LIMA","countrySubDivision":"LIMA","addressLine1":"AV.|7 DE JUNIO 1038C|||||NUEVA ESPERANZA||"},"eventId":"f81cbbf8-75ea-43d5-978a-ba80b01a8f12_1772817758.04862","nrovecescambiocard":0,"numberInstallments":3,"captureDateTime":"2026-03-06T12:22:15.434254-05:00","countryRegion":"PER","dniuserstore":"74847809","Fallecido":"NO","eventType":"fullApplicationNRT","deviceEntityId":"229dee51-8028-4d7a-99e3-59a8dc785488","personalEntityId":"46315635","homeEmail":"hugogarcia_14@hotmail.com","mobilePhone":{"number":"989024219","countryRegionCode":"51"},"nationality":"PE","cardId":"447974166010879dc48c26ed46d6d0e713f65a7c84b2ddf86839eedacbb6e496","name":{"surname":"Garcia Bello","givenName":"Victor","fullName":"Victor Hugo Garcia Bello","middleName":"Hugo"},"applicationId":"SNOHT23ZHTF9","applicantCityEntityId":"Lima","device":{"deviceFingerprint":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Mobile/15E148 Safari/604.1","ipAddress":"132.251.2.77","ipAddressV4":"132.251.2.77"},"lastnameuserstore":"Murrugarra","applicationDate":"2026-03-06","merchantShortName":"Porta","telephoneNumber":"989024219","msgType":"","customerOnboardDate":"2025-08-11","gender":"M","thirdPartyRiskScore":3,"customerEntityId":"d75edd11-641e-4b3b-9012-29fb5154f3c9","session":{"sessionStartTime":"2026-03-06T17:22:17.148278+00:00","sessionId":"USK95GLvBNDk0QQFqpKSIDscNHYQTkTW"},"numberPaidLoans":2,"mccEntityId":"5621","totalTimeDuringApplicationSubmissionInSeconds":420.885092,"merchantEntityId":"be1a8c0e-cf35-430d-9b92-fccd201e8dcf","customerIdentification":{"documentType":"DNI","documentNumber":"46315635"},"applicationChannel":"ONLINE","msgStatus":"","submissionDateTime":"2026-03-06T12:22:15.447634-05:00","cardEntityId":"447974166010879dc48c26ed46d6d0e713f65a7c84b2ddf86839eedacbb6e496","eventTime":"2026-03-06T12:22:38.046533-05:00","customerId":"d75edd11-641e-4b3b-9012-29fb5154f3c9","merchantCountry":"PER","loanstate":"active","amount":{"baseValue":62.93,"currency":"PER","value":62.93,"baseCurrency":"PER"},"schemaVersion":1,"dateOfBirth":"1990-04-06","customerNumber":"XBLQR7IVNX1Q","cardholder":"Victor Hugo García","numberActiveLoans":1,"merchantActivityStatus":"enabled","thirdPartyKYC":{"statusBuro":"approved","scoreKYC":100,"ppm":411.44,"effort_rate":23.33},"merchantCategoryCode":"5621","mobilePhoneEntityId":"989024219","tenantId":"Powerpay","amountInstallment":{"baseValue":20.98,"currency":"PER","value":20.98,"baseCurrency":"PER"},"age":35}
+
+
+
+###
+  ### Test NRT — Prueba regla RP01  -  003 ###
+###
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "loanreference": "7O9OPEGV0ZP2",
+  "firstnameuserstore": "Eduardo",
+  "payment_concept": "electrodomésticos, Ropa",
+  "deviceId": "9ce626dc-1b8f-42e0-be81-8b3c0dfcf582",
+  "cardToken": "kstxem4gkrccbmz69ezs",
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 123808,
+      "currency": "PER",
+      "value": 123808,
+      "baseCurrency": "PER"
+    }
+  },
+  "correspondenceAddress": {
+    "country": "PER",
+    "addressLine1": "Calle Toulon 135"
+  },
+  "Biometria": "NO",
+  "customerType": "DIGITAL",
+  "creditApplicationScore": 0,
+  "applicationStatus": "completed",
+  "emailEntityId": "epalomino2384@gmail.com",
+  "merchantId": "5ecbdec5-387c-4e07-a8b6-31408f35d182",
+  "maxMind": {
+    "cityDbCountryName": "Perú",
+    "cityDbLongitude": "-77.0305",
+    "cityDbLatitude": "-12.046",
+    "cityDbContinentName": "Sudamérica",
+    "cityDbPostalCode": "--",
+    "ispDbAutonomousSystemOrganization": "INTEGRATEL PERU S.A.A.",
+    "cityDbRepresentedCountryType": "--",
+    "ispDbName": "Movistar Peru",
+    "cityDbTimezone": "America/Lima",
+    "connectionType": "Cellular",
+    "cityDbCityName": "Lima",
+    "cityDbMetroCode": "--",
+    "ispDbMobileCountryCode": "716",
+    "cityDbGeoNamesIDs": "3932488",
+    "cityDbAccuracyRadius": "20",
+    "cityDbRegisteredCountry": "Perú",
+    "ispDbOrganizationName": "Movistar Peru",
+    "cityDbSubdivisionsName1": "--",
+    "cityDbSubdivisionsName0": "Provincia de Lima",
+    "cityDbContinentCode": "SA",
+    "cityDbSubdivisionsCode0": "LMA",
+    "cityDbCountryCode": "PE",
+    "cityDbSubdivisionsCode1": "--",
+    "cityDbSubdivisionsName2": "--",
+    "cityDbSubdivisionsCode2": "--",
+    "ispDbMobileNetworkCode": "06",
+    "domainName": "--",
+    "ispDbAutonomousSystemNumber": "6147"
+  },
+  "flag3DS": "N",
+  "_metadata": {
+    "eventId": "f5dff533-8807-4ed8-be95-8aa0b05e30e9_1772829180.929413",
+    "execution": {
+      "expectResponse": false
+    },
+    "maxMind_cityDbEuCountry": "false",
+    "systemEventId": "228243701-KBvL8aZE",
+    "entities": {
+      "PARTY": [
+        "42322035"
+      ],
+      "MOBILEPHONE": [
+        "951668473"
+      ],
+      "IP": [
+        "190.237.184.231"
+      ],
+      "APPLICATION": [
+        "NY1YP55UKQR0"
+      ],
+      "DEVICE": [
+        "9ce626dc-1b8f-42e0-be81-8b3c0dfcf582"
+      ],
+      "CUSTOMER": [
+        "999404dd-35c4-4a22-a27a-2a18fe636973"
+      ],
+      "MCC": [
+        "5621"
+      ],
+      "EMAIL": [
+        "epalomino2384@gmail.com"
+      ],
+      "CARD": [
+        "eea8b5c2a72192cf1c1be323552d357013a8199d614594569bf632b82785a625"
+      ],
+      "MERCHANT": [
+        "5ecbdec5-387c-4e07-a8b6-31408f35d182"
+      ]
+    },
+    "receivedTime": "2026-03-06T20:33:00Z",
+    "eventTime": "2026-03-06T20:33:00.927452Z",
+    "tenantId": [
+      "Powerpay"
+    ],
+    "eventType": "fullApplicationNRT",
+    "searchable": {
+      "merchantShortName": "Moixx",
+      "eventId": "f5dff533-8807-4ed8-be95-8aa0b05e30e9_1772829180.929413",
+      "customerEntityId": "999404dd-35c4-4a22-a27a-2a18fe636973",
+      "mccEntityId": "5621",
+      "merchantEntityId": "5ecbdec5-387c-4e07-a8b6-31408f35d182",
+      "eventType": "fullApplicationNRT",
+      "deviceEntityId": "9ce626dc-1b8f-42e0-be81-8b3c0dfcf582",
+      "deviceId": "9ce626dc-1b8f-42e0-be81-8b3c0dfcf582",
+      "customerIdentification": {
+        "documentNumber": "42322035"
+      },
+      "msgStatus": "",
+      "personalEntityId": "42322035",
+      "homeEmail": "epalomino2384@gmail.com",
+      "emailEntityId": "epalomino2384@gmail.com",
+      "mobilePhoneEntityId": "951668473",
+      "cardEntityId": "eea8b5c2a72192cf1c1be323552d357013a8199d614594569bf632b82785a625",
+      "name": {
+        "fullName": "Eduardo Palomino Hurtado"
+      },
+      "eventTime": "2026-03-06T20:33:00.927452Z",
+      "applicationId": "NY1YP55UKQR0",
+      "device": {
+        "ipAddress": "190.237.184.231",
+        "ipAddressV4": "190.237.184.231"
+      },
+      "applicationDate": "2026-03-06"
+    },
+    "maxMind_cityDbRegisteredEuCountry": "false"
+  },
+  "homeAddress": {
+    "country": "PER",
+    "townName": "LIMA",
+    "countrySubDivision": "LIMA",
+    "addressLine1": "CALLE|TOULON|135|DPTO.|104|URB|LA RIVIERA DE MONTERRICO||"
+  },
+  "eventId": "f5dff533-8807-4ed8-be95-8aa0b05e30e9_1772829180.929413",
+  "nrovecescambiocard": 0,
+  "numberInstallments": 3,
+  "captureDateTime": "2026-03-06T15:32:44.200212-05:00",
+  "countryRegion": "PER",
+  "dniuserstore": "",
+  "Fallecido": "NO",
+  "eventType": "fullApplicationNRT",
+  "deviceEntityId": "9ce626dc-1b8f-42e0-be81-8b3c0dfcf582",
+  "personalEntityId": "42322035",
+  "homeEmail": "epalomino2384@gmail.com",
+  "mobilePhone": {
+    "number": "951668473",
+    "countryRegionCode": "51"
+  },
+  "nationality": "PE",
+  "cardId": "eea8b5c2a72192cf1c1be323552d357013a8199d614594569bf632b82785a625",
+  "name": {
+    "surname": "Palomino Hurtado",
+    "givenName": "Eduardo",
+    "fullName": "Eduardo Palomino Hurtado",
+    "middleName": ""
+  },
+  "applicationId": "NY1YP55UKQR0",
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_3_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/145.0.7632.108 Mobile/15E148 Safari/604.1",
+    "ipAddress": "190.237.184.231",
+    "ipAddressV4": "190.237.184.231"
+  },
+  "lastnameuserstore": "Palomino Hurtado",
+  "applicationDate": "2026-03-06",
+  "merchantShortName": "Moixx",
+  "telephoneNumber": "951668473",
+  "msgType": "",
+  "customerOnboardDate": "2026-02-20",
+  "gender": "M",
+  "thirdPartyRiskScore": 1,
+  "customerEntityId": "999404dd-35c4-4a22-a27a-2a18fe636973",
+  "session": {
+    "sessionStartTime": "2026-03-06T15:32:46.034623-05:00",
+    "sessionId": "J0SlIN8EINMyYaxI9EkG54jgZvqaRmeS"
+  },
+  "numberPaidLoans": 0,
+  "mccEntityId": "5621",
+  "totalTimeDuringApplicationSubmissionInSeconds": 265.494463,
+  "merchantEntityId": "5ecbdec5-387c-4e07-a8b6-31408f35d182",
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "42322035"
+  },
+  "applicationChannel": "ONLINE",
+  "msgStatus": "",
+  "submissionDateTime": "2026-03-06T15:32:44.211894-05:00",
+  "cardEntityId": "eea8b5c2a72192cf1c1be323552d357013a8199d614594569bf632b82785a625",
+  "eventTime": "2026-03-06T15:33:00.927452-05:00",
+  "customerId": "999404dd-35c4-4a22-a27a-2a18fe636973",
+  "merchantCountry": "PER",
+  "loanstate": "active",
+  "amount": {
+    "baseValue": 549.96,
+    "currency": "PER",
+    "value": 549.96,
+    "baseCurrency": "PER"
+  },
+  "schemaVersion": 1,
+  "dateOfBirth": "1984-03-23",
+  "customerNumber": "BC5PFPQBGVGP",
+  "cardholder": "EDUARDO PALOMINO",
+  "numberActiveLoans": 2,
+  "merchantActivityStatus": "enabled",
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "scoreKYC": 100,
+    "ppm": 1255.06,
+    "effort_rate": 26.83
+  },
+  "merchantCategoryCode": "5621",
+  "mobilePhoneEntityId": "951668473",
+  "tenantId": "Powerpay",
+  "amountInstallment": {
+    "baseValue": 183.32,
+    "currency": "PER",
+    "value": 183.32,
+    "baseCurrency": "PER"
+  },
+  "age": 41
+}

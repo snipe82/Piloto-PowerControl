@@ -1,21 +1,15 @@
 -- =============================================
--- Regla: RP01 — challengeUsuarioDiferenteTitular
--- Versión: 5
+-- Regla: RP02 — challengeDosComprasMismoDia
+-- Versión: 1
 -- Fecha: 2026-03-06
 -- Histórico BigQuery: NO
--- Tabla BigQuery equivalente: rds_bbva.loan + rds_bbva.pre_loan
--- Campo beneficiario BQ: transaction_attribute WHERE name = 'document_number'
--- Pendiente BQ: agregar filtro channel, biometría y alertas DISCARDED
--- Cambios v5:
---   1. Agrega filtro para asegurar que es un crédito (sin pago asociado)
--- Cambios v4:
---   1. Agrega filtro DNI no en lista blanca
--- Cambios v3:
---   1. Agrega filtro application_status = completed
--- Cambios v2:
---   1. Agrega filtro por application_channel = ONLINE
---   2. Reemplaza condición de primera compra por validación de biometría previa
---   3. NOT EXISTS en alertas solo considera DISCARDED
+-- Cambios v1:
+--   1. Versión inicial
+--   2. Segunda compra en últimas 24 horas (no mismo día calendario)
+--   3. Compra previa debe ser crédito (sin pago asociado)
+--   4. No debe haber pasado biometría en la compra ni anteriormente
+--   5. DNI no debe estar en lista blanca
+--   6. No debe tener alertas descartadas previamente
 -- =============================================
 WITH params AS (
   SELECT $1::uuid AS customer_id, $2::varchar AS application_id,
@@ -25,12 +19,18 @@ SELECT COUNT(*) AS total
 FROM fact_application fa
 JOIN dim_customer dc ON fa.customer_id = dc.customer_id
 JOIN params p ON fa.application_id = p.application_id
-WHERE fa.application_channel = 'ONLINE'
-  AND fa.application_status = 'completed'
-  AND (
-    fa.beneficiary_dni IS NULL
-    OR fa.beneficiary_dni = ''
-    OR fa.beneficiary_dni != dc.document_number
+WHERE fa.application_status = 'completed'
+  -- Segunda compra o más en las últimas 24 horas
+  AND EXISTS (
+    SELECT 1 FROM fact_application fa2
+    WHERE fa2.customer_id = p.customer_id
+      AND fa2.application_id != p.application_id
+      AND fa2.application_status = 'completed'
+      AND fa2.submission_datetime >= NOW() - INTERVAL '24 hours'
+      AND NOT EXISTS (
+        SELECT 1 FROM fact_payment fp2
+        WHERE fp2.application_id = fa2.application_id
+      )
   )
   -- No debe haber pasado biometría en la compra
   AND fa.biometria = 'NO'
