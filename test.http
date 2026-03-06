@@ -508,3 +508,9 @@ X-API-Key: pc-antifraude-local-key-2026
   "lastnameuserstore": "BARAHONA NEYRA",
   "age": 29
 }
+
+
+### Invalidar caché de reglas
+POST http://localhost:3015/api/v1/events/admin/rules/refresh
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026

@@ -11,15 +11,14 @@ const { executeRules } = require('./ruleEngine');
 const { insertAlerts, formatAlerts } = require('./alertService');
 const { getAlertsByEvent } = require('../repositories/eventRepo');
 
-
 function isPayment(payload) {
     return !!payload.payments;
 }
 
 async function processRT(payload, mode = 'fullApplicationRT') {
     const { event_id, duplicate } = await eventRepo.insertEvent(payload);
+
     if (duplicate) {
-        // Consultar alertas existentes para este evento
         const existingAlerts = await getAlertsByEvent(event_id);
         const rulesActivated = existingAlerts.map(a => ({
             alertId: a.alert_id,
@@ -32,18 +31,15 @@ async function processRT(payload, mode = 'fullApplicationRT') {
         }));
 
         const blocked = rulesActivated.some(r => r.blocks);
-
         console.warn(`⚠️  Evento duplicado — devolviendo ${rulesActivated.length} alerta(s) existente(s): ${event_id}`);
 
-        return {
-            eventId: event_id,
-            duplicate: true,
-            rulesActivated,
-            blocked,
-        };
+        return { eventId: event_id, duplicate: true, rulesActivated, blocked };
     }
 
     try {
+        // Marcar como EN PROCESO — detecta si el servidor muere a mitad
+        await eventRepo.markProcessing(event_id);
+
         const [customerId, merchantId, deviceId] = await Promise.all([
             customerRepo.upsertCustomer(payload),
             merchantRepo.upsertMerchant(payload),
@@ -71,6 +67,7 @@ async function processRT(payload, mode = 'fullApplicationRT') {
         const alerts = await insertAlerts(rulesActivated, payload, mode, alertRefs);
         const formattedAlerts = formatAlerts(rulesActivated, alerts);
 
+        // Procesado exitosamente — incluso si fue reintento de ERROR
         await eventRepo.markProcessed(event_id);
 
         console.log(`✅ ${mode} procesado | appId: ${payload.applicationid} | tipo: ${isPayment(payload) ? 'pago' : 'crédito'}`);
@@ -84,6 +81,7 @@ async function processRT(payload, mode = 'fullApplicationRT') {
         };
 
     } catch (err) {
+        // Marcar como ERROR — reintentable
         await eventRepo.markError(event_id, err.message);
         throw err;
     }

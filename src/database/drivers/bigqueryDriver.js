@@ -21,14 +21,17 @@ function convertParams(sql, params) {
     let converted = sql;
     const namedParams = {};
 
-    params.forEach((value, i) => {
-        const n = i + 1;
-        converted = converted.replace(
-            new RegExp(`\\$${n}(?=[^0-9]|$)`, 'g'),
-            `@p${n}`
-        );
-        namedParams[`p${n}`] = value;
-    });
+    // Reemplazar de mayor a menor — evita que $1 corrompa $10, $11, etc.
+    params
+        .map((value, i) => ({ value, n: i + 1 }))
+        .sort((a, b) => b.n - a.n)  // ← orden descendente
+        .forEach(({ value, n }) => {
+            converted = converted.replace(
+                new RegExp(`\\$${n}(?=[^0-9]|$)`, 'g'),
+                `@p${n}`
+            );
+            namedParams[`p${n}`] = value;
+        });
 
     return { sql: converted, namedParams };
 }

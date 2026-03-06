@@ -24,11 +24,29 @@ async function insertEvent(payload) {
   ]);
 
   if (rows.length === 0) {
+    // Verificar si el evento existente está en ERROR — permitir reintento
+    const existing = await db.query(`
+      SELECT event_id, status FROM fact_event WHERE hash = $1
+    `, [hash]);
+
+    if (existing[0]?.status === 'ERROR') {
+      console.warn(`🔄 Reintentando evento en ERROR: ${existing[0].event_id}`);
+      return { event_id: existing[0].event_id, duplicate: false, retry: true };
+    }
+
     console.warn(`⚠️  Evento duplicado ignorado: ${payload.eventid}`);
     return { event_id: payload.eventid, duplicate: true };
   }
 
-  return { event_id: rows[0].event_id, duplicate: false };
+  return { event_id: rows[0].event_id, duplicate: false, retry: false };
+}
+
+async function markProcessing(eventId) {
+  await db.query(`
+    UPDATE fact_event
+    SET status = 'PROCESSING'
+    WHERE event_id = $1
+  `, [eventId]);
 }
 
 async function markProcessed(eventId) {
@@ -50,7 +68,7 @@ async function markError(eventId, errorMsg) {
 
 async function getAlertsByEvent(eventId) {
   const rows = await db.query(`
-    SELECT 
+    SELECT
       fa.alert_id,
       fa.rule_code,
       fa.severity,
@@ -60,11 +78,13 @@ async function getAlertsByEvent(eventId) {
       dr.blocks_operation
     FROM fact_alert fa
     JOIN dim_rule dr ON dr.rule_code = fa.rule_code
+    JOIN fact_event fe ON fe.event_id = fa.event_id
     WHERE fa.event_id = $1
       AND fa.status = 'OPEN'
+      AND fe.status = 'PROCESSED'
   `, [eventId]);
 
   return rows;
 }
 
-module.exports = { insertEvent, markProcessed, markError, getAlertsByEvent };
+module.exports = { insertEvent, markProcessing, markProcessed, markError, getAlertsByEvent };

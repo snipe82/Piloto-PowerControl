@@ -11,16 +11,30 @@ module.exports = function auth(req, res, next) {
         });
     }
 
+    // Fallar explícitamente si HMAC_SECRET no está configurado
+    const secret = process.env.HMAC_SECRET;
+    if (!secret) {
+        console.error('❌ HMAC_SECRET no está definido en las variables de entorno');
+        return res.status(500).json({
+            errors: '500: Error de configuración del servidor',
+            status_connector: 'error',
+        });
+    }
+
+    const hashReceived = crypto
+        .createHmac('sha256', secret)
+        .update(apiKey)
+        .digest();
+
+    const hashValid = crypto
+        .createHmac('sha256', secret)
+        .update(validKey)
+        .digest();
+
+    // try/catch defensivo por si alguien cambia el algoritmo en el futuro
     let valid = false;
     try {
-        // padEnd iguala longitudes para que timingSafeEqual no falle
-        // timingSafeEqual devuelve true SOLO si los buffers son idénticos
-        // la verificación de length descarta el caso donde apiKey es más corta pero el padding coincide
-        valid = apiKey.length === validKey.length &&
-            crypto.timingSafeEqual(
-                Buffer.from(apiKey),
-                Buffer.from(validKey)
-            );
+        valid = crypto.timingSafeEqual(hashReceived, hashValid);
     } catch {
         valid = false;
     }

@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const db = require('../database/dbClient');
 
 async function insertAlerts(rulesActivated, payload, eventType, refs) {
     if (rulesActivated.length === 0) return [];
@@ -27,11 +27,11 @@ async function insertAlerts(rulesActivated, payload, eventType, refs) {
     RETURNING alert_id, rule_code, severity, status, created_at
   `;
 
-    const result = await pool.query(query, values);
+    const rows = await db.query(query, values);
 
-    console.log(`💾 ${result.rows.length} alerta(s) insertada(s) para appId: ${payload.applicationid}`);
+    console.log(`💾 ${rows.length} alerta(s) insertada(s) para appId: ${payload.applicationid}`);
 
-    return result.rows;
+    return rows;
 }
 
 function formatAlerts(rulesActivated, alerts) {

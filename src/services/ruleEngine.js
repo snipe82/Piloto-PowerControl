@@ -1,5 +1,46 @@
 const db = require('../database/dbClient');
 
+// Caché en memoria con TTL
+const rulesCache = {
+    fullApplicationRT: { rules: null, expiresAt: 0 },
+    fullApplicationNRT: { rules: null, expiresAt: 0 },
+};
+
+const CACHE_TTL_MS = parseInt(process.env.RULES_CACHE_TTL_MS) || 5 * 60 * 1000; // 5 min default
+
+function validateRuleSQL(sql) {
+    if (!sql || typeof sql !== 'string') {
+        throw new Error('Query SQL inválido — vacío o no es string');
+    }
+
+    const normalized = sql.trim().toUpperCase();
+
+    // Solo permitir SELECT o WITH (CTEs)
+    if (!normalized.startsWith('SELECT') && !normalized.startsWith('WITH')) {
+        throw new Error('Regla rechazada — solo se permiten SELECT o WITH');
+    }
+
+    // CTEs con DML — PostgreSQL permite DELETE/UPDATE/INSERT dentro de CTEs
+    if (normalized.startsWith('WITH')) {
+        const DML_IN_CTE = ['DELETE FROM', 'UPDATE ', 'INSERT INTO'];
+        const found = DML_IN_CTE.find(kw => normalized.includes(kw));
+        if (found) {
+            throw new Error(`Regla rechazada — CTE contiene DML: ${found.trim()}`);
+        }
+    }
+
+    // Bloquear keywords peligrosos
+    const FORBIDDEN = [
+        'DROP', 'DELETE', 'TRUNCATE', 'ALTER', 'CREATE',
+        'EXECUTE', 'EXEC', 'INSERT', 'UPDATE', '--', ';',
+    ];
+
+    const found = FORBIDDEN.find(kw => normalized.includes(kw));
+    if (found) {
+        throw new Error(`Regla rechazada — contiene keyword prohibido: ${found}`);
+    }
+}
+
 function evaluateResult(rows) {
     if (!rows || rows.length === 0) return false;
     return (parseInt(rows[0].total) || 0) > 0;
@@ -13,6 +54,8 @@ async function executeRule(rule, payload) {
         }, 200);
 
         try {
+            validateRuleSQL(rule.query_sql);
+
             const params = [
                 payload.customerid,    // $1
                 payload.applicationid, // $2
@@ -34,9 +77,25 @@ async function executeRule(rule, payload) {
 }
 
 async function loadActiveRules(eventType) {
-    const column = eventType === 'fullApplicationRT' ? 'applies_rt' : 'applies_nrt';
+    const VALID_COLUMNS = {
+        fullApplicationRT: 'applies_rt',
+        fullApplicationNRT: 'applies_nrt',
+    };
 
-    console.log(`🔍 Cargando reglas para eventType: ${eventType} — columna: ${column}`);
+    const column = VALID_COLUMNS[eventType];
+    if (!column) {
+        throw new Error(`eventType inválido: "${eventType}"`);
+    }
+
+    // Verificar caché
+    const cached = rulesCache[eventType];
+    if (cached.rules && Date.now() < cached.expiresAt) {
+        console.log(`🔍 Reglas desde caché para: ${eventType} (${cached.rules.length} reglas)`);
+        return cached.rules;
+    }
+
+    // Cargar desde BD y actualizar caché
+    console.log(`🔍 Cargando reglas desde BD para: ${eventType} — columna: ${column}`);
 
     const rows = await db.query(`
     SELECT rule_code, rule_name, severity, blocks_operation, query_sql
@@ -47,10 +106,28 @@ async function loadActiveRules(eventType) {
     ORDER BY priority ASC, rule_code ASC
   `);
 
-    console.log(`🔍 Reglas cargadas: ${rows.length}`);
+    rulesCache[eventType] = {
+        rules: rows,
+        expiresAt: Date.now() + CACHE_TTL_MS,
+    };
+
+    console.log(`🔍 Reglas cargadas desde BD: ${rows.length} — caché válido por ${CACHE_TTL_MS / 1000}s`);
     rows.forEach(r => console.log(`   - ${r.rule_code}`));
 
     return rows;
+}
+
+// Invalidar caché manualmente — útil cuando se modifica dim_rule
+function invalidateRulesCache(eventType) {
+    if (eventType) {
+        rulesCache[eventType] = { rules: null, expiresAt: 0 };
+        console.log(`🔄 Caché invalidado para: ${eventType}`);
+    } else {
+        Object.keys(rulesCache).forEach(key => {
+            rulesCache[key] = { rules: null, expiresAt: 0 };
+        });
+        console.log('🔄 Caché de reglas invalidado completamente');
+    }
 }
 
 async function executeRules(payload, eventType) {
@@ -82,4 +159,4 @@ async function executeRules(payload, eventType) {
     return { rulesActivated, blocked };
 }
 
-module.exports = { executeRules };
+module.exports = { executeRules, invalidateRulesCache };
