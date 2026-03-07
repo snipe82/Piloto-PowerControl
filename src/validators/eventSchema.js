@@ -8,28 +8,33 @@ const baseSchema = Joi.object({
     merchantid: Joi.string().uuid().required(),
     deviceid: Joi.string().uuid().required(),
     eventtype: Joi.string().valid('fullApplicationRT', 'fullApplicationNRT').required(),
+
     submissiondatetime: Joi.string().required(),
     applicationdate: Joi.string().required(),
+
     amount: Joi.object({
         value: Joi.number().required(),
         currency: Joi.string().required(),
     }).unknown(true).required(),
+
     customeridentification: Joi.object({
         documenttype: Joi.string().required(),
         documentnumber: Joi.string().required(),
     }).required(),
+
     session: Joi.object({
-        sessionid: Joi.string().required(),
-        sessionstarttime: Joi.string().required(),
-    }).required(),
+        sessionid: Joi.string().optional(),
+        sessionstarttime: Joi.string().optional(),
+    }).optional(),
+
     device: Joi.object({
         ipaddress: Joi.string().required(),
     }).unknown(true).required(),
 
-    // Campos opcionales que pueden o no venir
-    payments: Joi.object().optional(),
-    biometria: Joi.string().optional(),
-    fallecido: Joi.string().optional(),
+    // Campos opcionales
+    payments: Joi.object().unknown(true).optional(),
+    biometria: Joi.string().allow('').optional(),
+    fallecido: Joi.string().allow('').optional(),
     dniuserstore: Joi.string().allow('').optional(),
     firstnameuserstore: Joi.string().allow('').optional(),
     lastnameuserstore: Joi.string().allow('').optional(),
@@ -38,17 +43,15 @@ const baseSchema = Joi.object({
     msgreason: Joi.string().allow('').optional(),
     msgtype: Joi.string().allow('').optional(),
     payment_concept: Joi.string().allow('').optional(),
-    msgstatusreason: Joi.string().allow('').optional(),
     correspondenceaddress: Joi.object().unknown(true).optional(),
 
-}).unknown(true); // unknown(true) permite campos extra sin romper
-
+}).unknown(true);
 
 // Función que valida y lanza error si falla
 function validateEvent(payload) {
     const { error, value } = baseSchema.validate(payload, {
         abortEarly: false,  // muestra TODOS los errores, no solo el primero
-        convert: false,     // no convierte tipos automáticamente
+        convert: false,  // no convierte tipos automáticamente
     });
 
     if (error) {

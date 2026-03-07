@@ -29,13 +29,19 @@ function validateRuleSQL(sql) {
         }
     }
 
+    // Remover comentarios SQL antes de validar keywords peligrosos
+    const withoutComments = sql
+        .replace(/--[^\n]*/g, '')    // remover comentarios de línea (--)
+        .replace(/\/\*[\s\S]*?\*\//g, '') // remover comentarios de bloque (/* */)
+        .toUpperCase();
+
     // Bloquear keywords peligrosos
     const FORBIDDEN = [
         'DROP', 'DELETE', 'TRUNCATE', 'ALTER', 'CREATE',
-        'EXECUTE', 'EXEC', 'INSERT', 'UPDATE', '--', ';',
+        'EXECUTE', 'EXEC', 'INSERT', 'UPDATE', ';',
     ];
 
-    const found = FORBIDDEN.find(kw => normalized.includes(kw));
+    const found = FORBIDDEN.find(kw => withoutComments.includes(kw));
     if (found) {
         throw new Error(`Regla rechazada — contiene keyword prohibido: ${found}`);
     }
