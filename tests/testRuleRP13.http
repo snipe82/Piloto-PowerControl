@@ -1,0 +1,246 @@
+
+###
+  ### Test RT — Prueba regla RP13 -  001 ###   
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "loanreference": "DYB3JZDJJFHK",
+  "firstnameuserstore": "RYAN",
+  "payment_concept": "electrodomésticos, Ropa",
+  "deviceId": "e9d0470a-5baf-4a99-9be7-e8ee4492741f",
+  "cardToken": "khovpdzuguborffndqyp",
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 19800,
+      "currency": "PER",
+      "value": 19800,
+      "baseCurrency": "PER"
+    }
+  },
+  "correspondenceAddress": {
+    "country": "PER",
+    "addressLine1": "Calle Encinas 100"
+  },
+  "Biometria": "NO",
+  "customerType": "DIGITAL",
+  "creditApplicationScore": 0,
+  "applicationStatus": "completed",
+  "emailEntityId": "grobilliard@pucp.edu.pe",
+  "merchantId": "3a788fe5-bf47-4804-a7ed-7e6035467905",
+  "maxMind": {
+    "cityDbCountryName": "Perú",
+    "cityDbLongitude": "-77.0305",
+    "cityDbLatitude": "-12.046",
+    "cityDbContinentName": "Sudamérica",
+    "cityDbPostalCode": "--",
+    "ispDbAutonomousSystemOrganization": "America Movil Peru S.A.C.",
+    "cityDbRepresentedCountryType": "--",
+    "ispDbName": "Claro Fibra Coaxial",
+    "cityDbTimezone": "America/Lima",
+    "connectionType": "Cable/DSL",
+    "cityDbCityName": "Lima",
+    "cityDbMetroCode": "--",
+    "ispDbMobileCountryCode": "--",
+    "cityDbGeoNamesIDs": "3932488",
+    "cityDbAccuracyRadius": "50",
+    "cityDbRegisteredCountry": "Perú",
+    "ispDbOrganizationName": "Claro Fibra Coaxial",
+    "cityDbSubdivisionsName1": "--",
+    "cityDbSubdivisionsName0": "Provincia de Lima",
+    "cityDbContinentCode": "SA",
+    "cityDbSubdivisionsCode0": "LMA",
+    "cityDbCountryCode": "PE",
+    "cityDbSubdivisionsCode1": "--",
+    "cityDbSubdivisionsName2": "--",
+    "cityDbSubdivisionsCode2": "--",
+    "ispDbMobileNetworkCode": "--",
+    "domainName": "--",
+    "ispDbAutonomousSystemNumber": "12252"
+  },
+  "flag3DS": "N",
+  "_metadata": {
+    "eventId": "4f567cc0-4fff-4fcd-aff8-86615b88ffc8_1773000661.698502",
+    "execution": {
+      "expectResponse": false
+    },
+    "maxMind_cityDbEuCountry": "false",
+    "systemEventId": "239411783-XqbPmEzr",
+    "entities": {
+      "PARTY": [
+        "76056642"
+      ],
+      "MOBILEPHONE": [
+        "947603348"
+      ],
+      "CITY": [
+        "Lima"
+      ],
+      "IP": [
+        "179.6.16.70"
+      ],
+      "APPLICATION": [
+        "RAEKM509UI2T"
+      ],
+      "DEVICE": [
+        "e9d0470a-5baf-4a99-9be7-e8ee4492741f"
+      ],
+      "CUSTOMER": [
+        "18d489c7-1a2b-4303-b445-8038711574db"
+      ],
+      "MCC": [
+        "5200"
+      ],
+      "EMAIL": [
+        "grobilliard@pucp.edu.pe"
+      ],
+      "CARD": [
+        "0de45864531e6ea7417a0b82efd43fd023157c7a52a4313d1cee1ba118e1ff57"
+      ],
+      "MERCHANT": [
+        "3a788fe5-bf47-4804-a7ed-7e6035467905"
+      ]
+    },
+    "receivedTime": "2026-03-08T20:11:01Z",
+    "eventTime": "2026-03-08T20:11:01.696697Z",
+    "tenantId": [
+      "Powerpay"
+    ],
+    "eventType": "fullApplicationNRT",
+    "searchable": {
+      "merchantShortName": "Calm",
+      "eventId": "4f567cc0-4fff-4fcd-aff8-86615b88ffc8_1773000661.698502",
+      "customerEntityId": "18d489c7-1a2b-4303-b445-8038711574db",
+      "mccEntityId": "5200",
+      "merchantEntityId": "3a788fe5-bf47-4804-a7ed-7e6035467905",
+      "eventType": "fullApplicationNRT",
+      "deviceEntityId": "e9d0470a-5baf-4a99-9be7-e8ee4492741f",
+      "deviceId": "e9d0470a-5baf-4a99-9be7-e8ee4492741f",
+      "customerIdentification": {
+        "documentNumber": "76056642"
+      },
+      "msgStatus": "",
+      "personalEntityId": "76056642",
+      "homeEmail": "grobilliard@pucp.edu.pe",
+      "emailEntityId": "grobilliard@pucp.edu.pe",
+      "mobilePhoneEntityId": "947603348",
+      "cardEntityId": "0de45864531e6ea7417a0b82efd43fd023157c7a52a4313d1cee1ba118e1ff57",
+      "name": {
+        "fullName": "Guillermo Rex Amilcar Robilliard Silva"
+      },
+      "eventTime": "2026-03-08T20:11:01.696697Z",
+      "applicationId": "RAEKM509UI2T",
+      "applicantCityEntityId": "Lima",
+      "device": {
+        "ipAddress": "179.6.16.70",
+        "ipAddressV4": "179.6.16.70"
+      },
+      "applicationDate": "2026-03-08"
+    },
+    "maxMind_cityDbRegisteredEuCountry": "false"
+  },
+  "homeAddress": {
+    "country": "PER",
+    "townName": "LIMA",
+    "countrySubDivision": "LIMA",
+    "addressLine1": "AV.|BOLIVAR 2150|||||||"
+  },
+  "eventId": "4f567cc0-4fff-4fcd-aff8-86615b88ffc8_1773000661.698502",
+  "nrovecescambiocard": 0,
+  "numberInstallments": 3,
+  "captureDateTime": "2026-03-08T15:08:44.943075-05:00",
+  "countryRegion": "PER",
+  "dniuserstore": "",
+  "Fallecido": "NO",
+  "eventType": "fullApplicationNRT",
+  "deviceEntityId": "e9d0470a-5baf-4a99-9be7-e8ee4492741f",
+  "personalEntityId": "76056642",
+  "homeEmail": "grobilliard@pucp.edu.pe",
+  "mobilePhone": {
+    "number": "947603348",
+    "countryRegionCode": "51"
+  },
+  "nationality": "PE",
+  "cardId": "0de45864531e6ea7417a0b82efd43fd023157c7a52a4313d1cee1ba118e1ff57",
+  "name": {
+    "surname": "Robilliard Silva",
+    "givenName": "Guillermo",
+    "fullName": "Guillermo Rex Amilcar Robilliard Silva",
+    "middleName": "Rex Amilcar"
+  },
+  "applicationId": "RAEKM509UI2T",
+  "applicantCityEntityId": "Lima",
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "ipAddress": "179.6.16.70",
+    "ipAddressV4": "179.6.16.70"
+  },
+  "lastnameuserstore": "SILVA",
+  "applicationDate": "2026-03-08",
+  "merchantShortName": "Calm",
+  "telephoneNumber": "947603348",
+  "msgType": "",
+  "customerOnboardDate": "2026-03-08",
+  "gender": "M",
+  "thirdPartyRiskScore": 5,
+  "customerEntityId": "18d489c7-1a2b-4303-b445-8038711574db",
+  "session": {
+    "sessionStartTime": "2026-03-08T15:10:46.39809-05:00",
+    "sessionId": "3RD1v44gTeaHF8ErES3utfAT0riP01Fx"
+  },
+  "numberPaidLoans": 0,
+  "mccEntityId": "5200",
+  "totalTimeDuringApplicationSubmissionInSeconds": 781.516986,
+  "merchantEntityId": "3a788fe5-bf47-4804-a7ed-7e6035467905",
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "76056642"
+  },
+  "applicationChannel": "ONLINE",
+  "msgStatus": "",
+  "submissionDateTime": "2026-03-08T15:08:44.957854-05:00",
+  "cardEntityId": "0de45864531e6ea7417a0b82efd43fd023157c7a52a4313d1cee1ba118e1ff57",
+  "eventTime": "2026-03-08T15:11:01.696697-05:00",
+  "customerId": "18d489c7-1a2b-4303-b445-8038711574db",
+  "merchantCountry": "PER",
+  "loanstate": "active",
+  "amount": {
+    "baseValue": 1234.05,
+    "currency": "PER",
+    "value": 1234.05,
+    "baseCurrency": "PER"
+  },
+  "schemaVersion": 1,
+  "dateOfBirth": "2000-04-27",
+  "customerNumber": "9E6QNMVIPWOG",
+  "cardholder": "Mery Silva",
+  "numberActiveLoans": 1,
+  "merchantActivityStatus": "enabled",
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "scoreKYC": 100,
+    "ppm": 607.56,
+    "effort_rate": 8.63
+  },
+  "merchantCategoryCode": "5200",
+  "mobilePhoneEntityId": "947603348",
+  "tenantId": "Powerpay",
+  "amountInstallment": {
+    "baseValue": 411.35,
+    "currency": "PER",
+    "value": 411.35,
+    "baseCurrency": "PER"
+  },
+  "age": 25
+}
+
+
+###
+  ### Test RT — Prueba regla RP13 -  002 ###   
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{"applicationType":"POWERPAY","firstnameuserstore":"Franco","payment_concept":"electrodomésticos, Ropa","deviceId":"56ff1723-d53b-4eb0-bf48-551959878b59","cardToken":"kswsjhselcix4yws6ilt","affordability":{"totalCreditLimit":{"baseValue":2000.1,"currency":"PER","value":2000.1,"baseCurrency":"PER"}},"correspondenceAddress":{"country":"PER","addressLine1":"Calle brea y pariñas, Urb. El trapecio Mz N'17 Etapa II"},"Biometria":"NO","creditApplicationScore":"0","customerType":"DIGITAL","applicationStatus":"pending","emailEntityId":"francofasshauer2@gmail.com","merchantId":"46d026bf-395a-42d5-92e5-e47f943c8f15","maxMind":{"cityDbLongitude":"-78.5937","cityDbCountryName":"Perú","cityDbLatitude":"-9.0751","cityDbContinentName":"Sudamérica","cityDbPostalCode":"02801","ispDbAutonomousSystemOrganization":"CALA SERVICIOS INTEGRALES E.I.R.L.","cityDbRepresentedCountryType":"--","ispDbName":"Cala Servicios Integrales E.i.r.l.","cityDbTimezone":"America/Lima","connectionType":"Cable/DSL","cityDbCityName":"Chimbote","cityDbMetroCode":"--","ispDbMobileCountryCode":"--","cityDbGeoNamesIDs":"3932488","cityDbAccuracyRadius":"20","cityDbRegisteredCountry":"Estados Unidos","ispDbOrganizationName":"Cala Servicios Integrales E.i.r.l.","cityDbSubdivisionsName1":"--","cityDbSubdivisionsName0":"Ancash","cityDbSubdivisionsCode0":"ANC","cityDbContinentCode":"SA","cityDbSubdivisionsCode1":"--","cityDbCountryCode":"PE","cityDbSubdivisionsName2":"--","cityDbSubdivisionsCode2":"--","ispDbMobileNetworkCode":"--","domainName":"--","ispDbAutonomousSystemNumber":"272836"},"flag3DS":"N","_metadata":{"execution":{"expectResponse":true},"eventId":"4f92b69b-18ff-4d15-9383-b257ecaa1662_1772993070.814874","maxMind_cityDbEuCountry":"false","entities":{"PARTY":["74030809"],"MOBILEPHONE":["980339468"],"CITY":["Chimbote"],"APPLICATION":["4U85NXJ36SDQ"],"IP":["38.255.110.116"],"DEVICE":["56ff1723-d53b-4eb0-bf48-551959878b59"],"CUSTOMER":["b3dd48cc-8330-4633-8e84-39d230f4d5f2"],"MCC":["5621"],"EMAIL":["francofasshauer2@gmail.com"],"MERCHANT":["46d026bf-395a-42d5-92e5-e47f943c8f15"],"CARD":["b7e2b3257fc9507cd0fdef207b49ab054ee08a525746d15058c4d6ae1eb89606"]},"systemEventId":"238840285-w3Cq5FHU","receivedTime":"2026-03-08T18:04:30Z","tenantId":["Powerpay"],"eventTime":"2026-03-08T18:04:30.813484Z","eventType":"fullApplicationRT","searchable":{"merchantShortName":"VANS","eventId":"4f92b69b-18ff-4d15-9383-b257ecaa1662_1772993070.814874","customerEntityId":"b3dd48cc-8330-4633-8e84-39d230f4d5f2","mccEntityId":"5621","merchantEntityId":"46d026bf-395a-42d5-92e5-e47f943c8f15","eventType":"fullApplicationRT","deviceId":"56ff1723-d53b-4eb0-bf48-551959878b59","customerIdentification":{"documentNumber":"74030809"},"deviceEntityId":"56ff1723-d53b-4eb0-bf48-551959878b59","personalEntityId":"74030809","homeEmail":"francofasshauer2@gmail.com","emailEntityId":"francofasshauer2@gmail.com","cardEntityId":"b7e2b3257fc9507cd0fdef207b49ab054ee08a525746d15058c4d6ae1eb89606","mobilePhoneEntityId":"980339468","name":{"fullName":"Guillermo Franco Fasshauer Mejía"},"eventTime":"2026-03-08T18:04:30.813484Z","applicationId":"4U85NXJ36SDQ","device":{"ipAddress":"38.255.110.116","ipAddressV4":"38.255.110.116"},"applicantCityEntityId":"Chimbote","applicationDate":"2026-03-08"},"maxMind_cityDbRegisteredEuCountry":"false"},"homeAddress":{"country":"PER","townName":"SANTA","countrySubDivision":"ANCASH","addressLine1":"|||||URB|EL TRAPECIO|N1|17"},"eventId":"4f92b69b-18ff-4d15-9383-b257ecaa1662_1772993070.814874","nrovecescambiocard":0,"numberInstallments":6,"captureDateTime":"2026-03-08T13:04:28.168515-05:00","countryRegion":"PER","dniuserstore":"","Fallecido":"NO","eventType":"fullApplicationRT","deviceEntityId":"56ff1723-d53b-4eb0-bf48-551959878b59","personalEntityId":"74030809","homeEmail":"francofasshauer2@gmail.com","mobilePhone":{"number":"980339468","countryRegionCode":"51"},"nationality":"PE","cardId":"b7e2b3257fc9507cd0fdef207b49ab054ee08a525746d15058c4d6ae1eb89606","name":{"surname":"Fasshauer Mejía","givenName":"Guillermo","fullName":"Guillermo Franco Fasshauer Mejía","middleName":"Franco"},"applicationId":"4U85NXJ36SDQ","applicantCityEntityId":"Chimbote","device":{"deviceFingerprint":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","ipAddress":"38.255.110.116","ipAddressV4":"38.255.110.116"},"lastnameuserstore":"Fasshauer","applicationDate":"2026-03-08","merchantShortName":"VANS","telephoneNumber":"980339468","thirdPartyRiskScore":8,"customerOnboardDate":"2024-01-05","customerEntityId":"b3dd48cc-8330-4633-8e84-39d230f4d5f2","session":{"sessionStartTime":"2026-03-08T18:04:29.864269+00:00","sessionId":"nlasdRs6FQBx2zT0ikTa11E0WXTeN2sf"},"mccEntityId":"5621","numberPaidLoans":4,"merchantEntityId":"46d026bf-395a-42d5-92e5-e47f943c8f15","totalTimeDuringApplicationSubmissionInSeconds":541.861371,"customerIdentification":{"documentType":"DNI","documentNumber":"74030809"},"applicationChannel":"ONLINE","submissionDateTime":"2026-03-08T13:04:28.181221-05:00","cardEntityId":"b7e2b3257fc9507cd0fdef207b49ab054ee08a525746d15058c4d6ae1eb89606","customerId":"b3dd48cc-8330-4633-8e84-39d230f4d5f2","eventTime":"2026-03-08T13:04:30.813484-05:00","merchantCountry":"PER","amount":{"baseValue":272,"currency":"PER","value":272,"baseCurrency":"PER"},"schemaVersion":1,"dateOfBirth":"2004-03-15","customerNumber":"V7MQYFUEM823","cardholder":"Guillermo Fasshauer","numberActiveLoans":0,"merchantActivityStatus":"enabled","thirdPartyKYC":{"statusBuro":"approved","ppm":6.57,"scoreKYC":100,"effort_rate":14.78},"mobilePhoneEntityId":"980339468","merchantCategoryCode":"5621","tenantId":"Powerpay","amountInstallment":{"baseValue":49.18,"currency":"PER","value":49.18,"baseCurrency":"PER"},"age":21}
