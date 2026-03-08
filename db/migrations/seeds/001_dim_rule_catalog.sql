@@ -33,5 +33,5 @@ INSERT INTO dim_rule (rule_code, rule_name, event_type, priority, severity, bloc
 ('RP32','blackListMobilePhone',                    'fullApplicationRT',  2, 'LOW',    true,  true,  false, true),
 ('RP33','challengeCambioDeNumero',                 'fullApplicationRT',  7, 'MEDIO',  false, true,  false, true),
 ('RP34','challengeDobleComprasComercio',           'fullApplicationRT',  3, 'MEDIO',  false, true,  false, true),
-('RP35','challengeMas500a12cuotas',                'fullApplicationRT',  1, 'LOW',    false, true,  false, true)
+('RP35','challengeMas500a12cuotas',                'fullApplicationNRT',  1, 'LOW',    false, true,  true, true)
 ON CONFLICT (rule_code) DO NOTHING;
