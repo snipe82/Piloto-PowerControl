@@ -12,19 +12,21 @@ async function insertEvent(payload) {
   const hash = hashPayload(payload);
 
   const rows = await db.query(`
-    INSERT INTO fact_event (event_id, event_type, payload, hash)
-    VALUES ($1, $2, $3, $4)
+    INSERT INTO fact_event (event_id, event_type, application_id, customer_id, payload, hash, event_time)
+    VALUES ($1, $2, $3, $4, $5, $6, $7)
     ON CONFLICT (hash) DO NOTHING
     RETURNING event_id
   `, [
     payload.eventid,
     payload.eventtype,
+    payload.applicationid,
+    payload.customerid,
     JSON.stringify(payload),
     hash,
+    payload.eventtime || null,
   ]);
 
   if (rows.length === 0) {
-    // Verificar si el evento existente está en ERROR — permitir reintento
     const existing = await db.query(`
       SELECT event_id, status FROM fact_event WHERE hash = $1
     `, [hash]);
