@@ -15,7 +15,7 @@ async function upsertApplication(payload, refs) {
       third_party_risk_score, score_kyc,
       number_active_loans, number_paid_loans,
       card_change_count, credit_application_score,
-      total_time_seconds, biometria,
+      total_time_seconds, biometria, fallecido,
       flag3ds, loan_reference, loan_state,
       msg_status, msg_status_reason,
       beneficiary_dni, beneficiary_firstname, beneficiary_lastname
@@ -24,8 +24,8 @@ async function upsertApplication(payload, refs) {
       $1,$2,$3,$4,$5,$6,$7,$8,
       $9,$10,$11,$12,$13,$14,
       $15,$16,$17,$18,$19,$20,
-      $21,$22,$23,$24,$25,$26,$27,
-      $28,$29,$30,$31,$32
+      $21,$22,$23,$24,$25,$26,$27,$28,
+      $29,$30,$31,$32,$33
     )
     ON CONFLICT (application_id)
     DO UPDATE SET
@@ -39,41 +39,43 @@ async function upsertApplication(payload, refs) {
       msg_status_reason      = EXCLUDED.msg_status_reason,
       beneficiary_dni        = EXCLUDED.beneficiary_dni,
       beneficiary_firstname  = EXCLUDED.beneficiary_firstname,
-      beneficiary_lastname   = EXCLUDED.beneficiary_lastname
+      beneficiary_lastname   = EXCLUDED.beneficiary_lastname,
+      fallecido              = EXCLUDED.fallecido
     RETURNING application_id
   `, [
-    payload.applicationid,
-    refs.eventId,
-    refs.customerId,
-    refs.merchantId,
-    payload.dniuserstore || null,
-    refs.cardId,
-    refs.deviceId,
-    refs.sessionId,
-    payload.submissiondatetime || null,
-    payload.applicationdate || null,
-    payload.amount?.value || null,
-    payload.amountinstallment?.value || null,
-    payload.amount?.currency || null,
-    payload.numberinstallments || null,
-    payload.applicationstatus || null,
-    payload.applicationchannel || null,
-    payload.thirdpartyriskscore || null,
-    payload.thirdpartykyc?.scorekyc || null,
-    payload.numberactiveloans || null,
-    payload.numberpaidloans || null,
-    payload.nrovecescambiocard || null,
-    creditScore,
-    payload.totaltimeduringapplicationsubmissioninseconds || null,
-    payload.biometria || 'NO',
-    payload.flag3ds || null,
-    payload.loanreference || null,
-    payload.loanstate || null,
-    payload.msgstatus || null,
-    payload.msgstatusreason || null,
-    payload.dniuserstore || null,
-    payload.firstnameuserstore || null,
-    payload.lastnameuserstore || null,
+    payload.applicationid,           // $1
+    refs.eventId,                     // $2
+    refs.customerId,                  // $3
+    refs.merchantId,                  // $4
+    payload.dniuserstore || null,     // $5
+    refs.cardId,                      // $6
+    refs.deviceId,                    // $7
+    refs.sessionId,                   // $8
+    payload.submissiondatetime || null,  // $9
+    payload.applicationdate || null,     // $10
+    payload.amount?.value || null,       // $11
+    payload.amountinstallment?.value || null, // $12
+    payload.amount?.currency || null,    // $13
+    payload.numberinstallments || null,  // $14
+    payload.applicationstatus || null,   // $15
+    payload.applicationchannel || null,  // $16
+    payload.thirdpartyriskscore || null, // $17
+    payload.thirdpartykyc?.scorekyc || null, // $18
+    payload.numberactiveloans || null,   // $19
+    payload.numberpaidloans || null,     // $20
+    payload.nrovecescambiocard || null,  // $21
+    creditScore,                         // $22
+    payload.totaltimeduringapplicationsubmissioninseconds || null, // $23
+    payload.biometria || 'NO',           // $24
+    (payload.fallecido || 'NO').toUpperCase() === 'SI' ? 'SI' : 'NO', // $25
+    payload.flag3ds || null,             // $26
+    payload.loanreference || null,       // $27
+    payload.loanstate || null,           // $28
+    payload.msgstatus || null,           // $29
+    payload.msgstatusreason || null,     // $30
+    payload.dniuserstore || null,        // $31
+    payload.firstnameuserstore || null,  // $32
+    payload.lastnameuserstore || null,   // $33
   ]);
 
   return rows[0].application_id;
