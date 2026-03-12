@@ -1,5 +1,5 @@
 -- =============================================
--- Regla: RP06 — velocidad1h
+-- Regla: RP07 — velocidad1d
 -- Versión: 4
 -- Fecha: 2026-03-12
 -- Histórico BigQuery: SÍ
@@ -17,7 +17,7 @@
 --   3. Pago exitoso: payment_status = completed en fact_payment
 -- Cambios v1:
 --   1. Versión inicial
---   2. Más de 3 eventos únicos por application_id en la última hora
+--   2. Más de 5 eventos únicos por application_id en las últimas 24 horas
 --   3. Se usa fact_event.event_time — fecha real del evento
 --   4. DNI no debe estar en lista blanca
 --   5. No debe tener alertas descartadas previamente
@@ -30,13 +30,13 @@ SELECT COUNT(*) AS total
 FROM dim_customer dc
 JOIN params p ON dc.customer_id = p.customer_id
 WHERE
-  -- Más de 3 operaciones exitosas en la última hora
+  -- Más de 5 operaciones exitosas en las últimas 24 horas
   (
     SELECT COUNT(DISTINCT fe.event_id)
     FROM fact_event fe
     JOIN fact_application fa ON fa.application_id = fe.application_id
     WHERE fe.customer_id = p.customer_id
-      AND fe.event_time >= NOW() - INTERVAL '1 hour'
+      AND fe.event_time >= NOW() - INTERVAL '24 hours'
       AND (
         -- Crédito exitoso (sin pago asociado)
         (
@@ -54,7 +54,7 @@ WHERE
             AND fp.payment_status = 'completed'
         )
       )
-  ) > 3
+  ) > 5
   -- DNI no debe estar en lista blanca
   AND NOT EXISTS (
     SELECT 1 FROM list_dni ld

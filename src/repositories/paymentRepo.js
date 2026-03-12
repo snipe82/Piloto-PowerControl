@@ -5,10 +5,7 @@ async function insertPayment(payload, refs) {
 
   const p = payload.payments;
 
-  const rawStatus = (p.statuspayment || p.status || '').toLowerCase();
-  let paymentStatus = 'PENDING';
-  if (rawStatus === 'completed' || rawStatus === 'success') paymentStatus = 'SUCCESS';
-  if (rawStatus === 'failed') paymentStatus = 'FAILED';
+  const paymentStatus = (p.statuspayment || p.status || 'pending').toLowerCase();
 
   const rows = await db.query(`
     INSERT INTO fact_payment (
