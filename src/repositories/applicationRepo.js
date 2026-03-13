@@ -61,8 +61,8 @@ async function upsertApplication(payload, refs) {
     payload.applicationchannel || null,  // $16
     payload.thirdpartyriskscore || null, // $17
     payload.thirdpartykyc?.scorekyc || null, // $18
-    payload.numberactiveloans || null,   // $19
-    payload.numberpaidloans || null,     // $20
+    payload.numberactiveloans ?? null,   // $19
+    payload.numberpaidloans ?? null,     // $20
     payload.nrovecescambiocard || null,  // $21
     creditScore,                         // $22
     payload.totaltimeduringapplicationsubmissioninseconds || null, // $23
