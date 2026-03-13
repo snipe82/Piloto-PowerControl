@@ -1,13 +1,15 @@
 -- =============================================
 -- Regla: RP29 — departamentoInStore24h
--- Versión: 4
+-- Versión: 5
 -- Fecha: 2026-03-13
 -- Histórico BigQuery: SÍ
 -- Aplica: fullApplicationRT
+-- Cambios v5:
+--   1. Elimina validación de alertas descartadas — puede ser robo
+--      de tarjeta o documento, la regla debe saltar igual
 -- Cambios v4:
 --   1. Elimina application_status = completed en la compra actual
 --      — aplica en RT, la compra aún no tiene estado final
---   2. Las compras previas del histórico sí se validan como completed
 -- Cambios v3:
 --   1. Agrega validación de comercio no en lista blanca (list_merchant)
 -- Cambios v2:
@@ -20,7 +22,6 @@
 --   4. Se usa list_merchant_store.departamento — cargado desde CSV
 --   5. Solo créditos — sin pagos asociados en la compra actual
 --   6. DNI no debe estar en lista blanca
---   7. No debe tener alertas descartadas previamente
 -- =============================================
 WITH params AS (
   SELECT $1::uuid AS customer_id, $2::varchar AS application_id,
@@ -62,10 +63,4 @@ WHERE fa.application_channel = 'POINT_OF_SALE'
     SELECT 1 FROM list_dni ld
     WHERE ld.document_number = dc.document_number
       AND ld.list_type = 'WHITE'
-  )
-  -- No debe haber tenido alertas descartadas previamente
-  AND NOT EXISTS (
-    SELECT 1 FROM fact_alert fa_al
-    WHERE fa_al.customer_id = p.customer_id
-      AND fa_al.status = 'DISCARDED'
   )

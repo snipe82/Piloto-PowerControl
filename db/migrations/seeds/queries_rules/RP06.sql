@@ -1,26 +1,19 @@
 -- =============================================
 -- Regla: RP06 — velocidad1h
--- Versión: 4
--- Fecha: 2026-03-12
+-- Versión: 5
+-- Fecha: 2026-03-13
 -- Histórico BigQuery: SÍ
--- Nota BQ: Las operaciones previas pueden estar en el histórico de BigQuery
---           si ocurrieron antes de que el sistema arrancara
+-- Cambios v5:
+--   1. Elimina validación de alertas descartadas — velocidad es señal
+--      suficiente independientemente del historial de revisiones
 -- Cambios v4:
---   1. COUNT(DISTINCT fe.event_id) en vez de fe.application_id
---      para contar operaciones reales — un mismo applicationId puede
---      tener múltiples eventos (crédito + pagos)
+--   1. COUNT(DISTINCT fe.event_id) para contar operaciones reales
 -- Cambios v3:
 --   1. payment_status cambiado a completed
 -- Cambios v2:
 --   1. Agrega validación de operaciones exitosas
---   2. Crédito exitoso: application_status = completed sin pago asociado
---   3. Pago exitoso: payment_status = completed en fact_payment
 -- Cambios v1:
 --   1. Versión inicial
---   2. Más de 3 eventos únicos por application_id en la última hora
---   3. Se usa fact_event.event_time — fecha real del evento
---   4. DNI no debe estar en lista blanca
---   5. No debe tener alertas descartadas previamente
 -- =============================================
 WITH params AS (
   SELECT $1::uuid AS customer_id, $2::varchar AS application_id,
@@ -38,7 +31,6 @@ WHERE
     WHERE fe.customer_id = p.customer_id
       AND fe.event_time >= NOW() - INTERVAL '1 hour'
       AND (
-        -- Crédito exitoso (sin pago asociado)
         (
           fa.application_status = 'completed'
           AND NOT EXISTS (
@@ -47,7 +39,6 @@ WHERE
           )
         )
         OR
-        -- Pago exitoso
         EXISTS (
           SELECT 1 FROM fact_payment fp
           WHERE fp.application_id = fe.application_id
@@ -60,10 +51,4 @@ WHERE
     SELECT 1 FROM list_dni ld
     WHERE ld.document_number = dc.document_number
       AND ld.list_type = 'WHITE'
-  )
-  -- No debe haber tenido alertas descartadas previamente
-  AND NOT EXISTS (
-    SELECT 1 FROM fact_alert fa_al
-    WHERE fa_al.customer_id = p.customer_id
-      AND fa_al.status = 'DISCARDED'
   )
