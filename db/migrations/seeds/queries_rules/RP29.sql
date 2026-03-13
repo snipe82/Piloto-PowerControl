@@ -1,9 +1,13 @@
 -- =============================================
 -- Regla: RP29 — departamentoInStore24h
--- Versión: 3
--- Fecha: 2026-03-12
+-- Versión: 4
+-- Fecha: 2026-03-13
 -- Histórico BigQuery: SÍ
--- Aplica: fullApplicationNRT
+-- Aplica: fullApplicationRT
+-- Cambios v4:
+--   1. Elimina application_status = completed en la compra actual
+--      — aplica en RT, la compra aún no tiene estado final
+--   2. Las compras previas del histórico sí se validan como completed
 -- Cambios v3:
 --   1. Agrega validación de comercio no en lista blanca (list_merchant)
 -- Cambios v2:
@@ -27,9 +31,8 @@ FROM fact_application fa
 JOIN dim_customer dc ON fa.customer_id = dc.customer_id
 JOIN list_merchant_store lms ON lms.merchant_id = fa.merchant_id
 JOIN params p ON fa.application_id = p.application_id
-WHERE fa.application_status = 'completed'
-  AND fa.application_channel = 'POINT_OF_SALE'
-  -- Existe compra previa en las últimas 24 horas en un departamento diferente
+WHERE fa.application_channel = 'POINT_OF_SALE'
+  -- Existe compra previa completada en las últimas 24 horas en un departamento diferente
   AND EXISTS (
     SELECT 1
     FROM fact_application fa2

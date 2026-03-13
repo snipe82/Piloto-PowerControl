@@ -1,7 +1,6 @@
--- db/seed/004_list_merchant_store.sql
--- Seed de comercios con departamento/provincia
--- Generado desde data-list-export-MERCHANTS_IN_STORE.csv
--- Total registros: 1322
+-- db/seed/006_list_merchant_store_full.sql
+-- Seed completo de comercios — 2019 registros
+-- Generado desde data-list-export-MERCHANTS_IN_STORE__2_.csv
 
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('00074022-d94d-4cb9-9e9e-5c799b9657f9'::uuid, 'Forli Megaplaza', 'LIMA', 'LIMA', 'MZA. I LOTE. 04 ASOC PEQ AVIC EL DORADO (ZAPALLAL PARADERO LA PIEDRA) LIMA - LIMA - PUENTE PIEDRA', '20511108200')
@@ -52,7 +51,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('00c105eb-7056-4028-991d-85e93d047571'::uuid, 'Conauto Puno', 'Puno', 'Puno', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('00cbd0e0-9ade-4065-b4df-7550c0f4340e'::uuid, 'Carsa Mega San Juan', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('00d61822-3798-49cd-98a8-4a034427adac'::uuid, 'NEW BALANCE SAN MIGUEL', 'Lima', 'Lima', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -68,6 +83,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('01a97ccc-b08c-4729-96ec-872c15e43f4b'::uuid, 'Panorama Hogar Tienda San Borja', 'Lima', 'San Borja', 'Jr. Ucayali 425 Cercado de Lima', '20330676826')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('01cc7db6-8cf9-4cda-b864-2b741a3073f7'::uuid, 'Bata B Mercado Central', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -76,7 +99,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('01e12aeb-d55e-4d17-86c7-ebb3823cf60a'::uuid, 'Nespresso La Rambla', 'Lima', 'Lima', 'Pasaje Yanacocha 171 Dpto 401 Santiago del Surco Lima', '20611315130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('01e41ce9-24e6-4210-ac16-a3b5e0fdb311'::uuid, 'CERTUS POSTGRADO', 'Lima', 'Santiago de surco', 'Av. Primavera Nro. 970', '20603817185')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('01fff16a-15c7-4967-99bc-edb192603937'::uuid, 'ISIL SERVICIOS', 'LIMA', 'Lima', 'AV. LA FONTANA 955 URB. SANTA PATRICIA', '20100134455')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('021d5bd2-3faa-4842-9bb2-8b68dba34145'::uuid, 'Rodalexia Venta Asistida', 'LIMA', 'Miraflores', 'AV. MARISCAL JOSE DE LA MAR 550A DPT 401', '20600681592')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -124,7 +171,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('02d15f0a-3708-4f43-9535-fae0da74c453'::uuid, 'MIKAELA SAN JUAN DE LURIGANCHO', 'Lima', 'San Juan de Lurigancho', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('02d64bd0-7199-4687-989c-be3dcab1d761'::uuid, 'Arquident', 'LIMA', 'LIMA', 'AV. NICOLAS AYLLON 359', '20552726546')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('02e30e08-28bb-45b7-bfcb-5ce25bde6565'::uuid, 'Tech Game Store Instore', 'Lima', 'San Martin de Porres', 'Jr. Santa Maria 291 Urb Palao Etp 2 SMP', '20610009728')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -156,6 +219,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('03b722f6-3e10-4cd8-98b1-26a20245ff3d'::uuid, 'Columbia Plaza Norte', 'Lima', 'Lima', 'CAL. AMADOR MERINO REYNA 267 SAN ISIDRO', '20514811271')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('03dd2213-c297-4ff6-be81-aa34316c7e37'::uuid, 'Footloose - Pucallpa - Tl2', 'Ucayali', 'Coronel Portillo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -173,6 +244,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('042ca8bd-1260-4313-a270-8553909f5231'::uuid, 'Carsa Yurimaguas', 'Lima', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('044cf6f3-eb59-47d8-af08-aa6c832e9a62'::uuid, 'LACOSTE JOCKEY PLAZA', 'Lima', 'Santiago de Surco', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -228,6 +307,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('04d42547-8b46-4cca-a880-780c454d9ee7'::uuid, 'Limalinen Jockey Plaza', 'Lima', 'Santiago de Surco', 'Av. Javier Prado Este 488 - San Isidro', '20606512679')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('04e29ce1-efaa-4e2b-90d3-57c7f9f06b96'::uuid, 'Footloose - SMP PLAZA REX - TK2', 'Lima', 'San Martin de Porres', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('04f4ce72-8a99-4048-ab24-7a0f2abfa702'::uuid, 'Footloose Comas - Tn9', 'Lima', 'Lima', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -252,6 +347,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('05328bd8-7cd4-472c-8ddb-de1934a87d82'::uuid, 'BOSE Cenco La Molina', 'Lima', 'Lima', 'JR. CARLOS NEUHAUS RIZO PATRÓN 125 URB. CORPAC SAN ISIDRO', '20100030838')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0537fb84-6b4a-4588-a16f-abf619c36e8d'::uuid, 'ALTERNATIVAS ENERGETICAS', 'Lima', 'Lima', 'AVENIDA UNIVERSITARIA NORTE MZ G LT 6A - URB. EL RETABLO II ETAPA - COMAS-LIMA', '20519413061')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('05a4f185-2ef4-4674-be65-8b6f5dc620da'::uuid, 'Karcher Center Chacarilla', 'Lima', 'Santiago de Surco', 'Av. Republica de Panama 6641', '20548502633')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('05fdab03-12af-4880-b928-52000e0f92a2'::uuid, 'iShop Plaza San Miguel', 'Lima', 'Lima', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -260,7 +379,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('063c697f-a064-486b-b6b6-55e6cb314e34'::uuid, 'Private Teacher Instore', 'Lima', 'Lima', 'AV. AREQUIPA 2633 - SAN ISIDRO', '20264234141')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('067d78b5-53be-47df-a0c9-2911e1b43664'::uuid, 'Alese Monitor Postventa Caja', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('06a259fa-3e5e-47a7-a190-b67563da19a8'::uuid, 'Columbia Larcomar', 'Lima', 'Lima', 'CAL. AMADOR MERINO REYNA 267 SAN ISIDRO', '20514811271')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -292,7 +427,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('06e81358-f46c-4515-89e9-d33bd79e4a89'::uuid, 'SALMA CAMINOS', 'lima', 'SANTIAGO DE SURCO', 'JR MONTERREY 258 CHACARILLA SURCO', '20548161208')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('06fcad41-32c0-4529-8354-1ab579be0211'::uuid, 'TIENDA SOLE MALL PLAZA TRUJILLO', 'Callao', 'La Libertad', 'Av. Argentina 2317', '20555190132')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0705e5aa-8a3e-4bae-a269-f82230512315'::uuid, 'GP MOTOS MAVILA SULLANA', 'Piura', 'Sullana', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -309,6 +460,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('075e0277-96c1-4279-ac0c-005546dc9f71'::uuid, 'Gmg Tarapoto Pimentel', 'Lima', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0762db6c-47c9-415e-8a3c-3c265328f568'::uuid, 'Hirophone Tienda Crediphone - Ate 3', 'LIMA', 'ATE', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -372,7 +531,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('082b697b-96c3-412e-bf5c-23534900c28e'::uuid, 'XIAOMI PIURA', 'Piura', 'Piura', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('082e85b5-59c4-43cf-a459-be7fb2e6d9e3'::uuid, 'SAMSUNG SES REAL PLAZA SALAVERRY', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0847e24f-c75d-4bbc-9386-e93720e674e1'::uuid, 'Finezza Santa Anita', 'Lima', 'Lima', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('08c699fb-dd3e-4a59-abe1-0d51022fbbf0'::uuid, 'PIEERS TDA NUEVA', 'Lima', 'La Victoria', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('08fc16ae-4103-4bfb-a3be-1bb384bf3c55'::uuid, 'Specialized Magdalena', 'Lima', 'Magdalena', 'AV. REDUCTO 1017 URB. LEURO MIRAFLORES', '20557677268')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -388,6 +579,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('094da8fd-aea2-4cbd-94b5-619dfa558423'::uuid, 'HEY DUDE_ASIA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('098bc6cc-429e-448e-a0fd-ed021973d583'::uuid, 'Evaluaciones Automotriz - No ventas - Manasa La Marina 1', 'LIMA', 'LIMA', '''-', '0')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -396,7 +595,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0994e317-e8e0-48ec-8bcc-061a7c0f2906'::uuid, 'HONOR MODULO CENTRO CIVICO', 'Lima', 'Lima', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('099ec9c7-c495-456c-a16b-f6b99b518d2d'::uuid, 'Michelle Belau MB. Arequipa C.C', 'Arequipa', 'Arequipa', 'AV. MARISCAL ELOY URETA NRO. 185 INT. 191 URB. EL PINO LIMA - SAN LUIS', '20296897338')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('09b0f824-c4c8-462b-a6a1-22c0b935a1c0'::uuid, 'KAYENCORP CHORRILLOS', 'Lima', 'Chorrillos', 'CANADA 635 LA VICTORIA', '20607050636')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0a0128ee-3a91-4a8e-91a5-f21eb8c993ee'::uuid, 'Soy Parrillero Instore', 'Lima', 'San Isidro', 'CAL. LAS GARZAS NORTE 475 SAN ISIDRO', '20611354879')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0a2ea4b6-63d5-41ca-b64d-ca885e822043'::uuid, 'CONVERSE CAYMA', 'Arequipa', 'Arequipa', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -420,6 +651,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0b16d1bd-3fc7-498c-b87d-b173900b8b6d'::uuid, 'LACOSTE LARCOMAR', 'Lima', 'Miraflores', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0b3e9052-68ee-4a62-9bbc-b19a6b6eb48a'::uuid, 'ROSA CLARÁ', 'Lima', 'Miraflores', 'Av. Santa Cruz 1119 Int. 202 - Miraflores', '20602094422')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('0b3f869f-a877-418b-aad1-89c6cb5681b2'::uuid, 'Footloose - Jr. Ayacucho - T28', 'Ayacucho', 'Huamanga', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -428,7 +675,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0b426ec0-381a-4b76-960b-8941ee40023d'::uuid, 'Columbia Angamos', 'Lima', 'Lima', 'CAL. AMADOR MERINO REYNA 267 SAN ISIDRO', '20514811271')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('0b531e13-f8e1-4123-89a9-1923e9de8d74'::uuid, 'Mac Center Arequipa', 'Arequipa', 'Arequipa', 'Cal. Nicolas de Pierola 368 - Urb. Liguria - Santiago de Surco', '20603954441')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0b5edb0b-d19a-46d1-9f9d-5ceeb1870d27'::uuid, 'Soft Jockey', 'Lima', 'Santiago de Surco', 'AV. EL POLO S/N CC EL POLO I TDA. A220 – SANTIAGO DE SURCO', '20601363861')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -476,7 +739,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('0cd43379-6a94-486d-bb60-7c648732337c'::uuid, 'Automotores Inka Lima', 'Chiclayo', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ Chiclayo CHICLAYO', '20480683839')
+VALUES ('0cc814ee-a6e1-4953-829e-8ced49879c20'::uuid, 'Behar Odontologos Instore', 'LIma', 'San Isidro', 'Av. Javier Prado Este 1010 - San Isidro', '20466366863')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0cd43379-6a94-486d-bb60-7c648732337c'::uuid, 'Automotores Inka Lima', 'Lambayeque', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ LAMBAYEQUE CHICLAYO', '20480683839')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0cda225d-88a3-4c53-bab9-cf992f37f24f'::uuid, 'Decor Center La Molina', 'Lima', 'La Molina', 'Av La Molina 473 Ate', '20215528791')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0ced98fa-5cfb-4810-b333-bc03e24f8d40'::uuid, 'KERASILK PROFESSIONAL 2', 'Lima', 'San Isidro', 'Cal. 3 Norte Nro. 140 Int. B SAN ISIDRO', '20605273786')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0d2ca393-4098-4b9b-b3da-ec5a52ae5d83'::uuid, 'GP MOTOS MAVILA TAMBOGRANDE', 'Piura', 'Tambogrande', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -548,6 +843,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0e203d05-1356-480f-a9d8-9ae50e340f74'::uuid, 'SALUD VISUAL LASER HUARAL', 'Lima', 'Huaral', 'MANUEL DULANTO 1601 PUEBLO LIBRE', '20613132628')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0e2d96dc-f824-486a-a289-0e0ef603c771'::uuid, 'PIEERS MALL IQUITOS (WAMA)', 'Loreto', 'Iquitos', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('0e3bc29a-cc7e-40dc-a093-2970726e7308'::uuid, 'Valdez Service - Vmt', 'Lima', 'Lima', 'AV BENAVIDES 3876 - SANTIAGO DE SURCO - LIMA - PERU', '10090046107')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -557,6 +868,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('0e4ff79e-947a-4a43-96ee-34d94076b2bc'::uuid, 'XIAOMI CHICLAYO 2 REAL PLAZA', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0eb6a8bb-445f-4baa-a2dd-4b9a30042416'::uuid, 'Bata B PRIMAVERA', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0f035c5a-b353-480e-a80e-eab43a07b3d2'::uuid, 'NEW BALANCE PARQUE LA MOLINA', 'Lima', 'La Molina', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0f6597c6-de01-4215-a598-64f6a0767d92'::uuid, 'TELVICOM VENTA ASISTIDA', 'Lima', 'MIraflores', 'MARISCAL LA MAR 1120 MIRAFLORES', '20419669394')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -588,6 +923,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('0fc59a2d-94da-4931-ad80-6338d0a1ad02'::uuid, 'Socopur Los Olivos', 'Lima', 'Lima', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('0fc756f2-b7bb-4c38-85e8-bbefea1dbd02'::uuid, 'Quality Products Tienda Real Plaza Puruchuco', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -596,7 +939,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('10109273-af3e-4856-ae97-3315eb9c25de'::uuid, 'OUTLET MINKA', 'Callao', 'Callao', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('101c56a8-1726-4032-94a9-b7f4650e7072'::uuid, 'JCH Llantas LIM PRIMAVERA', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1058fa33-1dc5-43c3-8068-293d1acfed39'::uuid, 'Rosen Outlet Lurin', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -636,6 +995,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('10ba1f5a-a2f1-4dbf-8bd1-c6b79a109c33'::uuid, 'Infanti Piura 1', 'Piura', 'Piura', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('10cb5de6-0fbb-43d5-95ef-9dc6159e95dd'::uuid, 'TIENDA SOLE MALL BELLAVISTA', 'Callao', 'Callao', 'Av. Argentina 2317', '20555190132')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -645,6 +1012,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('10d5a119-5aef-4e5f-9b41-5caaafff07a3'::uuid, 'Servisa', 'LIMA', 'LIMA', 'AVENIDA CANADA NRO 665. LA VICTORIA', '20100292875')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('10df74ed-bd3c-4975-ae20-d3abaa7bdaf3'::uuid, 'Hirophone Tienda Mall Aventura Santa Anita 1Er Nivel', 'LIMA', 'Santa Anita', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -700,6 +1075,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1173331d-ab96-4250-a70a-2e6756802030'::uuid, 'Adex Instituto Venta Asistida', 'Lima', 'San Borja', 'Av. Javier Prado Este Nro. 2875 – San Borja', '20100365341')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('118a1f22-d5a0-4b74-8fe9-e67e1747762f'::uuid, 'Phantom Jockey Plaza', 'LIMA', 'Lima', 'Av. Casimiro Ulloa 107', '20516634970')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -709,6 +1092,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('120f7770-741a-4d39-9e33-a218c32b4d5b'::uuid, 'Quirovida Rehabilitacion Integral - Los Olivos', 'Lima', 'Lima', 'Calle Las ?guilas 263 - Urb. Limatambo - Surquillo', '20504068146')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('122fe4dc-f0c3-4584-8a99-b8a215884fe8'::uuid, 'CROCS_MALL_DEL_SUR', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -732,7 +1123,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('129339b4-4fce-4aa6-a1c0-c06ea82e4285'::uuid, 'KAYENCORP CANADA', 'Lima', 'La Victoria', 'CANADA 635 LA VICTORIA', '20607050636')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('12b3c950-e825-4b90-9c8b-14f02e8d5dc1'::uuid, 'Clock Peru San Miguel', 'Lima', 'San Miguel', 'CALLE C. LOTE 20 DPTO 501 - SANTIAGO DE SURCO', '20602231799')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('12b77f84-bdd1-4395-a99f-1a2209e23ca1'::uuid, 'Gmg Sjl Castilla', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('12d74156-ab1c-4520-8d00-53e3feaac600'::uuid, 'Cilindro Peruano Instore', 'Lima', 'San Isidro', 'CAL. LAS GARZAS NORTE 475 SAN ISIDRO', '20611354879')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -796,7 +1211,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('136eefd3-44f2-4948-a5a0-587eadbbbc4c'::uuid, 'CROCS_MA_CHICLAYO', 'Lambayeque', 'Chiclayo', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('137a33b3-b7f9-4b92-8225-05fd254e0f7a'::uuid, 'Compuusa Principal', 'Arequipa', 'Paucarpata', 'Cl. Antonio Raimondy 123 Urb. Manuel Prado', '20532171173')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('13ab7595-403b-4b33-9e90-d81a2cac6d53'::uuid, 'EDIPESA PRIN', 'Lima', 'Lima', 'AV ARGENTINA 1710 LIMA', '20100041520')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('13cdd1d1-409e-41cf-a61b-c0cb00097415'::uuid, 'Phantom Angamos', 'Lima', 'Lima', 'Av. Casimiro Ulloa 107 Miraflores Lima', '20516634970')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -820,7 +1259,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('13f6f867-f401-4e07-857e-b69a57f83bec'::uuid, 'MIKAELA PLAZA SAN MIGUEL II', 'Lima', 'San Miguel', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('140c3adc-2fc0-4107-b8d0-8ca0b32f2f00'::uuid, 'AAA Multiservices InStore', 'LIMA', 'Puente Piedra', 'Mza. e Lote. 19', '20609609347')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('140c510c-25c0-4484-9d86-48c0a808a12c'::uuid, 'PIEERS CHOTA NEW', 'Cajamarca', 'Chota', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -836,6 +1291,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('145d14db-6642-4cf0-93e5-81b83ca363b5'::uuid, 'QUIRO INNOVA SURCO', 'Lima', 'Santiago de surco', 'ENCALADA 1090 SANTIAGO DE SURCO', '20614319004')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('146678bb-a1c2-4209-b300-6211af503211'::uuid, 'Hirophone Modulo Mall Plaza Comas 1Er Nivel', 'LIMA', 'COMAS', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('149a8f27-d012-444f-9cb8-a3455d4ecd1d'::uuid, 'Oxford Store Minka', 'LIMA', 'LIMA', 'Av. Los Algarrobos Mza. L-1 Lote. 1b Lurin', '20505039689')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -844,7 +1315,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('14d6ec37-cd19-407d-b147-c9db52a10941'::uuid, 'INBOX_PLAZA NORTE', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('15053c19-22b6-4541-ba7b-fe406e880beb'::uuid, 'SAMSUNG KIOSKO QUINDE ICA', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('15281269-9d7b-491c-831c-3126dce345a4'::uuid, 'Veneva Instore', 'Lima', 'San Isidro', 'CAL. LOS NOGALES 777 SAN ISIDRO', '20602083951')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1534a1c1-c71c-4ea0-902e-875fa3acdfb5'::uuid, 'UMBRO PIURA', 'Piura', 'Piura', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -868,6 +1363,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('155bc524-1dda-4ac6-af7b-7be2d4fefdb8'::uuid, 'CROCS_PURUCHUCO', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('156de478-5010-457e-a8d6-4c3ce4f1e44e'::uuid, 'Forli Venta Asistida', 'LIMA', 'LIMA', 'MZA. I LOTE. 04 ASOC PEQ AVIC EL DORADO (ZAPALLAL PARADERO LA PIEDRA) LIMA - LIMA - PUENTE PIEDRA', '20511108200')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -876,7 +1379,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('1578fff6-ab7a-4fe5-a528-abdaeaf637f6'::uuid, 'Automotores Pakatnamu S.A.C', 'Chiclayo', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+VALUES ('1578fff6-ab7a-4fe5-a528-abdaeaf637f6'::uuid, 'Automotores Pakatnamu S.A.C', 'Lambayeque', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1581d066-4204-4911-b34e-95ebf4d4baac'::uuid, 'COMPUCELL CANADA', 'Lima', 'La victoria', 'calle raymondi 123 arequipa', '20558669617')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -956,6 +1467,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('16e8938a-6f73-4682-a1a6-5caeec1af587'::uuid, 'Nua Baby Plaza Norte', 'Lima', 'Independencia', 'AV. GENERAL FELIPE SALAVERRY 2370', '20553224145')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1701f10e-e5ed-4bb1-a9ee-31e417ffb485'::uuid, 'Rosen Store Salaverry', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('170aafda-91bb-43f8-a4a3-6af51a47ae2d'::uuid, 'Carsa Huanuco', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -980,7 +1507,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('17400391-d16c-410c-84a5-5c640ff0a172'::uuid, 'NEW ERA MALL DEL SUR', 'Lima', 'San Juan De Miraflores', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1748056d-c647-47cc-bf99-553345b3e505'::uuid, 'Llantas San Martin Pte. Piedra', 'Lima', 'Lima', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1770e740-6aed-4d50-a920-72cd5eb196f2'::uuid, 'LEGO Jockey Plaza', 'Lima', 'Santiago de Surco', 'AV. JOSE PARDO N° 434 – MIRAFLORES - LIMA', '20605052836')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -996,7 +1539,63 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('17cdd400-95d2-4495-b939-35e8aa8db399'::uuid, 'Panorama Hogar CI San Borja', 'Lima', 'Lima', 'Jr. Ucayali 435 INT B Cercado de Lima', '20506249601')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('17daca40-6220-444c-8ed9-e8cc4b0f3533'::uuid, 'Electrogo', 'Ucayali', 'Coronel Portillo', 'Jr. Tarapaca 969 Urb. Cercado Pucallpa', '20128836170')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('18113d6b-b15d-446b-87d3-023c7b6387db'::uuid, 'LACOSTE LA MOLINA', 'Lima', 'La Molina', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1820970e-65ba-49c3-b9d4-a2d60445d0bd'::uuid, 'Pc Factory Real Plaza Piura', 'Piura', 'Piura', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('187fc756-156f-4b52-9aa0-50a664f06517'::uuid, 'PIEERS HUANCAYO 7 NEW', 'Junin', 'Huancayo', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('18842876-29ce-4f51-a2f8-b61919013cab'::uuid, 'YOUR OUTLET VENTA ASISTIDA', 'Lima', 'Santiago de Surco', 'URB. PROLONGACION BENAVIDES JR. OREJUELAS 271 SURCO', '20553205191')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('18859503-5e6b-4972-ac01-6d0e23ba882e'::uuid, 'Sometimes Venta Asistida', 'Lima', 'Ate', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1894229d-2149-4b71-97c1-d44d899e380b'::uuid, 'TH Servicios Medicos Instore', 'Lima', 'Lima', 'AV. JAVIER PRADO ESTE 228 - SAN ISIDRO', '20605060588')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1012,7 +1611,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('190d7d8e-74c9-4a54-a04b-8472210b4539'::uuid, 'PIEERS MALL S.J.L (WAMA)', 'Lima', 'San Juan de Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('192bf00c-1f5d-4500-9d17-36e39a4d996c'::uuid, 'Tous Salaverry', 'Lima', 'San Isidro', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('19792d9a-b134-4050-abe7-0e31bb372ba1'::uuid, 'Finezza Puruchuco', 'Lima', 'Lima', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('199dc307-d3a6-4d61-b452-21d2ecfe5501'::uuid, 'JCH Llantas TAC ??14', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('19a3d2a2-00f5-48bc-b62b-a42cb877db30'::uuid, 'CLINICA CARITA FELIZ', 'Piura', 'Piura', 'Huancavelica 925 Piura', '20483432951')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1028,7 +1659,47 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('19bd4f2b-62bf-4c62-803b-b95a2c35978c'::uuid, 'Aghaso Mall del Sur', 'Lima', 'Lima', 'Av. Javier Prado Oeste 757 Int 1306 - Magdalena del Mar', '20608707850')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('19efed86-13e6-4975-a64c-fabf7573c83d'::uuid, 'Rosen Store San Miguel', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1a036a3f-c4d8-4ded-acf6-b30560efe8a9'::uuid, 'Llantas San Martin Venta Asistida', 'Lima', 'Lima', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1a07a812-0f5d-4bd9-9033-23b54506d56a'::uuid, 'CROCS_CUSCO', 'Cusco', 'Cusco', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1a352802-cdae-401c-8a9f-214805fc708d'::uuid, 'Vehiculos Futur Miraflores', 'Lima', 'Lima', 'Calle Schell 698 - Miraflores', '20601243220')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1a4fabdf-7308-44d8-8f8b-075406935b77'::uuid, 'CROCS_SAN_MIGUEL', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1044,7 +1715,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1aa50d56-102f-43a0-a334-e4400060d792'::uuid, 'Infanti Puruchuco', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1ac426ee-c910-4107-8daa-23068221462e'::uuid, 'Footloose - Chimbote - Mega Plaza - T72', 'Ancash', 'Santa', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1acfc406-c46f-4ea6-9048-b82328030378'::uuid, 'Ssenda Selva Chiclayo', 'Lambayeque', 'Chiclayo', 'AV Nicolas Ayllon  4671 Ate Lima', '20608038834')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1aed9616-eef0-4893-a911-12022273afdd'::uuid, 'Samsonite Jockey Plaza', 'Lima', 'Lima', 'ENCALADA 1388 SURCO', '20551938353')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1061,6 +1756,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1b46f103-13f0-48e7-a8bb-5c6d7b8c4840'::uuid, 'CLINICA GUARDIA CIVIL', 'Lima', 'Lima', 'REPUBLICA DE PANAMA 3461 SAN ISIDRO LIMA', '20381170412')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1b4d2f3c-cb25-4293-adf2-70809c68b204'::uuid, 'CLINICA LASER PUERTO MALDONADO', 'Madre de Dios', 'Puerto Maldonado', 'JR MAYNAS 240 IQUITOS', '20600678613')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1b60a00f-f9ab-451a-b3ae-0deb09b5a264'::uuid, 'Hirophone Tienda Grande - Ate 1', 'LIMA', 'Ate', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1092,6 +1803,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1bb9f92a-7885-49a6-b394-433e2f501751'::uuid, 'Hirophone Tienda Real Plaza Santa Clara', 'LIMA', 'SANTA CLARA', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1bdccce8-f162-4596-9aac-0169c6db05c9'::uuid, 'Samsonite MallPlaza Angamos', 'Lima', 'Lima', 'ENCALADA 1388 SURCO', '20551938353')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1bea97fa-8dce-441b-97b0-e5be99aa654d'::uuid, 'Evolution PIURA', 'Piura', 'Piura', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20449239394')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1100,7 +1827,63 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1bff9b5f-45ef-44e8-8c95-118faad67e98'::uuid, 'Infanti Ica', 'Ica', 'Ica', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1c0ad24d-f5d2-4599-9585-918b95a83ff8'::uuid, 'Medinet Instore', 'Lima', 'San Isidro', 'AV. DIONISIO DERTEANO 184 - SAN ISIDRO', '20502811674')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1c3b69b3-6b5a-4f7c-8f1a-409f47883481'::uuid, 'PIEERS PTE PIEDRA 2(MAGEPII)', 'LIma', 'Puente Piedra', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1c4ba4a5-728b-4e4b-bf5b-d0b79a2008d2'::uuid, 'Carsa La Merced', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1c592379-2297-4c31-9449-f60ae803cad7'::uuid, 'Samsonite Trujillo', 'La Libertad', 'Trujillo', 'ENCALADA 1388 SURCO', '20551938353')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1ca6794d-d1fb-4a54-b7eb-1751fbf4f197'::uuid, 'El Cofre Showroom', 'Lima', 'Lima', 'PRO. LOS CONQUISTADORES 158 - SANTIAGO DE SURCO', '20605343911')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1cf03e05-fe54-4ba9-9b18-c2c378d97fd4'::uuid, 'Conauto Ugarte', 'Arequipa', 'Arequipa', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1d145db1-8ebd-423d-8a46-ebdb2afee48d'::uuid, 'SALUD VISUAL LASER BARRANCA', 'Lima', 'Barranca', 'MANUEL DULANTO 1601 PUEBLO LIBRE', '20613132628')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1117,6 +1900,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1e2f3f87-7dd8-4dfe-b1a3-b8fd4c3c1209'::uuid, 'Thermomix Ventas', 'Lima', 'Lima', 'Av. Mariscal La Mar 1034 Miraflores', '20606458526')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1e66e323-e520-4998-8d8c-b61067c8632e'::uuid, 'Universidad Privada Norbert Wiener Instore', 'Lima', 'Lima', 'AV. REPUBLICA DE CHILE NRO. 432 URB. SANTA BEATRIZ LIMA - LIMA - JESUS MARIA', '20466246370')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1156,7 +1947,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1eb1d858-42f0-4fa8-872f-f587d47b3d51'::uuid, 'Pc Factory Centro civico', 'Lima', 'Lima', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1ee48fc8-5719-4c8f-a7f2-d92fbd100818'::uuid, 'Baliq Mall San Juan Lurigancho', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1ef42603-3d3f-44b9-a6f1-71f51616bd0c'::uuid, 'Rosen Store Conquistadores', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('1efe8310-48f4-4a09-950e-9eea4718d637'::uuid, 'Phantom San Miguel', 'LIMA', 'Lima', 'Av. Casimiro Ulloa 107', '20516634970')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('1f1e9735-34e3-42ba-a430-3cc2af2a9120'::uuid, 'PIEERS CHICLAYO 3', 'Lambayeque', 'Chiclayo', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1196,7 +2019,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('205d1432-ec4a-405c-a3bc-c6be8a2c22d7'::uuid, 'PIEERS GAMARRA 570 CCT', 'Lima', 'Gamarra', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2065b7ca-ae80-4aae-a61e-44a03df8b032'::uuid, 'HEADMARK Puerto Maldonado', 'Madre de Dios', 'Puerto Maldonado', 'AV Nicolas Ayllon  4671 Ate Lima', '20517206955')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('206c4661-2879-4a21-87cd-846c2548401c'::uuid, 'PIEERS PIURA 3', 'Piura', 'Piura', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('206c5f3a-e712-4296-aa32-394afdec22d1'::uuid, 'Alese Taller Camacho ATF Postventa', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('209f6d22-e254-4da6-a64d-52197f065aec'::uuid, 'GP MOTOS MAVILA CHICLAYO', 'Lambayeque', 'Chiclayo', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1228,7 +2083,47 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('21391925-f960-4f1f-ab40-b0897b2615ad'::uuid, 'Salomon Miraflores', 'Lima', 'Miraflores', 'AV. CONQUISTADORES 840 - SAN ISIDRO', '20555212390')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2139b4dc-d6d5-4f23-8605-fe3ff844da46'::uuid, 'Llantas San Martin Arriola 1902', 'lima', 'San Luis', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2140df22-97ac-4e2c-ba51-59f67baad426'::uuid, 'BOSE Plaza San Miguel', 'Lima', 'Lima', 'JR. CARLOS NEUHAUS RIZO PATRÓN 125 URB. CORPAC SAN ISIDRO', '20100030838')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('218a9e5e-b81b-45c0-a18b-0e614c349190'::uuid, 'SAMSUNG KIOSKO JUAN DE ARONA', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('218f751b-743d-41cc-bcc3-b500e2712df0'::uuid, 'Tous Piura', 'Piura', 'Piura', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('21f4cdd3-f2ac-40f5-b68a-6d078f0ea3de'::uuid, 'Hirophone Módulo Mall Aventura Santa Anita 2Do Nivel', 'LIMA', 'Santa Anita', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1252,6 +2147,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('223382c6-c7f6-476a-bb61-5718d9289eb4'::uuid, 'Baliq Real Plaza Puruchuco', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('223e018c-b8dc-4577-b719-8ccc758279fa'::uuid, 'KERASILK PROFESSIONAL 1', 'Lima', 'San Isidro', 'Cal. 3 Norte Nro. 140 Int. B SAN ISIDRO', '20611495235')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2255d062-5888-477e-904a-993cd0cff3d8'::uuid, 'Smart Move Benavides', 'LIMA', 'LIMA', 'Av Olavegoya 1855 Dpto 1201 ??? Jesus Maria', '20604143374')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1268,7 +2179,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('228aaee1-b6b2-4d57-9466-b3cad9c2258b'::uuid, 'Mac Center Chiclayo', 'Chiclayo', 'Chiclayo', 'Cal. Nicolas de Pierola 368 - Urb. Liguria - Santiago de Surco', '20603954441')
+VALUES ('228aaee1-b6b2-4d57-9466-b3cad9c2258b'::uuid, 'Mac Center Chiclayo', 'Lambayeque', 'Chiclayo', 'Cal. Nicolas de Pierola 368 - Urb. Liguria - Santiago de Surco', '20603954441')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1277,6 +2188,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('228c43a9-32c0-402b-be86-ce491746b669'::uuid, 'MERRELL MEGA PLAZA', 'Lima', 'Lima', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('22b4ac7d-7605-4069-8b02-8678d952a805'::uuid, 'GV Odontologos Miraflores', 'Lima', 'MIraflores', '''-', '20614338408')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1300,7 +2219,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('22de798f-d4f7-4dbb-9580-c0978fb86003'::uuid, 'Brick Smart Puruchuco', 'Lima', 'Ate', 'AV. JOSE PARDO N° 434 – MIRAFLORES - LIMA', '20605052836')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2300a0ec-f1f9-4d23-99de-6905386bf460'::uuid, 'Ilaria Comas', 'Lima', 'Lima', 'AVENIDA DOS DE MAYO 308 SAN ISIDRO', '20107945874')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('231bec16-4c3f-4550-90fb-b88605baf460'::uuid, 'Invicta Larcomar', 'Lima', 'Miraflores', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1348,6 +2283,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2460c56e-4abf-4852-a516-9ebcbcec2c3d'::uuid, 'UMBRO SJL', 'Lima', 'San Juan de Lurigancho', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('249cc124-45b7-431e-8be3-1f4254dd4e34'::uuid, 'iShop Jockey Plaza Nuevo Hall', 'Lima', 'Lima', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1388,7 +2331,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2506574c-ebc5-407c-93f0-e56aecc51f10'::uuid, 'Mr Grill Instore', 'Lima', 'San Borja', 'Avenida Agustin de la Rosa Toro 1140 – San Borja', '20549241604')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('252da279-6608-4cba-8d28-7767a6ae8c41'::uuid, 'Xiaomi Larcomar Miraflores', 'Lima', 'Lima', 'CALLE LOS NEGOCIOS 448 SURQUILLO', '20604095604')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('254830ee-f47a-4061-984e-e95ea3ef3813'::uuid, 'DONNA CATTIVA VENTA ASISTIDA', 'Lima', 'Surquillo', 'JR MANUEL IRRIBARREN 1393 SURQUILLO', '20609061708')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('255d1020-ce28-41f1-a50f-7e893222c206'::uuid, 'Caffarena Malldelsur', 'Lima', 'San Juan de Miraflores', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1420,6 +2387,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('25779a3a-1329-4085-a155-d0f3c80e05e0'::uuid, 'Socopur VES', 'Lima', 'Lima', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('257a42ef-41c8-4583-8566-1b933394eb8d'::uuid, 'MERRELL CUSCO', 'Cusco', 'Cusco', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('258da099-bbd5-4f8f-9958-70fd2973e57f'::uuid, 'GP MOTOS MAVILA VIRU', 'La Libertad', 'Viru', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2590a782-c549-418f-bed2-ca930ccf23f1'::uuid, 'Llantas San Martin Alborada', 'Lima', 'Lima', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1444,7 +2435,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('25e4d9cd-b0ef-41b2-9af1-086793561c4a'::uuid, 'MIKAELA HUANCAYO', 'Junin', 'Huancayo', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2621150b-0e74-4ffb-a34f-2b48730d7a3a'::uuid, 'Casa St Blanc Instore', 'Lima', 'Lima', 'Calle Schell 698 - Miraflores', '20601908191')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2639fe8e-a9ce-4db0-b952-bc39aae9dc93'::uuid, 'SUNTIME QUINDE SHOPPING ICA', 'Lima', 'Lima', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('26a1a297-1162-4937-8940-317c42e0a7b8'::uuid, 'Mac Center Juliaca', 'Puno', 'San Roman', 'Cal. Nicolas de Pierola 368 - Urb. Liguria - Santiago de Surco', '20603954441')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1468,7 +2483,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('26f01ff7-6ab4-419b-967e-ed41ab5be39d'::uuid, 'CLINICA INTERNACIONAL SURCO', '', '', 'Jr Washington 1471 Cercado de lima', '20100054184')
+VALUES ('26f01ff7-6ab4-419b-967e-ed41ab5be39d'::uuid, 'CLINICA INTERNACIONAL SURCO', 'LIMA', 'LIMA', 'Jr Washington 1471 Cercado de lima', '20100054184')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('26f866d7-0119-4cf7-8772-2caaeec80963'::uuid, 'VELEZ SAN MIGUEL', 'Lima', 'San Miguel', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2712117e-aa3c-4a67-bd41-3447104353ec'::uuid, 'Aleash Mobiles Instore', 'LIMA', 'LIMA', 'JR. CUTERVO 1818 DPTO 302 – CERCADO DE LIMA', '20612806161')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1508,7 +2539,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('272f589a-11cb-48f8-8027-d1f4b89d5aeb'::uuid, 'PIEERS MONFER', 'Lima', 'San Juan de Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2732e3d8-8ff2-491f-be05-994a7a115d96'::uuid, 'Carsa Tarapoto', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2737f160-8e96-4d8f-94f4-946aa24a6efa'::uuid, 'MIXION TIENDA', 'LIma', 'San Isidro', 'LOS EUCALIPTOS 296 SAN ISIDRO', '20613298071')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('273ca8c7-a4c9-479e-8946-562ff9d9a8d7'::uuid, 'Compañía Fitness Venta Asistida', 'Lima', 'Santiago de surco', 'Calle Isabel Granda 152 - Santiago de Surco', '20516364573')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('274e58e3-73d4-45dd-a80f-8da707a49824'::uuid, 'Bimba y Lola La Molina', 'Lima', 'Lima', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1524,7 +2587,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('27a16089-ee8b-4379-8293-ed71d861d2c8'::uuid, 'Autopak Chiclayo', 'Chiclayo', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+VALUES ('27789317-03b7-4aeb-999a-a196c990bf8c'::uuid, 'Nespresso Parque la Molina', 'Lima', 'La Molina', 'Pasaje Yanacocha 171, Dpto 401, Santiago del Surco, Lima', '20611315130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('279fe060-eb1c-46f7-8dce-69dbc909623f'::uuid, 'Infanti Huancayo', 'Junin', 'Huancayo', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('27a16089-ee8b-4379-8293-ed71d861d2c8'::uuid, 'Autopak Chiclayo', 'Lambayeque', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('27da5726-724d-451e-b89f-b3d75200a672'::uuid, 'Socopur Instore', 'Lima', 'Ate', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1572,6 +2659,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('28a20d9d-e4a1-4f66-ac32-7d36b2731fd0'::uuid, 'DONNA CATTIVA SALAVERRY', 'Lima', 'San Isidro', 'JR MANUEL IRRIBARREN 1393 SURQUILLO', '20609061708')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('28be886e-ca46-4e88-87cd-7e69529d65bc'::uuid, 'COA Los Olivos', 'LIMA', 'San Isidro', 'Avenida Juan de Arona 151', '20112280201')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1580,7 +2675,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('28fc7d8d-5a2d-4e3a-a715-b52d3ab0275f'::uuid, 'Automotores Inka Trujillo', 'La Libertad', 'Trujillo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ Chiclayo CHICLAYO', '20480683839')
+VALUES ('28fc7d8d-5a2d-4e3a-a715-b52d3ab0275f'::uuid, 'Automotores Inka Trujillo', 'La Libertad', 'Trujillo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ LAMBAYEQUE CHICLAYO', '20480683839')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('292ec3cf-78b9-4b0d-b969-430d7488a734'::uuid, 'Conauto Aviación', 'Arequipa', 'Arequipa', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2940b2ec-eea5-4b8b-ac4c-eb153e5a68a9'::uuid, 'MERRELL CAJAMARCA', 'Cajamarca', 'Cajamarca', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1589,6 +2700,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('297f32d8-9a7e-44b8-979a-f9fc95353431'::uuid, 'TDA 5 NISSAN', 'LIMA', 'LIMA', 'AV. PASEO DE LA REPUBLICA 2289 URB STA CATALINA', '20602629067')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('29a068c2-c523-4509-b916-45e47e2f736d'::uuid, 'Socopur San Miguel 1', 'Lima', 'Lima', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1636,7 +2755,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2afa8be6-6122-4536-b757-033d06d55065'::uuid, 'Hirophone Módulo Mall Aventura San Juan De Lurigancho 3Er Nivel', 'LIMA', 'San Juan de Lurigancho', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2b17eef4-de40-455d-ab15-61b4dfcc555b'::uuid, 'DJI LARCOMAR', 'lima', 'Santiago de surco', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2b45cac7-25d2-4427-ad1e-f159ae0ebc50'::uuid, 'Smart Move Instore', 'LIMA', 'LIMA', 'Av Olavegoya 1855 Dpto 1201 ??? Jesus Maria', '20604143374')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2b4b4e42-792e-463b-86f4-b28c64f7fd28'::uuid, 'PIEERS CHIMU 571', 'Lima', 'San Juan de Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1652,7 +2795,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2b694a3c-8715-4474-bad5-ee3255551122'::uuid, 'Invicta Kiosko Salaverry', 'Lima', 'Lima', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2b6e8df5-9f7a-4f5e-b6ae-4a926e1a5283'::uuid, 'LookUp Expocentro', 'LIMA', 'LIMA', 'Av. Manuel Villar?Ðn 1098 interior 502 Surquillo - Lima', '20607296589')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2b736563-c429-4977-a844-f82533d70851'::uuid, 'Perufarma Venta asistida', 'Lima', 'Lima', 'JR. SANTA FRANCISCA ROMANA 1092 – CERCADO DE LIMA', '20100052050')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1676,7 +2835,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2bc5bc05-bbf3-40b9-bf94-2c1b09e4daae'::uuid, 'GP Motoshop Instore', 'Lima', 'Lima', 'AV. CANADA 3355 SAN LUIS', '20606073110')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2bd1503d-c12b-47fc-9b3c-d9c60608d3ee'::uuid, 'ALYS BEAUTY MAGDALENA', 'Lima', 'Lima', 'AV. SANTIAGO ANTUNEZ DE MAYOLO 1373 Los Olivos', '20602191371')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2bddaae7-b8f1-48f3-a57b-4338178c5428'::uuid, 'CROCS_RP_CHICLAYO', 'Lambayeque', 'Chiclayo', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1692,7 +2867,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2bf953d1-fd1a-4eb8-b251-5d75d622c389'::uuid, 'Llantas San Martin Arriola 1908', 'lima', 'San Luis', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2c1fec77-507d-4dbc-aefe-e366b130017e'::uuid, 'SALMA EL POLO', 'lima', 'SANTIAGO DE SURCO', 'JR MONTERREY 258 CHACARILLA SURCO', '20548161208')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2c5e2f31-6746-4d5c-a58b-c75da732e277'::uuid, 'Panorama Hogar CI Andahuaylas', 'Apurimac', 'Andahuaylas', 'Jr. Ucayali 435 INT B Cercado de Lima', '20506249601')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2c682905-13ba-4533-8ed2-94067133d2a9'::uuid, 'Footloose - Ica - El Quinde - Td2', 'Ica', 'Ica', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2c7c9854-87c4-4e80-995f-bbc7d5ff4d13'::uuid, 'Eboost Instore', 'Lima', 'Lima', 'CAL. NICOLAS DE PIEROLA 112 SAN BORJA', '20612486809')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1764,6 +2971,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2d52a02f-2f71-49b3-b810-385d77c881e9'::uuid, 'Tous Arequipa', 'Arequipa', 'Arequipa', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2d590fc6-eec7-440d-a152-c380f6b29130'::uuid, 'CROCS_IQUITOS', 'Loreto', 'Iquitos', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2d7ba1b6-8952-48f6-a0eb-355b38245d13'::uuid, 'FUNERARIA JARDINES DE LA PAZ PRINCIPAL', 'Lima', 'Lima', 'AV SAN BORJA SUR 1190 SAN  BORJA', '20517227103')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1773,6 +2996,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('2d85fe94-d9c2-42b2-97f4-99557318dfd6'::uuid, 'XIAOMI MOD SALAVERRY', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2e2b6827-c409-438c-b059-e76cefaf1704'::uuid, 'FORCE FITWEAR AREQUIPA', 'Arequipa', 'Arequipa', 'AV TRINIDAD MORAN MZ I LOTE 7 URB. LEON XIII MZ I LT 07 CAYMA  AREQUIPA', '20611658762')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1828,7 +3059,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('2f98f393-86ca-4822-b8c7-9f4b91108fb8'::uuid, 'Footloose - Chiclayo- Elias Aguirre 420 - Td8', 'Chiclayo', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+VALUES ('2f8f7279-d2cb-4f85-a441-ec7a81c468eb'::uuid, 'STEVE MADDEN PARQUE LA MOLINA', 'Lima', 'La Molina', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2f98f393-86ca-4822-b8c7-9f4b91108fb8'::uuid, 'Footloose - Chiclayo- Elias Aguirre 420 - Td8', 'Lambayeque', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('2fb1a1c8-efda-4b93-925f-32683490c437'::uuid, 'SANICENTER AREQUIPA', 'Arequipa', 'Arequipa', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1892,6 +3139,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('308d5510-5bf1-4dc7-814c-5e9480bf03c2'::uuid, 'COLISEUM ASIA', 'Lima', 'Cañete', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('30a053ba-2e9f-43f7-a68e-eca42ccaf63a'::uuid, 'Infanti Salaverry', 'Lima', 'San Isidro', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('30cf0e45-d54a-4d9e-8893-142edf6d093e'::uuid, 'Chic & Cute Larcomar', 'lima', 'Miraflores', 'AV. JAVIER PRADO ESTE 4200 INTERIOR MTF8 - SANTIAGO DE SURCO', '20604870209')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('30d646d8-648a-4e0c-b89d-87a72c67c52a'::uuid, 'Alese Taller La Paz Postventa', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1900,7 +3171,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('30e2e73c-573a-4fc5-9321-610a1fcdde6b'::uuid, 'Bata B CARABAYLLO', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('316367d7-2c6d-43f4-a01d-62504b8c8a07'::uuid, 'Phantom Plaza Norte', 'LIMA', 'Lima', 'Av. Casimiro Ulloa 107', '20516634970')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3181f679-ada9-46e5-8f82-17ec93447574'::uuid, 'CAT SANTA ANITA', 'Lima', 'Santa Anita', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -1964,6 +3251,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('321b1382-16ef-4ac6-a9b2-69db3ecf54ce'::uuid, 'UPN Postgrado Menores 2', 'Lima', 'Lima', 'Av. Tingo María 1122 Cercado de Lima Lima', '20215276024')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3222db5b-635c-44ec-a286-63267217bfd7'::uuid, 'DONNA CATTIVA REALPLAZA CAYMA', 'Arequipa', 'Cayma', 'JR MANUEL IRRIBARREN 1393 SURQUILLO', '20609061708')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3222f25c-ce25-4fde-ac17-ae0deb7e38c1'::uuid, 'Baliq Wong Aurora', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('32439094-d888-4e60-9d1a-a6dda65f9aa8'::uuid, 'XIAOMI MALL DEL SUR', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -1988,6 +3299,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3310f713-259a-476b-b7bd-754c1be24b87'::uuid, 'CONVERSE LA MOLINA', 'Lima', 'La Molina', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('33290679-98be-4dfd-8c7d-b7d483eb314e'::uuid, 'Monark Callao', 'Callao', 'Callao', 'AV. ELMER J.FAUCETT 1920', '20100004756')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('332e4a4a-2c04-4efc-a773-4c0f54115215'::uuid, 'TIENDA SOLE REAL PLAZA HUANCAYO', 'Callao', 'Junin', 'Av. Argentina 2317', '20555190132')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2005,6 +3332,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('33866cd9-48a6-4300-9377-8d67a011a6c5'::uuid, 'Drimer Plaza San Miguel', 'Lima', 'Lima', 'Jr. el Polo Nro. 670 Int. C605 Centro Comercial el Polo (Block C) - Santiago de Surco', '20101308678')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('338a2124-0106-49c5-9943-8ee01be3f953'::uuid, 'Importify Instore', 'Lima', 'Lima', 'OTR. 39 39 URB. EL ASESOR 2 - SANTA ANITA', '20613743538')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2052,6 +3387,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('349296dc-57cc-4e06-91ae-ec8f96918861'::uuid, 'Bata B5 MIRAFLORES', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('349d69c7-11bc-4650-ab29-0ab6576f6cbd'::uuid, 'Footloose - Jr. Huallaga - T18', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2068,7 +3411,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('34d5ceba-7551-48c7-9693-052eddb136f4'::uuid, 'Footloose - Chiclayo - Mall - Tg2', 'Chiclayo', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+VALUES ('34d5ceba-7551-48c7-9693-052eddb136f4'::uuid, 'Footloose - Chiclayo - Mall - Tg2', 'Lambayeque', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2084,7 +3427,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('34ec7371-cbe0-4474-9b8d-cebcec95a431'::uuid, 'OML Import  WDS Panamá', 'Lima', 'San Isidro', 'AV. ZARAGOZA MZ 04 LT 05 - LOS OLIVOS', '20518336607')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('34f94bf8-e1e2-422b-8a34-eba966656783'::uuid, 'PIEERS WAMA II', 'Lima', 'Lima', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3526ba96-3892-4c01-a8d3-8d42589808a7'::uuid, 'Marcimex Pacasmayo', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3542febd-2210-429e-af5d-037f4348b85f'::uuid, 'CLINICA LASER IQUITOS', 'Loreto', 'Iquitos', 'JR MAYNAS 240 IQUITOS', '20600678613')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2101,6 +3468,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('35508e98-1904-454b-b8fe-d5c570ce982c'::uuid, 'Joan Alfaro ??? 11y6 E Principal', 'Lima', 'Lima', 'ALM. DE LOS ABANICOS 200 URB LA ENCANTADA DE VILLA CHORRILLOS', '20517232522')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('35a536b8-6b02-4c6d-982c-dd0bcc567d88'::uuid, 'Bata B3 MAGDALENA', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2180,6 +3555,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3679a713-910b-491f-bf60-299664cf363b'::uuid, 'HONOR MODULO JOCKEY PLAZA', 'Lima', 'Santiago de surco', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('367a4dee-b3bb-40da-a010-37518447317f'::uuid, 'COA Callao', 'LIMA', 'San Isidro', 'Avenida Juan de Arona 151', '20112280201')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2204,6 +3587,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('36beb932-4ede-45ff-abd9-3b74f2f7354b'::uuid, 'Comsitec Tienda', 'Junin', 'Huancayo', 'AV. GIRALDEZ 281 HUANCAYO - JUNIN', '20568033354')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('36d344fb-4f12-47c9-9eda-9df416ea6219'::uuid, 'THE FRIEND OF PABLO WHATSAPP', 'Lima', 'Lima', 'CALLE MIGUEL DASSO 124 SAN ISIDRO', '20605349138')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('36da4fc8-896e-4eb2-adac-bb2983823114'::uuid, 'Mesajil Miraflores CP 1073', 'Lima', 'Lima', 'Av Republica de Colombia 130 San Isidro', '20269315688')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2213,6 +3612,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('36e3c6e9-647b-4843-8da2-b25d50fae692'::uuid, 'MANASA LA MARINA 2', 'Lima', 'Lima', 'AV. CRISTOBAL DE PERALTA NORTE 968 SANTIAGO DE SURCO', '20503258901')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('36e6b190-7126-4cfb-946e-b34206a5f2eb'::uuid, 'PIEERS AYACUCHO 2', 'Ayacucho', 'Ayacucho', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3720f3b3-7704-4249-8d68-5f09e3a983f6'::uuid, 'Rosen Store La Molina Parque', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3747fad1-0eff-4558-b171-318e22ebe8a6'::uuid, 'Hirophone Modulo Real Plaza Puruchuco 1Er Nivel', 'LIMA', 'ATE', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('374c3af5-003e-4693-95a3-08bdcf3c7437'::uuid, 'Chic & Cute Isla', 'lima', 'Miraflores', 'AV. JAVIER PRADO ESTE 4200 INTERIOR MTF8 - SANTIAGO DE SURCO', '20604870209')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2236,6 +3667,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('385b4e01-96b9-48cb-b4f9-971345810e57'::uuid, 'Tous El Bosque', 'Lima', 'Lima', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('38c2f8d5-86ed-472b-b525-0e328721a51c'::uuid, 'AUTOESPAR POST VENTA SAN LUIS', 'Lima', 'Lima', 'AV. Alfredo Mendiola 1635 San Martin de Porres', '20100821371')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2244,7 +3683,55 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('38c5f9d5-7db4-47a5-8add-df553ebf3db0'::uuid, 'Soft Venta Asistida', 'Lima', 'Santiago de Surco', 'AV. EL POLO S/N CC EL POLO I TDA. A220 – SANTIAGO DE SURCO', '20601363861')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('38f9c792-a2a4-4a4c-ad79-f10b33f8df18'::uuid, 'Rosen Store Jockey', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3914d538-560e-451e-abfa-fd3217c15a2a'::uuid, 'Thermomix Principal', 'Lima', 'Lima', 'Av. Mariscal La Mar 1034 Miraflores', '20606458526')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3917f33a-d8f2-4595-bf5b-cead27a646ff'::uuid, 'CONVERSE TRUJILLO', 'La Libertad', 'trujillo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('392431c3-e2c2-4e5c-bae7-d77701e12d64'::uuid, 'Limalinen Miraflores', 'Lima', 'Miraflores', 'Av. Javier Prado Este 488 - San Isidro', '20606512679')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('39250ccb-80cb-4d11-9bba-78f5953b3246'::uuid, 'SANICENTER PALAO 9', 'Lima', 'SAN MARTIN DE PORRES', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('392bf3ff-6607-4c7f-b676-8ed78a13f146'::uuid, 'KURANKO MAGDALENA', 'Lima', 'Lima', 'Cal. Jose Valencia Nro. 476 Int. 204. Magdalena del Mar', '20514359661')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2316,7 +3803,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3a6436ca-971c-443a-9b4f-3927f512f63e'::uuid, 'Baliq Plaza Norte', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3a98f5d1-49bf-42ff-a4f9-da6efeeb1d89'::uuid, 'GRUPO MALCA BAGUA GRANDE', 'AMAZONAS', 'BAGUA', 'HEROES DEL CENEPA 1199 BAGUA AMAZONAS', '20600956346')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3ab16c85-6ff8-48ae-8290-518b77f13f08'::uuid, 'Crossbike Instore', 'Lima', 'Lima', 'PRO. GENERAL ALVAREZ DE ARENALES 228', '10460606069')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2333,6 +3836,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3b0ebc42-ed94-4c0e-9bc0-a919a2ec5f92'::uuid, 'Cuy Games Real Plaza Salaverry', 'Lima', 'Lima', 'AV. JOSE LARCO 929 MIRAFLORES', '20514792462')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3b0fcaff-6de2-4c30-aafc-b9fcd5b3f763'::uuid, 'GP MOTOS MAVILA CASMA', 'La Libertad', 'Casma', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3b12f949-6a05-4e76-9fce-6e1c56daadcb'::uuid, 'PIEERS MEGA PLAZA II', 'Lima', 'Independencia', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3b222508-8516-446d-87e4-d4f15ef4c062'::uuid, 'Baliq Rambla San  Borja', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2380,7 +3907,55 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3bade695-8cce-4d6f-ab2b-7b6223150a91'::uuid, 'Pc Factory Bellavista', 'Lima', 'Lima', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3bb1c459-24ca-47d0-a2f7-a30ffed672d8'::uuid, 'Infanti Minka', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3bb440e6-64ff-48b7-a238-82f2d0297b2f'::uuid, 'COA Tacna', 'LIMA', 'San Isidro', 'Avenida Juan de Arona 151', '20112280201')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3bc3dc8d-18d6-4812-9815-bf8a7096c592'::uuid, 'SANICENTER PIURA', 'Piura', 'Piura', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3bf39f42-3176-40dd-b986-85883cc22dde'::uuid, 'PIEERS LA MOLINA', 'Lima', 'La Molina', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3bf6a3c0-61bd-4830-947f-8235627e780c'::uuid, 'Decor Center Arequipa', 'Arequipa', 'Arequipa', 'Av La Molina 473 Ate', '20215528791')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3c31343a-2c7d-4b15-b2e6-85e0c7186d76'::uuid, 'Invicta Jockey Plaza', 'Lima', 'Santiago de Surco', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2413,6 +3988,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3c8a0740-04e2-44ab-acce-7536da042106'::uuid, 'Vainsa Camacho', 'LIMA', 'distrito de Lur?Ñn', 'Av. B Sub Lote A1-3-2-B', '20555189631')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3cedd10e-6cf0-4088-a83c-c1397f93b463'::uuid, 'SALUD VISUAL LASER HUACHO', 'Lima', 'Huacho', 'MANUEL DULANTO 1601 PUEBLO LIBRE', '20613132628')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2484,7 +4067,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3e355ee2-40b3-4c2e-82e0-c88c6f1c4e98'::uuid, 'VELEZ WHATSAPP', 'Lima', 'Lima', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3e580a23-6cc6-4f75-828d-7477f71d2c4e'::uuid, 'iShop Larco', 'Lima', 'Lima', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3ea0ab0e-bf8d-44e9-b151-4d02f21ae2ec'::uuid, 'Isotec Movil', 'Junin', 'Tarma', 'Av. Ramon Castilla 158 - Tarma', '20610970193')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3ee178d8-73d9-4cbd-a29b-0743a6142241'::uuid, 'Bimba y Lola Jockey plaza', 'Lima', 'Santiago de Surco', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2516,6 +4123,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('3fe7fa5f-5473-44d2-89c7-d52714f441ad'::uuid, 'PIEERS WAMA I', 'Lima', 'Lima', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('3fef08d9-4867-4c40-83db-07cbb9945968'::uuid, 'Drimer Trujillo', 'La Libertad', 'Trujillo', 'Jr. el Polo Nro. 670 Int. C605 Centro Comercial el Polo (Block C) - Santiago de Surco', '20101308678')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2540,6 +4155,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4024c6a3-a0f0-4853-9099-d81a776a8270'::uuid, 'Caffarena Cajamarca', 'Cajamarca', 'Cajamarca', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('404c3277-e919-4a9e-a724-996a7abdd519'::uuid, 'Aquasport Venta Asistida', 'Lima', 'Barranco', 'Av. Republica de Panama 505', '20292890932')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('404d183e-5270-434d-81b5-acf735253ccc'::uuid, 'ISIL', 'LIMA', 'Lima', 'AV. LA FONTANA 955 URB. SANTA PATRICIA', '20100134455')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2548,7 +4179,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('406bf665-3b65-4cd1-ba24-c85e97e2e5e9'::uuid, 'CAT TRUJILLO', 'La Libertad', 'trujillo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('407465a4-d50f-474c-894d-4039c0ff5d48'::uuid, 'NESTARES GO', 'LIMA', 'LIMA', 'Av. Uruguay 346 tda 205 2piso', '20601850151')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4074a42a-56a7-4f24-bde1-759547841bf2'::uuid, 'UMBRO MALL DEL SUR', 'Lima', 'San Juan de Miraflores', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2596,7 +4243,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('40c0cc99-6755-4f49-84de-a24c3a753767'::uuid, 'RUMAH CASA SAN ISIDRO', 'Lima', 'San Isidro', 'LOS PRECURSORES 345 URB VALLE HERMOSO SURCO', '20548473439')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('40dfdfe7-0ecc-4785-9d59-2b305849cf0b'::uuid, 'Lolotec Instore', 'Lima', 'Lima', 'Calle Alameda del Alba 125 - Santiago de Surco', '20607895784')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('40e77cb5-c1c2-4763-a2c9-29b9cbdcf1dc'::uuid, 'PRICE BOX LURIN', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2628,6 +4291,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('411cf06c-3d95-4333-a813-e97fedbf86b8'::uuid, 'CAT CAYMA', 'Arequipa', 'Cayma', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('41218cf0-3a6b-4569-b734-d7f87cad86f5'::uuid, 'LACOSTE SAN MIGUEL', 'Lima', 'San Miguel', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('412d044a-a5cf-4399-8581-b9fd47ad5487'::uuid, 'PIEERS IQUITOS', 'Loreto', 'Iquitos', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4151c37c-af2d-4707-bac3-e4f63f0f93ee'::uuid, 'Anza Peru Sac', 'Lima', 'Lima', 'Calle Dos de Mayo 741 Miraflores', '20601237254')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2636,7 +4323,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('41657673-178c-4d77-856b-3163dd509607'::uuid, 'Automotores Inka Chiclayo', 'Chiclayo', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ Chiclayo CHICLAYO', '20480683839')
+VALUES ('41657673-178c-4d77-856b-3163dd509607'::uuid, 'Automotores Inka Chiclayo', 'Lambayeque', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ LAMBAYEQUE CHICLAYO', '20480683839')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('418840be-8b00-47f1-9617-56d7abfaf7bf'::uuid, 'CROCS_MEGAPLAZA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2684,7 +4379,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('41f2a062-dd8b-4237-8cb4-04407f660385'::uuid, 'PC Factory Arequipa (Porongoche)', 'Arequipa', 'Porongoche', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('422b4058-42c7-4e6b-9ba9-42bb6cb0f546'::uuid, 'HONOR TRUJILLO', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4234d47d-ed9a-4750-a01e-04fcac0043d3'::uuid, 'Hirophone Módulo Real Plaza Villa María', 'LIMA', 'Villa María del Triunfo', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2709,6 +4420,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('42845310-5528-464b-8e60-a19cc93e2a80'::uuid, 'SUNTIME PLAZA DE SOL', 'Lima', 'Lima', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('42985217-e852-4fb3-85ea-aa99cd9d4b89'::uuid, 'Hirophone Modulo Real Plaza Pro 1Er Nivel', 'LIMA', 'SAN MARTIN DE PORRES', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2741,6 +4460,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('42cfbc3d-b9a4-4d8f-8acd-286e0d8a7250'::uuid, 'Carsa Nueva Cajamarca', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('42df9c79-d9c0-4833-8e9d-72174c8d696a'::uuid, 'OML Import  Venta Asistida', 'Lima', 'Los Olivos', 'AV. ZARAGOZA MZ 04 LT 05 - LOS OLIVOS', '20518336607')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('42e64001-955c-4ec3-98cb-b4c5e3ddff5b'::uuid, 'STEVE MADDEN SALAVERRY', 'Lima', 'San Isidro', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('42e98ddf-e8e6-407a-bb49-014e34b5c376'::uuid, 'Moto Continental Principal', 'Lima', 'Santago de Surco', 'Calle Ivan Huertas 279 - URB. Prolongacion Benavides', '20613070100')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2796,6 +4539,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('43b1fad5-7854-4f8a-b630-b17e4f0d972a'::uuid, 'Glazer Peru Huancayo', 'Junin', 'Huancayo', 'AV. GENERAL EUGENIO GARZÓN 1679 – FDO. OYAGUE – JESUS MARÍA - LIMA', '20608490567')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('43cfd47a-dbfc-414e-be5d-85ed1438cc41'::uuid, 'Limalinen San Isidro', 'Lima', 'San Isidro', 'Av. Javier Prado Este 488 - San Isidro', '20606512679')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('43db3181-c1fd-4e7e-ac9b-fcb849c85925'::uuid, 'Tous San Borja', 'Lima', 'San Borja', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('43db9ca7-823d-4d2f-91c9-9d2b5f8c634f'::uuid, 'INSIDE ACTIVE VTA ASISTIDA', 'Lima', 'Miraflores', 'MALECON DE LA RESERVA 1049 URB ALMENDARIZ MIRAFLORES', '20611786841')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('43eaf5d2-ad4b-49d6-9f61-28a7f92d7266'::uuid, 'JCH Llantas AQP FERNANDINI', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2813,6 +4588,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('444be7e8-943a-4a77-a215-032e87eb226c'::uuid, 'Upn Postgrado Venta Asistida', 'Lima', 'Lima', 'Av. Tingo Mar?Ña 1122', '20215276024')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('44d39bf1-f1fd-42cb-ad29-7ff8a0de80c7'::uuid, 'COLISEUM SPORT CUZCO', 'Cusco', 'Cusco', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2860,6 +4643,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4504a568-7e1e-4e94-abf5-a3b35f2bf11d'::uuid, 'GP MOTOS MAVILA TARAPOTO', 'San Martin', 'Tarapoto', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('451544c9-bc50-4047-b4fb-2796af136a4a'::uuid, 'Audiophile Instore', 'Lima', 'Lince', 'Av. Arenales 2139, Lince', '20605531785')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4525585d-8049-4dbe-b030-e81b7f666f81'::uuid, 'Unbranded Plaza San Miguel', 'Lima', 'Lima', 'Av. La Encalada 1388 - Santiago de surco', '20604928681')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('45260bef-7589-4681-a63b-ad806303270b'::uuid, 'TEC STORE AREQUIPA', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2892,7 +4699,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('460e4aab-6c71-48b0-96bd-d4b112d7df88'::uuid, 'SAMSUNG SES REAL PLAZA CHICLAYO', 'Chiclayo', 'Chiclayo', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+VALUES ('459edf26-6b68-4866-823f-e308a1d7601c'::uuid, 'Specialized Arequipa', 'Arequipa', 'arequipa', 'AV. REDUCTO 1017 URB. LEURO MIRAFLORES', '20557677268')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('460e4aab-6c71-48b0-96bd-d4b112d7df88'::uuid, 'SAMSUNG SES REAL PLAZA CHICLAYO', 'Lambayeque', 'Chiclayo', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -2932,6 +4747,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('46b0cf78-4a1f-4086-a6ee-ff24780570b4'::uuid, 'Sometimes Multimarca Megaplaza', 'Lima', 'Independencia', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('46cdbe9c-8a9f-44ea-ab27-199ec1dbf139'::uuid, 'Footloose Tc5 - Jaen - Mega Plaza - Tc5', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -2964,7 +4787,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('470276d6-1b57-41a3-b1d4-be85f23c7fac'::uuid, 'NEW ERA CHICLAYO', 'Lambayeque', 'Chiclayo', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('470fc57e-88ad-43dc-b583-3bcc53a74b4b'::uuid, 'Nutripoint Miraflores', 'Lima', 'Lima', 'Jr Salaverry 659', '20611677066')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('47312f00-aacd-46f5-ab36-7d0d36e88095'::uuid, 'C&J Locks Instore', 'Lima', 'Santiago de Surco', 'AV. REPUBLICA DE PANAMA 6539 SANTIAGO DE SURCO', '20536144774')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('473986e9-4d0f-40ec-a282-a7e083b3daf2'::uuid, 'SANICENTER VENTA ASISTIDA', 'Lima', 'Lima', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3012,6 +4859,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('48cd6aa6-ca3c-40bb-8acb-140f68c153b5'::uuid, 'AMBAR JOYERIA TIENDA', 'Lima', 'Lima', 'AV ENCALADA 1587 SURCO', '20614350131')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('48d48e16-f088-4158-b8ac-ecc6da377d81'::uuid, 'Bata B1 JR. DE LA UNION', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('48dcfd81-9eea-46ba-b3d8-50221db70228'::uuid, 'Sony Jockey Plaza', 'Lima', 'Lima', 'CALLE AMADOR MERINO REYNA 285 PISO 5 SAN ISIDRO', '20372706288')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3036,6 +4899,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('49007e5e-4d4a-4128-8a48-1954ce4f0ca9'::uuid, 'UPRIT Postrgrado Venta Asistida', 'La Libertad', 'Trujillo', 'Calle Progreso 172-URB Barrio Obrrero-Trujillo, La Libertad', '20481652571')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('492a288c-59f7-424d-87fe-5c8099b59802'::uuid, 'SAMSUNG SES PLAZA NORTE', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3053,6 +4924,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('49db7937-16cd-4e4d-b8d5-5c34a2e63cfd'::uuid, 'Drimer Piura', 'Piura', 'Piura', 'Jr. el Polo Nro. 670 Int. C605 Centro Comercial el Polo (Block C) - Santiago de Surco', '20101308678')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('49ddf1e7-f973-4c42-bd9b-744e477317e4'::uuid, 'Decor Center Palao', 'Lima', 'San Martin de Porres', 'Av La Molina 473 Ate', '20215528791')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3092,7 +4971,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4a42926c-c98a-4514-84ac-f6a443b05045'::uuid, 'KLEANDER', 'Lima', 'Surquillo', 'JR INCA 142 SURQUILLO', '20607774413')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4a5ba97d-80ac-4155-9533-5bce10331827'::uuid, 'Footloose Th5 - Jaen - Mega Plaza - Th5', 'Cajamarca', 'JAEN', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4ab58013-be14-43f9-be3c-79c06a77919a'::uuid, 'HONOR TIENDA AREQUIPA', 'Arequipa', 'Arequipa', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4ac8bdf4-f239-4905-b425-167d54b51c6e'::uuid, 'Columbia Real Plaza Salaverry', 'Lima', 'Lima', 'CAL. AMADOR MERINO REYNA 267 SAN ISIDRO', '20514811271')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3108,7 +5011,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4aeced88-4241-450f-a990-50aefa638d5c'::uuid, 'Samsonite Plaza Norte', 'Lima', 'Lima', 'ENCALADA 1388 SURCO', '20551938353')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4af6035a-d346-41fd-a1ca-a068c197d724'::uuid, 'Evaluaciones Automotriz - No ventas - Gacsa Morro Solar', 'LIMA', 'LIMA', '''-', '0')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4b2d03a3-be0b-4f1b-8456-fdc425b96e28'::uuid, 'Bata B1 MIRAFLORES', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3180,6 +5099,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4be075a8-0058-4d88-91bb-d241f5b7269d'::uuid, 'COLISEUM SPORT CHICLAYO', 'Lambayeque', 'Chiclayo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4c07f6a2-2b6a-4a46-8f90-1c676198ab98'::uuid, 'Achorao Principal', 'Lima', 'Lima', 'AV VIA EVITAMIENTO 1639', '20600301994')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3204,7 +5131,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4c4650ee-1fb8-46b5-a3d2-50b299e6def7'::uuid, 'TOM GUTIE SAN ISIDRO', 'Lima', 'San Isidro', 'CONDE DE LA MONCLOVA 239, SAN ISIDRO', '20612276553')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4c6f4027-1e56-4b05-b1fb-33269f87a412'::uuid, 'Footloose - Tingo Maria - Tj8', 'HUANUCO', 'Tingo Maria', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4ca6120c-d629-406e-ba06-33ad2048f43e'::uuid, 'Asian Fan Store Chacarilla', 'Lima', 'Santiago de surco', 'Av. Caminos del Inca 257 - Santiago de Surco (Interior 124)', '20606249153')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4cdfa0ad-a7a9-4a53-9e0e-16dc33dffceb'::uuid, 'RUMAH CASA SURCO', 'Lima', 'Santiago de Surco', 'LOS PRECURSORES 345 URB VALLE HERMOSO SURCO', '20548473439')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3220,6 +5171,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4d136f27-6569-419d-ba78-d70a2e052f32'::uuid, 'R18-Huandoy - TO3', 'Lima', 'Los Olivos', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4d42e44b-a127-41ca-a8be-315e0ff226ff'::uuid, 'Marcimex Tambogrande', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3228,7 +5187,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('4d4b48fb-717a-40e2-80e4-eb643c2ab6d5'::uuid, 'SAMSUNG SES MALL AVENTURA CHICLAYO', 'Chiclayo', 'Chiclayo', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+VALUES ('4d4b48fb-717a-40e2-80e4-eb643c2ab6d5'::uuid, 'SAMSUNG SES MALL AVENTURA CHICLAYO', 'Lambayeque', 'Chiclayo', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3237,6 +5196,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4d5301b5-7361-4619-adeb-4f1c2f9036d5'::uuid, 'Footloose - Tumbes - Costa Mar - Td9', 'Tumbes', 'Tumbes', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4d672be5-7b60-48bb-965d-adac904afa61'::uuid, 'BLIZZ STORE VENTA ASISTIDA', 'Lima', 'Barranca', 'JR GALVEZ 1118 BARRANCA', '20571469406')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4d85152d-dad0-49b3-95eb-d6d5c6c6c831'::uuid, 'CROCS_CAJAMARCA', 'Cajamarca', 'Cajamarca', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3260,6 +5235,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4ddab57b-46a7-4e28-a21a-7df086b6f1b0'::uuid, 'GP MOTOS MAVILA PAIJAN', 'La Libertad', 'Paijan', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4deebfef-cce5-433e-96b0-434d4c851f04'::uuid, 'Footloose - Vmt - Real Plaza - Td4', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3276,6 +5259,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4df5226b-ee00-489f-ad8e-38505494e77f'::uuid, 'Chic & Cute Alameda', 'lima', 'Miraflores', 'AV. JAVIER PRADO ESTE 4200 INTERIOR MTF8 - SANTIAGO DE SURCO', '20604870209')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4e164157-e2fa-4a18-a95d-6df4a038b297'::uuid, 'Nestares Go Instore', 'LIMA', 'LIMA', 'Av. Uruguay 346 tda 205 2piso', '20601850151')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3285,6 +5276,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4e1ac667-fdcf-410f-99ee-7c511984f0f5'::uuid, 'Footloose - Pisco - Mega Plaza - Tc8', 'ICA', 'PISCO', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4e2c3b67-7827-4707-a51a-7e0a1b69ab61'::uuid, 'DYSON Jockey Plaza', 'Lima', 'Lima', 'JR. CARLOS NEUHAUS RIZO PATRÓN 125 URB. CORPAC SAN ISIDRO', '20100030838')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4e45369b-bfbe-4177-b55d-2d8591b39283'::uuid, 'CROCS_RAMBLA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3316,6 +5323,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4ea80595-7840-460f-a93c-3576ebe430fb'::uuid, 'CROCS_MINKA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4eac2033-6e8c-4b3c-bf16-93b7fefd82d8'::uuid, 'Curva Studio', 'Lima', 'Lima', 'Los literatos 114 Dpto 401. Santiago de Surco', '20612560685')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3332,6 +5347,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4ec2a254-b7f1-4c7e-b130-6db13a27b25a'::uuid, 'CONVERSE PARQUE LA MOLINA', 'Lima', 'La Molina', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4f2f6fe8-c788-4ee0-b018-73f30befc535'::uuid, 'Nutripoint - Sanexim', 'Lima', 'Lima', 'Jr. Salaverry 659 - Magdalena del Mar', '20511107904')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3341,6 +5364,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('4f434bbd-28b3-4253-a06c-fed4ffe4d91d'::uuid, 'Smile Club', 'Lima', 'Lima', 'Av. Las Gaviotas 582 Chorrillos', '20607463906')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4f44fd65-a0bb-4a10-b52b-19cc3967f9a0'::uuid, 'CONVERSE PURUCHUCO', 'Lima', 'Ate', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('4f8903f8-42ee-429c-b635-1391cba3e7a8'::uuid, 'GP MOTOS MAVILA TRUJILLO 2', 'La Libertad', 'trujillo', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3365,6 +5404,54 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('503d357a-5ff2-48d2-a905-5409570935f0'::uuid, 'Quirovida Rehabilitacion Integral - Chorrillos', 'Lima', 'Lima', 'Calle Las ?guilas 263 - Urb. Limatambo - Surquillo', '20504068146')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('503e6fb3-f479-445c-994f-6ab9dd8ebd09'::uuid, 'SANICENTER CHICLAYO RUIZ', 'Lambayeque', 'Chiclayo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('503f007d-ee59-4186-b1df-58bf9ba44463'::uuid, 'GP MOTOS MAVILA TRUJILLO', 'La Libertad', 'trujillo', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5087b89e-05e9-4469-b0b6-58fa238b64e5'::uuid, 'Invicta San Juan Lurigancho', 'Lima', 'San Juan de Lurigancho', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('50a038f8-5922-4fb4-bcb9-ed99e0c63550'::uuid, 'LEGO Plaza Norte', 'Lima', 'Independencia', 'AV. JOSE PARDO N° 434 – MIRAFLORES - LIMA', '20605052836')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('50d2a596-b1e5-47aa-bc7b-fa4a7dcea96d'::uuid, 'Samsonite Plaza San Miguel', 'Lima', 'Lima', 'ENCALADA 1388 SURCO', '20551938353')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5125fc4d-b027-448d-b6ba-b45b358fd3bb'::uuid, 'La Curacao Venta Asisitida', 'Lima', 'Lima', 'AV. LUIS GONZALES 1315 – CHICLAYO –CHICLAYO - LAMBAYEQUE', '20141189850')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3404,6 +5491,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('51b767ed-d0e5-4fb7-9c91-40cf07cfc15e'::uuid, 'MOTO NORTE PIURA GRAU', 'Piura', 'Piura', 'CAL.GERMAN SCHEREIBER NRO. 276 URB. SANTA ANA LIMA - LIMA - SAN ISIDRO', '20480297289')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('51fdb9b4-0771-4e4f-aafc-a673438aa505'::uuid, 'SUNTIME REAL PLAZA HUANUCO', 'Lima', 'Lima', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3436,6 +5531,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('527467bd-d9ee-4752-8c94-cd5a6518f2b3'::uuid, 'MACSA LINK DE PAGO', 'Lima', 'Santiago de surco', 'JR MONTE ROSA 233 SURCO', '20608523091')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('528d7d07-7b39-4629-bb35-c527e69f5d5a'::uuid, 'Compuusa Minka', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20532171173')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3453,6 +5556,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('52b11fd4-62f4-4c9a-8332-58e60a41b808'::uuid, 'Carsa Paita', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('52cdc1b8-cd1f-4704-8c47-2af100bf722a'::uuid, 'Wong Oftalmólogos Instore', 'Lima', 'Lima', 'AV GUARDIA CIVIL 554 - SAN ISIDRO', '20508167459')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('52ce107c-0125-4ceb-a307-1a26fb5facc8'::uuid, 'NEW BALANCE SHADOW', 'Lima', 'Independencia', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('52d2cab2-8821-463f-99dd-8bde6d06b46e'::uuid, 'Rosen Store Trujillo', 'La Libertad', 'Trujillo', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3484,7 +5611,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('53867204-b4dd-469e-9926-54b27b06fade'::uuid, 'CASA DONNA CATTIVA', 'Lima', 'San Isidro', 'JR MANUEL IRRIBARREN 1393 SURQUILLO', '20609061708')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('53954d22-7ef1-4f6f-b4cd-6b13d4d90ed0'::uuid, 'Marcimex Juanjui', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('53a9cdb4-a4ac-421a-a8c7-8c90c44f5d67'::uuid, 'Caffarena Higuereta', 'Lima', 'Santiago de Surco', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3500,7 +5643,63 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('53e79827-6972-4573-88b4-b59fe60edfbd'::uuid, 'VELEZ AREQUIPA', 'Arequipa', 'Arequipa', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('53e8da2d-a553-4b12-8a00-72cb5317bfdc'::uuid, 'JCH Llantas AQP. Av. JES??S', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('540f38fe-2678-482e-b02e-3d0bf73f7b70'::uuid, 'CROCS_MA_PORONGOCHE', 'Arequipa', 'Paucarpata', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5415de5b-a5a9-4350-9c82-560355eeb021'::uuid, 'Arena Megaplaza', 'lima', 'Independencia', 'Av. Los Conquistadores 321 - San Isidro', '20601274133')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5440a0d3-7d8d-46c2-8089-a895b5a3a1bf'::uuid, 'SAMSUNG Kiosko SSC Miraflores', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('546b37ec-e26c-4cf1-8664-d3cf832f3505'::uuid, 'Soft Miraflores', 'Lima', 'Miraflores', 'AV. EL POLO S/N CC EL POLO I TDA. A220 – SANTIAGO DE SURCO', '20601363861')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('546b5c5f-3855-4719-98e3-a4f4d3bfdfc8'::uuid, 'Invicta Plaza San Miguel', 'Lima', 'San Miguel', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5491e912-1f6d-4df8-ae24-e88edc25a806'::uuid, 'Hirophone Módulo Mall Aventura Santa Anita Sótano', 'LIMA', 'Santa Anita', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3516,6 +5715,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('54e20b98-4659-4206-b3a0-8ce4628d0976'::uuid, 'CROCS_HUANUCO', 'Huanuco', 'Huanuco', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('552534ac-8241-43a5-8c67-3f4df0ba6492'::uuid, 'IDUN MIRAFLORES T1', 'Lima', 'Lima', 'AV ROOSEVELT 6021 MIRAFLORES', '20607416100')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3524,7 +5731,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5528480d-6bdb-4ced-9c82-317c649af120'::uuid, 'VELEZ SALAVERRY', 'Lima', 'San Isidro', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('55298324-c1ef-4c54-ac58-acfafa3442eb'::uuid, 'GLOBAL LASER ICA', 'Lima', 'Lima', 'AV. MANUEL DULANTO 1656 PUEBLO LIBRE', '20554284681')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5572513e-a131-4edc-97a2-7cd72a6f994d'::uuid, 'STEVE MADDEN OUTLET ATOCONGO', 'Lima', 'Lima', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3596,6 +5819,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('55ff0236-ea42-43bb-8853-524479dbbdfe'::uuid, 'USIL Pregrado Instore', 'Lima', 'Lima', 'Av. La Fontana N° 550 La Molina', '20297868790')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('56452223-2e9c-4a98-b5f0-28e1922b1f7c'::uuid, 'Tempur Raul Ferrero', 'Lima', 'Lima', 'Av. Los Conquistadores 136 San Isidro', '20524261384')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3604,7 +5835,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('564e3f1b-4237-4180-80fb-8fa973d3f3fc'::uuid, 'HEADMARK Pucallpa', 'Ucayali', 'Pucallpa', 'AV Nicolas Ayllon  4671 Ate Lima', '20517206955')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('56718b69-f8b1-466e-a12e-088bcc7035b2'::uuid, 'VIAJES EL CORTE INGLES PERU', 'LIMA', 'LIMA', 'AV. ANGAMOS OESTE 624', '20518932391')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('567cbfd1-4c3b-4326-b251-2f1a76b7ccae'::uuid, 'Larbis Miraflores', 'Lima', 'San Isidro', 'CALLE LOS OLIVOS 262 - SAN ISIDRO', '20603615949')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3644,6 +5891,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('57185296-a8d6-4990-a3b1-9de10b40686f'::uuid, 'FITO ESPINOSA MIRAFLORES', 'Lima', 'Miraflores', 'CALLE GRAU 324 MIRAFLORES', '20562830996')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5721ef74-a630-460d-b5be-0c40f120a86f'::uuid, 'GLOBAL LASER CHIMBOTE', 'Lima', 'Lima', 'AV. MANUEL DULANTO 1656 PUEBLO LIBRE', '20554284681')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3660,7 +5915,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('574cb67b-194f-4fb3-b2c9-6e9878a684ce'::uuid, 'Infanti Benavides', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('57732550-303f-478d-945a-efb562a6aa8f'::uuid, 'Mossa Shoes', 'Lima', 'Lima', 'AV PRIMAVERA 1228 URB. VALLE HERMOSO-SANTIAGO DE SURCO', '20546747248')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('577bd72f-6aa5-4b8c-bb6d-7d1b042e0321'::uuid, 'CONVERSE 2 SAN MIGUEL', 'Lima', 'Lima', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3700,6 +5971,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('58d8198b-bd6e-48af-9448-0effec1a3927'::uuid, 'INSIDE ACTIVE San Isidro', 'Lima', 'Lima', 'MALECON DE LA RESERVA 1049 URB ALMENDARIZ MIRAFLORES', '20611786841')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('58e2fcf9-ec62-458a-b290-cedbe0f2a57f'::uuid, 'CONVERSE LARCOMAR', 'LIma', 'Miraflores', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('58e6222a-5aab-45a4-bea9-cb082778bd48'::uuid, 'MIKAELA PZA DEL SOL - ICA', 'Ica', 'Ica', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('592b2042-1112-4e60-85a8-f6fc960f7dfd'::uuid, 'iShop La Rambla San Borja', 'Lima', 'Lima', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3724,7 +6019,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('59702ba4-2610-4ad3-8e6a-c8ab89e3ce83'::uuid, 'CUIDAFARMA Instore', '', '', 'Av. Angamos Oeste Nro. 664', '20607030635')
+VALUES ('59702ba4-2610-4ad3-8e6a-c8ab89e3ce83'::uuid, 'CUIDAFARMA Instore', 'LIMA', 'Surquillo', 'Av. Angamos Oeste Nro. 664', '20607030635')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('597134fc-806c-4b49-a1ae-1b1520f64ebc'::uuid, 'Dreitz Gamer San Miguel', 'Lima', 'Lima', 'Calle Schell 698 - Miraflores', '20601908191')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3772,6 +6075,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('59f3296c-0109-46e7-894e-1b0f598721ca'::uuid, 'CROCS_JOCKEY', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5a3218cb-fa60-4bf7-a3cf-32f7a7281149'::uuid, 'Top Model - Jr. Union 716 - T16', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3812,7 +6123,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5ad7e206-c33b-4a1f-8044-3804a20cf475'::uuid, 'FITPOINT_MP_TRUJILLO', 'La Libertad', 'Trujillo', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5b268b94-9040-40b1-b16c-68541a915e61'::uuid, 'Llantas San Martin Arriola 1940', 'lima', 'San Luis', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5b6be013-39b0-41b4-a182-5295d3dfbac5'::uuid, 'Carsa Ventanilla', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5b714e84-6dff-4f4b-9d48-f26becd99e56'::uuid, 'Ssenda Selva Puerto Maldonado', 'Madre de Dios', 'Puerto Maldonado', 'AV Nicolas Ayllon  4671 Ate Lima', '20608038834')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5b85b2eb-e79f-44e3-9b7f-395df3eefb79'::uuid, 'Intersport Venta Asistida', 'Lima', 'La Molina', 'Avenida La Molina 1167 int 231 La Molina', '20600043863')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3844,6 +6187,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5c0925f4-be2e-4707-861f-053531e30b24'::uuid, 'Salomon Oulet Lurin', 'LIma', 'Lurin', 'AV. CONQUISTADORES 840 - SAN ISIDRO', '20555212390')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5c338793-17f1-49e9-99c8-8dde13054833'::uuid, 'PIEERS TACNA 2', 'Tacna', 'Tacna', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5c55ac60-5369-4d4f-aeeb-200964980780'::uuid, 'Monark San Isidro', 'Lima', 'Lima', 'AV. ELMER J.FAUCETT 1920', '20100004756')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3868,7 +6227,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5c8914cb-9cb5-4aa2-933b-7261dc124621'::uuid, 'TAIL G MOTOS INSTORE', 'Lima', 'Lima', 'CANEVARO 1332 LINCE', '20613074342')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5cc26390-f656-4e11-9379-ad24093f2c55'::uuid, 'Honor Arequipa Modulo', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5cc7d6b5-5084-4f7c-8a3f-eb0c48c1e35e'::uuid, 'DENTIVE INSTORE', 'Lima', 'Lima', 'DOS DE MAYO 524 MIRAFLORES', '20614150069')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3892,6 +6267,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5d073b74-3615-457f-a830-9bb3909d03a2'::uuid, 'PIEERS SANTUARIO I', 'LIma', 'San Juan de Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5d0ff109-30ca-49cc-a27f-00f9cad9123f'::uuid, 'Carsa Aguaytia', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3908,6 +6291,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5d7012c0-8585-4f45-83fb-c97ba1509b63'::uuid, 'FITPOINT_MP_AREQUIPA', 'Arequipa', 'Arequipa', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5d7ce0c9-db41-4919-9130-bfdc4650c082'::uuid, 'NEW BALANCE CUSCO', 'Cusco', 'Cusco', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5d88ee60-9bf6-4be4-9610-d9bcee9f97e2'::uuid, 'Quality Products Modulo Homedics Plaza Norte', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -3917,6 +6316,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5d9c4e5f-0e72-4a97-b08d-8efe19874421'::uuid, 'GV Odontologos principal', 'LIMA', 'LIMA', '''-', '0')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5d9d79c9-7526-4a87-9cb6-499da338aee9'::uuid, 'Bata B BELLAVISTA', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -3980,6 +6387,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5e10dfe4-9e76-4a17-a8a1-ae08185b36d7'::uuid, 'USIL Instituto de Emprendedores Instore', 'Lima', 'Lima', 'Av. La Fontana N° 550 La Molina', '20297868790')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('5e1cab50-ade2-491a-aa8e-d28b354304b1'::uuid, 'PIEERS CHIMBOTE-III', 'Ancash', 'Chimbote', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('5e3506a1-714e-42b1-9f53-3bf482b09f3e'::uuid, 'Ingenium', 'AREQUIPA', 'Arequipa', 'URB. LA MARINA B-1 CAYMA', '20605035036')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4036,6 +6459,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('60079f6e-1819-4c41-bf98-466fdc06dd69'::uuid, 'Arena Santa Anita', 'lima', 'San Anita', 'Av. Los Conquistadores 321 - San Isidro', '20601274133')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('600a8711-0e8c-4966-b7e1-e65c43117cc8'::uuid, 'Vainsa Instore', 'LIMA', 'distrito de Lur?Ñn', 'Av. B Sub Lote A1-3-2-B', '20555189631')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4045,6 +6476,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('600d1155-684e-42f6-8c92-3825f7134206'::uuid, 'Pacific Divers', 'Lima', 'Lima', 'Calle Grimaldo del Solar 238 - Miraflores - Lima', '20603422130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('602ac680-dc68-4747-be99-1f6bc71b4bb4'::uuid, 'Scooterland Miraflores', 'Lima', 'Lima', 'NA', '20605403744')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4092,6 +6531,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('609b139c-40d4-490a-8698-5e1243147381'::uuid, 'Decor Center Trujillo', 'La Libertad', 'Trujilo', 'Av La Molina 473 Ate', '20215528791')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('609fcf7a-a4e9-407b-bf2f-ebe0490df688'::uuid, 'ALYS BEAUTY LA MOLINA', 'Lima', 'Lima', 'AV. SANTIAGO ANTUNEZ DE MAYOLO 1373 Los Olivos', '20602191371')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4116,7 +6563,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('6131307f-ed49-4a7d-b667-d83a31ff4c9d'::uuid, 'CLINICA INTERNACIONAL SAN BORJA', '', '', 'Jr Washington 1471 Cercado de lima', '20100054184')
+VALUES ('6131307f-ed49-4a7d-b667-d83a31ff4c9d'::uuid, 'CLINICA INTERNACIONAL SAN BORJA', 'Lima', 'San Borja', 'Jr Washington 1471 Cercado de lima', '20100054184')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4148,6 +6595,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('61740413-8993-4c34-beba-32f3286f4794'::uuid, 'UPN Postgrado Menores 1', 'Lima', 'Lima', 'Av. Tingo María 1122 Cercado de Lima Lima', '20215276024')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('619b3bb7-3b3f-4c50-be28-7a9c6f89e1f5'::uuid, 'Carsa Ayacucho', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4156,7 +6611,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('621b3e0f-3249-468d-8510-f425238055a6'::uuid, 'Socopur La Molina', 'Lima', 'Lima', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('623f888e-c80a-43ef-a9c2-8de57605593c'::uuid, 'SUNTIME PLAZA SAN MIGUEL', 'Lima', 'Lima', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('62645421-4e3e-410d-b7db-045b55e6e6fb'::uuid, 'Lucasar Venta Asistida', 'Arequipa', 'Arequipa', 'PJE. DEAN VALDIVIA 205 YANAHUARA - AREQUIPA', '20600862775')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4180,7 +6651,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('62f45d10-af32-45be-829b-a714045276bd'::uuid, 'SALMA SAN ISIDRO', 'lima', 'San Isidro', 'JR MONTERREY 258 CHACARILLA SURCO', '20548161208')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('63072fe3-5212-42e2-8154-7543b62eaed2'::uuid, 'Compuusa Mercadillo Bolognesi Tacna', 'Arequipa', 'Paucarpata', 'Cl. Antonio Raimondy 123 Urb. Manuel Prado', '20532171173')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('632834a8-3258-4872-982b-a106b0a88410'::uuid, 'GP MOTOS MAVILA TALARA', 'Piura', 'Talara', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4204,7 +6691,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('6350f1fe-7548-4ed1-b9d1-86582a8275b2'::uuid, 'Autopak Venta Asisitida', 'Chiclayo', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+VALUES ('6350f1fe-7548-4ed1-b9d1-86582a8275b2'::uuid, 'Autopak Venta Asisitida', 'Lambayeque', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6357122d-bba7-4afb-be4a-51e2d3191f3a'::uuid, 'Infanti Santa anita', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6383d8bc-b0ab-421f-ab5b-bde47ffb0d2e'::uuid, 'CROCS_ASIA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4260,7 +6763,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('64876109-868f-408c-bb0e-2a35216745d0'::uuid, 'Footloose - Chiclayo - Real Plaza - T92', 'Chiclayo', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+VALUES ('64876109-868f-408c-bb0e-2a35216745d0'::uuid, 'Footloose - Chiclayo - Real Plaza - T92', 'Lambayeque', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4269,6 +6772,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('64cd7acb-26d3-4029-a242-e1998e5d9b81'::uuid, 'NORCENTRO BAGUA GRANDE', 'Cajamarca', 'Cajamarca', 'CAL. DIEGO PALOMINO 1500 JAEN CAJAMARCA', '20480038267')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('64d538f7-eda5-4b88-8df8-7bdb1a954998'::uuid, 'Tienda Efe Venta Asistida', 'Lima', 'Lima', 'AV. LUIS GONZALES 1315 – CHICLAYO –CHICLAYO - LAMBAYEQUE', '20141189850')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4292,7 +6803,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6513a926-26ad-4146-a212-ef028f6bb0da'::uuid, 'Baliq Jockey Plaza', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('65279d64-b008-4c63-8327-0ef3b52fd4a2'::uuid, 'Mac Center Cusco', 'Cusco', 'Cusco', 'Cal. Nicolas de Pierola 368 - Urb. Liguria - Santiago de Surco', '20603954441')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('65402d72-fba2-41de-bb71-c926ecc71ece'::uuid, 'CROCS_OP_PIURA', 'Piura', 'Piura', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4309,6 +6836,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('660ff8ea-a0de-4eda-9443-eb20eda07a5b'::uuid, 'SAMSUNG KIOSKO MALL AVENTURA IQUITOS', 'Loreto', 'Maynas', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('664ac1f0-8be0-4ff2-947b-40689e908ce9'::uuid, 'Hirophone Módulo Mall Aventura San Juan De Lurigancho Sotano', 'LIMA', 'San Juan de Lurigancho', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('667c591e-7b4e-4dba-97cd-287d24f56b11'::uuid, 'SMART LEBEN WHATSAPP', 'Lima', 'Lima', 'VERROCHIO 172 SAN BORJA', '20606113863')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4340,7 +6883,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('674e70b1-25ba-41f2-a7b3-e6a714ff2cad'::uuid, 'CAT SALAVERRY', 'Lima', 'San Isidro', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6757b5e5-2861-4d1f-93a6-52e6a2f71885'::uuid, 'iShop Real Plaza Piura', 'Piura', 'Piura', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('67743e7f-6106-4f13-a39a-0ee6e6d5610a'::uuid, 'UCAL PREGRADO', 'Lima', 'Molina', 'Av. Primavera Nro. 970', '20537886618')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4380,6 +6939,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('68d4b260-ae09-4ddf-9c4d-8ba57d0da584'::uuid, 'EDIPESA CHORRILLOS', 'Lima', 'Chorrilos', 'AV ARGENTINA 1710 LIMA', '20100041520')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('68ead57a-2259-4466-9421-bd888492ba57'::uuid, 'SERVIMOTOR SULLANA', 'Piura', 'Piura', 'LUIS ANTONIO EGUIGUREN 1048 PIURA', '20440983261')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4389,6 +6956,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6929b274-4287-4cff-8166-6b48e114c965'::uuid, 'Btime Instore', 'Lima', 'Lima', 'AVENIDA CAMINO REAL 348 INT 805z TORRE EL PILAR PISO 8 - SAN ISIDRO - LIMA', '20603802137')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6931139c-77cc-43a4-a681-da4a11e4dff1'::uuid, 'Clinica Aviva Lima Centro', 'Lima', 'Lima', 'Av. Alfredo Mendiola Nro. 6301 / Lima - Lima - Los Olivos', '20602393934')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('69b6c6d7-bf69-4325-b190-6e927811c9b5'::uuid, 'PIEERS STA ANITA', 'LIma', 'Santa Anita', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('69da0f55-6cb6-4f47-b382-94a1c19c6d40'::uuid, 'SANICENTER CHIMBOTE', 'Ancash', 'Chimbote', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4444,6 +7035,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6a7175da-be8c-44c3-9a12-38fef1f94a6f'::uuid, 'SAMSONITE WHOLESALE', 'Lima', 'Santiago de Surco', 'ENCALADA 1388 SURCO', '20551938353')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6a9c7321-1d0c-42e3-8cbd-f910dae9f5c8'::uuid, 'Carsa Ica', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4452,7 +7051,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6abd9438-648b-4228-a047-26d9490905fa'::uuid, 'MULTIDENT JESUS MARIA', 'Lima', 'Jesus María', 'GREGORIO ESCOBEDO 762 JESUS MARIA MULTIDENT JESUS MARIA', '20609364255')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6acb735f-28d3-4970-afd3-f4f73a2aa38f'::uuid, 'CLINICA BELLAVISTA AUNA', 'Lima', 'Lima', 'AV REPUBLICA DE PANAMA 3461 SAN ISIDRO LIMA', '20100251176')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6b35a47b-227a-4730-ab2e-54a300eb48d1'::uuid, 'Decor Center Chiclayo', 'Lambayeque', 'Chiclayo', 'Av La Molina 473 Ate', '20215528791')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4476,6 +7091,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6b7be093-0bb4-4772-aa6e-814300af4be9'::uuid, 'OML Import  WDS Redes', 'Lima', 'Los Olivos', 'AV. ZARAGOZA MZ 04 LT 05 - LOS OLIVOS', '20518336607')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6b8a2640-af11-4980-aeaa-b324337b7564'::uuid, 'Socopur San Bartolo', 'Lima', 'Lima', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6bc5203f-6e1b-47bc-b7c5-24d266a4aa7b'::uuid, 'Karcher Center Doral', 'Lima', 'Santiago de Surco', 'Av. Republica de Panama 6641', '20548502633')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6bec3f81-a5d8-4821-81d7-2a66c06a6635'::uuid, 'COLISEUM SPORT ANGAMOS', 'Lima', 'Surquillo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6bf6fbe2-bdd8-40ce-91cd-663f42bf20c2'::uuid, 'Clinica Chavarri San Borja', 'Lima', 'Lima', 'AV. LA MERCED 161', '20611926953')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4484,7 +7131,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6c2eac01-c98b-4f43-8036-a6d7bc8f1771'::uuid, 'Panorama Hogar Tienda Andahuaylas', 'Apurimac', 'Andahuaylas', 'Jr. Ucayali 425 Cercado de Lima', '20330676826')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6c313884-c8ac-44f5-aa8f-c568319ceca6'::uuid, 'Invicta Salaverry', 'Lima', 'San Isidro', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6c6ae1a6-82c2-460c-9f92-34c1fe1a7b8c'::uuid, 'Footloose - Arequipa - Palmeras - T12', 'Arequipa', 'Arequipa', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6cc7e214-27e6-4869-86d6-a6da620c28a3'::uuid, 'Decor Center Argentina', 'Lima', 'Lima', 'Av La Molina 473 Ate', '20215528791')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4516,6 +7187,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6e0866ca-421a-4578-bc32-dcd194cce03d'::uuid, 'Finezza Chiclayo', 'Lambayeque', 'Chiclayo', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6e1f38ce-618a-4292-b330-e9d41e7b5585'::uuid, 'Michelle Belau Basadre', 'Lima', 'Lima', 'AV. MARISCAL ELOY URETA NRO. 185 INT. 191 URB. EL PINO LIMA - SAN LUIS', '20296897338')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4540,7 +7219,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6ebd8ccd-2907-4ef8-ae75-2de3f6ba0a72'::uuid, 'Nespresso Trade Falabella', 'Lima', 'Santiago de Surco', 'Pasaje Yanacocha 171, Dpto 401, Santiago del Surco, Lima', '20611315130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6ec6a99d-219b-4099-a438-e43f9069e750'::uuid, 'Nua Baby Venta Asistida', 'Lima', 'San Isidro', 'AV. GENERAL FELIPE SALAVERRY 2370', '20553224145')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6ec8a75c-8c25-49e5-89f4-551dc0ab5420'::uuid, 'Footloose T80 - Santa Anita - Mall - T80', 'Lima', 'Lima', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6ed953f9-7680-4e0d-a57a-09b08a5f8cba'::uuid, 'TAO MOTOR CHORRILLOS', 'Lima', 'Lima', 'MZA. 4B LOTE. 7 URB. DEFENSORES DEL MARQUEZ DE CORPAC LIMA - LIMA - CHORRILLOS', '20601960061')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6ee96dc8-9267-4abd-9934-4080961b9928'::uuid, 'EDIPESA MEXICO', 'Lima', 'La Victoria', 'AV ARGENTINA 1710 LIMA', '20100041520')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4572,7 +7283,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6f320882-d056-4bd7-a9af-ff37aa1b54fb'::uuid, 'Glazer Peru Arequipa', 'Arequipa', 'Arequipa', 'AV. GENERAL EUGENIO GARZÓN 1679 – FDO. OYAGUE – JESUS MARÍA - LIMA', '20608490567')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('6f83b340-d0ff-4dbd-84db-6fb4f73b173c'::uuid, 'XIAOMI CHICLAYO MALL AVENTURA', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6f841e14-d319-435d-b03e-d1909f203f13'::uuid, 'Scalpers Jockey Plaza', 'Lima', 'Santiago de Surco', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6f8971bb-9cb9-46e9-8df8-b554b1ae1a28'::uuid, 'PIEERS CHOSICA 2 NEW CCT', 'Lima', 'Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4588,6 +7323,46 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6f996008-e596-4413-bdd4-f0b7169dfe56'::uuid, 'Decor Center Tacna', 'Tacna', 'Tacna', 'Decor Center Tacna', '20215528791')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6f9b6ef3-a823-44d9-8e4b-7619c035a81b'::uuid, 'Panorama Hogar Tienda San Miguel', 'Lima', 'San Miguel', 'Jr. Ucayali 425 Cercado de Lima', '20330676826')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6fca9ade-4795-4f84-bb69-5d373d74674b'::uuid, 'Baliq Real Plaza Salaverry', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('6fdfbfa8-2245-4e43-9d65-9df418e997d5'::uuid, 'MIKAELA CUSCO 2', 'Cusco', 'Cusco', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('70001727-4339-4cfb-aa59-425167d750e9'::uuid, 'Moiras Plateria Trujillo', 'LA LIBERTAD', 'Trujillo', 'AV. AMERICA OESTE 750 - TRUJILLO', '20481688923')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7020f6bc-96b5-4b06-a8e8-61865540f1da'::uuid, 'Alese Taller Camacho Kia Postventa', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4596,7 +7371,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('70348dfa-11e8-49ea-9049-299ef1d60a75'::uuid, 'CLINICA AVENDAÑO MIRAFLORES', 'Lima', 'Miraflores', 'CALLE LEONIDAS AVENDAÑO 116 MIRAFLORES', '20464259440')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7045221e-db04-4abc-9d4a-54bf22cf3264'::uuid, 'CLINICA DE OJOS GLOBAL LASER Instore', 'Lima', 'Lima', 'AV. MANUEL DULANTO 1656 PUEBLO LIBRE', '20554284681')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('706a3ffc-c7dc-4da1-a4a4-5d6cfb806f75'::uuid, 'OUTLET FAUCETT', 'Callao', 'Callao', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4660,6 +7451,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7171e3e4-16ec-41cb-a103-e24f7bd95d86'::uuid, 'FITPOINT_SALAVERRY', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7179c4fe-4d91-4136-bdaa-4a1aeaf950c6'::uuid, 'Xiaomi Real Plaza Santa Clara', 'LIMA', 'LIMA', 'CALLE LOS NEGOCIOS 448 SURQUILLO', '20604095604')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4676,7 +7475,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('71f0cde8-5bee-4938-89d3-fd1e2d345752'::uuid, 'PIEERS CHICLAYO 2 NEW', 'Lambayeque', 'Chiclayo', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('721b143d-1fd1-424a-b948-984b5b865538'::uuid, 'Footloose - Tumbes - Plaza Vea - Tf9', 'Tumbes', 'Tumbes', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('72384fc5-e4f2-4dff-8954-b84d2a8e28a6'::uuid, 'Infanti Plaza lima sur', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('72396428-b940-435e-83f5-308cf5668dd6'::uuid, 'CONVERSE AREQUIPA', 'Arequipa', 'Arequipa', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('724651ba-fca3-4e4a-9a15-986fb3e07bfc'::uuid, 'Footloose - Abancay - TO5', 'Lima', 'Lima', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4708,7 +7539,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('72980ca5-433a-41b0-a794-6e837a85b077'::uuid, 'PIEERS MERCADERES', 'Arequipa', 'Arequipa', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('72a800a5-a416-4f22-a792-2c5a8fed0206'::uuid, 'Socopur Suco', 'Lima', 'Lima', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('72c3cb43-9d98-48c1-89e2-bae958850dee'::uuid, 'MIKAELA CHICLAYO 1', 'Lambayeque', 'Chiclayo', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('72f369ef-c106-40cd-8c5e-c09792a2ee06'::uuid, 'iShop Mall Plaza Trujillo', 'La Libertad', 'Trujillo', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('72f8a64c-8e7b-4f74-83bb-32ea58967d05'::uuid, 'SmileUP', 'Lima', 'MIraflores', 'AV. REDUCTO 861 OF 502 MIRAFLORES', '20610744711')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4740,7 +7603,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('73bde9df-bbd5-4eb0-ad5b-558a03fdd4c8'::uuid, 'SAMSUNG KIOSKO REAL  PLAZA CHICLAYO', 'Chiclayo', 'Chiclayo', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+VALUES ('73bb6901-6639-427d-a213-7065ebc91826'::uuid, 'MERRELL SALAVERRY', 'Lima', 'San Isidro', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('73bde9df-bbd5-4eb0-ad5b-558a03fdd4c8'::uuid, 'SAMSUNG KIOSKO REAL  PLAZA CHICLAYO', 'Lambayeque', 'Chiclayo', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('73c7bce8-03bf-4116-ad1f-baa0be67482f'::uuid, 'Phantom Puruchuco', 'Lima', 'Ate', 'Av. Casimiro Ulloa 107, Miraflores, Lima', '20516634970')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('73cabc03-46cc-4520-86d9-1734f6acf3fc'::uuid, 'R STORE tienda', 'Lima', 'Lima', 'AV. INCA GARCILASO DE LA VEGA NRO. 1250 INT. 101 CERCADO DE LIMA LIMA - LIMA - LIMA', '20607749729')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('73f5c8ef-7dfe-4172-9b4b-e95f3c77e0e5'::uuid, 'CAT CHICLAYO', 'Lambayeque', 'Chiclayo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4749,6 +7644,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('74139d93-5124-44aa-9b65-0e45470fb16a'::uuid, 'ALYS BEAUTY Principal', 'Lima', 'Lima', 'AV. SANTIAGO ANTUNEZ DE MAYOLO 1373 Los Olivos', '20602191371')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('74207ab7-6d94-4403-aed4-3e856489c389'::uuid, 'ALESE Repuestos', 'lima', 'SANTIAGO DE SURCO', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('74433eb1-cf23-4584-8ff6-3b874154cc00'::uuid, 'Vertigo Roller Instore', 'Lima', 'Lince', 'AV. ARENALES 1737 LINCE', '20562780361')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7490af9f-7355-4f4f-bc84-22127b24e6a2'::uuid, 'Infanti Espinar', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4796,6 +7715,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7530bb1f-123e-425f-9aa8-16b59903ea31'::uuid, 'Socopur San Miguel 2', 'Lima', 'Lima', 'Av. Separadora Industrial Nro 695 Urb. Miguel Grau', '20294560204')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7538b951-f1d2-4d8f-b6cd-90de34aeac02'::uuid, 'Smart Move Principal', 'LIMA', 'LIMA', 'Av Olavegoya 1855 Dpto 1201 ??? Jesus Maria', '20604143374')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4804,7 +7731,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('756302e7-df95-4072-9762-eb7752867e41'::uuid, 'FITPOINT_PLAZA_NORTE', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('757fc245-8e5a-4775-b00a-4e0794387bdb'::uuid, 'Alese Naranjal Postventa Caja', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('75826f5d-e860-42cc-a43f-0c0aa9b0a191'::uuid, 'Columbia Parque La Molina', 'Lima', 'Lima', 'CAL. AMADOR MERINO REYNA 267 SAN ISIDRO', '20514811271')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4852,7 +7795,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('76662a2e-995a-4b68-83f9-547bc937b828'::uuid, 'SANICENTER TRUJILLO I', 'La Libertad', 'Trujillo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7690440a-27b1-4ead-8c01-b7006c08e4c9'::uuid, 'iRobot Venta Asistida', 'Lima', 'Lima', 'CAL. MONTE REAL 464 SURCO', '20601758131')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('76a376d9-d365-4bb8-bcf7-3a94bf48709a'::uuid, 'Bella Terra Hoteles Instore', 'Lima', 'Lima', 'Laguna Azul Resort & Spa Jirón Arnulfo García S/N Cuadra 2 San Martín El Sauce 22331', '20542345200')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4868,7 +7827,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('76bbae8a-9387-4b30-b264-f24101b6f449'::uuid, 'SUNTIME REAL PLAZA CHICLAYO', 'Chiclayo', 'Chiclayo', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
+VALUES ('76bbae8a-9387-4b30-b264-f24101b6f449'::uuid, 'SUNTIME REAL PLAZA CHICLAYO', 'Lambayeque', 'Chiclayo', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4892,6 +7851,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7714713b-3179-4f7c-8b4c-c2755004229e'::uuid, 'SOPHIE CROWN HOUSE', 'Lima', 'Lima', 'CALLE MIGUEL DASSO 139 SAN ISIDRO', '20547416008')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('77162f2d-5955-444e-a058-0753e4b03d1c'::uuid, 'Quality Products Modulo San Miguel', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4900,7 +7867,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7721b3d2-8108-4f28-9474-6d64ac9af3ea'::uuid, 'HEADMARK Iquitos', 'Loreto', 'Iquitos', 'AV Nicolas Ayllon  4671 Ate Lima', '20517206955')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('77379274-cff8-4d1b-8ad3-25dd9da32408'::uuid, 'Alese Taller Naranjal ATF Postventa', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('777f8487-db9b-4bd5-9251-67795bd9ed53'::uuid, 'PIEERS PUCALLPA NEW (ORIENTE)', 'Ucayali', 'Pucallpa', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4917,6 +7900,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('77a90f59-6c5e-4eb9-bf8e-63be03f453a4'::uuid, 'Carsa Huaral', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('77afbf49-6ba4-4c20-9c09-131a1ee1235a'::uuid, 'Samsonite Cusco', 'Cusco', 'Cusco', 'ENCALADA 1388 SURCO', '20551938353')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4948,6 +7939,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('77efffd3-55f1-46a7-ba36-8cfe706b35d5'::uuid, 'Baliq Wong Chacarilla', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7821493d-38af-4e2c-8330-0f4680dae92f'::uuid, 'Rosen Venta Telefonica', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7821c7b4-9220-4b0f-b87e-f5b6efd4bd9e'::uuid, 'EL CORTE INGLES LA MOLINA', 'Lima', 'Lima', 'AV. ANGAMOS OESTE 624', '20518932391')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4956,7 +7963,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7832b5a6-8b29-4c57-9db7-3e3f5e7eae9d'::uuid, 'ASICS_JOCKEY', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7836b68b-4568-4d17-ba09-1cbeb0b8e2f3'::uuid, 'Grupo Pana Taller Iquitos', 'Loreto', 'Maynas', 'AV. Aviaci?n 4928 urb. Higuereta - Santiago de Surco', '20100144922')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7880bfa7-2941-4f9a-828a-17a7532d5bac'::uuid, 'Pc Factory Sjl', 'Lima', 'San juan de Lurigancho', 'ca. Las Orquideas 585, Piso 12, san Isidro', '20609693534')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -4988,6 +8011,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('78d91bab-6a65-4116-a31d-84b72996e1bf'::uuid, 'Glazer Peru Evaluaciones Web', 'Lima', 'Jesus Maria', 'AV. GENERAL EUGENIO GARZÓN 1679 – FDO. OYAGUE – JESUS MARÍA - LIMA', '20608490567')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('791ff4a6-0917-45ad-bda5-b9b22d3f5476'::uuid, 'Alese Taller Camacho ATF Venta', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -4996,7 +8027,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('79451f3b-7b96-4612-aa2b-8e835c8098cd'::uuid, 'PIEERS COMAS4(GAMACHI)', 'Lima', 'Comas', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('794611ed-0fe3-4d50-8ff6-f91df33e3c8c'::uuid, 'Gmg Chincha', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('79b42765-f0a7-40f8-a4b1-00a44ac7c72a'::uuid, 'Hirophone Tienda Tambo - Ate 2', 'LIMA', 'ATE', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7a001ee3-a297-4872-af3c-78d7f3659b3c'::uuid, 'Finezza Plaza Norte', 'Lima', 'Lima', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5020,7 +8075,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7a9a8b8a-7779-437f-b53a-e1689fc97ea8'::uuid, 'Infanti Plaza Norte', 'Lima', 'Independencia', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7ab3ec46-d69c-4550-9473-f706f87b0fd7'::uuid, 'PIEERS TUMBES', 'Tumbes', 'Tumbes', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7abc6723-4e92-4775-b751-c5ff8b5a3242'::uuid, 'Quality Products Tienda Chiclayo Mall Aventura', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7b1d7ad8-6f18-4d2d-981a-df78d93351b7'::uuid, 'Infanti Trujillo 1', 'La Libertad', 'Trujilo', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5060,6 +8139,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7bf9e48b-68cc-4337-953f-0ae8277e85b9'::uuid, 'MIKAELA ICA', 'Ica', 'Ica', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7c35ee29-e9d9-424c-ac86-c099dae582f5'::uuid, 'New Athletic COMAS', 'Lima', 'Lima', 'Jr. Sandia Nro. 276 Cercado de Lima', '20550088330')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5076,7 +8163,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7c5e66ee-ef8c-4ed2-baa6-c34d053b8ec4'::uuid, 'SANICENTER SURQUILLO', 'Lima', 'Surquillo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7c7d3d4e-bf28-49e5-92a2-1c0fc46d993a'::uuid, 'Michelle Belau La Molina', 'Lima', 'Lima', 'AV. MARISCAL ELOY URETA NRO. 185 INT. 191 URB. EL PINO LIMA - SAN LUIS', '20296897338')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7c8f4cad-4ffd-4b0e-ae4b-3796e619e6f8'::uuid, 'PC Factory Arequipa (Cayma)', 'Arequipa', 'Cayma', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5116,6 +8219,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7d1ad888-11a2-4867-af88-29c41bad9446'::uuid, 'Bata B4 CHORRILLOS', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7d3f84df-7b56-4f91-973d-ee00e0a1570c'::uuid, 'Quality Products Tienda Mall Del Sur', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5125,6 +8236,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7d5deed8-c762-4948-9f93-79e1336c7a48'::uuid, 'Pana Motos Surquillo', 'Lima', 'Lima', 'Av. Republica de Panama 3321urb. El Palomar San Isidro', '20536429183')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7d6f11ab-9d38-4f0f-bb53-3f91e206704b'::uuid, 'PICCADILLY PLAZA SAN MIGUEL', 'Lima', 'San Miguel', 'EPSILON 145 CALLAO', '20129993139')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5180,6 +8299,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7e911c4b-c5ec-4356-9c1d-36765427af9a'::uuid, 'LEGO San Miguel', 'Lima', 'San Miguel', 'AV. JOSE PARDO N° 434 – MIRAFLORES - LIMA', '20605052836')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7ea163b8-bf28-4f46-a33d-f95bbaa03b1f'::uuid, 'Footloose - C. Civico - Real Plaza - T46', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5196,7 +8323,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7eddc9b0-b3eb-4115-8e82-06ed5f49d11c'::uuid, 'PIEERS TARAPOTO', 'San Martin', 'Tarapoto', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7ee954f6-8a36-4e8d-b641-4930f843e826'::uuid, 'SAMSUNG SES REAL PLAZA PRIMAVERA', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7ef49675-8e3e-41c1-8b17-81bab44f2d8d'::uuid, 'PIEERS CHOSICA', 'Lima', 'Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5213,6 +8356,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('7ef9156f-9aa9-4bd2-83dc-c49338bf053d'::uuid, 'SAMSUNG SES REAL PLAZA TRUJILLO', 'La Libertad', 'Trujillo', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7f0baedb-ffc9-42e3-b99b-98110447b779'::uuid, 'Scalpers Larcomar', 'Lima', 'Miraflores', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5252,6 +8403,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('7f79c4d4-c7c7-40dd-842e-bf92bd64b2d7'::uuid, 'Lucasar Miraflores', 'Arequipa', 'Miraflores', 'PJE. DEAN VALDIVIA 205 YANAHUARA - AREQUIPA', '20600862775')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8008b7e4-522d-4168-9d35-2bf54f149f99'::uuid, 'SERVIMOTOR PIURA', 'Piura', 'Piura', 'LUIS ANTONIO EGUIGUREN 1048 PIURA', '20440983261')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5268,7 +8427,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('80cd7e8f-b241-44c7-aab3-1422b1ab2fc6'::uuid, 'CAT PIURA', 'Piura', 'Piura', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('80e645d0-0271-4c46-8db3-9b85c1e5eee3'::uuid, 'Xiaomi Parque La Molina', 'Lima', 'Lima', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('80f330da-1667-4299-aea8-b259d0b45e53'::uuid, 'Aghaso Venta Asistida', 'Lima', 'Lima', 'Av. Javier Prado Oeste 757 Int 1306 - Magdalena del Mar', '20608707850')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8103c419-78a9-4f3d-8b5a-1c8b8e950722'::uuid, 'ARINSA DRONES CRUSCO', 'Cusco', 'Cusco', 'ARINSA DRONES Y SERVICIO DE INGENIERIA SAC', '20610175181')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5284,7 +8467,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('81311ad1-4bc3-4dc6-bb44-69e323ca4623'::uuid, 'MIKAELA IQUITOS', 'Loreto', 'Iquitos', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('81831a36-a12d-43fd-bd29-c3480e76e88a'::uuid, 'Alese Taller Minka Venta', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('818ffbe5-82cf-4a57-bbd6-a45d90d6f5f2'::uuid, 'Ssenda Selva Ate', 'Lima', 'Ate', 'AV Nicolas Ayllon  4671 Ate Lima', '20608038834')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5308,6 +8507,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('823551ef-f32d-43c0-835a-ae6053e0e65a'::uuid, 'Glazer Peru Chiclayo', 'Lambayeque', 'Chiclayo', 'AV. GENERAL EUGENIO GARZÓN 1679 – FDO. OYAGUE – JESUS MARÍA - LIMA', '20608490567')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('82670b44-9510-492e-8f25-382d30fca3dc'::uuid, 'Cassinelli Independencia', 'LIMA', 'Lima', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5324,6 +8531,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('82f0e3e1-378b-4e4e-b6f7-5e5bc6fe7c03'::uuid, 'Arena Outlet', 'Lima', 'Lima', 'Av. Los Conquistadores 321 - San Isidro', '20601274133')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('82fd1e6d-f34b-4dd6-b7da-7425d3557029'::uuid, 'GRUPO MALCA BAGUA', 'AMAZONAS', 'BAGUA', 'HEROES DEL CENEPA 1199 BAGUA AMAZONAS', '20600956346')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5333,6 +8548,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8311aa4f-79d2-4266-bddf-398a4b12a575'::uuid, 'Compuusa Mall Aventura Arequipa', 'Arequipa', 'Paucarpata', 'Cl. Antonio Raimondy 123 Urb. Manuel Prado', '20532171173')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('83295547-0944-47ea-84ad-48b7de5ada66'::uuid, 'CAT AREQUIPA', 'Arequipa', 'Arequipa', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('837873dc-a725-46c0-90b6-8df2aa2aeaf8'::uuid, 'Pc Factory Mall Plaza Trujillo', 'La Libertad', 'Trujillo', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5380,6 +8611,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('84626147-0fb9-4f80-9330-b9f38e644cc0'::uuid, 'Columbia Plaza San Miguel', 'Lima', 'Lima', 'CAL. AMADOR MERINO REYNA 267 SAN ISIDRO', '20514811271')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('846ff302-cdff-4813-a549-3d8911f04890'::uuid, 'Drimer Arequipa', 'Arequipa', 'Arequipa', 'Jr. el Polo Nro. 670 Int. C605 Centro Comercial el Polo (Block C) - Santiago de Surco', '20101308678')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5397,6 +8636,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8498b1c9-880c-4490-bbd1-fb395b643a6a'::uuid, 'Grintek Instore', 'Lima', 'Lima', 'Calle Cantuarias 140 Int 247 Miraflores', '20612586323')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('849e0baf-75b4-4e9f-be7c-fbe412fcb156'::uuid, 'CROCS_OUT_LURIN', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('84b2e80d-52bb-4536-952f-8d4737f29526'::uuid, 'PIEERS MOYOBAMBA', 'San Martin', 'Moyobamba', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5436,6 +8691,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('85adfd2b-5f0e-484f-96f1-cb1c814fb739'::uuid, 'Lanya Motors Venta Asistida', 'Lima', 'Lima', 'CALLE NAPO 3980 - INDEPENDENCIA', '20606187174')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('85d5877a-52d8-4e29-90df-cca6318d4c29'::uuid, 'Quirovida Rehabilitacion Integral - San Iisdro', 'LIMA', 'LIMA', 'Calle Las ?guilas 263 - Urb. Limatambo - Surquillo', '20504068146')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5468,6 +8731,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('86e596a4-1ba5-408e-81fd-f4e3b6fba61d'::uuid, 'OML Import - WDS Saan Marcelo', 'Lima', 'Lima', 'AV. ZARAGOZA MZ 04 LT 05 - LOS OLIVOS', '20518336607')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('86f4a957-4f49-4185-95ac-7c4f6f105f69'::uuid, 'Footloose - Trujillo - T78', 'La Libertad', 'Trujillo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5477,6 +8748,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8728bb09-c427-4273-9aa1-946678809924'::uuid, 'Footloose - Plaza Norte - T43', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('877290e7-0d4c-4aac-b597-aab8d34e02cc'::uuid, 'MERRELL PARQUE LA MOLINA', 'Lima', 'La Molina', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5508,6 +8787,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('87d79fa5-07d1-40f6-8a60-d6199b025e0b'::uuid, 'HEADMARK Ate', 'Lima', 'Ate', 'AV Nicolas Ayllon  4671 Ate Lima', '20517206955')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('87eb6724-ed9f-4040-a30c-f207c7786432'::uuid, 'CLINICA VALLESUR AREQUIPA', 'Arequipa', 'Arequipa', 'AV LA SALLE 116 AREQUIPA', '20454135432')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5517,6 +8804,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('883230ae-0823-4f78-a450-14c2e2c03435'::uuid, 'TDA 1 DERCO', 'LIMA', 'LIMA', 'AV. PASEO DE LA REPUBLICA 2289 URB STA CATALINA', '20602629067')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8844b481-5462-428a-9a42-0d0f1605b260'::uuid, 'Pc Factory Primavera', 'Lima', 'Lima', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5540,7 +8835,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('889be3d4-7d04-4f72-b95e-4a1c16682381'::uuid, 'Karcher Center Surquillo', 'Lima', 'Surquillo', 'Av. Republica de Panama 6641', '20548502633')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('88a01c66-766d-4480-9798-c91899385ec1'::uuid, 'Nutripoint Piura', 'Piura', 'Piura', 'Jr. Salaverry 655 - Magdalena del Mar', '20600575636')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8916b296-f861-4364-8992-ef59b488c309'::uuid, 'Organa Coleccionables Instore', 'Lima', 'Lince', 'C.C.ARENALESALT.CDRA.17AV.ARENALES', '20522927946')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5628,6 +8939,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('89f446f7-bc38-4b41-bd8e-85f0327922bd'::uuid, 'Footloose - Puruchuco - TO7', 'Lima', 'Ate', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8a3a2718-b058-4400-8d78-93fe4b3a93c7'::uuid, 'Gmg Villa Maria Del Triunfo', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5637,6 +8956,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8a69cd8e-03ab-4533-95d3-faf60c07f8ef'::uuid, 'LookUp Peru', 'LIMA', 'LIMA', 'Av. Manuel Villar?Ðn 1098 interior 502 Surquillo - Lima', '20607296589')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8a83be1d-801e-434a-86c9-92653f0a22e8'::uuid, 'Sonotec Venta Asistida', 'Lima', 'Lima', 'JR PARURO 1179-LIMA', '20518332792')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5661,6 +8988,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8a8f4dd6-5612-4acc-baac-a36c6331711f'::uuid, 'Footloose Sport - Jr. Union 400 - T70', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8a9dcc5f-fdfe-46e7-85a7-f8c454171e0f'::uuid, 'Scooterland Lince', 'Lima', 'Lima', 'NA', '20605403744')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8aa5446f-3728-48cd-93db-ec6841136be7'::uuid, 'Bata B2 CHORRILLOS', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5716,6 +9059,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8b7fcdf9-55fe-462d-a213-8698b5732b27'::uuid, 'Ssenda Selva Tarapoto', 'San Martin', 'Tarapoto', 'AV Nicolas Ayllon  4671 Ate Lima', '20608038834')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8bc52ebc-8dd6-499e-8961-5059ad0aae2b'::uuid, 'Colectivo 23 Venta Asistida', 'Lima', 'Santiago de surco', 'Calle Natalio Sanchez 125', '20610454144')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8bcaa922-238a-41ac-abbf-6d6c3a2e5e9c'::uuid, 'Carsa Abancay', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5748,6 +9107,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8c894db8-c4ac-420c-ab8f-03cb8184f01b'::uuid, 'MERRELL TRUJILLO', 'La Libertad', 'trujillo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8c9229fc-01d6-4e1b-993a-8bd938737b0b'::uuid, 'Tempur Benavides', 'Lima', 'Lima', 'Av. Los Conquistadores 136 San Isidro', '20524261384')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5764,7 +9131,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('8d31478e-2289-4861-8d8f-671cae85681b'::uuid, 'JCH Llantas JUL Chiclayo', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
+VALUES ('8d28fd46-49af-48e4-9cd9-40b2e0201fff'::uuid, 'Aquago Instore', 'Lima', 'Lima', 'AV. REPUBLICA DE CHILE 295 CERCADO DE LIMA', '20554234233')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8d2ad0ba-631e-4a80-9110-b49a1578368a'::uuid, 'CROCS_RP_PUCALLPA', 'Ucayali', 'Pucallpa', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8d31478e-2289-4861-8d8f-671cae85681b'::uuid, 'JCH Llantas JUL LAMBAYEQUE', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5773,6 +9156,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8d6639d1-ddb1-449e-a602-e912011555b6'::uuid, 'Nutripoint Cayma', 'Lima', 'Lima', 'Jr Salaverry 659', '20611677066')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8d8e8e26-5476-4705-95c7-6eb396aac1f5'::uuid, 'VELEZ MINKA', 'Callao', 'Callao', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5804,6 +9195,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8e8723ab-6572-4e6a-a873-efd6f8d516c1'::uuid, 'Pc Factory Puruchuco', 'Lima', 'Ate', 'ca. Las Orquideas 585, Piso 12, san Isidro', '20609693534')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8e877a6b-6923-4f95-80ee-023a1346050c'::uuid, 'COMPUCELL LIMA SUR', 'Lima', 'San juan de miraflores', 'calle raymondi 123 arequipa', '20558669617')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8e8cd330-5890-4d7b-9573-377fc883945d'::uuid, 'Tatoo Cusco Plaza', 'Cusco', 'Cusco', 'Calle Burgos 215 - Urb. Risso - San Isidro', '20501649261')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5820,7 +9227,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('8f83cf88-11f4-4d1e-bc20-71842b494d49'::uuid, 'Grupo AUNA Principal', 'Chiclayo', 'Chiclayo', 'CALLE MANUEL MARIA IZAGA 621 CHICLAYO Chiclayo', '0')
+VALUES ('8f176eb0-5cf6-4767-b674-48b788850df9'::uuid, 'SANICENTER TRUJILLO II', 'La Libertad', 'Trujillo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8f59c275-311d-4323-9200-79a3c684b4a7'::uuid, 'Hirophone Módulo Real Plaza Santa Clara', 'LIMA', 'SANTA CLARA', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8f83cf88-11f4-4d1e-bc20-71842b494d49'::uuid, 'Grupo AUNA Principal', 'Lambayeque', 'Chiclayo', 'CALLE MANUEL MARIA IZAGA 621 CHICLAYO LAMBAYEQUE', '0')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5844,6 +9267,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8f936d48-7a98-47d4-9992-500d995969ad'::uuid, 'Bimba y Lola El Bosque', 'Lima', 'Lima', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8f9774c6-ea61-4b50-8bb3-533917d697a0'::uuid, 'Mindfully Wellness Instore', 'Lima', 'Lima', 'AV MARISCAL LA MAR 1263 INTERIOR 207 - MIRAFLORES', '20610947451')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8fb4f49e-5c64-4c82-8c72-9e843aa549d2'::uuid, 'GP MOTOS MAVILA MOTUPE', 'Lambayeque', 'Motupe', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8fcedc29-9e05-4f8d-9cb0-25260699a3ee'::uuid, 'Baliq Real Plaza Primavera', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8fd9f5d0-057a-4897-a489-a316cd60290c'::uuid, 'Footloose - Lurin - To1', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5852,7 +9307,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8fe4c9dc-1b9b-49e3-ba93-11810a367eed'::uuid, 'CAT MALL DEL SUR', 'Lima', 'San Juan de Miraflores', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('8ff7c101-c47b-484d-8fa3-da88eb106ea2'::uuid, 'IX Comercio', 'LIMA', 'LIMA', 'CALLE LOS NEGOCIOS 448 SURQUILLO', '20604095604')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('8ffcf2e2-ba64-444f-a84a-c3fc1695f5d6'::uuid, 'MIKAELA MEGAPLAZA', 'Lima', 'Independencia', 'EPSILON 145 CALLAO', '20129993139')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5876,7 +9347,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('902e9340-4c1e-4cec-916f-c071f577c248'::uuid, 'GP MOTOS MAVILA PAITA', 'Piura', 'Paita', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('90387892-e392-43f9-a3de-5b911a7daf14'::uuid, 'Gmg Villa El Salvador', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('904ea3a4-d6e3-4357-8bf0-da1375189e16'::uuid, 'MOTOFACIL INDEPENDENCIA', 'Lima', 'Lima', 'CAL. SANTA LUCIA DE CONCHAN 144 URB LA ENCANTADA DE VILLA CHORRILLOS', '20609320983')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('90572edf-0538-4de4-9d2d-458295ac0249'::uuid, 'GP MOTOS MAVILA PUCALLPA', 'Ucayali', 'Pucallpa', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -5924,6 +9419,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('91ae6b2f-80cc-48ce-a27d-a976b6affcf1'::uuid, 'VELEZ LARCOMAR', 'Lima', 'Miraflores', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('91b60c84-a53b-4474-9df0-56313d666614'::uuid, 'Honor Puruchuco', 'Lima', 'Lima', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -5933,6 +9436,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('91bab261-3f14-4cb7-b69c-6ec8f3c09e98'::uuid, 'Invicta Instore', 'Lima', 'Lima', 'Calle Talladores 155 Urb. Los Artesanos ??? Ate ??? Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('91d23164-2a2f-4f2e-8350-a121591ac0ee'::uuid, 'CLINICA SAN MARTIN SURCO', 'Lima', 'Santiago de surco', 'CALLE BREA Y PARIÑAS 109 MONTERRICO SURCO', '20505487754')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('92037a33-da21-4e28-873b-a7304b01a9cf'::uuid, 'INBOX_MP_AREQUIPA', 'Arequipa', 'Arequipa', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9203e49d-3e96-485d-8c49-839e11e76c3b'::uuid, 'Invicta Arequipa', 'Arequipa', 'Arequipa', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('921efba6-4a75-4543-8531-5badbce0dea8'::uuid, 'Bimba y Lola Salaverry', 'Lima', 'Lima', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6012,6 +9547,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('938425b8-99b2-48ca-be4b-2eeb12f45c1f'::uuid, 'CROCS_MP_AREQUIPA', 'Arequipa', 'Arequipa', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('93a634fb-e600-4103-b8ef-a2addd728884'::uuid, 'SANICENTER CHICLAYO UGARTE', 'Lambayeque', 'Chiclayo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('93ae0c60-f67d-4db8-84ec-8df35ca763ee'::uuid, 'Carsa Arequipa Norte', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6021,6 +9572,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('93c4590c-51ff-414e-a35c-5b3610bcdb09'::uuid, 'Quality Products Tienda Ica Plaza Del Sol', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('93d72a2e-2dd0-44f3-b7de-c1230f0c1efc'::uuid, 'PIEERS STA ROSA', 'Lima', 'La Victoria', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6045,6 +9604,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('94432e63-08f0-45b4-9403-f567008cf150'::uuid, 'City Bikes Venta Asistida', 'Callao', 'Callao', 'Cal. Epsilon 145 - Callao', '20516784513')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('94691bc9-dd5d-41e7-992b-806a2910c0f0'::uuid, 'Nua Baby Salaverry', 'Lima', 'San Isidro', 'AV. GENERAL FELIPE SALAVERRY 2370', '20553224145')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6100,7 +9667,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('952f21dc-bead-4a48-9d97-82e71ff2b5fe'::uuid, 'ORIMEDE WHATSAPP', 'Lima', 'Lima', 'AV. EMANCIPACION NO: 772 CERCADO DE LIMA - LIMA', '20601161096')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('955c09fa-b025-458c-961a-79539d621a7f'::uuid, 'MIKAELA MALL DEL SUR', 'Lima', 'San Juan de Miraflores', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('95646fd6-194a-4916-88bc-6cecdf3d9d85'::uuid, 'DJI PLAZA SAN MIGUEL', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('95922900-469c-4d9b-8b2b-560965bb3be3'::uuid, 'PICCADILLY PLAZA NORTE', 'Lima', 'Independencia', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('95964394-6ddd-49f2-9cd1-98d39987ff2a'::uuid, 'KAYENCORP LINCE', 'Lima', 'Lince', 'CANADA 635 LA VICTORIA', '20607050636')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6156,6 +9755,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9629b628-b754-451b-844f-3bac4c12feda'::uuid, 'CROCS_LA_MOLINA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9633dce2-b850-43c9-aa09-f0a4d8443b39'::uuid, 'SUNTIME METRO SAN JUAN DE LURIGANCHO', 'Lima', 'Lima', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6164,7 +9771,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('963a82bd-da02-4930-b1ca-064a675afb87'::uuid, 'GP MOTOS MAVILA LA UNION', 'Lima', 'Lima', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('96b97a2e-c684-414f-91ce-a67543cce2b0'::uuid, 'Metusa Tienda Unicachi', 'Callao', 'Callao', 'Av. Argentina 2317', '20555190132')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('96c2e9ec-af76-4401-aea5-a1ae96382863'::uuid, 'Alpha Technology Instore', 'Lima', 'Comas', 'AV. ALFREDO MENDIOLA NRO. 7810 INT. 92B URB. PRO INDUSTRIAL LIMA - LIMA - COMAS', '20601042852')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6188,7 +9811,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('971c800b-c5d2-46be-999b-11f7b0a4f8cb'::uuid, 'Autopak Cajamarca', 'Chiclayo', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+VALUES ('971c800b-c5d2-46be-999b-11f7b0a4f8cb'::uuid, 'Autopak Cajamarca', 'Lambayeque', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9726e3c3-4de4-4ef2-bce4-8992b9de1c1a'::uuid, 'Instituto Daniel Alcides Carrión Instore', 'Lima', 'Lima', 'AV. REPUBLICA DE CHILE NRO. 432 URB. SANTA BEATRIZ LIMA - LIMA - JESUS MARIA', '20138221157')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9736a3bb-9223-46e7-bad4-aa5eebe8bfc0'::uuid, 'IDUN JOYERIA VENTA ASISTIDA', 'lima', 'Miraflores', 'AV ROOSEVELT 6021 MIRAFLORES', '20607416100')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6204,7 +9843,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('973b59e9-9c9b-4397-87f1-13bf7fbbed16'::uuid, 'Soft El Polo', 'Lima', 'Santiago de Surco', 'AV. EL POLO S/N CC EL POLO I TDA. A220 – SANTIAGO DE SURCO', '20601363861')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('97445d8e-483b-4093-8d91-485da0b33df9'::uuid, 'Capilea Principal', 'Lima', 'Lima', 'AV JOSE PARDO 138 INT 902 MIRAFLORES', '20602184863')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('974c6f67-fbbc-4364-b68d-9820ac22fa89'::uuid, 'Arena Mall Aventura Arequipa', 'Artequipa', 'Arequipa', 'Av. Los Conquistadores 321 - San Isidro', '20601274133')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6228,7 +9883,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9774a673-288a-440a-a8d8-39a22d3a246b'::uuid, 'MOTO NORTE PIURA SANCHEZ CERRO', 'Piura', 'Piura', 'CAL.GERMAN SCHEREIBER NRO. 276 URB. SANTA ANA LIMA - LIMA - SAN ISIDRO', '20480297289')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('977617bb-8bb9-411d-903c-bedb04933c92'::uuid, 'Michelle Belau Trujillo Real', 'La Libertad', 'Trujillo', 'AV. MARISCAL ELOY URETA NRO. 185 INT. 191 URB. EL PINO LIMA - SAN LUIS', '20296897338')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('97baacaf-a418-43c0-931c-fe982ca4bb23'::uuid, 'Hirophone Modulo Real Plaza Puruchuco 2Do Nivel', 'LIMA', 'ATE', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('97ec4314-72a0-4487-a2b2-2a27e4b73deb'::uuid, 'GP MOTOS MAVILA SULLANA JL', 'Piura', 'Sullana', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6244,7 +9923,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('98267470-0758-40c3-ba58-faf11dea365b'::uuid, 'MOTO NORTE TRUJILLO', 'La Libertad', 'Trujillo', 'CAL.GERMAN SCHEREIBER NRO. 276 URB. SANTA ANA LIMA - LIMA - SAN ISIDRO', '20480297289')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('983d6d88-f33e-49fc-9626-3a6039a9ac11'::uuid, 'Around Instore', 'Lima', 'Lima', 'CA. GRIMALDO DEL SOLAR 162 MIRAFLORES', '20609623021')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9894091d-0318-41a3-83b9-0c42e95b7741'::uuid, 'BJR MIRAFLORES', 'Lima', 'Miraflores', 'ENRIQUE BARRON 1024 SANTA BEATRIZ', '20536579746')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6268,6 +9963,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('98f22764-6892-4db4-9d83-520c43d410f6'::uuid, 'Mips Mobile Miraflores', 'LIMA', 'Miraflores', 'Av. Jose Larco 101', '20611016086')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('99007ae2-1ae2-49c1-bccb-6d943e0654bc'::uuid, 'Advancell Instore', 'LIMA', 'LIMA', 'AV. INCA GARCILASO DE LA VEGA 1358 - CERCADO DE LIMA', '20606435712')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6277,6 +9980,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('992593a6-23b3-4f5c-97b1-e6df13b5bd8a'::uuid, 'SAMSUNG SES MALL DEL SUR', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('993b491e-452c-4b32-bc47-17a34877123c'::uuid, 'GP MOTOS MAVILA CHIMBOTE', 'Ancash', 'Chimbote', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6316,6 +10027,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('99f43869-475a-4eef-9535-cdca04cb5a7e'::uuid, 'Footloose-Chancay - TO4', 'Lima', 'Chancay', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9a0973ef-79b2-4774-b4bd-dbfcef033848'::uuid, 'MOTO N & F', 'Lima', 'San Isidro', 'CAL.GERMAN SCHEREIBER NRO. 276 URB. SANTA ANA LIMA - LIMA - SAN ISIDRO', '20480297289')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9a158302-575b-4e27-b6e5-f7c57c4ff074'::uuid, 'Phantom Real Plaza Cusco', 'Lima', 'Lima', 'Av. Casimiro Ulloa 107', '20516634970')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6325,6 +10052,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9a1c644c-37f8-4bf2-b0d3-1e7ff467e8a7'::uuid, 'Fox Moviles', 'Lima', 'Lima', 'Av. de la Roca de Vergallo Nro. 493 Int. 2105', '20608662767')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9a214bfb-dc33-4c30-8e58-4e86c47369b3'::uuid, 'Clínica Aviva SMP', 'Lima', 'Lima', 'Av. Alfredo Mendiola Nro. 6301 / Lima - Lima - Los Olivos', '20602393934')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6348,6 +10083,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9aa6a4e5-7586-491d-95fd-896c53c92a66'::uuid, 'PIEERS PURUCHUCO', 'Lima', 'Ate', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9abf834f-f900-4b8e-9022-83d9f74ce1c6'::uuid, 'Footloose - Sullana - Tottus - Ti1', 'PIURA', 'SULLANA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6364,7 +10107,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9aca47a1-cbc9-4a7e-b7d0-d3ed8d254e61'::uuid, 'Llantas San Martin Arequipa', 'Arequipa', 'Arequipa', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9ae6f263-6ca4-4e11-9f54-3df62d7139f5'::uuid, 'CONVERSE 2 PLAZA NORTE', 'Lima', 'Lima', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9b0dd964-0054-46eb-9ec3-f4de9004ffa4'::uuid, 'INBOX_MOLINA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6412,6 +10171,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9c106199-d8c0-4872-b612-124936537882'::uuid, 'CROCS_BELLAVISTA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9c3251fe-a764-4f99-85d6-8c97dd275f2e'::uuid, 'Gmg Comas', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6452,6 +10219,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9c974a79-d4ca-42e9-b183-d85ea1076e8e'::uuid, 'Unaluka Venta Asistida', 'Lima', 'Lima', 'Calle General Silva 395 - Miraflores', '20548487065')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9cab7fd0-aa2c-4ba4-b629-c2f80c0c4107'::uuid, 'Footloose - Cajamarca - El Quinde - Te6', 'Cajamarca', 'Cajamarca', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6468,6 +10243,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9cc0fd2f-e91f-4c0f-b49c-bc300b030b19'::uuid, 'PIEERS SULLANA 2 (Gamachi)', 'Piura', 'Sullana', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9cf63e18-0dd2-42e2-96c2-aa1576cab6c9'::uuid, 'Footloose - Pucallpa - Real Plaza - T98', 'Ucayali', 'Coronel Portillo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6477,6 +10260,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9d154717-7280-4e7c-ac9a-57b7e5b69a09'::uuid, 'Footloose Sport - Chimbote - Mega Plaza - T74', 'Ancash', 'Santa', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9d2fa33f-1adf-4201-b2b9-1f7223b45f44'::uuid, 'OPPO MALL DEL SUR', 'Lima', 'San juan de miraflores', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6508,7 +10299,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9e117744-3242-4360-8569-43282cb0bedd'::uuid, 'PIEERS HUANCAYO 5', 'Junin', 'Huancayo', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9e72a6f5-0832-46fc-91f3-ad94ec11baa8'::uuid, 'MENS FASHION BOX INSTORE', 'Lima', 'Lima', 'ALFREDO MENDIOLA 1400', '20611953799')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9e79cf5e-20c6-4acf-8443-15a7edb7267e'::uuid, 'iShop Real Plaza Salaverry', 'Lima', 'Lima', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9e8bbda3-8553-4240-8bae-ef32220d1168'::uuid, 'MOTOS MAVILA JAEN', 'Cajamarca', 'Jaen', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6532,7 +10347,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('9eeb522c-e760-4338-9949-4267e6db5212'::uuid, 'iShop Real Plaza Chiclayo', 'Chiclayo', 'Chiclayo', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
+VALUES ('9eeb522c-e760-4338-9949-4267e6db5212'::uuid, 'iShop Real Plaza Chiclayo', 'Lambayeque', 'Chiclayo', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6564,7 +10379,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9f51667c-34d6-4cef-9c6f-861bd5ba0c51'::uuid, 'Asian Fan Store Jesus Maria', 'Lima', 'Jesus María', 'Av. Caminos del Inca 257 - Santiago de Surco (Interior 124)', '20606249153')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9f5a3674-e650-42d3-b3c4-fe9e7600416d'::uuid, 'Movil City Iquitos', 'Loreto', 'Maynas', 'JR. SANTA INES NRO. 151 SAN MARTIN - SAN MARTIN - TARAPOTO', '20553818100')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9f74a5bb-c271-4b0c-b3f2-624803b6e4bd'::uuid, 'Rheem Instore', 'Lima', 'SANTIAGO DE SURCO', 'AV. CIRCUNVALACION DE CLUB GOLF LOS INCAS NRO. 154 INT. 1704 SURCO', '20144955766')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6580,7 +10411,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9fc9f2f8-6c31-4479-a7ef-deb6ebd053db'::uuid, 'Chic & Cute Wong', 'lima', 'La Molina', 'AV. JAVIER PRADO ESTE 4200 INTERIOR MTF8 - SANTIAGO DE SURCO', '20604870209')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('9fd18f68-cce4-4656-ba0d-eb5aa8630576'::uuid, 'JCH Llantas LIM ARRIOLA 2298', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('9ff03784-9f5c-449e-b577-589a065d9960'::uuid, 'Rosen Outlet Minka', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6620,7 +10467,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a0a0300c-5c1e-407d-bc51-56f10cc49a3f'::uuid, 'MIKAELA CAJAMARCA', 'Cajamarca', 'Cajamarca', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a0a87293-538b-4087-b4d7-8759864a625e'::uuid, 'Xiaomi Mall Aventura Pucallpa', 'Lima', 'Lima', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a0ab344d-a153-48c7-8e50-c635cdbe51cb'::uuid, 'Infanti La molina', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6652,7 +10515,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a13f2b0f-a273-4785-985c-c24a9c33f803'::uuid, 'MERREL PURUCHUCO', 'Lima', 'Lima', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a1436b18-67f9-40e9-8d69-6a54f8659e29'::uuid, 'Footloose - Gamarra - T14', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a153c1fe-ff29-4a79-8e19-89d0c1b808f6'::uuid, 'Infanti Chiclayo 1', 'Lambayeque', 'Chiclayo', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6676,7 +10555,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a15c9abc-a364-48e1-b411-668c2b08cf44'::uuid, 'CAT HUANCAYO', 'Junin', 'Huancayo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a168bb11-cce8-478e-a12d-852e1af897b6'::uuid, 'Dummy Impulsadores', '', '', 'Ninguna', '0')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a185e369-3749-4d21-848c-941813b040f3'::uuid, 'Bata B LINCE', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6700,6 +10595,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a2135320-85f5-4e21-b2b7-168bffadccd5'::uuid, 'Nespresso Arequipa', 'Arequipa', 'Arequipa', 'Pasaje Yanacocha 171, Dpto 401, Santiago del Surco, Lima', '20611315130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a22d0887-b378-4154-9175-0477226806ae'::uuid, 'Samsonite Outlet Faucett', 'Lima', 'Lima', 'ENCALADA 1388 SURCO', '20551938353')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a22e0adc-68a0-4be9-9bfc-52444bbfb0e9'::uuid, 'Nutripoint 28 De Julio', 'Lima', 'Lima', 'Jr. Salaverry 655 - Magdalena del Mar', '20600575636')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6708,7 +10619,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a233fb86-2d5e-43b7-a796-7de8e0f8a136'::uuid, 'Tous San Miguel', 'Lima', 'San Miguel', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a27892ea-6296-4861-bb47-c737f36eac91'::uuid, 'Marcimex Yurimaguas', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a2bd5abf-7030-4505-b63c-efea82d5bf25'::uuid, 'FITPOINT_ASIA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6764,7 +10691,55 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a37b4289-2e50-40d3-9443-717df8c1158b'::uuid, 'Casabella Instore', 'Lima', 'Lima', 'Calle las fábricas 211 urb. San Remo, Lima', '20101536468')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a3832413-59cf-4024-8339-7c97b4fafea2'::uuid, 'Conauto Pizarro', 'Arequipa', 'Paucarpata', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a38a4dae-b3af-4380-9aba-37ba62ed68d2'::uuid, 'Prevensalud Instore', 'Lima', 'MIraflores', 'AV ALFREDO BENAVIDES 1555 OFC 306 Miraflores', '20613113747')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a392b776-2043-4ad3-8afa-cb2e3fd64724'::uuid, 'Infanti Angamos', 'Lima', 'Surquillo', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a3ae10fa-1517-45fe-8e96-1792e1353492'::uuid, 'Phantom Real Plaza Chiclayo', 'Lima', 'Lima', 'Av. Casimiro Ulloa 107', '20516634970')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a4163286-bd3d-4d68-bb94-61af9dd8a5e9'::uuid, 'BIMBA Y LOLA LARCOMAR', 'Lima', 'Miraflores', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a425e0f9-f202-4223-a429-80a1e541d276'::uuid, 'Baliq Wong Ovalo Gutierrez', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6788,6 +10763,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a46e0d2c-d2f0-4644-be6a-7e0fcfa71b51'::uuid, 'Bata B6 JR. DE LA UNION', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a48659c4-2086-4aed-a39b-a96c8fa8958e'::uuid, 'Sitel Venta Asistida', 'LIMA', 'SANTIAGO DE SURCO', 'AV. CIRCUNVALACIÓN DEL CLUB GOLF LOS INCAS 134', '20100039037')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a4b07e0d-832e-4f9a-b36c-e076ea0ebb01'::uuid, 'Liga Sport Venta Asistida', 'Lima', 'San Luis', 'Av. San Juan 603 - San Luis', '20611573309')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a4ce2538-7cc1-4e5e-bb70-e17b8820baef'::uuid, 'Cuy Games Larco', 'Lima', 'Lima', 'AV. JOSE LARCO 929 MIRAFLORES', '20546437214')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6796,7 +10795,47 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a4d432ac-52fa-4daf-8013-502f8ae3f7fe'::uuid, 'VELOCELL WHATSAPP', 'Lima', 'Lima', 'AV DE LOS PRECURSORES 1192 SAN MIGUEL', '20611136367')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a4f9528d-15e7-43b8-84ae-3d18d4c447b1'::uuid, 'Infanti Jockey', 'Lima', 'Santiago de Surco', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a504f1bc-fd25-4d68-b8e7-13e6642efef2'::uuid, 'PICADILLY AREQUIPA MALL PLAZA', 'Arequipa', 'Arequipa', 'EPSILON 145 CALLAO', '20129993139')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a5245438-af05-4154-984d-06481d9f06d9'::uuid, 'Cibertcopy', 'LIMA', 'LIMA', 'AV. INCA GARCILAZO DE LA VEGA 1348 STAND 1001', '20492046397')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a555b660-dbbc-4896-932b-8663f0a204dc'::uuid, 'SALUD VISUAL LASER CHIMBOTE', 'Ancash', 'Chimbote', 'MANUEL DULANTO 1601 PUEBLO LIBRE', '20613132628')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a5742366-f640-499b-a0b4-9f17a2920d58'::uuid, 'Insafi Instore', 'Lima', 'Lima', 'AV. ALFREDO BENAVIDES 1944 MIRAFLORES', '20606610361')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6860,6 +10899,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a67b68da-3a0b-4932-93f9-d6c0ec93c379'::uuid, 'Samsonite Larcomar', 'Lima', 'Lima', 'ENCALADA 1388 SURCO', '20551938353')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a6a6fc1c-417e-4875-8f08-17c167adbd57'::uuid, 'Caffarena Cusco', 'Cusco', 'Cusco', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a6d684c9-ace5-43b4-b3f1-6ba4d1d52c4d'::uuid, 'Sercoplus Instore', 'Lima', 'Lima', 'AV. INCA GARCILASO DE LA VEGA 1251 - CERCADO DE LIMA', '20518679121')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a6d93804-7443-4d1e-b17f-fcf6fca17151'::uuid, 'Panorama Hogar Tienda Ucayali', 'Ucayali', 'Ucayali', 'Jr. Ucayali 425 Cercado de Lima', '20330676826')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a6f13ec2-43e0-4c68-865f-e6c4363dc33c'::uuid, 'Carsa Villa El Salvador', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6900,6 +10971,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a733d280-bca8-4d31-8bbd-d8f94c22ab4e'::uuid, 'PIEERS PIURA II', 'Piura', 'Piura', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a734a3e8-a9e3-439d-917d-c782307db64c'::uuid, 'Pc Factory Comas', 'LIMA', 'san Isidro', 'ca. Las Orquideas 585', '20609693534')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -6908,7 +10987,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a73e13e5-5c06-46f7-87f1-94071f7a8987'::uuid, 'OUTLET LURIN', 'Lima', 'Lurin', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a7479aee-291f-49f6-b0a1-b0dbcbbf622e'::uuid, 'iShop Real Plaza Huancayo', 'Junin', 'Huancayo', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20600739477')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a75e5dc4-073e-4f3b-89a3-6ad5cacbd72a'::uuid, 'EDIPESA CARABAYA', 'Lima', 'Lima', 'AV ARGENTINA 1710 LIMA', '20100041520')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a78c7821-5154-4386-b1b3-479105929cfb'::uuid, 'Baliq Mall Del Sur', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6925,6 +11028,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a79a14d2-4d8d-4a38-bb13-bb62a0bc6b6b'::uuid, 'Quality Products Call Center', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a7b7f765-44d3-4817-a1c9-ad74c9ba82e8'::uuid, 'PIEERS TRUJILLO III', 'La Libertad', 'trujillo', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a7d4c546-2bbd-49f8-a44b-a0a8955adec7'::uuid, 'KAYENCORP SJL', 'Lima', 'Lima', 'CANADA 635 LA VICTORIA', '20607050636')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6980,7 +11099,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a903cd75-937e-4ea1-98fc-bf7f7d3460ed'::uuid, 'Baliq Plaza San Miguel', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a9143f2b-fef2-45dd-8f30-e292b9ee3327'::uuid, 'Xiaomi Real Plaza Piura', 'Piura', 'Piura', 'CALLE LOS NEGOCIOS 448 SURQUILLO', '20604095604')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a91a90bd-4ad9-4d24-986a-51559b90ae81'::uuid, 'Hirophone Modulo Mall Plaza Comas Nivel Sótano', 'LIMA', 'COMAS', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a9227ac6-8baf-4b9e-8027-4eb58aade01b'::uuid, 'CAT PURUCHUCO', 'Lima', 'Ate', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -6996,7 +11139,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a9458a7b-2ffa-4a91-9457-23e16a740f4e'::uuid, 'Hirophone Módulo Mall Aventura San Juan De Lurigancho 1Er Nivel', 'LIMA', 'San Juan de Lurigancho', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a9651d5b-6a35-4437-b195-277916f1e919'::uuid, 'NEW ERA JOCKEY PLAZA', 'Lima', 'Santiago de Surco', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a96f00ac-1b75-4e3a-957d-dde385934cb9'::uuid, 'Bipolar Moda Sac Instore', 'LIMA', 'Lima', 'AV. PARDO Y ALIAGA 220', '20546098177')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a9703318-6d37-47ca-83d2-331b296de26e'::uuid, 'Perufarma Venta Ferias', 'Lima', 'Lima', 'JR. SANTA FRANCISCA ROMANA 1092 – CERCADO DE LIMA', '20100052050')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7012,7 +11179,55 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a982380d-d9d4-4d70-9f4e-b42cbc685a57'::uuid, 'COLISEUM COMAS', 'LIma', 'Comas', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('a9a19597-5842-45cf-affc-420d39f87ad5'::uuid, 'New Athletic SAN JUAN DE LURIGANCHO', 'Lima', 'Lima', 'Jr. Sandia Nro. 276 Cercado de Lima', '20550088330')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a9b11c07-1c6f-4d33-8eb9-7b8d7cf8c627'::uuid, 'Vehiculos Futur Plaza Norte', 'Lima', 'Lima', 'Calle Schell 698 - Miraflores', '20601243220')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a9c0a0ba-9ac6-4da7-8100-98dbe071d2bf'::uuid, 'CROCS_LARCOMAR', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('a9caba05-4a1a-418f-849c-dcb853b53236'::uuid, 'EDIPESA SURQUILLO', 'Lima', 'Surquillo', 'AV ARGENTINA 1710 LIMA', '20100041520')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('aa132053-353d-49b0-8f8a-96fe2e7e2535'::uuid, 'Limalinen El Polo', 'Lima', 'Santiago de Surco', 'Av. Javier Prado Este 488 - San Isidro', '20606512679')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('aa165dd2-813c-47e3-9922-d746ac68dc61'::uuid, 'CROCS_RP_PIURA2', 'Piura', 'Piura', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7028,7 +11243,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('aacf0005-a732-4ebf-9951-1a08b1035a3e'::uuid, 'CUIDAFARMA Principal', '', '', 'Av. Angamos Oeste Nro. 664', '20607030635')
+VALUES ('aa8dc405-4542-4402-9276-e0d634c715d0'::uuid, 'FLYPE INSTORE', 'LIMA', 'LIMA', 'calle los rosales - Independencia', '20612989525')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('aabc1e8d-1962-4d2e-a51d-5caa8e4044b2'::uuid, 'Tous La Molina', 'Lima', 'Lima', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('aacf0005-a732-4ebf-9951-1a08b1035a3e'::uuid, 'CUIDAFARMA Principal', 'Lima', 'Surquillo', 'Av. Angamos Oeste Nro. 664', '20607030635')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ab0fe046-9ee4-4e8c-a7ff-9e38fa71ba8a'::uuid, 'DJI Outlet Arauco Arequipa', 'Arequipa', 'arequipa', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7037,6 +11276,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ab16ceef-35cc-4c1b-9145-37d9ccb271da'::uuid, 'COA Huancayo', 'LIMA', 'San Isidro', 'Avenida Juan de Arona 151', '20112280201')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ab398d66-b5a3-40e4-b587-4927afe84e43'::uuid, 'Samsonite Salaverry', 'Lima', 'Lima', 'ENCALADA 1388 SURCO', '20551938353')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7060,7 +11307,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('abd0d4c1-7775-4fab-98ad-e96f80ff2145'::uuid, 'KAYENCORP LOS OLIVOS', 'Lima', 'Los Olivos', 'CANADA 635 LA VICTORIA', '20607050636')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('abdaee82-2bb2-4319-9728-0398a618922f'::uuid, 'Nuskin vendedores', 'Lima', 'Lima', 'AV. REPUBLICA DE PANAMA 3055 SAN ISIDRO', '0')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ac29638c-315a-441a-a968-0157beacd173'::uuid, 'Rosen Store Arequipa', 'Arequipa', 'Arequipa', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7132,6 +11395,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ad5b4160-4d32-4891-90e0-68378e49cc42'::uuid, 'SALUD VISUAL LASER CAÑETE', 'Lima', 'Cañete', 'MANUEL DULANTO 1601 PUEBLO LIBRE', '20613132628')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ad99097c-540d-46b5-8570-194c1c78639b'::uuid, 'Alese La Marina Kia Postventa Caja', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7156,7 +11427,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('adf2012e-e294-4b5d-95f9-84186cb2bfce'::uuid, 'iCenter Instore', 'La Libertad', 'Trujillo', 'Jiron bolivar 733 -  Trujillo', '20615104681')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('adf99619-e3c5-4485-9907-4058ca92c8f0'::uuid, 'Vpx Club Asia Instore', 'LIMA', 'Ca ete', 'CAR. PANAMERICANA SUR KM 108 SEC PREDIO 3 Y 4', '20607929174')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('adfd9f67-c624-44fb-9104-6c39b2fd8347'::uuid, 'Chic & Cute Molina Plaza', 'lima', 'La Molina', 'AV. JAVIER PRADO ESTE 4200 INTERIOR MTF8 - SANTIAGO DE SURCO', '20604870209')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7173,6 +11460,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ae14816f-1bca-4b53-a715-8a6a97d8daff'::uuid, 'HONOR MEGA PLAZA', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ae1d414c-f230-4225-b5e8-2cf8f7293671'::uuid, 'GP MOTOS MAVILA PIURA 2', 'Piura', 'Piura', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7236,6 +11531,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('af1e5376-daae-4505-9805-5d9e8f653180'::uuid, 'Ópticas Wong San Isidro', 'Lima', 'Lima', 'AV GUARDIA CIVIL 554 - SAN ISIDRO', '20606059346')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('af2b5b23-bf39-4802-9be3-afc1f6b065ca'::uuid, 'HEADMARK Tarapoto', 'San Martin', 'Tarapoto', 'AV Nicolas Ayllon  4671 Ate Lima', '20517206955')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('af8967dc-1a47-4934-9650-5a9239a5cd6a'::uuid, 'Specialized Chacarilla', 'Lima', 'Santiago de surco', 'AV. REDUCTO 1017 URB. LEURO MIRAFLORES', '20557677268')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('afa4167d-90a3-4532-baa1-5a86da047bf9'::uuid, 'Footloose - Iquitos - Mall - Tl3', 'Loreto', 'Maynas', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7253,6 +11572,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b0465acf-509f-46e8-b402-1c86f549e333'::uuid, 'CLINICA CAMINO REAL', 'La Libertad', 'Trujillo', 'CAL. FRANCISCO BOLOGNESI 561 TRUJILLO LA LIBERTAD', '20546292658')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b0e095c4-a4cb-4264-b85b-4e1a3198d3cd'::uuid, 'CROCS_SAN JUAN', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7308,7 +11635,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b1e43a0b-4fb7-4bda-a751-ac3b9a7e1b3a'::uuid, 'MB Corp Arequipa', 'Arequipa', 'Arequipa', 'Av. Alfonso Ugarte 205 Arequipa', '20609372088')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b1efc012-3bf7-43c6-ae22-7844eff29137'::uuid, 'CROCS_COMAS', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b2287af6-81da-4979-b533-7ca84924392f'::uuid, 'TIENDA SOLE  PLAZA NORTE', 'Callao', 'Callao', 'Av. Argentina 2317', '20555190132')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b2be7ac1-b742-4827-9733-880abedc7f44'::uuid, 'PIEERS CHICLAYO', 'Lambayeque', 'Chiclayo', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b2e540f4-b751-45cf-9264-7dc9d759af02'::uuid, 'CROCS_CHIMBOTE', 'Ancash', 'Chimbote', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7325,6 +11684,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b300296c-25d9-4486-a25a-002c53e1f7ca'::uuid, 'EL CORTE INGLES MAYORISTA', 'LIMA', 'LIMA', 'AV. ANGAMOS OESTE 624', '20518932391')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b31ca20a-db11-4cee-bcf5-19f805558c04'::uuid, 'Bata B RIMAC', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7356,6 +11723,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b3791b26-5a6d-4b7a-84af-2d5503062bcf'::uuid, 'iTouch Instore', 'Lima', 'Santiago de surco', 'AV. CAMINOS DEL INCA 244 SANTIAGO DE SURCO', '20609872960')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b386df22-91d5-4eec-bec7-eba92b6ed60f'::uuid, 'Footloose - Callao - Outlet - Tg6', 'Callao', 'Callao', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7380,7 +11755,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b3af56bf-61bc-4ecc-873e-fb84d6f90369'::uuid, 'Relojes Peru Instore', 'Lima', 'San Miguel', 'PJ. LA MACARENA 157 - SAN MIGUEL', '20604073571')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b3b609ac-2bf2-4443-acc5-2b14ef197e3a'::uuid, 'SAMSUNG  KIOSKO JOCKEY PLAZA', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b3ee0b24-6d8c-4d88-a3c4-d6bd51ba6102'::uuid, 'SOPHIE CROWN LARCOMAR', 'Lima', 'Lima', 'CALLE MIGUEL DASSO 139 SAN ISIDRO', '20547416008')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7420,7 +11811,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('b47417e3-25ef-4a38-ac90-9abec1531088'::uuid, 'Autopak Piura', 'Chiclayo', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+VALUES ('b44b08f2-fd48-42de-8e09-38bb979b5ebe'::uuid, 'TUMI INSTORE', 'Lima', 'Lima', 'AV. JAVIER PRADO ESTE 560 DPTO 401 - SAN ISIDRO - LIMA', '20600516885')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b45605d0-530d-4291-9458-bf6e2408b3f4'::uuid, 'PIEERS ICA', 'Ica', 'Ica', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b4640b4e-6211-46cf-9c36-7808b4135dfd'::uuid, 'Invicta Plaza Norte', 'Lima', 'Independencia', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b47417e3-25ef-4a38-ac90-9abec1531088'::uuid, 'Autopak Piura', 'Lambayeque', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b475d88c-5533-4ba8-849b-7e6a112bd08a'::uuid, 'Decor Center Ica', 'Ica', 'Ica', 'Av La Molina 473 Ate', '20215528791')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7429,6 +11852,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b491f370-31d8-4f31-9e16-233c4a633a0d'::uuid, 'Prizma Tech Venta Asistida', 'Lima', 'Lima', 'Av. Arenales 2055 Tienda 102 Lince', '20602215068')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b495ee40-ed0a-41ed-967a-5d1d5034613d'::uuid, 'OPTICA LUMINARIS Instore', 'Lima', 'Surquillo', 'PASEO DE LA REPUBLICA 4077 SURQUILLO', '20607346390')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b4e6f084-d00d-490a-b45d-1d62a7e2e364'::uuid, 'Unbranded Dasso', 'Lima', 'Lima', 'Av. La Encalada 1388 - Santiago de surco', '20604928681')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7468,7 +11907,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('b5a98615-2698-439a-a132-f306030e9bf8'::uuid, 'Autopak Jaen', 'Chiclayo', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
+VALUES ('b554a46e-9b58-4e09-bd58-ea986042ac6f'::uuid, 'TOUS LARCOMAR', 'Lima', 'Miraflores', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b58137df-394e-4491-86a1-e2706ad19846'::uuid, 'Clock Peru Arequipa', 'Arequipa', 'Arequipa', 'CALLE C. LOTE 20 DPTO 501 - SANTIAGO DE SURCO', '20602231799')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b596f22f-8deb-4418-8540-ec0953d1bd8a'::uuid, 'INVERSO EL POLO', 'Lima', 'Santiago de surco', 'AV EL POLO 695 SURCO', '20609474573')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b5a2bc82-fe46-4870-a1f9-7ac5cddddedf'::uuid, 'OPPO PLAZA NORTE', 'lima', 'Independencia', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b5a98615-2698-439a-a132-f306030e9bf8'::uuid, 'Autopak Jaen', 'Lambayeque', 'Chiclayo', 'CAR. PANAMERICANA NORTE 1106', '20538993400')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7516,6 +11987,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b6592d3e-7e92-4b0e-8b04-f6a98ec668a7'::uuid, 'Origitec Instore', 'Lima', 'Santiago de surco', 'CAL. TEODORO VALCARCEL SANTIAGO DE SURCO', '20611624043')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b674fa6b-7797-45ba-ad0a-3515e87cfddc'::uuid, 'BNI', 'Lima', 'Lima', 'AV. MALECON CISNEROS 952 DPTO. 1301-A - MIRAFLORES', '20563168251')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7556,7 +12035,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b6ead8d0-8d7d-4fbc-bf56-d1f7115c966d'::uuid, 'Infanti San Borja 2', 'Lima', 'San Borja', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b779ae25-c8c0-4729-b47d-6067b05ad19c'::uuid, 'Quality Products Tienda Arequipa Real Plaza', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b7a73647-d4fe-472a-b65e-aa51e4ef462d'::uuid, 'LEGO Arequipa', 'Arequipa', 'Arequipa', 'AV. JOSE PARDO N° 434 – MIRAFLORES - LIMA', '20605052836')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b7a8f447-b863-4cf2-9c04-67fe5b73d299'::uuid, 'Escuela de Parrilleros Venta asistida', 'Lima', 'San Isidro', 'CAL. LAS GARZAS NORTE 475 SAN ISIDRO', '20611354879')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b7af3c71-def5-4b9a-a225-aaf530072f88'::uuid, 'Caffarena Mota', 'Lima', 'Santiago de Surco', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7604,6 +12115,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b8b1fb44-5a33-49b5-ab89-3d22ddec09a6'::uuid, 'Conauto Lambayeque', 'Arequipa', 'Arequipa', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b8bd4363-6099-408d-a3c9-9e3f65cbd6c7'::uuid, 'Autoespar Ventas Ica', 'Lima', 'Lima', 'AV. Alfredo Mendiola 1635 San Martin de Porres', '20100821371')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7612,7 +12131,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b8ecd03d-cebf-484b-979e-8567d8908f66'::uuid, 'TOULOUSE LAUTREC POSTGRADO', 'Lima', 'Molina', 'Av. Primavera Nro. 970', '20603817185')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b90b94a2-1413-4e83-a903-c4498d4d8e19'::uuid, 'BGS Instore', 'Lima', 'Lima', 'AV. CAYETANO HEREDIA 1045 - JESUS MARÍA', '20602027024')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b92c88a1-2872-4c62-9bf6-028f1862e926'::uuid, 'Carsa Pucallpa Portillo', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b95af932-d043-46d8-b9f8-aeb8e246560e'::uuid, 'Caffarena Jockeyplaza', 'Lima', 'Santiago de Surco', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b968b26c-05e5-42cc-bbfb-f495d221cf8e'::uuid, 'Coa Call Center', 'Lima', 'San Isidro', 'Avenida Juan de Arona 151, Dpto 203, San Isidro, Lima, Lima.', '20112280201')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7629,6 +12180,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('b9a52f56-7bbb-442e-9597-72f03f19a47e'::uuid, 'Aldo & Co. Chacarilla', 'LIMA', 'San Borja', 'Av Primavera 785', '20100997909')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('b9bc72d1-efc3-4518-bfd7-4844475e05bc'::uuid, 'CROCS_SANTA_ANITA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7676,6 +12235,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ba696a27-a9e4-4afa-955b-109e2623a467'::uuid, 'Tous Jockey plaza', 'Lima', 'Santiago de Surco', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('bae4ac2e-9e24-4032-a1b2-83e218368166'::uuid, 'Alese Taller Plaza Norte ATF Venta', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7700,7 +12267,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bb1c03c3-9c2e-47ec-9ed3-8b93acd4ee68'::uuid, 'Footloose - TALARA', 'Piura', 'Talara', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('bb23313f-71c5-4662-b03a-41ed533c8c36'::uuid, 'Nixblix Real Plaza Primavera', 'Lima', 'Lima', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20609588897')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bb24efc6-07f4-4b7d-8a0b-ef626719d64a'::uuid, 'Rosen Store La Molina Cencosud', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7724,7 +12307,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bb3fc365-de18-47d9-85b9-5fa12c28e6b4'::uuid, 'Suono Master Instore', 'Lima', 'Lima', 'JR. PARURO 535 LIMA', '20614480913')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('bbab7c3b-6599-4001-830f-1d7c0e592419'::uuid, 'Pm Certifica', 'Lima', 'Lima', 'CALLE 21 #713 OF 305 SAN ISIDRO', '20516024128')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bbb4e441-93c5-489d-bc88-561089a5c691'::uuid, 'Motomoda Venta Asistida', 'Lima', 'Lima', 'Av. 28 de julio 725 - Lima', '20613263927')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7748,6 +12347,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bc1a00db-518c-464f-857f-8018938e11b2'::uuid, 'Salomon La Molina', 'Lima', 'La Molina', 'AV. CONQUISTADORES 840 - SAN ISIDRO', '20555212390')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('bc514001-0e27-44b0-aab5-7c9c055909ef'::uuid, '3B Iphone Principal', 'Lima', 'Lima', 'Calle Cantuarias 140 INT 41 - Miraflores', '20608648730')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7764,7 +12371,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bc8bf58b-2385-4498-9272-8ca8e6335219'::uuid, 'NEW ERA SANTA ANITA', 'Lima', 'Santa Anita', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bc8ccd22-43b6-4eea-a6fc-9cdc9695052d'::uuid, 'Monark Giant - Trujillo', 'La Libertad', 'Trujillo', 'AV. ELMER J.FAUCETT 1920', '20100004756')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('bcd18df4-faba-47be-926c-112cf43c82c8'::uuid, 'Footloose - Huancayo - Real Plaza - T42', 'Junin', 'Huancayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bcd1f89a-c13f-4cad-a432-512f8baa43ef'::uuid, 'GP MOTOS MAVILA ZARUMILLA', 'Tumbes', 'Zarumilla', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7796,7 +12427,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('bd4e7a6f-4056-433f-a5b4-09922baa8f54'::uuid, 'SERVIMEDICOS AUNA', 'Chiclayo', 'Chiclayo', 'CALLE MANUEL MARIA IZAGA 621 CHICLAYO Chiclayo', '20394674371')
+VALUES ('bd4e7a6f-4056-433f-a5b4-09922baa8f54'::uuid, 'SERVIMEDICOS AUNA', 'Lambayeque', 'Chiclayo', 'CALLE MANUEL MARIA IZAGA 621 CHICLAYO LAMBAYEQUE', '20394674371')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7828,6 +12459,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bdb34e46-b595-46cb-81ed-2b8d2048d3a2'::uuid, 'Hirophone Call Center', 'LIMA', 'LIMA', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('bdc19423-b06b-4afe-8828-262d983ab082'::uuid, 'Nixblix Jockey Plaza', 'Lima', 'Lima', 'AV. RICARDO RIVERA NAVARRETE 475 SAN ISIDRO', '20609588897')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7852,6 +12491,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('be553f54-1fa3-4912-b7d3-03a0cd59a25b'::uuid, 'Rosen Store Asia', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('be5b626f-678f-46c2-ba16-a22101e8f60b'::uuid, 'SOPHIE CROWN SALAVERRY', 'Lima', 'Lima', 'CALLE MIGUEL DASSO 139 SAN ISIDRO', '20547416008')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('be5ccd9e-157f-4c68-9724-8742da315fbf'::uuid, 'Footloose - Huacho - To2', 'LIMA', 'HUACHO', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -7868,7 +12523,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('be907820-a975-4aaa-9f5e-5d07f96e9af9'::uuid, 'Footloose - Puruchuco - TO6', 'Lima', 'Ate', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('beb60e50-9c3e-4e00-9c24-c329e862b121'::uuid, 'Quality Products Tienda Real Plaza Cusco', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bef06c72-2e8c-4ae8-b61d-fa671ad816a9'::uuid, 'GP MOTOS MAVILA CHEPEN', 'La Libertad', 'Chepen', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7885,6 +12556,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('befa1f68-dc79-4e26-a3ae-d63cd4af29a0'::uuid, 'Footloose Sport - Arequipa - Mall - Tj3', 'Arequipa', 'Arequipa', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bf26003f-2060-43f9-b6d3-e56f22f0f0c3'::uuid, 'CASA ANDINA VENTA ASISTIDA', 'LIMA', 'Miraflores', 'AV LA PAZ 463 MIRAFLORES', '20505670443')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bf2be7a2-73f5-48ec-837f-e1695d51e326'::uuid, 'Rosen Store Miraflores', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7956,7 +12643,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('c023a24d-1c2a-4ce0-9252-a19df638e856'::uuid, 'AUTOMOTORES INKA S.A.C.', 'Chiclayo', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ Chiclayo CHICLAYO', '20480683839')
+VALUES ('bfe16423-2d32-4f9b-bb4e-3f47bf95e761'::uuid, 'Me voy de viaje Venta Asistida', 'LIMA', 'San Isidro', 'Calle Mariano de los Santos 198 - San Isidro', '20267781151')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('bfec993f-873f-44e9-a050-cb3a8bb71d6e'::uuid, 'Infanti Piura 2', 'Piura', 'Piura', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c0009e85-9748-4355-9356-f3f9fe8e84f7'::uuid, 'Decor Center Huancayo', 'HUANCAYO', 'Huancayo', 'Av La Molina 473 Ate', '20215528791')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c023a24d-1c2a-4ce0-9252-a19df638e856'::uuid, 'AUTOMOTORES INKA S.A.C.', 'Lambayeque', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ LAMBAYEQUE CHICLAYO', '20480683839')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7980,7 +12691,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c0452cff-5130-4562-84d1-a5df9c445226'::uuid, 'SOPHIE CROWN DASSO', 'Lima', 'Lima', 'CALLE MIGUEL DASSO 139 SAN ISIDRO', '20547416008')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c045eb4f-38b8-4e94-be2f-28f5c1ab6e0c'::uuid, 'Hipermercados Ceramicos Manchay', 'Lima', 'Lima', 'AV. REPÚBLICA DE PANAMÁ 4495 SURQUILLO', '20466776336')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c0495611-85bb-4474-9f97-45dcb25b22af'::uuid, 'Marcimex Chepen', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c051541f-5975-4167-a9fd-5e53462c32c8'::uuid, 'Finezza Huancayo', 'Junin', 'Huancayo', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c056e9dd-38b8-4211-9c46-fa314074973d'::uuid, 'COLISEUM KM40', 'Lima', 'Lurin', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -7996,6 +12739,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c072da7a-2d27-4989-a2be-ccd466143b6d'::uuid, 'CROCS_OUT_FAUCETT', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c0e4dbee-6546-4ae1-b4bd-fd9c4628f2cf'::uuid, 'SAMSUNG KIOSKO MALL DEL SUR', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8004,7 +12755,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c1004826-ebdc-4f2a-a6fc-d048a9b87ffc'::uuid, 'VELEZ LA RAMBLA', 'Lima', 'San Borja', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c1658409-5ecb-4704-ab0f-27e6d9651706'::uuid, 'CROCS_PRIMAVERA2', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c1767338-c197-458c-a4cc-8d6fd3fa5ee7'::uuid, 'TEC STORE COMPUPALACE', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c17de343-18df-4502-9097-2f74365e847d'::uuid, 'CAT CUZCO', 'Cusco', 'Cusco', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8044,6 +12819,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c2441eab-3c79-4ac9-9515-d3d7081cbce9'::uuid, 'Pc Factory Iquitos', 'Loreto', 'Iquitos', 'ca. Las Orquideas 585, Piso 12, san Isidro', '20609693534')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c2aad9e2-4d90-4f9d-be29-d847a2fb51a0'::uuid, 'Llantas San Martin Piura', 'Piura', 'Piura', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c2abb539-37d2-4ae7-a370-71c7db2ef45c'::uuid, 'Evaluaciones Automotriz - No ventas - Derco La Victoria', 'LIMA', 'LIMA', '''-', '0')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8052,7 +12843,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c2ae66a5-6db2-4487-8af2-65a5745321af'::uuid, 'Infanti Atocongo', 'Lima', 'San Juan de Milaflores', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c2d155ea-d20d-4482-a27a-b1174f8a13cf'::uuid, 'Nutripoint Santa Anita', 'Lima', 'Lima', 'Jr. Salaverry 655 - Magdalena del Mar', '20600575636')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c30886e8-c823-40c5-83d6-20bd852438e0'::uuid, 'Baliq Lima Plaza Sur', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8100,6 +12907,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c39c6ffc-aa62-4d7e-9c89-e91111201705'::uuid, 'PIEERS TINGO MARIA(GAMACHI)', 'Huanuco', 'Tingo Maria', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c39f8cae-d703-4b1c-ac9d-f3f7320212fe'::uuid, 'GRUPO MALCA CHACHAPOYAS', 'AMAZONAS', 'BAGUA', 'HEROES DEL CENEPA 1199 BAGUA AMAZONAS', '20600956346')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8116,6 +12931,78 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c40b5184-5f8b-4aaa-b5f1-11bac9736d68'::uuid, 'Nespresso Jockey Plaza', 'Lima', 'Santiago de Surco', 'Pasaje Yanacocha 171, Dpto 401, Santiago del Surco, Lima', '20611315130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c48ffe17-4a51-4bd6-a8a1-29c0e4e0ece5'::uuid, 'Rosen Store Chacarilla', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c4e980b3-a8bd-4ba7-9659-d1f4083082cf'::uuid, 'OVERTAKE INSTORE', 'Lima', 'Lima', 'AV. BRASIL NRO. 817 JESUS MARIA LIMA', '20607798002')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c50107dc-922f-4f48-98e3-c1d739c1cb4a'::uuid, 'Infanti San Miguel 1', 'Lima', 'San Miguel', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c50cf027-42bf-4876-8c22-0117864c7623'::uuid, 'Huaman Music Instore', 'Lima', 'Lima', 'JR ANGARAES 713', '20611772514')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c5347f82-e973-469f-b5c4-be0bbcd668a2'::uuid, 'PC Factory Chiclayo', 'Lambayeque', 'Chiclayo', 'ca. Las Orquideas 585 Piso 12 san Isidro', '20609693534')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c54e2994-a719-4c9a-904f-f491679246f4'::uuid, 'Infanti Primavera', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c54fe2ef-6280-4137-94b6-f9a2c2bcf2c4'::uuid, 'Infanti Mega Plaza', 'Lima', 'Independencia', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c563e48f-ed82-49b1-a620-59ed118e7617'::uuid, 'Panorama Hogar CI Ucayali', 'Ucayali', 'Ucayali', 'Jr. Ucayali 435 INT B Cercado de Lima', '20506249601')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c576c5c2-4e7a-436d-9a2f-84cc98a81fa7'::uuid, 'Rok Instore', 'Lima', 'Lima', 'Av. Augusto Perez Aranibar 1872 San Isidro', '20608273510')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8125,6 +13012,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c592b371-4312-4cd4-b2e7-9725df7cd6a5'::uuid, 'Carsa Pacasmayo', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c5974b86-6c25-4209-8204-50c1ad0a1b8a'::uuid, 'JHL Medical Center Instore', 'Lima', 'Ate', 'CAL. TAPICEROS 280 ATE', '20612023086')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8172,6 +13067,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c6542b4b-827c-4118-bd3e-75362b9a840a'::uuid, 'BOSE Pardo', 'Lima', 'Lima', 'JR. CARLOS NEUHAUS RIZO PATRÓN 125 URB. CORPAC SAN ISIDRO', '20100030838')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c66bced6-7053-4a89-9df2-857374357b71'::uuid, 'PADOVA MIRAFLORES', 'Lima', 'MIraflores', 'AV GENERAL JUAN ANTONIO PEZET 299 SAN ISIDRO', '20612614653')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c66cd25c-134e-4d23-b7a3-75a7a24a5d64'::uuid, 'AAA Multiservices Principal', 'LIMA', 'Puente Piedra', 'Mza. e Lote. 19', '20609609347')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8180,7 +13091,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c68dee41-1a41-42d8-a4f0-bfad633d73e5'::uuid, 'FITPOINT_JOCKEY', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c68f1651-759b-4b49-b498-8cf479b40256'::uuid, 'PIEERS JULIACA', 'Puno', 'Juliaca', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c6ab6cc6-766c-433f-b32a-f6fd75796919'::uuid, 'Aldo & Co. La Molina', 'Lima', 'Lima', 'Av Primavera 785 Urb. Chacarilla San Borja', '20100997909')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c6bbc086-d64e-409d-9088-e4b9489fe169'::uuid, 'UPC Postgrado Venta Asistida', 'LIMA', 'distrito de Santiago de Surco', 'Av. Alonso de Molina 1611', '20211614545')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c6cbe470-fe1c-4a57-83a9-d53389e226a6'::uuid, 'Bata B CHORRILLOS', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8205,6 +13148,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c74948e6-aa56-49f5-ac10-56ab8ef96010'::uuid, 'Tatoo Surco', 'Lima', 'Lima', 'Calle Burgos 215 - Urb. Risso - San Isidro', '20501649261')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c74f3867-738c-4586-96bb-72a8ba7a7c62'::uuid, 'Clock Peru Mega Plaza', 'Lima', 'Independencia', 'CALLE C. LOTE 20 DPTO 501 - SANTIAGO DE SURCO', '20602231799')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8260,6 +13211,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c8232d44-70f4-4d76-a6dd-77fee6ab29c2'::uuid, 'COLISEUM LAMBRAMANI', 'Arequipa', 'Arequipa', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c889a85b-d3e6-4691-9a26-7ef1a84ffb7e'::uuid, 'Gmg Ventanilla', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8268,7 +13227,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('c8b08b71-7ca8-49e8-ba4b-01381ffea075'::uuid, 'CLINICA INTERNACIONAL PRINCIPAL', '', '', 'Jr Washington 1471 Cercado de lima', '20100054184')
+VALUES ('c8aaa2ce-98f7-499a-aea1-d29addaa8f9c'::uuid, 'Llantas San Martin Arriola 1992', 'lima', 'San Luis', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c8b08b71-7ca8-49e8-ba4b-01381ffea075'::uuid, 'CLINICA INTERNACIONAL PRINCIPAL', 'Lima', 'Lima', 'Jr Washington 1471 Cercado de lima', '20100054184')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8284,7 +13251,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c8e4c44a-5040-498d-b919-536d5eeb212b'::uuid, 'Nespresso Trujillo', 'La Libertad', 'Trujillo', 'Pasaje Yanacocha 171, Dpto 401, Santiago del Surco, Lima', '20611315130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c8f1f8b9-9b31-4343-835f-697c61ce5aaf'::uuid, 'Unbranded Jockey Plaza', 'Lima', 'Lima', 'Av. La Encalada 1388 - Santiago de surco', '20604928681')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c926e5ec-f7c0-45ff-9ec7-e601d42934c6'::uuid, 'Asian Fan Store Megaplaza', 'Lima', 'Independencia', 'Av. Caminos del Inca 257 - Santiago de Surco (Interior 124)', '20606249153')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('c92f6cf2-f558-4536-baef-4a70975c9a29'::uuid, 'Iza Motors Peru Sac', 'LIMA', 'LIMA', 'AV. DE LAS AMERICAS NRO. 1049 URB. BALCONCILLO LIMA - LIMA - LA VICTORIA', '20524382335')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('c93f947c-4baa-4656-9ce2-942dff72c6c5'::uuid, 'ASICS_MALL DEL SUR', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8324,6 +13323,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ca3f8ee2-4566-466d-97ef-0deeb3975d91'::uuid, 'Bata B SANTA CLARA', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ca4a5ee3-7dd1-45ab-9f79-242d6c82dd96'::uuid, 'Autoespar Ventas Plaza Norte', 'Lima', 'Lima', 'AV. Alfredo Mendiola 1635 San Martin de Porres', '20100821371')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8340,6 +13347,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ca5eff4e-f1e3-40bc-b0a9-2feea8a19305'::uuid, 'SMART STORE LINK DE PAGO', 'Ancash', 'Chimbote', 'CALLE ELIAS AGUIRRE 238 - CHIMBOTE', '20614472970')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ca608201-f49c-4f5b-8889-ad71a9d6823e'::uuid, 'Davalos Ate', 'Lima', 'Lima', 'AV. JAVIER PRADO ESTE 635 ??? SAN ISIDRO', '20101066992')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8348,7 +13363,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ca6eac97-541a-47ec-9930-3c45ce642be7'::uuid, 'BOSE La Rambla San Borja', 'Lima', 'Lima', 'JR. CARLOS NEUHAUS RIZO PATRÓN 125 URB. CORPAC SAN ISIDRO', '20100030838')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ca81781f-562f-45f8-8758-f0f2071ccdf3'::uuid, 'TIENDA REAL PLAZA CHICLAYO', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('caa4eabb-128f-40bd-ac4f-f359251b7aa5'::uuid, 'New Era Piura', 'Piura', 'Piura', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('caff3e14-7d2e-483e-a279-f6d0e2aace7f'::uuid, 'Bata B2 BREÑA', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8404,7 +13443,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cbc7d09c-df3e-461e-9983-066880930bdd'::uuid, 'CONVERSE SANTA ANITA', 'Lima', 'Santa Anita', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cbdc7dc0-1e15-41ca-bd6a-43da315f5705'::uuid, 'Glazer Peru Lima', 'Lima', 'Jesus Maria', 'AV. GENERAL EUGENIO GARZÓN 1679 – FDO. OYAGUE – JESUS MARÍA - LIMA', '20608490567')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('cbe2419d-b5cb-478a-a848-46afba3f6b53'::uuid, 'GV Odontologos Jesus Maria', 'LIMA', 'LIMA', '''-', '20602235549')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cbe64cbd-55d8-4161-8294-55d1a99e98aa'::uuid, 'COMPUCELL MINKA', 'Callao', 'Callao', 'calle raymondi 123 arequipa', '20558669617')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8428,7 +13491,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cc355728-768b-4ef5-969b-22dbf1bb96ca'::uuid, 'Freeway Instore', 'Lima', 'Lince', 'AV. GENERAL ALVAREZ DE ARENALES 1737 LINCE', '20122090290')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('cc39ceb3-63db-4b6e-9b81-0a0fe9735874'::uuid, 'Pumesa', 'LIMA', 'LIMA', 'AV. VICTOR MALASQUEZ MZA. A5 LOTE. 07A C.P. HUERTOS DE MANCHAY', '20611101261')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cc452ee1-b9b9-406e-9204-efc40a8e02a5'::uuid, 'Finezza Minka', 'Lima', 'Lima', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8460,7 +13539,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ccb60500-0c5b-42be-a807-c6b881210cbe'::uuid, 'MENTE BONITA VENTA ASISTIDA', 'Lima', 'MIraflores', 'CALLE ARICA 820 MIRAFLORES', '20608006908')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ccb759d9-5374-4f87-b1df-72dfc6679c43'::uuid, 'Quiro Innova San Miguel', 'Lima', 'Lima', 'Carlos Gonzales Candamo 225 - 701 | San Miguel', '20612481581')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cd0105d7-1e86-4d4f-870c-4895ce45813b'::uuid, 'GP MOTOS MAVILA PIURA GRAU', 'Piura', 'Piura', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8500,6 +13595,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cde9f925-c0a8-418c-9bdf-12fa71c73f3c'::uuid, 'Infanti Arequipa', 'Arequipa', 'Arequipa', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ce11c6ff-07de-4ffe-b800-39ed153dfb8d'::uuid, 'Dreitz Gamer Miraflores', 'Lima', 'Lima', 'Calle Schell 698 - Miraflores', '20601908191')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cec25fc9-9357-480e-8aab-3bac0f18c7ed'::uuid, 'Bata B3 SAN BORJA', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cec3193a-1a0e-41b4-9276-f9afee399a05'::uuid, 'NEW ERA MEGA PLAZA', 'Lima', 'Independencia', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('cf0c8be2-59e4-4a7d-93b3-69ae1d91f703'::uuid, 'SAMSUNG KIOSKO PLAZA NORTE', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8508,7 +13635,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cf384f05-8165-4ba7-b212-32d47698a832'::uuid, 'MOTO NORTE SAC', 'Lima', 'San Isidro', 'CAL.GERMAN SCHEREIBER NRO. 276 URB. SANTA ANA LIMA - LIMA - SAN ISIDRO', '20480297289')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('cf39a5d1-dd8f-4b3a-87e3-3fbc21d408b5'::uuid, 'HAKU MOTORS S.A.C.', 'LIMA', 'LIMA', 'CAL. LAS CASUARINAS MZ D1 LT1 PASAJE LOS JAZMINES PACHACAMAC-LIMA', '20609006782')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('cf3e4ca1-b427-471c-b7ed-a1c44504ee92'::uuid, 'ALMMA INSTORE', 'Lima', 'Lince', 'MARISCAL MILLER 2548 LINCE', '20607975486')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8556,6 +13699,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d05589bb-dc6b-4f43-8761-61510342aee5'::uuid, 'NEW ERA PLAZA NORTE', 'Lima', 'Independencia', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d059cd68-eb2d-47eb-a374-03dba9e28fef'::uuid, 'KAYENCORP AREQUIPA', 'Arequipa', 'Arequipa', 'CANADA 635 LA VICTORIA', '20607050636')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d06c76b0-7af2-4574-9c6f-3d102120a533'::uuid, 'Nutripoint - Punto De Nutricion Sac', 'Lima', 'Lima', 'Jr. Salaverry 655 - Magdalena del Mar', '20600575636')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8588,7 +13747,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d0b73a41-e24e-4f03-9a6f-516143adbf8c'::uuid, 'FITPOINT_LA _MOLINA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d10635f2-1c6a-4eed-be99-1c4c8274a844'::uuid, 'Cassinelli Cusco', 'LIMA', 'Cusco', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d10ddda1-0c3c-485c-9435-1af4bb189a7a'::uuid, 'NEW ERA SJL', 'Lima', 'San Juan de Lurigancho', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8605,6 +13780,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d1440882-d7c7-48e4-bfa1-98134ae70d7e'::uuid, 'Compuusa Global Plaza Arequipa', 'Arequipa', 'Paucarpata', 'Cl. Antonio Raimondy 123 Urb. Manuel Prado', '20532171173')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d161daa2-d330-4440-baed-7f7a036822a1'::uuid, 'UMBRO PURUCHUCO', 'Lima', 'Ate', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8644,6 +13827,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d2511a73-b769-4b96-829f-c8100fc9d8c2'::uuid, 'MERREL MALL DEL SUR', 'Lima', 'San Juan de Miraflores', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d25a0cce-6631-4090-bfa5-7d7075de74f2'::uuid, 'CROCS_MP_TRUJILLO', 'La Libertad', 'Trujillo', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d25a2ede-3a4c-49ec-8719-93d0b0451b0b'::uuid, 'Taller 3', 'LIMA', 'LIMA', 'AV. PASEO DE LA REPUBLICA 2289 URB STA CATALINA', '20602629067')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8653,6 +13852,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d25a41b5-bce8-4206-828a-0b93015d13ea'::uuid, 'Alese Taller Naranjal Postventa', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d25a68be-36f5-451d-967c-31a7d95f5ae6'::uuid, 'PIEERS CUTERVO', 'Cajamarca', 'Cutervo', 'Av. Abancay 186 barrios altos lima', '20374343964')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8676,6 +13883,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d31419e5-571f-49e3-9316-475deffbbcbc'::uuid, 'GP MOTOS MAVILA CAJAMARCA', 'Cajamarca', 'Cajamarca', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d3418874-b101-4d56-a2a7-a8fbb3cbe23d'::uuid, 'PIEERS STA LUCIA I', 'Lima', 'Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d35a6e72-3a8a-4506-8bc4-3ed1fff93c77'::uuid, 'JCH Llantas LIM ARRIOLA 1522', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20318171701')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8684,7 +13907,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d3f0de27-3b03-4782-ae44-73df86f06238'::uuid, 'LA BOUTIQUE WHATSAPP', 'Lima', 'Lima', 'REYNALDO DE VIVANCO 595 SURCO', '20609165104')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d3fa7e5b-8b97-4fe0-9a90-416af282d3f6'::uuid, 'PIEERS CANTO GRANDE 3', 'Lima', 'San Juan de Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d40ec927-eaed-47d9-a656-65e8b1924ea3'::uuid, 'Tatoo San Isidro', 'Lima', 'Lima', 'Calle Burgos 215 - Urb. Risso - San Isidro', '20501649261')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d463fe71-4f38-410a-ac9e-97720e1c0cff'::uuid, 'SANICENTER PALAO 10', 'Lima', 'SAN MARTIN DE PORRES', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8717,6 +13964,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d508447e-46c1-4d81-abca-30f9af148d60'::uuid, 'MEDI ESTHETIC SAC', 'Lima', 'Lima', 'AV. Benavides 4462 urb. Vista Alegre ??? Surco', '20513643765')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d523a215-415d-4f2e-8ebd-bdcc0498e068'::uuid, 'GP MOTOS MAVILA LIMA', 'Lima', 'Lima', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8764,6 +14019,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d6256290-9cd3-4698-ab54-d2e10584bf44'::uuid, 'Limalinen Salaverry', 'Lima', 'San Isidro', 'Av. Javier Prado Este 488 - San Isidro', '20606512679')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d6273016-8111-40e5-8f05-362a76cd45eb'::uuid, 'TOP MOTORS HONDA INSTORE', 'LIMA', 'LIMA', 'AV. REPUBLICA DE CHILE 396 URB. SANTA BEATRIZ - JESUS MARIA', '20606100613')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8772,7 +14035,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d64a7478-58c3-49e2-bfcb-9e37f23c48c9'::uuid, 'SANICENTER TACNA', 'La Libertad', 'Trujillo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d662f233-6fa5-4544-93b9-33081208cc3b'::uuid, 'TIENDA SOLE REAL PLAZA PIURA', 'Callao', 'Piura', 'Av. Argentina 2317', '20555190132')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d6659da8-f5dc-4e9a-9ed4-356117ac778c'::uuid, 'Asian Fan Store Bellavista', 'Callao', 'Bellavista', 'Av. Caminos del Inca 257 - Santiago de Surco (Interior 124)', '20606249153')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d6a90e02-0890-4b23-a206-c59ffd25296f'::uuid, 'Chic & Cute Mall Plaza', 'lima', 'Surquillo', 'AV. JAVIER PRADO ESTE 4200 INTERIOR MTF8 - SANTIAGO DE SURCO', '20604870209')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8812,6 +14099,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d6dd54a4-2ead-44d9-a2d5-263a48d7fa83'::uuid, 'SALUD VISUAL LASER ICA', 'Ica', 'Ica', 'MANUEL DULANTO 1601 PUEBLO LIBRE', '20613132628')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d703f589-3727-49bf-8df2-b1b516b51901'::uuid, 'DONNA CATTIVA CAVENECIA', 'Lima', 'San Isidro', 'JR MANUEL IRRIBARREN 1393 SURQUILLO', '20609061708')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d747f59a-c67c-4f32-8c10-2d0920a0b9ff'::uuid, 'SUNTIME COSTA MAR PLAZA TUMBES', 'Lima', 'Lima', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8828,7 +14131,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('d7847c3d-f8ee-415e-970d-4b486a1270e7'::uuid, 'Drimer Chiclayo', 'Chiclayo', 'Chiclayo', 'Jr. el Polo Nro. 670 Int. C605 Centro Comercial el Polo (Block C) - Santiago de Surco', '20101308678')
+VALUES ('d7847c3d-f8ee-415e-970d-4b486a1270e7'::uuid, 'Drimer Chiclayo', 'Lambayeque', 'Chiclayo', 'Jr. el Polo Nro. 670 Int. C605 Centro Comercial el Polo (Block C) - Santiago de Surco', '20101308678')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8860,7 +14163,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('d7cc305f-333a-4f9d-9eb7-39130220ff8d'::uuid, 'Btime Modulo Chiclayo', 'Chiclayo', 'Chiclayo', 'AVENIDA CAMINO REAL 348 INT 805z TORRE EL PILAR PISO 8 - SAN ISIDRO - LIMA', '20603802137')
+VALUES ('d7cc305f-333a-4f9d-9eb7-39130220ff8d'::uuid, 'Btime Modulo Chiclayo', 'Lambayeque', 'Chiclayo', 'AVENIDA CAMINO REAL 348 INT 805z TORRE EL PILAR PISO 8 - SAN ISIDRO - LIMA', '20603802137')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d802d471-0680-4d56-9b15-3d35177c0270'::uuid, 'SANICENTER HUANCAYO', 'Junin', 'Huancayo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8869,6 +14180,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d805b38f-5938-4971-a295-479743576ad8'::uuid, 'COA Cajamarca', 'LIMA', 'San Isidro', 'Avenida Juan de Arona 151', '20112280201')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d80cc20c-5938-4241-838a-268fd4b8946a'::uuid, 'SANICENTER ILO', 'Moquegua', 'Ilo', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d828f649-031e-4713-b873-fddd9535f543'::uuid, 'Arena San Isidro', 'lima', 'San Isidro', 'Av. Los Conquistadores 321 - San Isidro', '20601274133')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d83c577f-db73-4812-b6e5-7f190e9a3920'::uuid, 'HONOR JULIACA', 'Junin', 'Junin', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -8924,6 +14259,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d9477f83-4d98-4c49-b56f-81be13978f25'::uuid, 'Infanti SJL', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('d95e9c5e-b5e9-4c39-94bc-33fe8440d330'::uuid, 'Cassinelli Miraflores', 'LIMA', 'Lima', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8948,6 +14291,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('d9da5c2d-109b-4f78-80dc-8a3c73ba4c07'::uuid, 'Caffarena Sanmiguel', 'Lima', 'San Miguel', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('da238712-6d9c-431d-98ca-d3643e233d03'::uuid, 'Quality Products Tienda Miraflores', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -8956,7 +14307,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('da5e4803-9b99-49fd-98aa-03010113c408'::uuid, 'CROCS_PLAZA_LIMA_SUR', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('da637769-44c3-4df3-8133-ff82533fd1f0'::uuid, 'TVS Motos Instore', 'Lima', 'San Miguel', 'AV. LA MARINA 774 PUEBLO LIBRE', '20512942891')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('da675a22-908e-4d95-801f-3d30577334bd'::uuid, 'Michelle Belau Salaverry R.Plaza', 'Lima', 'Lima', 'AV. MARISCAL ELOY URETA NRO. 185 INT. 191 URB. EL PINO LIMA - SAN LUIS', '20296897338')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('daa1e335-0ac3-4270-80f0-69eb7e62e1ca'::uuid, 'Nutripoint SJL', 'Lima', 'Lima', 'Jr. Salaverry 655 - Magdalena del Mar', '20600575636')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9004,7 +14379,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('db8a01ad-6627-45df-832b-2355034664ce'::uuid, 'Hipermercados Ceramicos Chiclayo', 'LIMA', 'Chiclayo', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
+VALUES ('db8a01ad-6627-45df-832b-2355034664ce'::uuid, 'Hipermercados Ceramicos Chiclayo', 'LIMA', 'Lambayeque', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dba41e7e-473c-4564-a9cf-5d9ea746ff36'::uuid, 'Hirophone Modulo Real Plaza Huancayo 2Do Nivel', 'HUANCAYO', 'Huancayo', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9036,6 +14419,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dc1b9bbf-12de-4985-8f5f-8768c8c83469'::uuid, 'NEW ERA AREQUIPA', 'Arequipa', 'Arequipa', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('dc1bafc5-e715-45d4-ab61-a4cc492302b9'::uuid, '3Bi Phones', 'Lima', 'Lima', 'Calle Cantuarias 140 INT 41 - Miraflores', '20608648730')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9052,6 +14443,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dc5ec0a2-5855-4ea2-9cd1-894647956ad3'::uuid, 'NEW ERA SAN MIGUEL', 'Lima', 'San Miguel', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('dc9ca999-8bca-465a-bab6-f8ab8c570a02'::uuid, 'Cassinelli Trujillo', 'LIMA', 'La Libertad', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9060,7 +14459,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dc9d4115-8809-42f4-a191-8a94c2e687e6'::uuid, 'Clock Peru Surco', 'Lima', 'Santiago de Surco', 'CALLE C. LOTE 20 DPTO 501 - SANTIAGO DE SURCO', '20602231799')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('dcb012bc-797a-4d8a-8b54-23a26ed7cd2d'::uuid, 'Xiaomi Megaplaza Chimbote', 'Ancash', 'Santa', 'CALLE LOS NEGOCIOS 448 SURQUILLO', '20604095604')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dcb8cf82-9a52-451c-a74d-2855f9268641'::uuid, 'MIKAELA Y PICADILLY VENTA ASISTIDA', 'Lima', 'Lima', 'EPSILON 145 CALLAO', '20129993139')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9077,6 +14492,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('dcfb541b-e04c-4093-abe7-175ff968ee82'::uuid, 'Alese Taller Naranjal ATF Postventa PyP', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dd2264c1-aba9-4d04-b6b4-002ec6bd4f70'::uuid, 'Specialized Miraflores', 'Lima', 'Miraflores', 'AV. REDUCTO 1017 URB. LEURO MIRAFLORES', '20557677268')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9108,7 +14531,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dd9f6991-07aa-45bc-85eb-87d8eb272301'::uuid, 'Life Medicine Instore', 'Lima', 'Lima', 'CAL. GENERAL SUAREZ 149 MIRAFLORES', '20614935821')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ddb47e18-8c52-47ec-af28-bc96a65bbf86'::uuid, 'AUTOESPAR POSTVENTA COMAS', 'Lima', 'Lima', 'AV. Alfredo Mendiola 1635 San Martin de Porres', '20100821371')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dddb128c-283c-4792-9eb4-765a1327f935'::uuid, 'SOS Veterinaria Instore', 'Lima', 'Lima', 'AV. MARISCAL JOSE DE LA MAR - MIRAFLORES', '20602841899')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('de0a4a95-fe8f-4480-8e5a-97e8d388c2b5'::uuid, 'MOTO FUERZA CHICLAYO', 'Lambayeque', 'Chiclayo', 'CAL.GERMAN SCHEREIBER NRO. 276 URB. SANTA ANA LIMA - LIMA - SAN ISIDRO', '20478217898')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('de245423-f509-4372-9020-13080b5dfa6c'::uuid, 'CROCS_ICA', 'Ica', 'Ica', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9132,6 +14587,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('deae4ef4-0524-4687-b90b-fe80ac7e7758'::uuid, 'NEW ERA PLAZA LIMA SUR', 'Lima', 'San Juan De Miraflores', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ded6b30a-f011-44db-91c6-fcd0c1bb981e'::uuid, 'Cuycito Store Venta Asistida', 'Lima', 'San Borja', 'CALLE OERSTED G10 URB LA MERCED - SAN BORJA', '10465649742')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('df1fa005-4e89-4dc8-90b4-829ec66eddf8'::uuid, 'FORCE FITWEAR LIMA', 'Lima', 'Lima', 'AV TRINIDAD MORAN MZ I LOTE 7 URB. LEON XIII MZ I LT 07 CAYMA  AREQUIPA', '20611658762')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('df30c0dc-cdc0-45bf-91fe-b8a6aacc69bd'::uuid, 'Kenneth Cole - Jockey Plaza', 'Lima', 'Santiago de surco', 'CALLE LOS NEGOCIOS 448 SURQUILLO', '20604095604')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('df3aa548-0233-4842-bdb3-544323571026'::uuid, 'Gamaffer Instore', 'Lima', 'Lima', 'AV. PACHACUTEC MZ AG LOTE 5 ANEXO 22 DE SAN ANTONIO DE JICAMARCA SAN JUAN DE LURIGANCHO', '20611557613')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9148,7 +14635,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('dfc7ad55-dc24-4cab-a72d-523c8d275e13'::uuid, 'Cassinelli Chiclayo', 'LIMA', 'Chiclayo', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
+VALUES ('dfc224bc-6b2f-493c-9791-464a6129df5f'::uuid, 'VELEZ JOCKEY', 'Lima', 'Santiago de Surco', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('dfc7ad55-dc24-4cab-a72d-523c8d275e13'::uuid, 'Cassinelli Chiclayo', 'LIMA', 'Lambayeque', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9172,6 +14667,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e034828d-28d1-4f94-84f5-37d741a5b430'::uuid, 'Caffarena Trujillo', 'La libertad', 'Trujillo', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e038d6ce-eda4-46bf-84f7-b60ad6b7dacd'::uuid, 'Phantom Real Plaza Centro Civico', 'Lima', 'Lima', 'Av. Casimiro Ulloa 107', '20516634970')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9180,7 +14683,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e03b7bbb-141c-40cd-a40c-8ef3fbdd5ed3'::uuid, 'PIEERS VENERO', 'Lima', 'La Victoria', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e0a60a4e-8cb3-4e1d-b7ed-9b7a81befb8d'::uuid, 'Footloose - Mega Plaza - T10', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e0c48886-1674-4449-94ee-fe31b2935db8'::uuid, 'Clínica Neuman Instore', 'Lima', 'Miraflores', 'Av Roosevelt 6120 Miraflores', '10443661404')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9228,7 +14747,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e13a3660-ec06-430b-a71a-7195df002cf6'::uuid, 'OML Import  WDS Arequipa', 'Arequipa', 'arequipa', 'AV. ZARAGOZA MZ 04 LT 05 - LOS OLIVOS', '20518336607')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e165a998-6172-4bee-9d75-051a4c24dd14'::uuid, 'Evaluaciones Automotriz - No ventas - Manasa Surco', 'Lima', 'Lima', '''-', '0')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e16d6a03-b7fc-4010-9eb9-7a297e6c1503'::uuid, 'INBOX_JOCKEY', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9316,6 +14851,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e289023b-0b5a-41e8-83cf-2c9f39719f0f'::uuid, 'Aldo & Co. Consultas', 'Lima', 'Lima', 'Av Primavera 785 Urb. Chacarilla San Borja', '20100997909')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e29582fa-b63e-412e-9225-bef91c4155e0'::uuid, 'Decor Center Salaverry', 'Lina', 'San Isidro', 'Av La Molina 473 Ate', '20215528791')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e29adf4b-604a-4c84-9390-5568f8c8a115'::uuid, 'CROCS_PLAZA_NORTE2', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e2a54111-fa4e-4d36-a2ab-410d5fbeb75d'::uuid, 'HONOR PLAZA NORTE', 'Lima', 'Lima', 'CAL. CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9364,7 +14923,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e31bdec9-6517-4136-b221-3748fe90b89c'::uuid, 'Invicta Mall del Sur', 'Lima', 'San Juan De Miraflores', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e326f13c-9029-4ef5-a2cc-1011418b6771'::uuid, 'CAT JOCKEY', 'Lima', 'Lima', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e348cb16-1318-4bb6-809a-6f45b2658895'::uuid, 'SALUD VISUAL LASER CHINCHA', 'Ica', 'Chincha', 'MANUEL DULANTO 1601 PUEBLO LIBRE', '20613132628')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e36bd1fb-abd0-4989-a0e4-64a7386f01b9'::uuid, 'MOTOFUERZA SAC', 'Lima', 'San Isidro', 'CAL.GERMAN SCHEREIBER NRO. 276 URB. SANTA ANA LIMA - LIMA - SAN ISIDRO', '20478217898')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9388,7 +14971,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e3c1aa0d-4670-4aa5-b997-5ee1a04c96ac'::uuid, 'Caffarena Plazanorte', 'Lima', 'Independencia', 'AV. SANTIAGO DE SURCO 3699 - SURCO', '20501709183')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e3c44914-044e-4bc8-a07d-974c35bcad00'::uuid, 'Mi Store - Pachacutec', 'Lima', 'Lima', 'AV. LOS FORESTALES 1296 INTERIOR C-09 VILLA EL SALVADOR LIMA', '20603393491')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e3cc7879-f15e-4405-b4ff-2db95909a2c1'::uuid, 'INBOX_MA_CHICLAYO', 'Lambayeque', 'Chiclayo', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e3e4dcd5-48e3-4087-a07e-d39c1f5a716b'::uuid, 'Finezza Comas', 'Lima', 'Lima', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9421,6 +15028,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e48b9ca1-0eef-4cec-a701-0d29c60758d1'::uuid, 'Top Model - Sjm - Mall Del Sur - Tc2', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e4936f35-2fb4-439c-afd7-1be99e34e8e5'::uuid, 'Invicta Huancayo', 'Junin', 'Huancayo', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e495a55b-419b-47d2-812c-45ee89e0ad81'::uuid, 'UCAL POSTGRADO', 'Lima', 'Molina', 'Av. Primavera Nro. 970', '20537886618')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9476,6 +15099,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e50c2207-fafa-40f0-a41a-ae910242a0d1'::uuid, 'Decor Center Rep de Panama', 'Lima', 'San Isidro', 'Av La Molina 473 Ate', '20215528791')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e518a751-c4d0-46f9-87df-fe072141efde'::uuid, 'CONVERSE MALL DEL SUR', 'Lima', 'San Juan de Miraflores', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e533eac1-4988-490a-9950-5ab4104c8541'::uuid, 'COMPUCELL CERRO', 'Lima', 'Arequipa', 'calle raymondi 123 arequipa', '20558669617')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e5937325-1ea5-4bcc-a5fc-2a598043464b'::uuid, 'Gmg Minka', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9485,6 +15132,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e5940e61-8e4a-4357-9970-e28017e2180f'::uuid, 'Evolution LIM ALZAMORA', 'LIMA', 'LIMA', 'Av. Nicolas Arriola 2291 - Lima - La Victoria', '20449239394')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e5bd56f2-4677-46bc-8cbc-873a25068721'::uuid, 'Infanti Cusco', 'Cusco', 'Cusco', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e5c729e8-c8bc-4380-aacc-2d00cf8809b3'::uuid, 'Rosen Outlet Rosen', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9509,6 +15172,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e65bfa16-a2e6-4c00-b61e-50c96ed8fbe7'::uuid, 'Gmg La Union', 'LIMA', 'SANTIAGO DE SURCO', 'AV. PRIMAVERA NRO. 1796', '20605475273')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e6739da5-0ac5-4f2d-8d86-bec80d95b2a2'::uuid, 'CROCS_ KM40', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e6765d63-1752-4e50-8755-ba8c3918a160'::uuid, 'BOSE Jockey Plaza', 'Lima', 'Lima', 'JR. CARLOS NEUHAUS RIZO PATRÓN 125 URB. CORPAC SAN ISIDRO', '20100030838')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9564,6 +15243,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e7622ce5-2c37-4d3b-bc74-77bb44c18bbe'::uuid, 'Calm Venta Asistida', 'Lima', 'San Isidro', 'AV. BELEN 339 - SAN ISIDRO', '20611905298')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e77708d4-31df-4e72-8cdb-70e15f475edd'::uuid, 'COA Ica', 'LIMA', 'San Isidro', 'Avenida Juan de Arona 151', '20112280201')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9572,7 +15259,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('e7bab93c-e4f8-47e0-8f5c-147e2332a4c4'::uuid, 'CLINICA INTERNACIONAL LIMA', '', '', 'Jr Washington 1471 Cercado de lima', '20100054184')
+VALUES ('e7a288bb-8631-4071-8207-d5a3250e39ef'::uuid, 'Infanti Comas', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e7bab93c-e4f8-47e0-8f5c-147e2332a4c4'::uuid, 'CLINICA INTERNACIONAL LIMA', 'Lima', 'Lima', 'Jr Washington 1471 Cercado de lima', '20100054184')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9604,6 +15299,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e8a4e92f-9cca-497c-92ae-9b4b44a72568'::uuid, 'PIEERS PIURA 6', 'Piura', 'Piura', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e8ad9c1c-a387-4cf7-848d-ab62180548cd'::uuid, 'KAYENCORP ICA', 'Ica', 'Ica', 'CANADA 635 LA VICTORIA', '20607050636')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e8aea1ee-b019-415b-a40b-802ba4d21d2a'::uuid, 'Movil City Tarapoto', 'San Martin', 'San Martin', 'JR. SANTA INES NRO. 151 SAN MARTIN - SAN MARTIN - TARAPOTO', '20553818100')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9620,7 +15331,39 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e8f40611-9ede-444c-8664-33efb6329394'::uuid, 'GP MOTOS MAVILA HUACHO', 'Lima', 'Huacho', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('e93074f7-cf16-462e-af9f-5912f1c57364'::uuid, 'Tempur', 'Lima', 'Lima', 'Av. Los Conquistadores 136 San Isidro', '20524261384')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e93508a7-39bc-4faa-9121-840503e38751'::uuid, 'EDIPESA COLONIAL', 'Lima', 'Lima', 'AV ARGENTINA 1710 LIMA', '20100041520')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e95232c9-e840-4e7b-ba81-101c9fc0f039'::uuid, 'Nespresso Larcomar', 'Lima', 'Miraflores', 'Pasaje Yanacocha 171, Dpto 401, Santiago del Surco, Lima', '20611315130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e952ffff-453b-4e32-94a6-b47c8581d02a'::uuid, 'MB Corp Juliaca', 'Puno', 'Juliaca', 'Av. Alfonso Ugarte 205 Arequipa', '20609372088')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9660,6 +15403,30 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e9f1b7aa-87fb-4262-8a54-53706e2d3206'::uuid, 'SUNTIME TRUJILLO', 'La Libertad', 'Trujillo', 'Av. Paseo de la Republica Nro. 1984 - Lince', '20537519461')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('e9f4e503-02d6-4b9f-8d4b-1a06185e781e'::uuid, 'Ssenda Selva Iquitos', 'Loreto', 'Iquitos', 'AV Nicolas Ayllon  4671 Ate Lima', '20608038834')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ea07a23d-2cee-49f9-a184-9eb6063e0b58'::uuid, 'SOPHIE CROWN JOCKEY', 'Lima', 'Lima', 'CALLE MIGUEL DASSO 139 SAN ISIDRO', '20547416008')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ea095eac-a379-487c-8141-6a4da7134abb'::uuid, 'Footloose - Juliaca - Real Plaza - T83', 'Puno', 'San Rom?Ðn', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9684,6 +15451,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ea52e473-a48e-4020-b3a4-6ab7b030f444'::uuid, 'FACES SCULPTORS SURCO', 'Lima', 'Santiago de surco', 'BOULEVARD 141 MONTERRICO SURCO', '20611172967')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ea5df5d5-21d7-4526-b2ad-c7458110591a'::uuid, 'Llantas San Martin Palao', 'Lima', 'Lima', 'AV. ALFREDO MENDIOLA 310 - INDEPENDENCIA', '20381499627')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9700,6 +15475,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ea73fff2-a8ef-43ae-8990-466a6e951cc6'::uuid, 'WYNK Real Plaza Salaverry', 'Lima', 'Lima', 'JR. CARLOS NEUHAUS RIZO PATRÓN 125 URB. CORPAC SAN ISIDRO', '20100030838')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ea854a87-3727-4377-af38-00feb55a599f'::uuid, 'F&T SPORT SAC', 'LIMA', 'Lima', 'Av. Los conquistadores 243', '20549741593')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9708,7 +15491,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ea968a10-a6f1-4f7b-acf2-e1643d47610c'::uuid, 'Conauto Hino', 'Arequipa', 'Arequipa', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ead37c11-221c-470b-bd48-4d67993c650d'::uuid, 'Comsitec Venta Asistida', 'Junin', 'Huancayo', 'AV. GIRALDEZ 281 HUANCAYO - JUNIN', '20568033354')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ead3e435-f929-471e-8984-05d8d82faeb9'::uuid, 'Drimer Miraflores', 'Lima', 'Lima', 'Jr. el Polo Nro. 670 Int. C605 Centro Comercial el Polo (Block C) - Santiago de Surco', '20101308678')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('eb29d01f-8d13-4e81-b018-ce3898ad2728'::uuid, 'Chic & Cute El Polo', 'lima', 'SANTIAGO DE SURCO', 'AV. JAVIER PRADO ESTE 4200 INTERIOR MTF8 - SANTIAGO DE SURCO', '20604870209')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9740,6 +15547,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('eb8bb419-b5a6-44c7-b6ed-9e29155e101d'::uuid, 'ASICS_SAN_MIGUEL', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('eb99d8c4-3798-4e21-8b92-c8e21b35790c'::uuid, 'GP MOTOS MAVILA CHULUCANAS', 'Piura', 'Chulucanas', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('eba7cd66-1204-451c-8e47-cf71e8656a6c'::uuid, 'Xiaomi Real Plaza Huancayo', 'Lima', 'Lima', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9757,6 +15580,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ebfe239c-6702-4710-a518-9f9c1a675bf9'::uuid, 'Alese Taller Meiggs Postventa PYP', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ec0e408f-e5e5-45c3-a067-aa83f97b3392'::uuid, 'NEW ERA MIRAFLORES', 'Lima', 'Miraflores', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9812,7 +15643,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('ecbd89c8-4172-40e9-92db-445936b624d0'::uuid, 'Top Model - Chiclayo - T31', 'Chiclayo', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+VALUES ('ecbd89c8-4172-40e9-92db-445936b624d0'::uuid, 'Top Model - Chiclayo - T31', 'Lambayeque', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9844,7 +15675,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ed295511-ad7b-451c-9b1c-6fa18421cd26'::uuid, 'PIEERS CAJAMARCA', 'Cajamarca', 'Cajamarca', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ed3074e1-7679-4e56-a20d-6914ecfbf7c3'::uuid, 'Resersur Taller Parque Industrial', 'Arequipa', 'Arequipa', 'AV. ALFONSO UGARTE 250 - Arequipa', '20100202124')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ed7d1e6c-f0c5-480e-8ec8-4712d8bbdee5'::uuid, 'MULTIDENT MAGDALENA', 'Lima', 'Magdalena', 'GREGORIO ESCOBEDO 762 JESUS MARIA MULTIDENT JESUS MARIA', '20601673909')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('edb8ba4f-d5ca-42cd-9e6f-4678f8d5c391'::uuid, 'Decor Center Piura', 'Piura', 'Piura', 'Av La Molina 473 Ate', '20215528791')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9876,7 +15731,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ee1191f3-f13e-4a10-93bc-df878d3b608f'::uuid, 'PIEERS PICHANAQUI', 'Junin', 'Pichanaqui', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ee203335-c5ff-48af-8274-a5dfc573a902'::uuid, 'COMPUCELL PARQUE', 'Lima', 'Santiago de Surco', 'calle raymondi 123 arequipa', '20558669617')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ee45e25f-9f0d-4d80-b144-b3d68d3c3f83'::uuid, 'Hipermercados Ceramicos Ventanilla', 'LIMA', 'LIMA', 'AV. REP??BLICA DE PANAM? 4495', '20466776336')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ee6f7cad-e28e-4def-8d59-a45db9b1c302'::uuid, 'Columbia Jockey Plaza', 'Lima', 'Lima', 'CAL. AMADOR MERINO REYNA 267 SAN ISIDRO', '20514811271')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9916,7 +15795,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('eef93c49-d762-41d3-af54-df877ab760c3'::uuid, 'TIENDA SOLE MALL AVENTURA CHICLAYO', 'Callao', 'Chiclayo', 'Av. Argentina 2317', '20555190132')
+VALUES ('eef93c49-d762-41d3-af54-df877ab760c3'::uuid, 'TIENDA SOLE MALL AVENTURA CHICLAYO', 'Callao', 'Lambayeque', 'Av. Argentina 2317', '20555190132')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9948,7 +15827,55 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ef8d4f3d-334b-4433-8414-003a6980545d'::uuid, 'Soft San Isidro', 'Lima', 'San Isidro', 'AV. EL POLO S/N CC EL POLO I TDA. A220 – SANTIAGO DE SURCO', '20601363861')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('efa1794b-1c1b-496b-a327-adcf4e27797d'::uuid, 'CONVERSE SALAVERRY', 'Lima', 'San Isidro', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('efa804ce-dbf1-49fc-98fe-a1f597305874'::uuid, 'VALLESUR AUNA', 'Arequipa', 'Arequipa', 'AV LA SALLE 116 AREQUIPA', '20454135432')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f0009728-c06c-47e0-85d1-7a39c6fd78ee'::uuid, 'Phono Center Instore', 'Lima', 'San Miguel', 'Av. La Marina 605 San Miguel', '20522003850')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f08f64c0-fbf3-413b-bc6f-09a2e720093d'::uuid, 'PIEERS STA LUCIA 2 (Gamachi)', 'Lima', 'Lurigancho', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f097f49d-44ba-4476-bb56-155e8db2b5ec'::uuid, 'Nuve Instore', 'Lima', 'Lima', 'CALLE LOS ÑANDUES 175 SURQUILLO', '20553899851')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f09c4046-67df-41f8-90b0-8b421f0b252c'::uuid, 'Wilson San Isidro', 'Lima', 'San Isidro', 'AV. CONQUISTADORES 840 - SAN ISIDRO', '20555212390')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -9980,6 +15907,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f11ec2a8-5b01-4a2f-b1d6-26f09b10fc35'::uuid, 'Finezza Cusco', 'Cusco', 'Cusco', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f128960e-afeb-464c-9ffd-46d746a809e0'::uuid, 'Quality Products Modulo Megaplaza Modulo 1', 'Lima', 'Lima', 'AV. GENERAL CORDOVA N“? 1145 URB STA CRUZ MIRAFLORES', '20524045843')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -9988,7 +15923,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('f1371363-d98d-4f68-88ac-8465ae54193d'::uuid, 'Automotores Inka Chimbote', 'Chiclayo', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ Chiclayo CHICLAYO', '20480683839')
+VALUES ('f1371363-d98d-4f68-88ac-8465ae54193d'::uuid, 'Automotores Inka Chimbote', 'Lambayeque', 'Chiclayo', 'FND. FUNDO IRIS CAR. PANAMERICANA NORTE SN JOSE LEONARDO ORTIZ LAMBAYEQUE CHICLAYO', '20480683839')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f1590251-d269-44f8-9d03-ad7ec60d7c5a'::uuid, 'COLISEUM SJL', 'Lima', 'San Juan de Lurigancho', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10028,7 +15971,63 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f1d98351-6209-451a-a4c6-600a9d74bfa4'::uuid, 'Conauto Miraflores', 'Arequipa', 'Arequipa', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f21149a3-51c6-4404-ba0f-f20985526ad5'::uuid, 'SANICENTER ATE', 'Lima', 'Ate', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f21e3f72-af9c-4479-9c6c-bacb7967de15'::uuid, 'SAMSUNG KIOSKO CHIMBOTE', 'Ancash', 'Chimbote', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f22281fc-fd5d-4526-98e4-a3efca59291a'::uuid, 'Finezza Trujillo', 'La Libertad', 'Trujillo', 'Av. Los Fresnos 1316 - La Molina', '20555195363')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f242f19c-83e7-4acb-a6ae-1707551b590e'::uuid, 'INBOX_MP_TRUJILLO', 'La Libertad', 'Trujillo', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f2433feb-45ed-4563-b538-9b564101d05c'::uuid, 'Grillcorp Instore', 'Lima', 'San Juan De Lurigancho', 'URB CANTO BELLO, CAL. LOS AMANCAES MZ D1 LT4, SJL-LIMA-LIMA', '20614103826')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f2631cd1-4fb7-46d4-b3c0-f276b0c45ae7'::uuid, 'Estudio Emma', 'Lima', 'Lima', 'JR. MARISCAL AGUSTIN GAMARRA 415 - URB EL PINO SAN LUIS', '20606617756')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f263b0d2-8a0e-40b5-8d44-d897605e0050'::uuid, 'VELEZ LA MOLINA', 'Lima', 'La Molina', 'FELIPE SALAVERRY 2370 JESUS MARIA', '20555610107')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10052,6 +16051,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f2a1ef9f-5ad4-4549-b25c-e5bb33624b64'::uuid, 'NEW BALANCE AREQUIPA', 'Arequipa', 'Arequipa', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f2b44c68-5caf-4e13-aff8-35d7b77437ab'::uuid, 'Joan Alfaro 11y6E T1', 'Lima', 'Lima', 'ALM. DE LOS ABANICOS 200 URB LA ENCANTADA DE VILLA CHORRILLOS', '20517232522')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -10061,6 +16068,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f2ddf562-55a0-4842-9354-1ec9e6dda8d0'::uuid, 'Footloose - Lurin - Plaza Vea - Tg5', 'LIMA', 'LIMA', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f2e050b8-673a-4e6e-a31a-09579ae65ac4'::uuid, 'Phantom Piura 2', 'Piura', 'Piura', 'Av. Casimiro Ulloa 107 Miraflores Lima', '20516634970')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f2ed5450-b699-40ae-885e-dfc2f55e50fd'::uuid, 'Panorama Hogar CI San Miguel', 'Lima', 'Lima', 'Jr. Ucayali 435 INT B Cercado de Lima', '20506249601')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10092,7 +16115,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f417abc2-5ee8-4b54-9cae-5a73a5536140'::uuid, 'GP MOTOS MAVILA TUMBES', 'Tumbes', 'Tumbes', 'AV LA MARINA 1549 SAN MIGUEL', '20601706980')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f419c2c7-a398-441b-99ba-640221ea9a84'::uuid, 'RADIOTERAPIAS', 'Lima', 'Lima', 'REPUBLICA DE PANAMA 3461 SAN ISIDRO LIMA', '20381170412')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f4768a9c-8a49-41f8-aaee-6d237b9294fa'::uuid, 'CONVERSE CHICLAYO', 'Lambayeque', 'Chiclayo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10132,7 +16171,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f567d4ab-5a26-4a47-bc55-504604850d95'::uuid, 'SANICENTER CUSCO', 'Cusco', 'Cusco', 'AV ALFREDO MENDIOLA 965 URB PALAO SMP', '20138651917')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f570b3a6-f2cc-41af-9789-18d81ebd02c9'::uuid, 'Honor Real Plaza Cusco', 'Lima', 'Lima', 'CAL.CHICLAYO NRO. 562 URB. LIMA LIMA - LIMA - MIRAFLORES', '20601844916')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f5e05cbb-361a-470d-a7e6-f8afca30a8f5'::uuid, 'RUMAH CASA SAN MIGUEL', 'Lima', 'San Miguel', 'LOS PRECURSORES 345 URB VALLE HERMOSO SURCO', '20548473439')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10148,7 +16203,47 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f6246e43-79c8-4411-b7dc-01cde3c85252'::uuid, 'NEW ERA COMAS', 'Lima', 'Comas', 'DERBY 254 SANTIAGO DE SURCO', '20600973585')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f6a2f1ce-6c58-417a-81ab-5ed9f7371c0c'::uuid, 'V. MOTOR CENTER', 'Lima', 'Lima', 'Av. Industrial Panamericana Norte 3656 3658 3660 Urb Industrial Panamericana Norte - Independencia', '20392489488')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f6c34f70-768f-42b3-a9df-0b90135fe5d9'::uuid, 'Continental Travel', 'LIMA', 'San Isidro', 'Calle Mariano de los Santos 198 - San Isidro', '20267781151')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f6f11f16-b84f-4615-92b3-ff224ad41db0'::uuid, 'Baliq Wong 2 De Mayo', 'Lima', 'Lima', 'Av. Santa Cruz 1350 Miraflores', '20392118749')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f6fdb494-2442-47d5-b8e6-b59fc4d06d29'::uuid, 'Mips Mobile Mall Santa Anita', 'LIMA', 'Santa Anita', 'Av. Jose Larco 101', '20611016086')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f70f0f30-54ce-4ae6-a3b7-8de640eefd24'::uuid, 'Infanti Brasil', 'Lima', 'Lima', 'CALLE LOS LIBERTADORES 455 SAN ISIDRO', '20431062870')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10164,7 +16259,15 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('f747d58e-cfa7-44e0-9831-2e9f1544ce0d'::uuid, 'Footloose - Chiclayo- Elias Aguirre 467 - T20', 'Chiclayo', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
+VALUES ('f73ae9d8-16ba-4131-a392-77444c820b3d'::uuid, 'Hirophone Modulo Open Plaza Atocongo 1Er Nivel', 'LIMA', 'SAN JUAN DE MIRAFLORES', 'AV. NICOLÁS AYLLÓN 4770 DISTRITO DE ATE', '20606969873')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f747d58e-cfa7-44e0-9831-2e9f1544ce0d'::uuid, 'Footloose - Chiclayo- Elias Aguirre 467 - T20', 'Lambayeque', 'Chiclayo', 'CALLE CINCO 176 URB VULCANO', '20427799973')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10205,6 +16308,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f7a59ec3-4ac1-48c4-b88e-881c6da974e2'::uuid, 'SAMSUNG SES MALL AVENTURA SANTA ANITA', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f7aa3939-2c88-4e6c-85c9-ca56939f1f7f'::uuid, 'Clock Peru Trujillo', 'La libertad', 'Trujillo', 'CALLE C. LOTE 20 DPTO 501 - SANTIAGO DE SURCO', '20602231799')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10260,6 +16371,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f7e2ef6e-791f-46a7-918b-a67e91f4e8f6'::uuid, 'FITPOINT_PRIMAVERA', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f7f761c0-352e-4259-b9e5-d83061cf8d56'::uuid, 'Rosen Store San Isidro', 'Lima', 'Lima', 'AV EL SOL LOTE 04 VILLA EL SALVADOR', '20258886420')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f8229399-59a2-4d75-b94f-b0eefca224db'::uuid, 'MOTOFACIL Principal', 'Lima', 'Lima', 'CAL. SANTA LUCIA DE CONCHAN 144 URB LA ENCANTADA DE VILLA CHORRILLOS', '20609320983')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -10292,7 +16419,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('f89814ff-ecb7-4a70-9aa3-6d2c6fdb3fdd'::uuid, 'SERVIMEDICOS SEDE 1', 'Chiclayo', 'Chiclayo', 'CALLE MANUEL MARIA IZAGA 621 CHICLAYO Chiclayo', '20394674371')
+VALUES ('f89814ff-ecb7-4a70-9aa3-6d2c6fdb3fdd'::uuid, 'SERVIMEDICOS SEDE 1', 'Lambayeque', 'Chiclayo', 'CALLE MANUEL MARIA IZAGA 621 CHICLAYO LAMBAYEQUE', '20394674371')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10301,6 +16428,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f924cdbf-b64c-4b3e-825c-46b5658238ae'::uuid, 'Indumotos', 'Lima', 'Lima', 'MZ Y LT 6 URB. PARQUE INDUSTRIAL EL ASESOR - ATE - LIMA', '20608240315')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f942aa03-8cce-45ed-97b2-7b482a70a897'::uuid, 'LEGO Salaverry', 'Lima', 'San Isidro', 'AV. JOSE PARDO N° 434 – MIRAFLORES - LIMA', '20605052836')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10324,6 +16459,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f9bd9d69-cb77-4635-87f1-c6e4b89b759f'::uuid, 'PIEERS HUANCAYO-II', 'Junin', 'Huancayo', 'Av. Abancay 186 barrios altos lima', '20374343964')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('f9e0e911-2d75-4efe-b284-f9282f6782fd'::uuid, 'NEW BALANCE TRUJILLO', 'La Libertad', 'trujillo', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('f9efa42c-d62e-46ae-813c-88f1140a5e61'::uuid, 'Colineal San Isidro', 'Lima', 'Lima', 'Av. Prolongacio Primavera 1049', '20535751537')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -10332,7 +16483,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fa110679-93d1-4cab-a755-b4136a7fe043'::uuid, 'Conauto Juliaca', 'Arequipa', 'Arequipa', 'Av. Alfonso Ugarte 205 Arequipa', '20413666130')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fa3dc745-45fe-4940-9912-44858c7d24b2'::uuid, 'HEADMARK Chiclayo', 'Lambayeque', 'Chiclayo', 'AV Nicolas Ayllon  4671 Ate Lima', '20517206955')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('fa3f3bda-d299-4bf8-82dd-acb81075955d'::uuid, 'Somos Moto Instore', 'Lima', 'Lima', 'ARQUIMEDES 159 La Campi?Ïa - Chorrillos', '20612461717')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fa787f7c-c162-43c3-9888-3fdd54093004'::uuid, 'Ventus Instore', 'Lima', 'Lima', 'Av. Angamos Oeste 407 Miraflores', '20543754332')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10356,7 +16531,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fadf1779-04e9-4921-8f09-e7cc30427d86'::uuid, 'Invicta Pucallpa', 'Ucayali', 'Pucallpa', 'Calle Talladores 155 Urb. Los Artesanos – Ate – Lima', '20550848741')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('fae15c9e-cb7d-45b2-8de7-07f81484c8d3'::uuid, 'Futuro Vision San Borja Sur', 'LIMA', 'Lima', 'Av. San Borja Sur 536', '20185972179')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fae9192f-cc69-4c06-997c-43c45da89987'::uuid, 'MERRELL PARQUE LA MOLINA', 'Lima', 'La Molina', 'Av. Camino Real 1050 - San Isidro', '20459980963')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10396,6 +16587,38 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fb573a01-0ea5-4605-91ce-4193382a1d54'::uuid, 'Asian Fan Store Higuereta', 'Lima', 'Santiago de surco', 'Av. Caminos del Inca 257 - Santiago de Surco (Interior 124)', '20606249153')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fb82c225-ab03-4336-b2b4-fddbe82b5e9d'::uuid, 'CAT SAN MIGUEL', 'Lima', 'San Miguel', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fba3f9ed-e813-4248-9f76-34e0a8693271'::uuid, 'Emove Miraflores', 'Lima', 'Lima', 'AV JAVIER PRADO OESTE 1694-503 SAN ISIDRO', '20602590357')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fba4c8c8-91a4-4fdb-a14c-8812804517c9'::uuid, 'PANIC POINT PIURA', 'Piura', 'Piura', 'CALLE AREQUIPA 642 PIURA', '20610355782')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('fbe97783-8917-4c56-b588-3fb2165cd2e0'::uuid, 'SAMSUNG SES PLAZA SAN MIGUEL', 'Lima', 'Lima', 'AV. PERSHING NRO. 465 INT. 201 LIMA - LIMA - MAGDALENA DEL MAR', '20600108272')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -10404,7 +16627,31 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fc293268-4d27-40f6-b05a-f4130cf2b94a'::uuid, 'DONNA CATTIVA JOCKEY PLAZA', 'Lima', 'Santiago de Surco', 'JR MANUEL IRRIBARREN 1393 SURQUILLO', '20609061708')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('fc7fc37b-42a0-444b-bf53-5453a71c08cc'::uuid, 'Alese Taller Camacho Postventa', 'Lima', 'Lima', 'Av. Manuel Olguin nro. 335 int. 102 urb. Monterrico (edificio link tower 1er piso) lima - lima - Santiago de Surco', '20297867718')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fc86bf0a-f41b-4738-86a2-9d3fbce7d1fb'::uuid, 'CAT CAJAMARCA', 'Cajamarca', 'Cajamarca', 'Av. Camino Real 1050 - San Isidro', '20459980963')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fc8fbee8-622a-4e54-bb31-c7a618e2414e'::uuid, 'CROCS_SALAVERRY', 'Lima', 'Lima', 'AV SANTA CRUZ 466 SAN ISIDRO', '20601664489')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10428,7 +16675,7 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
-VALUES ('fcea71b5-aeb6-4718-8687-187ec9750825'::uuid, 'CLINICA INTERNACIONAL LA MOLINA', '', '', 'Jr Washington 1471 Cercado de lima', '20100054184')
+VALUES ('fcea71b5-aeb6-4718-8687-187ec9750825'::uuid, 'CLINICA INTERNACIONAL LA MOLINA', 'LIMA', 'LIMA', 'Jr Washington 1471 Cercado de lima', '20100054184')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10460,7 +16707,23 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fd64b9a7-d560-4e0b-8940-1824fd790a35'::uuid, 'Bata B3 COMAS', 'Lima', 'Lima', 'AV. RICARDO PALMA NRO. 341 INT. 1101 (PISO 11) LIMA - LIMA - MIRAFLORES', '20101951872')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('fdcec137-1e13-43c8-a959-c524a302edf5'::uuid, 'SkullCandy Venta Asistida', 'LIMA', 'LIMA', 'Av Mariscal La Mar 1263', '20519478511')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fe266bec-dde3-4fea-a278-a920ab1dd982'::uuid, 'Limitless Instore', 'Lima', 'San Isidro', 'Av. General Francisco Valle R 572 San Isidro', '20606734418')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10477,6 +16740,22 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('fe47e1dd-6297-42a0-9ebf-858467a77b90'::uuid, 'Deportify Principal', 'LIMA', 'Lima', 'Cal. San Carlos 14', '20609354055')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fe593dc3-28ce-4798-8a6b-ad797408b0cd'::uuid, 'Ssenda Selva Pucallpa', 'Ucayali', 'Pucallpa', 'AV Nicolas Ayllon  4671 Ate Lima', '20608038834')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('fe87acfc-68e2-42e1-b4c4-4f2f19bb45b2'::uuid, 'Music Market Surco', 'Lima', 'Lima', 'AV. BENAVIDES N° 385 INT. 44 - MIRAFLORES', '20512232176')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,
@@ -10532,6 +16811,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   billing_address = EXCLUDED.billing_address,
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ff479cc8-96e0-4439-8a17-472157539bfd'::uuid, 'Lucasar Arequipa', 'Arequipa', 'Arequipa', 'PJE. DEAN VALDIVIA 205 YANAHUARA - AREQUIPA', '20600862775')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ff527a0d-f3d8-44d1-aed2-cf840c37af53'::uuid, 'Michelle Belau San Borja', 'Lima', 'Lima', 'AV. MARISCAL ELOY URETA NRO. 185 INT. 191 URB. EL PINO LIMA - SAN LUIS', '20296897338')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
@@ -10557,6 +16844,14 @@ ON CONFLICT (merchant_id) DO UPDATE SET
   ruc             = EXCLUDED.ruc;
 INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
 VALUES ('ff7d2c68-9ae6-4116-ae75-f95cac8147bd'::uuid, 'Btime Modulo Jockey', 'Lima', 'Lima', 'AVENIDA CAMINO REAL 348 INT 805z TORRE EL PILAR PISO 8 - SAN ISIDRO - LIMA', '20603802137')
+ON CONFLICT (merchant_id) DO UPDATE SET
+  display_name    = EXCLUDED.display_name,
+  departamento    = EXCLUDED.departamento,
+  provincia       = EXCLUDED.provincia,
+  billing_address = EXCLUDED.billing_address,
+  ruc             = EXCLUDED.ruc;
+INSERT INTO list_merchant_store (merchant_id, display_name, departamento, provincia, billing_address, ruc)
+VALUES ('ffd44a91-f86e-4297-a39a-c7ab0333a60b'::uuid, 'SOS Veterinaria Clínica Instore', 'Lima', 'Lima', 'AV. MARISCAL JOSE DE LA MAR - MIRAFLORES', '20602841899')
 ON CONFLICT (merchant_id) DO UPDATE SET
   display_name    = EXCLUDED.display_name,
   departamento    = EXCLUDED.departamento,

@@ -1,1 +1,187 @@
-### SIN EVENTOS PARA PROBAR ###
+###
+  ### Test RT — Prueba regla RP29 -  Primera compra en menos de 24 horas en comercio in store de Lima###   
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{"applicationType":"POWERPAY","deviceId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","cardToken":"kpwafensgews8jw9ycdm","Biometria":"SI","affordability":{"totalCreditLimit":{"baseValue":8800,"currency":"PER","value":8800,"baseCurrency":"PER"}},"creditApplicationScore":"0","customerType":"PHYSICAL","emailEntityId":"christianarturogerereyna@gmail.com","applicationStatus":"pending","merchantId":"91b60c84-a53b-4474-9df0-56313d666614","maxMind":{"cityDbLongitude":"-77.0305","cityDbCountryName":"Perú","cityDbLatitude":"-12.046","cityDbPostalCode":"--","cityDbContinentName":"Sudamérica","ispDbAutonomousSystemOrganization":"VIETTEL PERU S.A.C.","cityDbRepresentedCountryType":"--","ispDbName":"Bitel","cityDbTimezone":"America/Lima","connectionType":"Cellular","cityDbCityName":"Lima","cityDbMetroCode":"--","cityDbGeoNamesIDs":"3932488","ispDbMobileCountryCode":"716","cityDbAccuracyRadius":"200","cityDbRegisteredCountry":"Perú","ispDbOrganizationName":"Bitel","cityDbSubdivisionsName1":"--","cityDbSubdivisionsName0":"Provincia de Lima","cityDbSubdivisionsCode0":"LMA","cityDbContinentCode":"SA","cityDbSubdivisionsCode1":"--","cityDbCountryCode":"PE","cityDbSubdivisionsName2":"--","cityDbSubdivisionsCode2":"--","ispDbMobileNetworkCode":"15","domainName":"--","ispDbAutonomousSystemNumber":"262210"},"flag3DS":"N","_metadata":{"eventId":"77353ece-d3f6-443d-8032-10ba227e124c_1773358155.69997","execution":{"expectResponse":true},"maxMind_cityDbEuCountry":"false","systemEventId":"263339558-02eAnAsX","entities":{"PARTY":["44811881"],"MOBILEPHONE":["983167610"],"CITY":["Lima"],"APPLICATION":["IHCM06Y5Q4XG"],"IP":["181.176.109.114"],"DEVICE":["01fdcfb3-e145-4bbc-af05-f9a9f7da44d4"],"SALESPERSON":["148513"],"CUSTOMER":["86f56a52-2fe8-441a-901d-609f64ea1a45"],"EMAIL":["christianarturogerereyna@gmail.com"],"MCC":["5732"],"CARD":["a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c"],"MERCHANT":["91b60c84-a53b-4474-9df0-56313d666614"]},"receivedTime":"2026-03-12T23:29:15Z","eventTime":"2026-03-12T23:29:15.698723Z","tenantId":["Powerpay"],"eventType":"fullApplicationRT","searchable":{"eventId":"77353ece-d3f6-443d-8032-10ba227e124c_1773358155.69997","merchantShortName":"Honor Puruchuco","customerEntityId":"86f56a52-2fe8-441a-901d-609f64ea1a45","mccEntityId":"5732","merchantEntityId":"91b60c84-a53b-4474-9df0-56313d666614","salespersonEntityId":"148513","eventType":"fullApplicationRT","deviceId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","customerIdentification":{"documentNumber":"44811881"},"deviceEntityId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","personalEntityId":"44811881","homeEmail":"christianarturogerereyna@gmail.com","emailEntityId":"christianarturogerereyna@gmail.com","cardEntityId":"a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c","mobilePhoneEntityId":"983167610","eventTime":"2026-03-12T23:29:15.698723Z","name":{"fullName":"Christian Arturo Gere Reyna"},"applicationId":"IHCM06Y5Q4XG","device":{"ipAddress":"181.176.109.114","ipAddressV4":"181.176.109.114"},"applicantCityEntityId":"Lima","applicationDate":"2026-03-12"},"maxMind_cityDbRegisteredEuCountry":"false"},"homeAddress":{"country":"PER","townName":"LIMA","countrySubDivision":"LIMA","addressLine1":"CALLE|PRAGA|150|||URB|PORTALES J.PRADO|Ñ|6"},"eventId":"77353ece-d3f6-443d-8032-10ba227e124c_1773358155.69997","numberInstallments":6,"nrovecescambiocard":0,"captureDateTime":"2026-03-12T18:29:11.045293-05:00","countryRegion":"PER","salespersonEntityId":"148513","Fallecido":"NO","eventType":"fullApplicationRT","deviceEntityId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","personalEntityId":"44811881","homeEmail":"christianarturogerereyna@gmail.com","nationality":"PE","mobilePhone":{"number":"983167610","countryRegionCode":"51"},"cardId":"a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c","name":{"surname":"Gere Reyna","givenName":"Christian","fullName":"Christian Arturo Gere Reyna","middleName":"Arturo"},"applicationId":"IHCM06Y5Q4XG","device":{"deviceFingerprint":"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36","ipAddress":"181.176.109.114","ipAddressV4":"181.176.109.114"},"applicantCityEntityId":"Lima","applicationDate":"2026-03-12","merchantShortName":"Honor Puruchuco","telephoneNumber":"983167610","customerOnboardDate":"2024-08-10","gender":"M","thirdPartyRiskScore":4,"customerEntityId":"86f56a52-2fe8-441a-901d-609f64ea1a45","session":{"sessionStartTime":"2026-03-12T23:29:14.570576+00:00","sessionId":"MfCol4LE06aeqXUKo4lv97zrynrv6xlR"},"numberPaidLoans":5,"mccEntityId":"5732","merchantEntityId":"91b60c84-a53b-4474-9df0-56313d666614","totalTimeDuringApplicationSubmissionInSeconds":223.343758,"customerIdentification":{"documentType":"DNI","documentNumber":"44811881"},"applicationChannel":"POINT_OF_SALE","submissionDateTime":"2026-03-12T18:29:11.061942-05:00","cardEntityId":"a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c","eventTime":"2026-03-12T18:29:15.698723-05:00","customerId":"86f56a52-2fe8-441a-901d-609f64ea1a45","merchantCountry":"PER","amount":{"baseValue":600,"currency":"PER","value":600,"baseCurrency":"PER"},"schemaVersion":1,"dateOfBirth":"1988-01-22","cardholder":"Christian Arturo Gere Reyna","customerNumber":"4NTM1FF39EIU","numberActiveLoans":3,"merchantActivityStatus":"enabled","thirdPartyKYC":{"statusBuro":"approved","ppm":930.22,"scoreKYC":100,"effort_rate":24.41},"mobilePhoneEntityId":"983167610","merchantCategoryCode":"5732","tenantId":"Powerpay","amountInstallment":{"baseValue":112.5,"currency":"PER","value":112.5,"baseCurrency":"PER"},"age":38}
+
+###
+  ### Test NRT — Prueba regla RP29 -  Primera compra en menos de 24 horas en comercio in store de Lima###   
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{"applicationType":"POWERPAY","loanreference":"OGV24P0LKXMT","deviceId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","cardToken":"kpwafensgews8jw9ycdm","Biometria":"SI","affordability":{"totalCreditLimit":{"baseValue":8800,"currency":"PER","value":8800,"baseCurrency":"PER"}},"creditApplicationScore":0,"customerType":"PHYSICAL","emailEntityId":"christianarturogerereyna@gmail.com","applicationStatus":"completed","merchantId":"91b60c84-a53b-4474-9df0-56313d666614","maxMind":{"cityDbLongitude":"-77.0305","cityDbCountryName":"Perú","cityDbLatitude":"-12.046","cityDbPostalCode":"--","cityDbContinentName":"Sudamérica","ispDbAutonomousSystemOrganization":"VIETTEL PERU S.A.C.","cityDbRepresentedCountryType":"--","ispDbName":"Bitel","cityDbTimezone":"America/Lima","connectionType":"Cellular","cityDbCityName":"Lima","cityDbMetroCode":"--","cityDbGeoNamesIDs":"3932488","ispDbMobileCountryCode":"716","cityDbAccuracyRadius":"200","cityDbRegisteredCountry":"Perú","ispDbOrganizationName":"Bitel","cityDbSubdivisionsName1":"--","cityDbSubdivisionsName0":"Provincia de Lima","cityDbSubdivisionsCode0":"LMA","cityDbContinentCode":"SA","cityDbSubdivisionsCode1":"--","cityDbCountryCode":"PE","cityDbSubdivisionsName2":"--","cityDbSubdivisionsCode2":"--","ispDbMobileNetworkCode":"15","domainName":"--","ispDbAutonomousSystemNumber":"262210"},"flag3DS":"N","_metadata":{"eventId":"77353ece-d3f6-443d-8032-10ba227e124c_1773358165.480998","execution":{"expectResponse":false},"maxMind_cityDbEuCountry":"false","systemEventId":"263340243-pDetDp6t","entities":{"PARTY":["44811881"],"MOBILEPHONE":["983167610"],"CITY":["Lima"],"APPLICATION":["IHCM06Y5Q4XG"],"IP":["181.176.109.114"],"DEVICE":["01fdcfb3-e145-4bbc-af05-f9a9f7da44d4"],"SALESPERSON":["148513"],"CUSTOMER":["86f56a52-2fe8-441a-901d-609f64ea1a45"],"EMAIL":["christianarturogerereyna@gmail.com"],"MCC":["5732"],"CARD":["a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c"],"MERCHANT":["91b60c84-a53b-4474-9df0-56313d666614"]},"receivedTime":"2026-03-12T23:29:25Z","eventTime":"2026-03-12T23:29:25.479594Z","tenantId":["Powerpay"],"eventType":"fullApplicationNRT","searchable":{"merchantShortName":"Honor Puruchuco","eventId":"77353ece-d3f6-443d-8032-10ba227e124c_1773358165.480998","customerEntityId":"86f56a52-2fe8-441a-901d-609f64ea1a45","mccEntityId":"5732","merchantEntityId":"91b60c84-a53b-4474-9df0-56313d666614","salespersonEntityId":"148513","eventType":"fullApplicationNRT","deviceId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","msgStatus":"","customerIdentification":{"documentNumber":"44811881"},"deviceEntityId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","personalEntityId":"44811881","homeEmail":"christianarturogerereyna@gmail.com","emailEntityId":"christianarturogerereyna@gmail.com","cardEntityId":"a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c","mobilePhoneEntityId":"983167610","eventTime":"2026-03-12T23:29:25.479594Z","name":{"fullName":"Christian Arturo Gere Reyna"},"applicationId":"IHCM06Y5Q4XG","device":{"ipAddress":"181.176.109.114","ipAddressV4":"181.176.109.114"},"applicantCityEntityId":"Lima","applicationDate":"2026-03-12"},"maxMind_cityDbRegisteredEuCountry":"false"},"homeAddress":{"country":"PER","townName":"LIMA","countrySubDivision":"LIMA","addressLine1":"CALLE|PRAGA|150|||URB|PORTALES J.PRADO|Ñ|6"},"eventId":"77353ece-d3f6-443d-8032-10ba227e124c_1773358165.480998","numberInstallments":6,"nrovecescambiocard":0,"captureDateTime":"2026-03-12T18:29:11.045293-05:00","countryRegion":"PER","salespersonEntityId":"148513","Fallecido":"NO","eventType":"fullApplicationNRT","deviceEntityId":"01fdcfb3-e145-4bbc-af05-f9a9f7da44d4","personalEntityId":"44811881","homeEmail":"christianarturogerereyna@gmail.com","nationality":"PE","mobilePhone":{"number":"983167610","countryRegionCode":"51"},"cardId":"a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c","name":{"surname":"Gere Reyna","givenName":"Christian","fullName":"Christian Arturo Gere Reyna","middleName":"Arturo"},"applicationId":"IHCM06Y5Q4XG","device":{"deviceFingerprint":"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36","ipAddress":"181.176.109.114","ipAddressV4":"181.176.109.114"},"applicantCityEntityId":"Lima","applicationDate":"2026-03-12","merchantShortName":"Honor Puruchuco","msgType":"","telephoneNumber":"983167610","customerOnboardDate":"2024-08-10","gender":"M","thirdPartyRiskScore":4,"customerEntityId":"86f56a52-2fe8-441a-901d-609f64ea1a45","session":{"sessionStartTime":"2026-03-12T23:29:14.570576+00:00","sessionId":"MfCol4LE06aeqXUKo4lv97zrynrv6xlR"},"numberPaidLoans":5,"mccEntityId":"5732","merchantEntityId":"91b60c84-a53b-4474-9df0-56313d666614","totalTimeDuringApplicationSubmissionInSeconds":230.970017,"msgStatus":"","customerIdentification":{"documentType":"DNI","documentNumber":"44811881"},"applicationChannel":"POINT_OF_SALE","submissionDateTime":"2026-03-12T18:29:11.061942-05:00","cardEntityId":"a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c","eventTime":"2026-03-12T18:29:25.479594-05:00","customerId":"86f56a52-2fe8-441a-901d-609f64ea1a45","merchantCountry":"PER","loanstate":"active","amount":{"baseValue":600,"currency":"PER","value":600,"baseCurrency":"PER"},"schemaVersion":1,"dateOfBirth":"1988-01-22","cardholder":"Christian Arturo Gere Reyna","customerNumber":"4NTM1FF39EIU","numberActiveLoans":4,"merchantActivityStatus":"enabled","thirdPartyKYC":{"statusBuro":"approved","ppm":930.22,"scoreKYC":100,"effort_rate":24.41},"mobilePhoneEntityId":"983167610","merchantCategoryCode":"5732","tenantId":"Powerpay","amountInstallment":{"baseValue":112.5,"currency":"PER","value":112.5,"baseCurrency":"PER"},"age":38}
+
+
+###
+  ### Test RT — Prueba regla RP29 -  001 ###  SE FUERZA CAMBIANDO EL COMERCIO IN STORE DE LIMA A GP MOTOS MAVILA CHICLAYO
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "deviceId": "9ee524ef-f90e-43c4-8051-cee45077f818",
+  "cardToken": "kpwafensgews8jw9ycdm",
+  "Biometria": "SI",
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 8800,
+      "currency": "PER",
+      "value": 8800,
+      "baseCurrency": "PER"
+    }
+  },
+  "creditApplicationScore": "0",
+  "customerType": "PHYSICAL",
+  "emailEntityId": "christianarturogerereyna@gmail.com",
+  "applicationStatus": "pending",
+  "merchantId": "209f6d22-e254-4da6-a64d-52197f065aec",
+  "maxMind": {
+    "cityDbLongitude": "-77.0305",
+    "cityDbCountryName": "Perú",
+    "cityDbLatitude": "-12.046",
+    "cityDbPostalCode": "--",
+    "cityDbContinentName": "Sudamérica",
+    "ispDbAutonomousSystemOrganization": "VIETTEL PERU S.A.C.",
+    "ispDbRepresentedCountryType": "--",
+    "ispDbName": "Bitel",
+    "cityDbTimezone": "America/Lima",
+    "connectionType": "Cellular",
+    "cityDbCityName": "Lima",
+    "cityDbMetroCode": "--",
+    "cityDbGeoNamesIDs": "3932488",
+    "ispDbMobileCountryCode": "716",
+    "cityDbAccuracyRadius": "200",
+    "cityDbRegisteredCountry": "Perú",
+    "ispDbOrganizationName": "Bitel",
+    "cityDbSubdivisionsName1": "--",
+    "cityDbSubdivisionsName0": "Provincia de Lima",
+    "cityDbSubdivisionsCode0": "LMA",
+    "cityDbContinentCode": "SA",
+    "cityDbSubdivisionsCode1": "--",
+    "cityDbCountryCode": "PE",
+    "cityDbSubdivisionsName2": "--",
+    "cityDbSubdivisionsCode2": "--",
+    "ispDbMobileNetworkCode": "15",
+    "domainName": "--",
+    "ispDbAutonomousSystemNumber": "262210"
+  },
+  "flag3DS": "N",
+  "_metadata": {
+    "eventId": "dd54b7b3-1739-47fd-b5f0-e2e0428fe775_1773359106.597531",
+    "execution": {
+      "expectResponse": true
+    },
+    "systemEventId": "262350230-JiiNm9tx",
+    "entities": {
+      "PARTY": ["44811881"],
+      "MOBILEPHONE": ["983167610"],
+      "CITY": ["Lima"],
+      "APPLICATION": ["QP1TG7YGIRXP"],
+      "IP": ["181.176.109.114"],
+      "DEVICE": ["9ee524ef-f90e-43c4-8051-cee45077f818"],
+      "SALESPERSON": ["148513"],
+      "CUSTOMER": ["86f56a52-2fe8-441a-901d-609f64ea1a45"],
+      "EMAIL": ["christianarturogerereyna@gmail.com"],
+      "MCC": ["5732"],
+      "CARD": [
+        "a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c"
+      ],
+      "MERCHANT": ["209f6d22-e254-4da6-a64d-52197f065aec"]
+    },
+    "receivedTime": "2026-03-12T23:45:06Z",
+    "eventTime": "2026-03-12T23:45:06.596074Z",
+    "tenantId": ["Powerpay"],
+    "eventType": "fullApplicationRT"
+  },
+  "homeAddress": {
+    "country": "PER",
+    "townName": "LIMA",
+    "countrySubDivision": "LIMA",
+    "addressLine1": "CALLE|PRAGA|150|||URB|PORTALES J.PRADO|Ñ|6"
+  },
+  "eventId": "dd54b7b3-1739-47fd-b5f0-e2e0428fe775_1773359106.597531",
+  "numberInstallments": 6,
+  "nrovecescambiocard": 0,
+  "captureDateTime": "2026-03-12T18:45:03.652372-05:00",
+  "countryRegion": "PER",
+  "salespersonEntityId": "148513",
+  "Fallecido": "NO",
+  "eventType": "fullApplicationRT",
+  "deviceEntityId": "9ee524ef-f90e-43c4-8051-cee45077f818",
+  "personalEntityId": "44811881",
+  "homeEmail": "christianarturogerereyna@gmail.com",
+  "nationality": "PE",
+  "mobilePhone": {
+    "number": "983167610",
+    "countryRegionCode": "51"
+  },
+  "cardId": "a3dcb66000c615efe981dc79862e3df98d75bea401d4a42aad6d8474b340ef9c",
+  "name": {
+    "surname": "Gere Reyna",
+    "givenName": "Christian",
+    "middleName": "Arturo",
+    "fullName": "Christian Arturo Gere Reyna"
+  },
+  "applicationId": "QP1TG7YGIRXP",
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36",
+    "ipAddress": "181.176.109.114",
+    "ipAddressV4": "181.176.109.114"
+  },
+  "applicationDate": "2026-03-12",
+  "merchantShortName": "GP MOTOS MAVILA CHICLAYO",
+  "telephoneNumber": "983167610",
+  "customerOnboardDate": "2024-08-10",
+  "gender": "M",
+  "thirdPartyRiskScore": 4,
+  "customerEntityId": "86f56a52-2fe8-441a-901d-609f64ea1a45",
+  "session": {
+    "sessionStartTime": "2026-03-12T23:45:05.444075+00:00",
+    "sessionId": "f8l5bs3HQAp47SrlRNTEMbvq11ACqhDu"
+  },
+  "numberPaidLoans": 5,
+  "mccEntityId": "5732",
+  "merchantEntityId": "209f6d22-e254-4da6-a64d-52197f065aec",
+  "totalTimeDuringApplicationSubmissionInSeconds": 162.81357,
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "44811881"
+  },
+  "applicationChannel": "POINT_OF_SALE",
+  "submissionDateTime": "2026-03-12T18:45:03.680248-05:00",
+  "eventTime": "2026-03-12T18:45:06.596074-05:00",
+  "customerId": "86f56a52-2fe8-441a-901d-609f64ea1a45",
+  "merchantCountry": "PER",
+  "amount": {
+    "baseValue": 200,
+    "currency": "PER",
+    "value": 200,
+    "baseCurrency": "PER"
+  },
+  "schemaVersion": 1,
+  "dateOfBirth": "1988-01-22",
+  "cardholder": "Christian Arturo Gere Reyna",
+  "customerNumber": "4NTM1FF39EIU",
+  "numberActiveLoans": 4,
+  "merchantActivityStatus": "enabled",
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "ppm": 930.22,
+    "scoreKYC": 100,
+    "effort_rate": 24.41
+  },
+  "mobilePhoneEntityId": "983167610",
+  "merchantCategoryCode": "5732",
+  "tenantId": "Powerpay",
+  "amountInstallment": {
+    "baseValue": 37.06,
+    "currency": "PER",
+    "value": 37.06,
+    "baseCurrency": "PER"
+  },
+  "age": 38
+}
