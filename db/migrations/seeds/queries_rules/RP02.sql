@@ -1,15 +1,19 @@
 -- =============================================
 -- Regla: RP02 — challengeDosComprasMismoDia
--- Versión: 1
--- Fecha: 2026-03-06
+-- Versión: 2
+-- Fecha: 2026-03-12
 -- Histórico BigQuery: NO
+-- Cambios v2:
+--   1. Elimina NOT EXISTS fact_payment en compras previas del histórico
+--      — un crédito previo puede tener pagos de cuotas asociados
 -- Cambios v1:
 --   1. Versión inicial
---   2. Segunda compra en últimas 24 horas (no mismo día calendario)
---   3. Compra previa debe ser crédito (sin pago asociado)
---   4. No debe haber pasado biometría en la compra ni anteriormente
---   5. DNI no debe estar en lista blanca
---   6. No debe tener alertas descartadas previamente
+--   2. Compra completada con biometría NO
+--   3. Existe compra previa completada en las últimas 24h
+--   4. DNI no debe estar en lista blanca
+--   5. Debe ser un crédito — sin pago asociado en la compra actual
+--   6. No debe haber pasado biometría anteriormente
+--   7. No debe tener alertas descartadas previamente
 -- =============================================
 WITH params AS (
   SELECT $1::uuid AS customer_id, $2::varchar AS application_id,
@@ -20,20 +24,16 @@ FROM fact_application fa
 JOIN dim_customer dc ON fa.customer_id = dc.customer_id
 JOIN params p ON fa.application_id = p.application_id
 WHERE fa.application_status = 'completed'
-  -- Segunda compra o más en las últimas 24 horas
+  -- No debe haber pasado biometría en la compra
+  AND fa.biometria = 'NO'
+  -- Existe compra previa completada en las últimas 24h
   AND EXISTS (
     SELECT 1 FROM fact_application fa2
     WHERE fa2.customer_id = p.customer_id
       AND fa2.application_id != p.application_id
       AND fa2.application_status = 'completed'
       AND fa2.submission_datetime >= NOW() - INTERVAL '24 hours'
-      AND NOT EXISTS (
-        SELECT 1 FROM fact_payment fp2
-        WHERE fp2.application_id = fa2.application_id
-      )
   )
-  -- No debe haber pasado biometría en la compra
-  AND fa.biometria = 'NO'
   -- DNI no debe estar en lista blanca
   AND NOT EXISTS (
     SELECT 1 FROM list_dni ld

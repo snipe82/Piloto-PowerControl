@@ -17,7 +17,7 @@ X-API-Key: pc-antifraude-local-key-2026
 
 
 ###
-  ### Test RT — Prueba regla RP09 -  001 ###  SE FORZO COLOCANDO BIOMETRIA EN NO Y CAMBIANDO LA HORA LOCAL
+  ### Test RT — Prueba regla RP09 -  001 ###  SE FORZO COLOCANDO BIOMETRIA EN NO Y COLOCANDO FECHA 25 FEB 2026 17:25
 POST http://localhost:3015/api/v1/events/fullApplicationRT
 Content-Type: application/json
 X-API-Key: pc-antifraude-local-key-2026
