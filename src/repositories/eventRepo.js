@@ -70,21 +70,22 @@ async function markError(eventId, errorMsg) {
 
 async function getAlertsByEvent(eventId) {
   const rows = await db.query(`
-    SELECT
-      fa.alert_id,
-      fa.rule_code,
-      fa.severity,
-      fa.status,
-      fa.created_at,
-      dr.rule_name,
-      dr.blocks_operation
-    FROM fact_alert fa
-    JOIN dim_rule dr ON dr.rule_code = fa.rule_code
-    JOIN fact_event fe ON fe.event_id = fa.event_id
-    WHERE fa.event_id = $1
-      AND fa.status = 'OPEN'
-      AND fe.status = 'PROCESSED'
-  `, [eventId]);
+        SELECT
+            fa.alert_id,
+            fa.rule_code,
+            fa.severity,
+            fa.status,
+            fa.created_at,
+            dr.rule_name,
+            dr.blocks_operation,
+            dr.entity_type
+        FROM fact_alert fa
+        JOIN dim_rule dr ON dr.rule_code = fa.rule_code
+        JOIN fact_event fe ON fe.event_id = fa.event_id
+        WHERE fa.event_id = $1
+            AND fa.status = 'OPEN'
+            AND fe.status = 'PROCESSED'
+    `, [eventId]);
 
   return rows;
 }

@@ -4,15 +4,15 @@ function buildRiskStatus(rulesActivated) {
     return 'review';
 }
 
-function buildConfigGroups(rulesActivated) {
-    if (rulesActivated.length === 0) return [];
+function buildConfigGroups(rulesForEntity) {
+    if (rulesForEntity.length === 0) return [];
 
     return [{
         id: 'Powerpay',
         type: 'tenant',
-        triggeredrules: rulesActivated.map(r => r.ruleName),
+        triggeredrules: rulesForEntity.map(r => r.ruleName),
         rulescontributingevents: {},
-        merchants: rulesActivated.map(r => ({
+        merchants: rulesForEntity.map(r => ({
             merchantid: `Rule: ${r.ruleName}`,
             aggregatescore: 1,
             alert: true,
@@ -33,16 +33,22 @@ function buildConfigGroups(rulesActivated) {
     }];
 }
 
-function buildOutputTags(rulesActivated) {
-    if (rulesActivated.length === 0) return [];
+function buildOutputTags(rulesForEntity) {
+    if (rulesForEntity.length === 0) return [];
     return [{
         tag: '_tag',
-        values: rulesActivated.map(r => r.ruleCode),
+        values: rulesForEntity.map(r => r.ruleCode),
     }];
 }
 
 function buildEntities(payload, rulesActivated) {
-    const customerRiskStatus = buildRiskStatus(rulesActivated);
+    // Separar reglas por entity_type
+    const rulesByEntity = {
+        customer: rulesActivated.filter(r => (r.entityType || 'customer') === 'customer'),
+        merchant: rulesActivated.filter(r => r.entityType === 'merchant'),
+        card: rulesActivated.filter(r => r.entityType === 'card'),
+        device: rulesActivated.filter(r => r.entityType === 'device'),
+    };
 
     return [
         // MOBILEPHONE
@@ -89,20 +95,20 @@ function buildEntities(payload, rulesActivated) {
             riskstatus: 'no-risk',
             tenantid: payload.tenantid || 'Powerpay',
         },
-        // CUSTOMER — acá van las alertas
+        // CUSTOMER
         {
             entityid: payload.customerid,
             entitytype: 'CUSTOMER',
-            configgroups: buildConfigGroups(rulesActivated),
+            configgroups: buildConfigGroups(rulesByEntity.customer),
             models: [{
                 modelid: 'businessrules',
                 confidence: null,
                 score: null,
                 tags: [],
             }],
-            outputtags: buildOutputTags(rulesActivated),
+            outputtags: buildOutputTags(rulesByEntity.customer),
             overallscore: { overallscore: null },
-            riskstatus: customerRiskStatus,
+            riskstatus: buildRiskStatus(rulesByEntity.customer),
             tenantid: payload.tenantid || 'Powerpay',
         },
         // PARTY (DNI)
@@ -120,11 +126,16 @@ function buildEntities(payload, rulesActivated) {
         {
             entityid: payload.merchantid,
             entitytype: 'MERCHANT',
-            configgroups: [],
-            models: [],
-            outputtags: [],
+            configgroups: buildConfigGroups(rulesByEntity.merchant),
+            models: [{
+                modelid: 'businessrules',
+                confidence: null,
+                score: null,
+                tags: [],
+            }],
+            outputtags: buildOutputTags(rulesByEntity.merchant),
             overallscore: { overallscore: null },
-            riskstatus: 'no-risk',
+            riskstatus: buildRiskStatus(rulesByEntity.merchant),
             tenantid: payload.tenantid || 'Powerpay',
         },
         // MCC
@@ -153,22 +164,32 @@ function buildEntities(payload, rulesActivated) {
         {
             entityid: payload.deviceid,
             entitytype: 'DEVICE',
-            configgroups: [],
-            models: [],
-            outputtags: [],
+            configgroups: buildConfigGroups(rulesByEntity.device),
+            models: [{
+                modelid: 'businessrules',
+                confidence: null,
+                score: null,
+                tags: [],
+            }],
+            outputtags: buildOutputTags(rulesByEntity.device),
             overallscore: { overallscore: null },
-            riskstatus: 'no-risk',
+            riskstatus: buildRiskStatus(rulesByEntity.device),
             tenantid: payload.tenantid || 'Powerpay',
         },
         // CARD
         {
             entityid: payload.cardid || '',
             entitytype: 'CARD',
-            configgroups: [],
-            models: [],
-            outputtags: [],
+            configgroups: buildConfigGroups(rulesByEntity.card),
+            models: [{
+                modelid: 'businessrules',
+                confidence: null,
+                score: null,
+                tags: [],
+            }],
+            outputtags: buildOutputTags(rulesByEntity.card),
             overallscore: { overallscore: null },
-            riskstatus: 'no-risk',
+            riskstatus: buildRiskStatus(rulesByEntity.card),
             tenantid: payload.tenantid || 'Powerpay',
         },
     ];

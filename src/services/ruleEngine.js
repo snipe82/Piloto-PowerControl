@@ -6,7 +6,7 @@ const rulesCache = {
     fullApplicationNRT: { rules: null, expiresAt: 0 },
 };
 
-const CACHE_TTL_MS = parseInt(process.env.RULES_CACHE_TTL_MS) || 5 * 60 * 1000; // 5 min default
+const CACHE_TTL_MS = parseInt(process.env.RULES_CACHE_TTL_MS) || 5 * 60 * 1000;
 
 function validateRuleSQL(sql) {
     if (!sql || typeof sql !== 'string') {
@@ -15,12 +15,10 @@ function validateRuleSQL(sql) {
 
     const normalized = sql.trim().toUpperCase();
 
-    // Solo permitir SELECT o WITH (CTEs)
     if (!normalized.startsWith('SELECT') && !normalized.startsWith('WITH')) {
         throw new Error('Regla rechazada — solo se permiten SELECT o WITH');
     }
 
-    // CTEs con DML — PostgreSQL permite DELETE/UPDATE/INSERT dentro de CTEs
     if (normalized.startsWith('WITH')) {
         const DML_IN_CTE = ['DELETE FROM', 'UPDATE ', 'INSERT INTO'];
         const found = DML_IN_CTE.find(kw => normalized.includes(kw));
@@ -29,13 +27,11 @@ function validateRuleSQL(sql) {
         }
     }
 
-    // Remover comentarios SQL antes de validar keywords peligrosos
     const withoutComments = sql
-        .replace(/--[^\n]*/g, '')    // remover comentarios de línea (--)
-        .replace(/\/\*[\s\S]*?\*\//g, '') // remover comentarios de bloque (/* */)
+        .replace(/--[^\n]*/g, '')
+        .replace(/\/\*[\s\S]*?\*\//g, '')
         .toUpperCase();
 
-    // Bloquear keywords peligrosos
     const FORBIDDEN = [
         'DROP', 'DELETE', 'TRUNCATE', 'ALTER', 'CREATE',
         'EXECUTE', 'EXEC', 'INSERT', 'UPDATE', ';',
@@ -93,24 +89,22 @@ async function loadActiveRules(eventType) {
         throw new Error(`eventType inválido: "${eventType}"`);
     }
 
-    // Verificar caché
     const cached = rulesCache[eventType];
     if (cached.rules && Date.now() < cached.expiresAt) {
         console.log(`🔍 Reglas desde caché para: ${eventType} (${cached.rules.length} reglas)`);
         return cached.rules;
     }
 
-    // Cargar desde BD y actualizar caché
     console.log(`🔍 Cargando reglas desde BD para: ${eventType} — columna: ${column}`);
 
     const rows = await db.query(`
-    SELECT rule_code, rule_name, severity, blocks_operation, query_sql
-    FROM dim_rule
-    WHERE is_active = true
-      AND ${column} = true
-      AND query_sql IS NOT NULL
-    ORDER BY priority ASC, rule_code ASC
-  `);
+        SELECT rule_code, rule_name, severity, blocks_operation, query_sql, entity_type
+        FROM dim_rule
+        WHERE is_active = true
+          AND ${column} = true
+          AND query_sql IS NOT NULL
+        ORDER BY priority ASC, rule_code ASC
+    `);
 
     rulesCache[eventType] = {
         rules: rows,
@@ -118,12 +112,11 @@ async function loadActiveRules(eventType) {
     };
 
     console.log(`🔍 Reglas cargadas desde BD: ${rows.length} — caché válido por ${CACHE_TTL_MS / 1000}s`);
-    rows.forEach(r => console.log(`   - ${r.rule_code}`));
+    rows.forEach(r => console.log(`   - ${r.rule_code} [${r.entity_type || 'customer'}]`));
 
     return rows;
 }
 
-// Invalidar caché manualmente — útil cuando se modifica dim_rule
 function invalidateRulesCache(eventType) {
     if (eventType) {
         rulesCache[eventType] = { rules: null, expiresAt: 0 };
@@ -150,13 +143,22 @@ async function executeRules(payload, eventType) {
         rules.map(rule => executeRule(rule, payload))
     );
 
-    const rulesActivated = results.filter(r => r !== null);
-    const blocked = rulesActivated.some(r => r.blocks_operation === true);
+    const rulesActivated = results
+        .filter(r => r !== null)
+        .map(r => ({
+            ruleCode: r.rule_code,
+            ruleName: r.rule_name,
+            severity: r.severity,
+            blocks: r.blocks_operation === true,
+            entityType: r.entity_type || 'customer',
+        }));
+
+    const blocked = rulesActivated.some(r => r.blocks);
 
     if (rulesActivated.length > 0) {
         console.log(`🚨 ${rulesActivated.length} regla(s) activada(s) en appId: ${payload.applicationid}`);
         rulesActivated.forEach(r => {
-            console.log(`   ${r.blocks_operation ? '🔴 BLOQUEA' : '🟡 ALERTA'} ${r.rule_code} — ${r.rule_name} [${r.severity}]`);
+            console.log(`   ${r.blocks ? '🔴 BLOQUEA' : '🟡 ALERTA'} ${r.ruleCode} — ${r.ruleName} [${r.severity}] [${r.entityType}]`);
         });
     } else {
         console.log(`✅ Sin reglas activadas para appId: ${payload.applicationid}`);

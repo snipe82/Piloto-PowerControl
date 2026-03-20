@@ -26,6 +26,7 @@ async function processRT(payload, mode = 'fullApplicationRT') {
             ruleName: a.rule_name,
             severity: a.severity,
             blocks: a.blocks_operation,
+            entityType: a.entity_type || 'customer',
             status: a.status,
             createdAt: a.created_at,
         }));

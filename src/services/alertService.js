@@ -36,13 +36,14 @@ async function insertAlerts(rulesActivated, payload, eventType, refs) {
 
 function formatAlerts(rulesActivated, alerts) {
     return rulesActivated.map(rule => {
-        const alert = alerts.find(a => a.rule_code === rule.rule_code);
+        const alert = alerts.find(a => a.rule_code === rule.ruleCode);
         return {
             alertId: alert?.alert_id || null,
-            ruleCode: rule.rule_code,
-            ruleName: rule.rule_name,
+            ruleCode: rule.ruleCode,
+            ruleName: rule.ruleName,
             severity: rule.severity,
-            blocks: rule.blocks_operation,
+            blocks: rule.blocks,
+            entityType: rule.entityType || 'customer',
             status: alert?.status || 'OPEN',
             createdAt: alert?.created_at || null,
         };
