@@ -1,12 +1,14 @@
 -- =============================================
 -- Regla: RP34 — challengeDobleComprasComercio
--- Versión: 1
+-- Versión: 2
 -- Fecha: 2026-03-18
 -- Histórico BigQuery: SÍ
 -- Aplica: fullApplicationRT
 -- Entidad: merchant
 -- Nota BQ: El histórico de compras del comercio puede estar en BigQuery
 --           si ocurrieron antes de que el sistema arrancara
+-- Cambios v2:
+--   1. Agrega validación de comercio no en lista blanca (list_merchant)
 -- Cambios v1:
 --   1. Versión inicial
 --   2. Alerta si comercio no tiene compras en el mes (primera compra)
@@ -16,8 +18,9 @@
 --      puede tener pagos de cuotas asociados
 --   5. Solo créditos — sin pagos asociados en la compra actual
 --   6. No debe haber pasado biometría en la compra ni anteriormente
---   7. DNI no debe estar en lista blanca
---   8. No debe tener alertas descartadas previamente
+--   7. Comercio no debe estar en lista blanca
+--   8. DNI no debe estar en lista blanca
+--   9. No debe tener alertas descartadas previamente
 -- =============================================
 WITH params AS (
   SELECT $1::uuid AS customer_id, $2::varchar AS application_id,
@@ -62,6 +65,12 @@ WHERE
     WHERE fa2.customer_id = p.customer_id
       AND fa2.application_id != p.application_id
       AND fa2.biometria = 'SI'
+  )
+  -- Comercio no debe estar en lista blanca
+  AND NOT EXISTS (
+    SELECT 1 FROM list_merchant lm
+    WHERE lm.merchant_id = p.merchant_id
+      AND lm.list_type = 'WHITE'
   )
   -- DNI no debe estar en lista blanca
   AND NOT EXISTS (
