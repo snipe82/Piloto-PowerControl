@@ -1,0 +1,159 @@
+###
+  ### Test RT — Prueba regla RP23 -  Compra previa menos de 200 soles y a 12 cuotas
+POST http://localhost:3015/api/v1/events/fullApplicationNRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{
+  "applicationType": "POWERPAY",
+  "applicationId": "GLK11SCXFIJQ",
+  "applicationStatus": "completed",
+  "applicationChannel": "ONLINE",
+  "applicationDate": "2025-06-25",
+
+  "customerType": "DIGITAL",
+  "customerId": "e0e8c2d5-2607-4e25-a49b-6f1f61112b8d",
+  "customerEntityId": "e0e8c2d5-2607-4e25-a49b-6f1f61112b8d",
+  "customerNumber": "R12ZSAQIAVHO",
+  "customerOnboardDate": "2025-05-07",
+
+  "name": {
+    "givenName": "Bryan",
+    "middleName": "Jhon",
+    "surname": "Espinoza Cucho",
+    "fullName": "Bryan Jhon Espinoza Cucho"
+  },
+
+  "age": 23,
+  "nationality": "PE",
+
+  "customerIdentification": {
+    "documentType": "DNI",
+    "documentNumber": "71160454"
+  },
+
+  "personalEntityId": "71160454",
+
+  "emailEntityId": "espinoza01stif@gmail.com",
+  "homeEmail": "espinoza01stif@gmail.com",
+
+  "mobilePhone": {
+    "countryRegionCode": "57",
+    "number": "948092680"
+  },
+  "mobilePhoneEntityId": "948092680",
+  "telephoneNumber": "948092680",
+
+  "correspondenceAddress": {
+    "country": "PER",
+    "addressLine1": "Av. la Molina 2448, Local 209"
+  },
+
+  "deviceId": "f46ccbc6-043d-4e0c-88be-0ba8ecc44a35",
+  "deviceEntityId": "f46ccbc6-043d-4e0c-88be-0ba8ecc44a35",
+  "device": {
+    "deviceFingerprint": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 / platform: Win32",
+    "ipAddress": "38.187.27.88",
+    "ipAddressV4": "38.187.27.88"
+  },
+
+  "cardId": "31393d5c6dc8654d17f91eba756e59ffb6dd61fdad9f4d578437b7443bc222f7",
+  "cardEntityId": "31393d5c6dc8654d17f91eba756e59ffb6dd61fdad9f4d578437b7443bc222f7",
+  "cardToken": "ki8rqy6dabkip7rtfskj",
+  "cardholder": "bryan espinoza",
+
+  "merchantId": "4ae1fccb-406c-4bce-8f1f-5ddb0b8c0efb",
+  "merchantEntityId": "4ae1fccb-406c-4bce-8f1f-5ddb0b8c0efb",
+  "merchantShortName": "Pc Factory",
+  "merchantCountry": "PER",
+  "merchantCategoryCode": "5732",
+  "merchantActivityStatus": "enabled",
+  "mccEntityId": "5732",
+
+  "amount": {
+    "baseValue": 84.9,
+    "currency": "PER",
+    "value": 84.9,
+    "baseCurrency": "PER"
+  },
+
+  "amountInstallment": {
+    "baseValue": 7.96,
+    "currency": "PER",
+    "value": 7.96,
+    "baseCurrency": "PER"
+  },
+
+  "affordability": {
+    "totalCreditLimit": {
+      "baseValue": 1200,
+      "currency": "PER",
+      "value": 1200,
+      "baseCurrency": "PER"
+    }
+  },
+
+  "numberInstallments": 12,
+  "numberActiveLoans": 3,
+
+ 
+
+  "thirdPartyRiskScore": 6,
+  "thirdPartyKYC": {
+    "statusBuro": "approved",
+    "ppm": 21.73,
+    "scoreKYC": 100,
+    "effort_rate": 2.16
+  },
+
+  "creditApplicationScore": 0,
+  "flag3DS": "N",
+
+  "countryRegion": "PER",
+  "tenantId": "Powerpay",
+  "schemaVersion": 1,
+
+  "eventType": "fullApplicationNRT",
+  "eventId": "5d5600c9-9ffe-4f1e-a0d6-8ea770313109_1756120262.669449",
+  "eventTime": "2025-08-25T06:11:02.650949-05:00",
+  "captureDateTime": "2025-06-25T21:47:27.841581-05:00",
+  "submissionDateTime": "2025-06-25T21:47:27.856013-05:00",
+
+  "session": {
+    "sessionId": "AZaJREcLeWW0650QuasNR0F6LZbmK3Yg",
+    "sessionStartTime": "2025-06-26T02:47:29.384587+00:00"
+  },
+
+  "totalTimeDuringApplicationSubmissionInSeconds": 1289.13548,
+
+  "maxMind": {
+    "cityDbCityName": "Departamento de Lima",
+    "cityDbCountryName": "Perú",
+    "cityDbLatitude": "-11.85",
+    "cityDbLongitude": "-76.45",
+    "cityDbContinentName": "Sudamérica",
+    "cityDbTimezone": "America/Lima",
+    "connectionType": "Cable/DSL",
+    "ispDbName": "Nextnet Sac",
+    "ispDbOrganizationName": "Nextnet Sac",
+    "domainName": "nextnet.com.pe"
+  },
+
+  "_metadata": {
+    "eventId": "5d5600c9-9ffe-4f1e-a0d6-8ea770313109_1756120262.669449",
+    "eventType": "fullApplicationNRT",
+    "receivedTime": "2025-08-25T11:11:02Z",
+    "systemEventId": "88691541-0Plo6g0Z",
+    "execution": {
+      "expectResponse": false
+    }
+  }
+}
+
+###
+  ### Test RT — Prueba regla RP23 -  001 ###   
+POST http://localhost:3015/api/v1/events/fullApplicationRT
+Content-Type: application/json
+X-API-Key: pc-antifraude-local-key-2026
+
+{"applicationType":"POWERPAY","deviceId":"d856cc67-0c9a-4dc3-a3b6-1130640aa0c6","cardToken":"kkvozebbmmhnfyhmszgw","affordability":{"totalCreditLimit":{"baseValue":1200,"currency":"PER","value":1200,"baseCurrency":"PER"}},"customerType":"DIGITAL","creditApplicationScore":"0","applicationStatus":"pending","emailEntityId":"espinoza01stif@gmail.com","merchantId":"70ad9535-370b-4cec-b37e-cf76d196b7c4","maxMind":{"cityDbCountryName":"Perú","cityDbLongitude":"-77.0305","cityDbLatitude":"-12.046","cityDbContinentName":"Sudamérica","cityDbPostalCode":"--","ispDbAutonomousSystemOrganization":"America Movil Peru S.A.C.","cityDbRepresentedCountryType":"--","ispDbName":"Claro Móvil","cityDbTimezone":"America/Lima","connectionType":"Cellular","cityDbCityName":"Lima","cityDbMetroCode":"--","ispDbMobileCountryCode":"--","cityDbGeoNamesIDs":"3932488","cityDbAccuracyRadius":"50","cityDbRegisteredCountry":"Perú","ispDbOrganizationName":"Claro Peru","cityDbSubdivisionsName1":"--","cityDbSubdivisionsName0":"Provincia de Lima","cityDbContinentCode":"SA","cityDbSubdivisionsCode0":"LMA","cityDbCountryCode":"PE","cityDbSubdivisionsCode1":"--","cityDbSubdivisionsName2":"--","cityDbSubdivisionsCode2":"--","ispDbMobileNetworkCode":"--","domainName":"--","ispDbAutonomousSystemNumber":"12252"},"flag3DS":"N","_metadata":{"eventId":"6feb2610-8db0-4a62-8f3c-96c4ad22b1f5_1756175586.249174","execution":{"expectResponse":true},"maxMind_cityDbEuCountry":"false","systemEventId":"92073739-xiShnGqs","entities":{"PARTY":["71160454"],"MOBILEPHONE":["948092680"],"CITY":["Lima"],"IP":["179.6.154.68"],"APPLICATION":["KEIYRWS6UON3"],"DEVICE":["d856cc67-0c9a-4dc3-a3b6-1130640aa0c6"],"CUSTOMER":["e0e8c2d5-2607-4e25-a49b-6f1f61112b8d"],"MCC":["5732"],"EMAIL":["espinoza01stif@gmail.com"],"CARD":["96ef58bc5a47a7d280ac542647e82733cf8936127d3e1c39dbcae122935820c5"],"MERCHANT":["70ad9535-370b-4cec-b37e-cf76d196b7c4"]},"receivedTime":"2025-08-26T02:33:06Z","eventTime":"2025-08-26T02:33:06.242063Z","tenantId":["Powerpay"],"eventType":"fullApplicationRT","searchable":{"merchantShortName":"iShop","eventId":"6feb2610-8db0-4a62-8f3c-96c4ad22b1f5_1756175586.249174","customerEntityId":"e0e8c2d5-2607-4e25-a49b-6f1f61112b8d","mccEntityId":"5732","merchantEntityId":"70ad9535-370b-4cec-b37e-cf76d196b7c4","eventType":"fullApplicationRT","deviceId":"d856cc67-0c9a-4dc3-a3b6-1130640aa0c6","customerIdentification":{"documentNumber":"71160454"},"deviceEntityId":"d856cc67-0c9a-4dc3-a3b6-1130640aa0c6","personalEntityId":"71160454","homeEmail":"espinoza01stif@gmail.com","emailEntityId":"espinoza01stif@gmail.com","mobilePhoneEntityId":"948092680","cardEntityId":"96ef58bc5a47a7d280ac542647e82733cf8936127d3e1c39dbcae122935820c5","eventTime":"2025-08-26T02:33:06.242063Z","name":{"fullName":"Bryan Jhon Espinoza Cucho"},"applicationId":"KEIYRWS6UON3","device":{"ipAddress":"179.6.154.68","ipAddressV4":"179.6.154.68"},"applicantCityEntityId":"Lima","applicationDate":"2025-08-25"},"maxMind_cityDbRegisteredEuCountry":"false"},"eventId":"6feb2610-8db0-4a62-8f3c-96c4ad22b1f5_1756175586.249174","numberInstallments":12,"captureDateTime":"2025-08-25T21:33:02.684010-05:00","countryRegion":"PER","eventType":"fullApplicationRT","deviceEntityId":"d856cc67-0c9a-4dc3-a3b6-1130640aa0c6","personalEntityId":"71160454","homeEmail":"espinoza01stif@gmail.com","mobilePhone":{"number":"948092680","countryRegionCode":"57"},"nationality":"PE","cardId":"96ef58bc5a47a7d280ac542647e82733cf8936127d3e1c39dbcae122935820c5","name":{"surname":"Espinoza Cucho","givenName":"Bryan","fullName":"Bryan Jhon Espinoza Cucho","middleName":"Jhon"},"applicationId":"KEIYRWS6UON3","applicantCityEntityId":"Lima","device":{"deviceFingerprint":"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36 / platform: Linux armv81","ipAddress":"179.6.154.68","ipAddressV4":"179.6.154.68"},"applicationDate":"2025-08-25","merchantShortName":"iShop","telephoneNumber":"948092680","customerOnboardDate":"2025-05-07","thirdPartyRiskScore":6,"customerEntityId":"e0e8c2d5-2607-4e25-a49b-6f1f61112b8d","session":{"sessionStartTime":"2025-08-26T02:33:04.470058+00:00","sessionId":"BN5ZdRzDbGiea2GMzUwtXJ01qqqHMUDS"},"mccEntityId":"5732","totalTimeDuringApplicationSubmissionInSeconds":64.164487,"merchantEntityId":"70ad9535-370b-4cec-b37e-cf76d196b7c4","customerIdentification":{"documentType":"DNI","documentNumber":"71160454"},"applicationChannel":"ONLINE","submissionDateTime":"2025-08-25T21:33:02.698691-05:00","cardEntityId":"96ef58bc5a47a7d280ac542647e82733cf8936127d3e1c39dbcae122935820c5","eventTime":"2025-08-25T21:33:06.242063-05:00","customerId":"e0e8c2d5-2607-4e25-a49b-6f1f61112b8d","merchantCountry":"PER","amount":{"baseValue":1999,"currency":"PER","value":1999,"baseCurrency":"PER"},"schemaVersion":1,"customerNumber":"R12ZSAQIAVHO","cardholder":"Bryan Espinoza","numberActiveLoans":2,"merchantActivityStatus":"enabled","thirdPartyKYC":{"statusBuro":"approved","scoreKYC":100,"ppm":21.73,"effort_rate":2.16},"merchantCategoryCode":"5732","mobilePhoneEntityId":"948092680","tenantId":"Powerpay","amountInstallment":{"baseValue":200.52,"currency":"PER","value":200.52,"baseCurrency":"PER"},"age":23}
