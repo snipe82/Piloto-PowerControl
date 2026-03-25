@@ -6,9 +6,10 @@ async function upsertCustomer(payload) {
       customer_id, customer_number, document_type, document_number,
       first_name, middle_name, last_name, full_name,
       email, phone, gender, date_of_birth,
-      nationality, onboard_date, customer_type, fallecido
+      nationality, onboard_date, customer_type, fallecido,
+      previous_phone
     )
-    VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16)
+    VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)
     ON CONFLICT (document_type, document_number)
     DO UPDATE SET
       customer_number = EXCLUDED.customer_number,
@@ -17,6 +18,7 @@ async function upsertCustomer(payload) {
       last_name       = EXCLUDED.last_name,
       full_name       = EXCLUDED.full_name,
       email           = EXCLUDED.email,
+      previous_phone  = dim_customer.phone,
       phone           = EXCLUDED.phone,
       gender          = EXCLUDED.gender,
       nationality     = EXCLUDED.nationality,
@@ -40,6 +42,7 @@ async function upsertCustomer(payload) {
     payload.customeronboarddate || null,
     payload.customertype || null,
     payload.fallecido === 'si',
+    null, // previous_phone — solo se actualiza en DO UPDATE
   ]);
 
   return rows[0].customer_id;
