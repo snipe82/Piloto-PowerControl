@@ -1,8 +1,10 @@
 -- =============================================
 -- Regla: RP13 — blackListCard
--- Versión: 1
--- Fecha: 2026-03-08
+-- Versión: 2
+-- Fecha: 2026-03-26
 -- Histórico BigQuery: NO
+-- Cambios v2:
+--   1. Agrega validación de crédito — sin pago asociado en la compra actual
 -- Cambios v1:
 --   1. Versión inicial
 --   2. Verifica si la tarjeta de la aplicación está en lista negra
@@ -16,3 +18,8 @@ FROM fact_application fa
 JOIN params p ON fa.application_id = p.application_id
 JOIN list_card lc ON lc.card_id = fa.card_id
 WHERE lc.list_type = 'BLACK'
+  -- Debe ser un crédito — sin pago asociado
+  AND NOT EXISTS (
+    SELECT 1 FROM fact_payment fp
+    WHERE fp.application_id = p.application_id
+  )

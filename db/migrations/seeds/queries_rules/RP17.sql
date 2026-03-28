@@ -1,8 +1,10 @@
 -- =============================================
 -- Regla: RP17 — blackListUserDNI
--- Versión: 1
--- Fecha: 2026-03-08
+-- Versión: 2
+-- Fecha: 2026-03-26
 -- Histórico BigQuery: NO
+-- Cambios v2:
+--   1. Agrega validación de crédito — sin pago asociado en la compra actual
 -- Cambios v1:
 --   1. Versión inicial
 --   2. Verifica si el DNI del beneficiario está en lista negra
@@ -19,3 +21,8 @@ JOIN list_dni ld ON ld.document_number = fa.beneficiary_dni
 WHERE ld.list_type = 'BLACK'
   AND fa.beneficiary_dni IS NOT NULL
   AND fa.beneficiary_dni != ''
+  -- Debe ser un crédito — sin pago asociado
+  AND NOT EXISTS (
+    SELECT 1 FROM fact_payment fp
+    WHERE fp.application_id = p.application_id
+  )
