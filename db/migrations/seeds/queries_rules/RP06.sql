@@ -2,7 +2,9 @@
 -- Regla: RP06 — velocidad1h
 -- Versión: 5
 -- Fecha: 2026-03-13
--- Histórico BigQuery: SÍ
+-- Histórico BigQuery: NO
+-- Nota BQ: Tiene histórico pero no representa valor consultar por 1 hora antes,
+--           considerando además que la réplica no dispone de la información del día.
 -- Cambios v5:
 --   1. Elimina validación de alertas descartadas — velocidad es señal
 --      suficiente independientemente del historial de revisiones

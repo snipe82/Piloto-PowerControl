@@ -2,7 +2,9 @@
 -- Regla: RP09 — tresComprasDiferenteComercio1000PEN
 -- Versión: 4
 -- Fecha: 2026-03-12
--- Histórico BigQuery: SÍ
+-- Histórico BigQuery: NO
+-- Nota BQ: Tiene histórico pero no representa valor consultar por 24 horas antes, 
+--          considerando además que la réplica no dispone de la información del día.
 -- Aplica: fullApplicationRT
 -- Cambios v4:
 --   1. Elimina NOT EXISTS fact_payment en compras previas del histórico

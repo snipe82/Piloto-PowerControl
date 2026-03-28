@@ -1,12 +1,25 @@
 -- =============================================
 -- Regla: RP34 — challengeDobleComprasComercio
--- Versión: 2
--- Fecha: 2026-03-18
+-- Versión: 5
+-- Fecha: 2026-03-26
 -- Histórico BigQuery: SÍ
 -- Aplica: fullApplicationRT
 -- Entidad: merchant
 -- Nota BQ: El histórico de compras del comercio puede estar en BigQuery
---           si ocurrieron antes de que el sistema arrancara
+--           en la tabla rds_bbva.loan — se une con pre_loan, transaction
+--           y merchant para filtrar por merchant_id.
+--           Solo aplica para compras_mes — la réplica tiene retraso de 24 horas
+--           por lo que no tiene valor consultar BigQuery para compras_dia.
+-- Cambios v5:
+--   1. Agrega L.status IN ('active', 'paid') en BigQuery comentado
+--      para garantizar que el crédito fue completado
+-- Cambios v4:
+--   1. Elimina BigQuery comentado de compras_dia — réplica con retraso 24h
+--      no tiene valor para ventana del día actual
+-- Cambios v3:
+--   1. Agrega query BigQuery comentado en CTEs compras_mes y compras_dia
+--   2. Ajuste zona horaria Perú: TIMESTAMP_ADD(CAST(L.created_at AS TIMESTAMP), INTERVAL -5 HOUR)
+--   3. Refactoriza CTEs para soportar UNION ALL con BigQuery
 -- Cambios v2:
 --   1. Agrega validación de comercio no en lista blanca (list_merchant)
 -- Cambios v1:
@@ -28,10 +41,24 @@ WITH params AS (
 ),
 compras_mes AS (
   SELECT COUNT(*) AS total_mes
-  FROM fact_application fa2, params p
-  WHERE fa2.merchant_id = p.merchant_id
-    AND fa2.application_status = 'completed'
-    AND fa2.submission_datetime >= NOW() - INTERVAL '30 days'
+  FROM (
+    SELECT fa2.application_id
+    FROM fact_application fa2, params p
+    WHERE fa2.merchant_id = p.merchant_id
+      AND fa2.application_status = 'completed'
+      AND fa2.submission_datetime >= NOW() - INTERVAL '30 days'
+    -- BIG QUERY HISTORICO - Se consulta rds_bbva.loan
+    -- UNION ALL
+    -- SELECT L.id AS application_id
+    -- FROM `bbva-bnpl-pe-mo-project.rds_bbva.loan` L
+    -- INNER JOIN `bbva-bnpl-pe-mo-project.rds_bbva.pre_loan` PL ON PL.id = L.pre_loan_id
+    -- INNER JOIN `bbva-bnpl-pe-mo-project.rds_bbva.transaction` T ON T.pre_loan_id = PL.id
+    -- INNER JOIN `bbva-bnpl-pe-mo-project.rds_bbva.merchant` M ON T.merchant_id = M.id
+    -- WHERE M.id = p.merchant_id::text
+    --   AND L.status IN ('active', 'paid')
+    --   AND TIMESTAMP_ADD(CAST(L.created_at AS TIMESTAMP), INTERVAL -5 HOUR)
+    --       >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 30 DAY)
+  ) compras
 ),
 compras_dia AS (
   SELECT COUNT(*) AS total_dia

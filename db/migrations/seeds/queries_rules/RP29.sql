@@ -2,7 +2,9 @@
 -- Regla: RP29 — departamentoInStore24h
 -- Versión: 5
 -- Fecha: 2026-03-13
--- Histórico BigQuery: SÍ
+-- Histórico BigQuery: NO
+-- Nota BQ: Tiene histórico pero no representa valor consultar por 24 horas antes,
+--           considerando además que la réplica no dispone de la información del día.
 -- Aplica: fullApplicationRT
 -- Cambios v5:
 --   1. Elimina validación de alertas descartadas — puede ser robo

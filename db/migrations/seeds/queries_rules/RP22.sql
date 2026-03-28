@@ -2,7 +2,9 @@
 -- Regla: RP22 — challengeCuatroComprasTresDiasRiesgoAlto
 -- Versión: 1
 -- Fecha: 2026-03-18
--- Histórico BigQuery: SÍ
+-- Histórico BigQuery: NO 
+-- Nota BQ: Tiene histórico pero no representa valor consultar por 72 horas antes,
+--           considerando además que la réplica no dispone de la información del día.
 -- Aplica: fullApplicationRT
 -- Cambios v1:
 --   1. Versión inicial

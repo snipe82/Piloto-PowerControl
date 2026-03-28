@@ -2,7 +2,9 @@
 -- Regla: RP21 — challengeTresComprasMismoDiasRiesgoAlto
 -- Versión: 1
 -- Fecha: 2026-03-18
--- Histórico BigQuery: SÍ
+-- Histórico BigQuery: NO 
+-- Nota BQ: Tiene histórico pero no representa valor consultar por 24 horas antes,
+--           considerando además que la réplica no dispone de la información del día.
 -- Aplica: fullApplicationRT
 -- Cambios v1:
 --   1. Versión inicial

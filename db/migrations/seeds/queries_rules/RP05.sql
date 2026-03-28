@@ -2,10 +2,11 @@
 -- Regla: RP05 — challengeMasDosPagosenDia
 -- Versión: 1
 -- Fecha: 2026-03-07
--- Histórico BigQuery: SÍ
--- Nota BQ: fact_payment solo tiene pagos desde que el sistema arrancó.
---           Para detectar pagos previos se necesita consultar el histórico
---           de pagos en BigQuery antes de activar esta regla.
+-- Histórico BigQuery: NO
+-- Nota BQ: Si bien fact_payment solo tiene pagos desde que el sistema arrancó.
+--          Para detectar pagos previos se necesita consultar el histórico,
+--          sin embargo por 24 horas previas no vale la pena, considerando además
+--          que la réplica no dispone de la información del día.
 -- Cambios v1:
 --   1. Versión inicial
 --   2. Más de dos pagos manuales en las últimas 24 horas

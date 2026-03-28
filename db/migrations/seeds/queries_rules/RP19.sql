@@ -1,13 +1,28 @@
 -- =============================================
 -- Regla: RP19 — challengeDobleTicketPromedioComercio
--- Versión: 2
--- Fecha: 2026-03-13
+-- Versión: 6
+-- Fecha: 2026-03-26
 -- Histórico BigQuery: SÍ
 -- Aplica: fullApplicationNRT
+-- Entidad: merchant
 -- Nota BQ: El histórico de compras del comercio puede estar en BigQuery
---           si ocurrieron antes de que el sistema arrancara
+--           en la tabla rds_bbva.loan — se une con pre_loan, transaction
+--           y merchant para filtrar por merchant_id
+-- Cambios v6:
+--   1. Agrega L.status IN ('active', 'paid') en BigQuery comentado
+--      para garantizar que el crédito fue completado
+-- Cambios v5:
+--   1. Fix zona horaria BigQuery — TIMESTAMP_ADD(CAST(L.created_at AS TIMESTAMP), INTERVAL -5 HOUR)
+-- Cambios v4:
+--   1. Refactoriza CTE — separa compras_comercio (filas) de promedio_comercio (agregado)
+--      para que el UNION ALL con BigQuery funcione correctamente
+--   2. AVG y COUNT se calculan sobre el CTE combinado
+-- Cambios v3:
+--   1. Agrega query BigQuery comentado en CTE
+--      usando rds_bbva.loan + pre_loan + transaction + merchant
+--   2. Usa INTERVAL 365 DAY en vez de 12 MONTH por limitación BigQuery
 -- Cambios v2:
---   1. Elimina NOT EXISTS fact_payment en el CTE promedio_comercio
+--   1. Elimina NOT EXISTS fact_payment en el CTE
 --      — en el histórico un crédito puede tener pagos de cuotas asociados,
 --      el filtro de pagos solo aplica para la operación actual
 -- Cambios v1:
@@ -23,13 +38,28 @@ WITH params AS (
   SELECT $1::uuid AS customer_id, $2::varchar AS application_id,
          $3::uuid AS device_id,   $4::uuid AS merchant_id
 ),
-promedio_comercio AS (
-  SELECT AVG(fa2.amount) AS avg_amount, COUNT(*) AS total_compras
+compras_comercio AS (
+  SELECT fa2.amount AS amount
   FROM fact_application fa2, params p
   WHERE fa2.merchant_id = p.merchant_id
     AND fa2.application_id != p.application_id
     AND fa2.application_status = 'completed'
     AND fa2.submission_datetime >= NOW() - INTERVAL '12 months'
+  -- BIG QUERY HISTORICO - Se consulta rds_bbva.loan
+  -- UNION ALL
+  -- SELECT L.AMOUNT AS amount
+  -- FROM `bbva-bnpl-pe-mo-project.rds_bbva.loan` L
+  -- INNER JOIN `bbva-bnpl-pe-mo-project.rds_bbva.pre_loan` PL ON PL.id = L.pre_loan_id
+  -- INNER JOIN `bbva-bnpl-pe-mo-project.rds_bbva.transaction` T ON T.pre_loan_id = PL.id
+  -- INNER JOIN `bbva-bnpl-pe-mo-project.rds_bbva.merchant` M ON T.merchant_id = M.id
+  -- WHERE M.id = p.merchant_id::text
+  --   AND L.status IN ('active', 'paid')
+  --   AND TIMESTAMP_ADD(CAST(L.created_at AS TIMESTAMP), INTERVAL -5 HOUR)
+  --       >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 365 DAY)
+),
+promedio_comercio AS (
+  SELECT AVG(amount) AS avg_amount, COUNT(*) AS total_compras
+  FROM compras_comercio
 )
 SELECT COUNT(*) AS total
 FROM fact_application fa

@@ -2,7 +2,10 @@
 -- Regla: RP02 — challengeDosComprasMismoDia
 -- Versión: 2
 -- Fecha: 2026-03-12
--- Histórico BigQuery: NO
+-- Histórico BigQuery: NO 
+-- Nota BQ: Tiene histórico pero no representa valor consultar por 24 horas antes,
+--           considerando además que la réplica no dispone de la información del día.
+-- Aplica: fullApplicationNRT
 -- Cambios v2:
 --   1. Elimina NOT EXISTS fact_payment en compras previas del histórico
 --      — un crédito previo puede tener pagos de cuotas asociados

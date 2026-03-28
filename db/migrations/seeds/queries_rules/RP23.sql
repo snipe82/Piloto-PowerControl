@@ -2,7 +2,9 @@
 -- Regla: RP23 — challengeCompraPreviaMenor12cuotas
 -- Versión: 1
 -- Fecha: 2026-03-18
--- Histórico BigQuery: SÍ
+-- Histórico BigQuery: NO 
+-- Nota BQ: Tiene histórico pero no representa valor consultar por 48 horas antes,
+--           considerando además que la réplica no dispone de la información del día.
 -- Aplica: fullApplicationRT
 -- Nota BQ: La compra previa puede estar en el histórico de BigQuery
 --           si ocurrió antes de que el sistema arrancara
