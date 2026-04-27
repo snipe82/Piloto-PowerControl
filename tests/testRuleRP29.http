@@ -16,7 +16,7 @@ X-API-Key: pc-antifraude-local-key-2026
 
 
 ###
-  ### Test RT — Prueba regla RP29 -  001 ###  SE FUERZA CAMBIANDO EL COMERCIO IN STORE DE LIMA A GP MOTOS MAVILA CHICLAYO
+  ### Test RT — Prueba regla RP29 -  001 ###  SE FUERZA CAMBIANDO EL COMERCIO IN STORE DE LIMA A GP MOTOS MAVILA CHICLAYO y FECHA AL 2026-03-12 23:45
 POST http://localhost:3015/api/v1/events/fullApplicationRT
 Content-Type: application/json
 X-API-Key: pc-antifraude-local-key-2026

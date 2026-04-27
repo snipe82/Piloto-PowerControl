@@ -42,7 +42,7 @@ X-API-Key: pc-antifraude-local-key-2026
 
 
 ###
-  ### Test RT — Prueba regla RP34 -  001 ###  Prueba en Cuy Games despues de evaluar promedio diario de compras  
+  ### Test RT — Prueba regla RP34 -  001 ###  Prueba en Cuy Games despues de evaluar promedio diario de compras   SE FUERZA CAMBIANDO FECHA A 20 MARZO 22:55
 POST http://localhost:3015/api/v1/events/fullApplicationRT
 Content-Type: application/json
 X-API-Key: pc-antifraude-local-key-2026
@@ -51,7 +51,7 @@ X-API-Key: pc-antifraude-local-key-2026
 
 
 ###
-  ### Test RT — Prueba regla RP34 -  002 - Prueba New Balance La Molina, primera compra en el mes ###   
+  ### Test RT — Prueba regla RP34 -  002 - Prueba New Balance La Molina, primera compra en el mes ###  SE FUERZA CAMBIANDO FECHA A 20 MARZO 22:55 
 POST http://localhost:3015/api/v1/events/fullApplicationRT
 Content-Type: application/json
 X-API-Key: pc-antifraude-local-key-2026

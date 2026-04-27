@@ -6,14 +6,19 @@ async function insertAlerts(rulesActivated, payload, eventType, refs) {
     const values = [];
     const placeholders = rulesActivated.map((rule, i) => {
         const base = i * 7;
+
+        // Mantenemos esta lógica porque es la que arregló el problema del rule_code vacío
+        const ruleCode = rule.rule_code || rule.ruleCode || rule.rulecode || 'UNKNOWN_RULE';
+        const severity = rule.severity || rule.priority || 'MEDIUM';
+
         values.push(
-            rule.rule_code,
+            ruleCode,
             refs.eventId,
             payload.applicationid,
             refs.customerId,
             refs.paymentId || null,
             eventType,
-            rule.severity,
+            severity,
         );
         return `($${base + 1},$${base + 2},$${base + 3},$${base + 4},$${base + 5},$${base + 6},$${base + 7})`;
     });
@@ -29,6 +34,7 @@ async function insertAlerts(rulesActivated, payload, eventType, refs) {
 
     const rows = await db.query(query, values);
 
+    // Este log puedes dejarlo o quitarlo, es útil para saber que se guardó en BD
     console.log(`💾 ${rows.length} alerta(s) insertada(s) para appId: ${payload.applicationid}`);
 
     return rows;

@@ -18,7 +18,7 @@ X-API-Key: pc-antifraude-local-key-2026
 
 
 ###
-  ### Test RT — Prueba regla RP24 -  001 ###   
+  ### Test RT — Prueba regla RP24 -  001 ###  SE FUERZA CAMBIANDO FECHA AL 3 DE MARZO 2026 14:20
 POST http://localhost:3015/api/v1/events/fullApplicationRT
 Content-Type: application/json
 X-API-Key: pc-antifraude-local-key-2026

@@ -10,7 +10,7 @@ X-API-Key: pc-antifraude-local-key-2026
 
 
 ###
-  ### Test RT — Prueba regla RP08 -  001 ###   
+  ### Test RT — Prueba regla RP08 -  001 ###  SE FUERZA CAMBIANDO A FECHA A 2026-03-09 19:30 PM 
 POST http://localhost:3015/api/v1/events/fullApplicationRT
 Content-Type: application/json
 X-API-Key: pc-antifraude-local-key-2026
