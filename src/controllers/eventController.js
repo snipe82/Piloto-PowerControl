@@ -16,7 +16,7 @@ async function fullApplicationRT(req, res, next) {
 
         const result = await processRT(payload, 'fullApplicationRT');
 
-        // Usar la respuesta ARIC ya construida en el service
+        // Usar la respuesta ARIC ya construida en el service y corta el resto de use del app.js
         return res.status(200).json(result.aricResponse);
 
     } catch (err) {
@@ -31,13 +31,13 @@ async function fullApplicationNRT(req, res, next) {
 
         console.log(`📥 NRT | appId: ${payload.applicationid} | tipo: ${eventType}`);
 
-        // Responder inmediato
+        // Responder inmediato  y corta el resto de use del app.js
         res.status(200).json({
             body: '',
             status_code: 204,
         });
 
-        // Procesar en background — genera y graba trama ARIC igual que RT
+        // Procesar en background — genera y graba trama ARIC igual que RT 
         setImmediate(() => {
             processNRT(payload, 'fullApplicationNRT').catch(err => {
                 console.error(`❌ Error NRT background appId: ${payload.applicationid} — ${err.message}`);

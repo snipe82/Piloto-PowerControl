@@ -15,4 +15,6 @@ router.post('/admin/rules/refresh', (req, res) => {
     });
 });
 
+//Si el router no encuentra ruta internamente da next para que pase al siguiente paso en app.js que es elerrorHandler 404 
+//escrito en fijo en caso de no error
 module.exports = router;

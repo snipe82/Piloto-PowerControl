@@ -16,6 +16,10 @@ const errorHandler = require('./middleware/errorHandler');
 const eventRoutes = require('./routes/eventRoutes');
 
 const app = express();
+// Le dice a Express que estás detrás de un proxy (Nginx, AWS, Cloudflare)
+// y que debe usar la cabecera X-Forwarded-For para calcular req.ip
+app.set('trust proxy', 1);
+
 const PORT = process.env.PORT || 3000;
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -44,7 +48,8 @@ app.get('/api/v1/health', async (req, res) => {
 // Rutas de eventos — rate limit + API Key
 app.use('/api/v1/events', rateLimiter, auth, eventRoutes);
 
-// 404
+// 404 Manejador de ruta no encontrada, si el enrutador no detecta ruta alguna se ejecuta este middleware 
+//y por eso está al final de todos los middlewares. 
 app.use((req, res) => {
     res.status(404).json({
         status: 'error',

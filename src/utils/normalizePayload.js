@@ -1,3 +1,7 @@
+//Funcion recursiva para pasar todas las claves del JSON del payload a minusculas y evitar problemas 
+//de compatibilidad al conectar con la BD 
+//por diferencias de mayusculas o minusculas en las claves. Se define una profundidad maxima para evitar 
+// problemas de DoS por objetos muy anidados
 const MAX_DEPTH = parseInt(process.env.NORMALIZE_MAX_DEPTH) || 10;
 
 function normalizeKeys(obj, depth = 0) {

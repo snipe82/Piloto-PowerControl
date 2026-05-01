@@ -11,7 +11,9 @@ module.exports = function auth(req, res, next) {
         });
     }
 
-    // Fallar explícitamente si HMAC_SECRET no está configurado
+    // Esta es la semilla para que se mezclen las claves al generar los hashes abajo y así no sean las mismas que 
+    //todo hash genera, los hackers tienen diccionarios de miles de hashes asociados a palabras y podrían identificarla 
+    //si llegan a interceptar la memoria del servidor.
     const secret = process.env.HMAC_SECRET;
     if (!secret) {
         console.error('❌ HMAC_SECRET no está definido en las variables de entorno');
@@ -31,7 +33,9 @@ module.exports = function auth(req, res, next) {
         .update(validKey)
         .digest();
 
-    // try/catch defensivo por si alguien cambia el algoritmo en el futuro
+    // try/catch defensivo por si alguien cambia el algoritmo en el futuro ya qye al validar las llaves con === al fallar en el primer
+    //caracter de la cadena da error y no compara el resto y timingSafeEqual compara toda la cadena para evitar ataques de temporizacion 
+    //ya que dura el mismo tiempo en validar toda la cadena.
     let valid = false;
     try {
         valid = crypto.timingSafeEqual(hashReceived, hashValid);
