@@ -1,4 +1,6 @@
-const db = require('../database/dbClient');
+//Inserta las alertas activadas y las formatea para responder al front
+
+db = require('../database/dbClient');
 
 async function insertAlerts(rulesActivated, payload, eventType, refs) {
     if (rulesActivated.length === 0) return [];
@@ -40,6 +42,12 @@ async function insertAlerts(rulesActivated, payload, eventType, refs) {
     return rows;
 }
 
+//Formatea las alertas de acuerdo a lo que retorna 
+//el método executeRules para que coincida con el formato de la respuesta de la API.
+//Recuerda que si trabajamos el arreglo que devuelve insertAlerts, las reglas
+// no tendran el formato que retorna el método executeRules, por lo que necesitamos
+// hacer esta conversion ya que viene de base de datos con valores clave distintos, 
+//ejemplo, rule_code por ruleCode, severity por priority, etc
 function formatAlerts(rulesActivated, alerts) {
     return rulesActivated.map(rule => {
         const alert = alerts.find(a => a.rule_code === rule.ruleCode);

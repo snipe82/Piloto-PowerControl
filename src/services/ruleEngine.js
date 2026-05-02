@@ -1,3 +1,8 @@
+//Carga las reglas activas para cada evento y procesa las alertas en base a cada regla 
+//devolviendo un arreglo con las alertas activadas.  
+//Carga las reglas activas por evento en cache y expone un metodo para limpiarlo y 
+//recargarlas desde base de datos
+
 const db = require('../database/dbClient');
 
 // Caché en memoria con TTL
@@ -139,6 +144,8 @@ async function executeRules(payload, eventType) {
 
     console.log(`⚙️  Ejecutando ${rules.length} reglas para appId: ${payload.applicationid}`);
 
+    //Ejecutamos todas las reglas de manera paralela usando el metodo Promise.all
+    // de esta manera ahorramos tiempo de ejecucion ya que las reglas no dependen una de la otra
     const results = await Promise.all(
         rules.map(rule => executeRule(rule, payload))
     );
